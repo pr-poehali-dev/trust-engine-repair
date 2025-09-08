@@ -42,7 +42,7 @@ export default function Index() {
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-marine-dark leading-tight">
                   Надёжный сервис для вашего
-                  <span className="text-primary block">морского двигателя</span>
+                  <span className="text-primary block">двигателя</span>
                 </h1>
                 <p className="text-xl text-marine-steel mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
