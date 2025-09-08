@@ -61,6 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Marine theme colors
+				marine: {
+					blue: '#1E40AF',
+					dark: '#0F172A', 
+					steel: '#64748B',
+					light: '#F8FAFC',
+					accent: '#0EA5E9',
 				}
 			},
 			borderRadius: {
