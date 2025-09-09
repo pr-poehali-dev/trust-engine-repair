@@ -14,9 +14,9 @@ export default function Logo({
   className = '' 
 }: LogoProps) {
   const sizeClasses = {
-    small: 'h-6 w-6 sm:h-7 sm:w-7',
-    medium: 'h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12',
-    large: 'h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16'
+    small: 'h-5 w-auto sm:h-6 sm:w-auto',
+    medium: 'h-6 w-auto sm:h-7 sm:w-auto md:h-8 md:w-auto',
+    large: 'h-8 w-auto sm:h-10 sm:w-auto md:h-12 md:w-auto'
   };
 
   const textSizeClasses = {
@@ -28,8 +28,8 @@ export default function Logo({
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <img 
-        src="/favicon.svg" 
-        alt="MarineService" 
+        src="/logo.svg" 
+        alt="RED MAR" 
         className={sizeClasses[size]}
       />
       {showText && (

@@ -34,8 +34,7 @@ export default function ProjectMercruiser57() {
               Вернуться к проектам
             </Button>
             <div className="flex items-center gap-2">
-              <img src="/favicon.svg" alt="MarineService" className="h-6 w-6 sm:h-7 sm:w-7" />
-              <span className="font-bold text-marine-dark text-sm sm:text-base">MarineService</span>
+              <img src="/logo.svg" alt="RED MAR" className="h-5 w-auto sm:h-6 sm:w-auto" />
             </div>
           </div>
         </div>

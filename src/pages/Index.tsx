@@ -14,13 +14,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <img src="/favicon.svg" alt="MarineService" className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12" />
-              <div className="flex flex-col">
-                <span className="text-lg sm:text-xl font-bold text-marine-dark">MarineService</span>
-                <span className="hidden sm:block text-xs text-marine-steel italic font-medium -mt-0.5">
-                  Новая жизнь вашего двигателя
-                </span>
-              </div>
+              <img src="/logo.svg" alt="RED MAR" className="h-6 w-auto sm:h-7 sm:w-auto md:h-8 md:w-auto" />
+              <span className="hidden sm:block text-xs text-marine-steel italic font-medium">
+                Новая жизнь вашего двигателя
+              </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-marine-steel hover:text-primary transition-colors">Услуги</a>
