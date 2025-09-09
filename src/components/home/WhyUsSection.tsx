@@ -1,12 +1,7 @@
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
-interface WhyUsSectionProps {
-  onContactClick: () => void;
-}
-
-export default function WhyUsSection({ onContactClick }: WhyUsSectionProps) {
+export default function WhyUsSection() {
   const mainAdvantages = [
     {
       icon: 'Award',
@@ -36,11 +31,7 @@ export default function WhyUsSection({ onContactClick }: WhyUsSectionProps) {
 
 
 
-  const workflowImages = [
-    '/img/69551f2d-ae28-47dc-8b0c-008881fafee8.jpg',
-    '/img/a3d90cac-8002-4f4c-a058-66c35f6064ba.jpg',
-    '/img/daf8631c-cc6d-4dfa-8caa-bc9f2907aa98.jpg'
-  ];
+
 
   return (
     <section id="why-us" className="relative px-4 py-20 lg:py-28 overflow-hidden bg-white">
@@ -52,17 +43,7 @@ export default function WhyUsSection({ onContactClick }: WhyUsSectionProps) {
       </div>
       
       <div className="max-w-7xl mx-auto relative">
-        {/* Заголовок для мобильных */}
-        <div className="lg:hidden space-y-6 mb-12 text-center">
-          <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
-            ⚒️ Наши преимущества
-          </Badge>
-          
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
-            Почему выбирают{' '}
-            <span className="text-primary">именно нас</span>
-          </h2>
-        </div>
+
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="space-y-8 order-2 lg:order-1">
