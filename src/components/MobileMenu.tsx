@@ -5,9 +5,10 @@ import Icon from '@/components/ui/icon';
 interface MobileMenuProps {
   isOpen: boolean;
   onToggle: () => void;
+  onContactClick: () => void;
 }
 
-export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
+export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileMenuProps) {
   // Блокируем скролл при открытом меню без смещения контента
   useEffect(() => {
     if (isOpen) {
@@ -77,21 +78,20 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
           />
           
           {/* Menu panel */}
-          <div className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl z-[9999] md:hidden transform transition-transform duration-300 ease-out">
+          <div className="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-white shadow-2xl z-[9999] md:hidden transform transition-transform duration-300 ease-out">
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="flex items-center gap-3">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto" />
-                <span className="text-sm text-gray-600 font-medium">RED MAR</span>
               </div>
               <Button 
                 variant="ghost" 
                 size="sm" 
                 onClick={onToggle}
-                className="hover:bg-gray-100 p-2"
+                className="hover:bg-gray-100 p-3"
                 aria-label="Закрыть меню"
               >
-                <Icon name="X" size={20} className="text-gray-700" />
+                <Icon name="X" size={24} className="text-gray-700" />
               </Button>
             </div>
             
@@ -154,7 +154,10 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <Button 
                   className="w-full bg-primary hover:bg-brand-blue-dark text-white font-semibold py-3 rounded-xl shadow-lg"
-                  onClick={handleLinkClick}
+                  onClick={() => {
+                    onContactClick();
+                    handleLinkClick();
+                  }}
                 >
                   <Icon name="Phone" size={18} className="mr-2" />
                   Связаться с нами

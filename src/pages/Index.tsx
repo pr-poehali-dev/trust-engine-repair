@@ -8,9 +8,11 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import BannerSlider from '@/components/BannerSlider';
 import MobileMenu from '@/components/MobileMenu';
+import ContactForm from '@/components/ContactForm';
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
   
   const sliderImages = [
     'https://cdn.poehali.dev/files/fa538d5f-21ab-4b35-a595-5b9dca841f5c.jpg',
@@ -55,14 +57,18 @@ export default function Index() {
             </div>
             
             <div className="flex items-center gap-3">
-              <Button className="hidden sm:flex bg-primary hover:bg-brand-blue-dark text-white font-medium px-6 py-2.5 rounded-xl">
+              <Button 
+                className="hidden sm:flex bg-primary hover:bg-brand-blue-dark text-white font-medium px-6 py-2.5 rounded-xl"
+                onClick={() => setContactFormOpen(true)}
+              >
                 <Icon name="Phone" size={16} className="mr-2" />
                 Связаться
               </Button>
               
               <MobileMenu 
                 isOpen={mobileMenuOpen} 
-                onToggle={() => setMobileMenuOpen(!mobileMenuOpen)} 
+                onToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+                onContactClick={() => setContactFormOpen(true)}
               />
             </div>
           </div>
@@ -106,6 +112,7 @@ export default function Index() {
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-brand-blue-dark text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30"
+                  onClick={() => setContactFormOpen(true)}
                 >
                   <Icon name="Wrench" size={20} className="mr-3" />
                   Заказать диагностику
@@ -875,6 +882,12 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Contact Form Modal */}
+      <ContactForm 
+        isOpen={contactFormOpen}
+        onClose={() => setContactFormOpen(false)}
+      />
     </div>
   );
 }
