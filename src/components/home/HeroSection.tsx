@@ -19,9 +19,23 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
       </div>
       
       <div className="max-w-7xl mx-auto relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        {/* Заголовок для мобильных устройств */}
+        <div className="lg:hidden space-y-6 mb-8 text-center">
+          <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
+            ⚓ Профессиональный ремонт морских двигателей
+          </Badge>
+          
+          <h1 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
+            Профессиональное{' '}
+            <span className="text-primary">восстановление</span>{' '}
+            двигателей для катеров и яхт
+          </h1>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="space-y-8 order-2 lg:order-1">
-            <div className="space-y-6">
+            {/* Заголовок для десктопа */}
+            <div className="hidden lg:block space-y-6">
               <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
                 ⚓ Профессиональный ремонт морских двигателей
               </Badge>
@@ -31,19 +45,19 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
                 <span className="text-primary">восстановление</span>{' '}
                 двигателей для катеров и яхт
               </h1>
-              
-              <div className="space-y-4">
-                <p className="text-xl text-brand-gray-600 leading-relaxed font-medium">
-                  Специализируемся на ремонте и восстановлении стационарных двигателей 
-                  <span className="text-brand-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha</span>
-                </p>
-                <p className="text-lg text-brand-gray-500">
-                  Более 12 лет опыта • Гарантия качества • Оригинальные запчасти
-                </p>
-              </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="space-y-4">
+              <p className="text-lg lg:text-xl text-brand-gray-600 leading-relaxed font-medium text-center lg:text-left">
+                Специализируемся на ремонте и восстановлении стационарных двигателей 
+                <span className="text-brand-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha</span>
+              </p>
+              <p className="text-base lg:text-lg text-brand-gray-500 text-center lg:text-left">
+                Более 12 лет опыта • Гарантия качества • Оригинальные запчасти
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-brand-blue-dark text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30"
@@ -66,18 +80,18 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
             </div>
             
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-brand-gray-200">
+            <div className="grid grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t border-brand-gray-200">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">500+</div>
-                <div className="text-sm text-brand-gray-600">Двигателей отремонтировано</div>
+                <div className="text-xl lg:text-2xl font-bold text-primary">500+</div>
+                <div className="text-xs lg:text-sm text-brand-gray-600">Двигателей отремонтировано</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">12</div>
-                <div className="text-sm text-brand-gray-600">Лет опыта</div>
+                <div className="text-xl lg:text-2xl font-bold text-primary">12</div>
+                <div className="text-xs lg:text-sm text-brand-gray-600">Лет опыта</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">100%</div>
-                <div className="text-sm text-brand-gray-600">Гарантия качества</div>
+                <div className="text-xl lg:text-2xl font-bold text-primary">100%</div>
+                <div className="text-xs lg:text-sm text-brand-gray-600">Гарантия качества</div>
               </div>
             </div>
           </div>
