@@ -101,116 +101,230 @@ export default function Index() {
       </section>
 
       {/* What We Offer Section */}
-      <section id="services" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section id="services" className="py-20 px-4 bg-gradient-to-br from-marine-light/20 via-white to-primary/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/5 via-transparent to-primary/5 opacity-60"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-marine-dark mb-4">Что мы предлагаем</h2>
+            <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-lg px-6 py-2">
+              🔧 Наши услуги
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
+              Что мы <span className="text-primary">предлагаем</span>
+            </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
-              Комплексные решения для восстановления и обслуживания морских двигателей
+              Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { 
                 title: 'Восстановление двигателей под ключ', 
-                description: 'Полное восстановление с гарантией качества и современными технологиями',
-                icon: 'RefreshCw'
+                description: 'Полное восстановление с гарантией качества и современными технологиями. Используем только оригинальные компоненты.',
+                icon: 'RefreshCw',
+                image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
+                accent: 'text-blue-600',
+                bgColor: 'bg-blue-50',
+                features: ['Капитальный ремонт', 'Современные технологии', 'Гарантия качества']
               },
               { 
                 title: 'Продажа лонг-блоков', 
-                description: 'Готовые к установке блоки двигателей с полной комплектацией',
-                icon: 'Package'
+                description: 'Готовые к установке блоки двигателей с полной комплектацией и тестированием на стенде.',
+                icon: 'Package',
+                image: '/img/04333da0-be06-4c2d-ac1d-74f71868a541.jpg',
+                accent: 'text-green-600',
+                bgColor: 'bg-green-50',
+                features: ['Готовые блоки', 'Полная комплектация', 'Тестирование']
               },
               { 
                 title: 'Профессиональная диагностика', 
-                description: 'Комплексная диагностика с детальным отчетом о состоянии',
-                icon: 'Search'
+                description: 'Комплексная диагностика с детальным отчетом о состоянии и рекомендациями по ремонту.',
+                icon: 'Search',
+                image: '/img/a78e3607-d6ee-449a-895b-7ab9dc9b726e.jpg',
+                accent: 'text-orange-600',
+                bgColor: 'bg-orange-50',
+                features: ['Детальный отчет', 'Профессиональное оборудование', 'Рекомендации']
               },
               { 
                 title: 'Комплектующие для ремонта', 
-                description: 'Оригинальные запчасти и расходные материалы',
-                icon: 'Settings'
+                description: 'Оригинальные запчасти и расходные материалы от официальных поставщиков с доставкой.',
+                icon: 'Settings',
+                image: '/img/04333da0-be06-4c2d-ac1d-74f71868a541.jpg',
+                accent: 'text-purple-600',
+                bgColor: 'bg-purple-50',
+                features: ['Оригинальные запчасти', 'Быстрая доставка', 'Гарантия качества']
               },
               { 
                 title: 'Гарантийное обслуживание', 
-                description: 'Сервисная поддержка и обслуживание восстановленных двигателей',
-                icon: 'Shield'
+                description: 'Сервисная поддержка и обслуживание восстановленных двигателей с долгосрочной гарантией.',
+                icon: 'Shield',
+                image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
+                accent: 'text-red-600',
+                bgColor: 'bg-red-50',
+                features: ['Долгосрочная гарантия', 'Сервисная поддержка', 'Техническое обслуживание']
               }
-            ].map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20 flex flex-col h-full">
-                <div className="aspect-video bg-marine-light rounded-t-lg flex items-center justify-center mb-4">
-                  <div className="bg-white/80 p-4 rounded-lg">
-                    <Icon name={service.icon} size={32} className="text-marine-blue" />
+            ].slice(0, 3).map((service, index) => (
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <div className={`${service.bgColor} p-3 rounded-full shadow-lg`}>
+                      <Icon name={service.icon} size={24} className={service.accent} />
+                    </div>
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <CardHeader className="pt-0 flex-shrink-0">
-                  <CardTitle className="text-lg leading-tight">{service.title}</CardTitle>
+                
+                <CardHeader className="pb-3">
+                  <CardTitle className={`text-xl font-bold ${service.accent} mb-2 group-hover:text-primary transition-colors duration-300`}>
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0 flex flex-col flex-grow">
-                  <p className="text-marine-steel text-sm leading-relaxed flex-grow">{service.description}</p>
-                  <Button variant="outline" className="w-full mt-4 text-marine-blue border-marine-blue hover:bg-marine-blue hover:text-white">
+                
+                <CardContent className="space-y-4">
+                  <p className="text-marine-steel leading-relaxed group-hover:text-marine-dark transition-colors duration-300">
+                    {service.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-marine-steel">
+                        <Icon name="CheckCircle" size={16} className="text-green-500" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <Icon name="ArrowRight" size={16} className="ml-2" />
                     Подробнее
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
+          
+          <div className="text-center mt-12">
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
+              <Icon name="Grid3X3" size={20} className="mr-2" />
+              Посмотреть все услуги
+            </Button>
+          </div>
+        </div>
+      </section>
+          </div>
         </div>
       </section>
 
       {/* Why Us Section */}
-      <section id="why-us" className="py-20 px-4 bg-marine-light">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-marine-dark mb-8">Почему выбирают нас</h2>
-              <div className="space-y-6">
-                {[
-                  {
-                    icon: 'Cog',
-                    title: 'Профессиональное восстановление',
-                    description: 'Не просто ремонт, а полная реконструкция с использованием современных компонентов. Восстановленные двигатели часто превосходят заводские аналоги.'
-                  },
-                  {
-                    icon: 'Package',
-                    title: 'Широкий ассортимент',
-                    description: 'Предлагаем готовые решения «под ключ» и лонг-блоки для самостоятельной сборки. Подберем двигатель под любые задачи.'
-                  },
-                  {
-                    icon: 'Users',
-                    title: 'Экспертный подход',
-                    description: 'Команда квалифицированных мастеров с глубоким знанием конструкции Volvo Penta и Mercruiser.'
-                  },
-                  {
-                    icon: 'Shield',
-                    title: 'Гарантийные обязательства',
-                    description: 'Каждый восстановленный двигатель проходит тщательное тестирование и сопровождается официальной гарантией.'
-                  },
-                  {
-                    icon: 'Wrench',
-                    title: 'Комплексное обслуживание',
-                    description: 'Выполняем работы любой сложности, от замены отдельных узлов до полной сборки мотора.'
-                  }
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
-                      <Icon name={item.icon} size={24} className="text-primary" />
+      <section id="why-us" className="py-20 px-4 bg-gradient-to-br from-marine-light/30 via-white to-marine-blue/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/3 via-transparent to-primary/3 opacity-60"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-lg px-6 py-2">
+              ⭐ Наши преимущества
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
+              Почему выбирают <span className="text-primary">именно нас</span>
+            </h2>
+            <p className="text-xl text-marine-steel max-w-3xl mx-auto">
+              Более 15 лет опыта, тысячи восстановленных двигателей и довольных клиентов
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              {[
+                {
+                  icon: 'Award',
+                  title: 'Профессиональное восстановление',
+                  description: 'Не просто ремонт, а полная реконструкция с использованием современных компонентов.',
+                  accent: 'text-blue-600',
+                  bgColor: 'bg-blue-50',
+                  stats: '500+ двигателей в год'
+                },
+                {
+                  icon: 'Package',
+                  title: 'Широкий ассортимент',
+                  description: 'Готовые решения «под ключ» и лонг-блоки для самостоятельной сборки.',
+                  accent: 'text-green-600',
+                  bgColor: 'bg-green-50',
+                  stats: '50+ моделей в наличии'
+                },
+                {
+                  icon: 'Users',
+                  title: 'Экспертная команда',
+                  description: 'Квалифицированные мастера с глубоким знанием Volvo Penta и Mercruiser.',
+                  accent: 'text-orange-600',
+                  bgColor: 'bg-orange-50',
+                  stats: '15+ лет опыта'
+                },
+                {
+                  icon: 'Shield',
+                  title: 'Гарантийные обязательства',
+                  description: 'Тщательное тестирование и официальная гарантия на каждый двигатель.',
+                  accent: 'text-purple-600',
+                  bgColor: 'bg-purple-50',
+                  stats: '2 года гарантии'
+                }
+              ].map((item, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm p-6">
+                  <div className="flex items-start gap-4">
+                    <div className={`${item.bgColor} p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon name={item.icon} size={28} className={item.accent} />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-marine-dark mb-2">{item.title}</h3>
-                      <p className="text-marine-steel">{item.description}</p>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className={`text-xl font-bold ${item.accent} group-hover:text-primary transition-colors duration-300`}>
+                          {item.title}
+                        </h3>
+                        <Badge variant="outline" className="text-xs font-medium">
+                          {item.stats}
+                        </Badge>
+                      </div>
+                      <p className="text-marine-steel leading-relaxed group-hover:text-marine-dark transition-colors duration-300">
+                        {item.description}
+                      </p>
+                      <div className="flex items-center gap-2 mt-3 text-sm text-green-600 font-medium">
+                        <Icon name="CheckCircle" size={16} />
+                        <span>Проверено временем</span>
+                      </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </Card>
+              ))}
             </div>
+            
             <div className="relative">
-              <img 
-                src="/img/69551f2d-ae28-47dc-8b0c-008881fafee8.jpg" 
-                alt="Современное оборудование для ремонта двигателей"
-                className="rounded-2xl shadow-xl w-full h-auto"
-              />
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src="/img/69551f2d-ae28-47dc-8b0c-008881fafee8.jpg" 
+                  alt="Современное оборудование для ремонта двигателей"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+                    <div className="flex items-center gap-3">
+                      <Icon name="MapPin" size={20} className="text-primary" />
+                      <div>
+                        <p className="font-semibold text-marine-dark">Современная мастерская</p>
+                        <p className="text-sm text-marine-steel">Профессиональное оборудование</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Декоративные элементы */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-marine-blue/20 rounded-full blur-2xl"></div>
             </div>
           </div>
         </div>
@@ -307,51 +421,156 @@ export default function Index() {
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section id="gallery" className="py-20 px-4 bg-gradient-to-br from-white via-marine-light/10 to-primary/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/2 via-transparent to-primary/2 opacity-50"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-marine-dark mb-4">Наши работы</h2>
-            <p className="text-xl text-marine-steel max-w-2xl mx-auto text-center">Примеры выполненных Нами проектов по восстановлению стационарных двигателей</p>
+            <Badge className="mb-4 bg-green-50 text-green-600 border-green-200 text-lg px-6 py-2">
+              🏆 Наши работы
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
+              Примеры <span className="text-primary">выполненных проектов</span>
+            </h2>
+            <p className="text-xl text-marine-steel max-w-3xl mx-auto">
+              Профессиональное восстановление стационарных двигателей с гарантией качества
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Volvo Penta D6-350', type: 'Капитальный ремонт', status: 'Завершено' },
-              { title: 'Mercruiser 5.7L', type: 'Замена поршневой', status: 'Завершено' },
-              { title: 'Yamaha 6.2L', type: 'Модернизация системы', status: 'Завершено' },
-              { title: 'Indmar Raptor 6.0L', type: 'Восстановление блока', status: 'Завершено' },
-              { title: 'Volvo Penta D4-180', type: 'Ремонт турбины', status: 'Завершено' },
-              { title: 'Mercruiser 6.2L', type: 'Полное восстановление', status: 'Завершено' }
+              { 
+                title: 'Volvo Penta D6-350', 
+                type: 'Капитальный ремонт', 
+                status: 'Завершено',
+                image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
+                duration: '14 дней',
+                features: ['Новая поршневая', 'Обновленная электроника', 'Модернизация системы охлаждения'],
+                accent: 'text-blue-600',
+                bgColor: 'bg-blue-50'
+              },
+              { 
+                title: 'Mercruiser 5.7L', 
+                type: 'Замена поршневой', 
+                status: 'Завершено',
+                image: '/img/7f7497d1-f1ad-4824-b35d-61928133340f.jpg',
+                duration: '10 дней',
+                features: ['Форсированные поршни', 'Балансировка коленвала', 'Новые форсунки'],
+                accent: 'text-green-600',
+                bgColor: 'bg-green-50'
+              },
+              { 
+                title: 'Yamaha 6.2L', 
+                type: 'Модернизация системы', 
+                status: 'Завершено',
+                image: '/img/7362f21a-774e-4981-abe9-d46ef65ceb65.jpg',
+                duration: '18 дней',
+                features: ['Турбонаддув', 'Интеркулер', 'Программная настройка'],
+                accent: 'text-orange-600',
+                bgColor: 'bg-orange-50'
+              },
+              { 
+                title: 'Indmar Raptor 6.0L', 
+                type: 'Восстановление блока', 
+                status: 'Завершено',
+                image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
+                duration: '21 день',
+                features: ['Расточка блока', 'Новая ГБЦ', 'Система впрыска'],
+                accent: 'text-purple-600',
+                bgColor: 'bg-purple-50'
+              },
+              { 
+                title: 'Volvo Penta D4-180', 
+                type: 'Ремонт турбины', 
+                status: 'Завершено',
+                image: '/img/7f7497d1-f1ad-4824-b35d-61928133340f.jpg',
+                duration: '7 дней',
+                features: ['Новый картридж', 'Обновленные магистрали', 'Калибровка системы'],
+                accent: 'text-red-600',
+                bgColor: 'bg-red-50'
+              },
+              { 
+                title: 'Mercruiser 6.2L', 
+                type: 'Полное восстановление', 
+                status: 'Завершено',
+                image: '/img/7362f21a-774e-4981-abe9-d46ef65ceb65.jpg',
+                duration: '25 дней',
+                features: ['Капремонт блока', 'Новая трансмиссия', 'Полная электроника'],
+                accent: 'text-indigo-600',
+                bgColor: 'bg-indigo-50'
+              }
             ].map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <CardTitle className="text-lg">{project.title}</CardTitle>
-                    <Badge variant="secondary" className="bg-green-50 text-green-600">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-green-50 text-green-600 border-green-200 shadow-lg">
                       {project.status}
                     </Badge>
                   </div>
-                  <CardDescription>{project.type}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="bg-marine-light h-32 rounded-lg flex items-center justify-center mb-4">
-                    <Icon name="Camera" size={32} className="text-marine-steel" />
+                  <div className="absolute top-4 right-4">
+                    <div className={`${project.bgColor} px-3 py-1 rounded-full shadow-lg`}>
+                      <span className={`text-sm font-medium ${project.accent}`}>{project.duration}</span>
+                    </div>
                   </div>
-                  <Button variant="outline" className="w-full">
-                    Подробнее
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                
+                <CardHeader className="pb-3">
+                  <div className="flex justify-between items-start mb-2">
+                    <CardTitle className={`text-xl font-bold ${project.accent} group-hover:text-primary transition-colors duration-300`}>
+                      {project.title}
+                    </CardTitle>
+                  </div>
+                  <CardDescription className="text-marine-steel font-medium">
+                    {project.type}
+                  </CardDescription>
+                </CardHeader>
+                
+                <CardContent className="space-y-4">
+                  <div className="space-y-2">
+                    {project.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-marine-steel">
+                        <Icon name="CheckCircle" size={14} className="text-green-500 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <Icon name="Eye" size={16} className="mr-2" />
+                    Посмотреть детали
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
+          
+          <div className="text-center mt-12">
+            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
+              <Icon name="Grid3X3" size={20} className="mr-2" />
+              Посмотреть все проекты
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Guarantees Section */}
-      <section id="guarantees" className="py-20 px-4 bg-marine-dark text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Гарантии качества</h2>
-          <p className="text-xl text-marine-light/80 mb-12 max-w-3xl mx-auto">
+      <section id="guarantees" className="py-20 px-4 bg-gradient-to-br from-marine-dark via-marine-dark/95 to-primary/10 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/10 via-transparent to-primary/10 opacity-50"></div>
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <Badge className="mb-4 bg-white/10 text-white border-white/20 text-lg px-6 py-2">
+            🛡️ Наши гарантии
+          </Badge>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            Гарантии <span className="text-marine-accent">качества</span>
+          </h2>
+          <p className="text-xl text-marine-light/90 mb-12 max-w-3xl mx-auto">
             Мы настолько уверены в качестве наших услуг, что предоставляем расширенные гарантии
           </p>
 
@@ -360,96 +579,180 @@ export default function Index() {
               {
                 icon: 'Shield',
                 title: '2 года гарантии',
-                description: 'На все виды капитального ремонта двигателей'
+                description: 'На все виды капитального ремонта двигателей',
+                accent: 'text-green-400',
+                bgColor: 'bg-green-400/20',
+                features: ['Капитальный ремонт', 'Замена агрегатов', 'Электронные системы']
               },
               {
                 icon: 'RefreshCw',
                 title: 'Бесплатное ТО',
-                description: 'Первое техническое обслуживание за наш счёт'
+                description: 'Первое техническое обслуживание за наш счёт',
+                accent: 'text-blue-400',
+                bgColor: 'bg-blue-400/20',
+                features: ['Замена масла', 'Диагностика систем', 'Профилактическое обслуживание']
               },
               {
                 icon: 'Headphones',
                 title: '24/7 поддержка',
-                description: 'Круглосуточная техническая поддержка'
+                description: 'Круглосуточная техническая поддержка',
+                accent: 'text-orange-400',
+                bgColor: 'bg-orange-400/20',
+                features: ['Консультации экспертов', 'Удаленная диагностика', 'Экстренная помощь']
               }
-            ].map((guarantee) => (
-              <div key={guarantee.title} className="text-center">
-                <div className="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Icon name={guarantee.icon} size={32} className="text-marine-accent" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4">{guarantee.title}</h3>
-                <p className="text-marine-light/70">{guarantee.description}</p>
-              </div>
+            ].map((guarantee, index) => (
+              <Card key={index} className="group bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-marine-accent/20">
+                <CardContent className="p-8 text-center">
+                  <div className={`${guarantee.bgColor} w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon name={guarantee.icon} size={36} className={guarantee.accent} />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-marine-accent transition-colors duration-300">
+                    {guarantee.title}
+                  </h3>
+                  <p className="text-marine-light/80 mb-6 leading-relaxed">
+                    {guarantee.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    {guarantee.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-marine-light/70 justify-center">
+                        <Icon name="CheckCircle" size={14} className={guarantee.accent} />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-marine-accent hover:bg-marine-accent/90 text-white shadow-2xl hover:shadow-xl transition-all duration-300 px-8 py-4">
+              <Icon name="Phone" size={20} className="mr-2" />
+              Узнать подробности гарантии
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contacts" className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section id="contacts" className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 text-lg px-6 py-2">
+              📞 Связаться с нами
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
+              Готовы начать <span className="text-primary">восстановление</span>?
+            </h2>
+            <p className="text-xl text-marine-steel max-w-3xl mx-auto">
+              Свяжитесь с нами любым удобным способом, и получите персональную консультацию эксперта
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold text-marine-dark mb-8">Свяжитесь с нами</h2>
               <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Icon name="Phone" size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-marine-dark">Телефон</p>
-                    <p className="text-marine-steel">+7 (xxx) xxx-xx-xx</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Icon name="Mail" size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-marine-dark">Email</p>
-                    <p className="text-marine-steel">info@marineservice.ru</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Icon name="MapPin" size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-marine-dark">Адрес</p>
-                    <p className="text-marine-steel">г. Москва, ул. Морская, д. 15</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-lg">
-                    <Icon name="Clock" size={20} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-marine-dark">Режим работы</p>
-                    <p className="text-marine-steel">Пн-Пт: 9:00-18:00, Сб: 10:00-16:00</p>
-                  </div>
-                </div>
+                {[
+                  {
+                    icon: 'Phone',
+                    title: 'Телефон',
+                    value: '+7 (xxx) xxx-xx-xx',
+                    description: 'Звоните с 9:00 до 18:00',
+                    accent: 'text-green-600',
+                    bgColor: 'bg-green-50',
+                    action: 'Позвонить сейчас'
+                  },
+                  {
+                    icon: 'Mail',
+                    title: 'Email',
+                    value: 'info@marineservice.ru',
+                    description: 'Отвечаем в течение часа',
+                    accent: 'text-blue-600',
+                    bgColor: 'bg-blue-50',
+                    action: 'Написать письмо'
+                  },
+                  {
+                    icon: 'MapPin',
+                    title: 'Адрес мастерской',
+                    value: 'г. Москва, ул. Морская, д. 15',
+                    description: 'Приезжайте на экскурсию',
+                    accent: 'text-orange-600',
+                    bgColor: 'bg-orange-50',
+                    action: 'Построить маршрут'
+                  },
+                  {
+                    icon: 'Clock',
+                    title: 'Режим работы',
+                    value: 'Пн-Пт: 9:00-18:00, Сб: 10:00-16:00',
+                    description: 'Воскресенье - выходной',
+                    accent: 'text-purple-600',
+                    bgColor: 'bg-purple-50',
+                    action: 'Записаться на визит'
+                  }
+                ].map((contact, index) => (
+                  <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className={`${contact.bgColor} p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          <Icon name={contact.icon} size={24} className={contact.accent} />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className={`font-bold text-lg ${contact.accent} mb-1 group-hover:text-primary transition-colors duration-300`}>
+                            {contact.title}
+                          </h3>
+                          <p className="text-marine-dark font-medium mb-1">{contact.value}</p>
+                          <p className="text-sm text-marine-steel mb-3">{contact.description}</p>
+                          <Button variant="outline" size="sm" className={`${contact.accent} border-current hover:bg-current hover:text-white transition-all duration-300`}>
+                            <Icon name="ArrowRight" size={14} className="mr-1" />
+                            {contact.action}
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
 
-            <Card className="shadow-xl">
-              <CardHeader>
-                <CardTitle>Оставить заявку</CardTitle>
-                <CardDescription>
-                  Заполните форму, и мы свяжемся с вами в течение часа
-                </CardDescription>
+            <Card className="shadow-2xl border-2 border-primary/20 bg-white/90 backdrop-blur-sm">
+              <CardHeader className="bg-gradient-to-r from-primary/10 to-marine-blue/10 rounded-t-lg">
+                <div className="flex items-center gap-3">
+                  <div className="bg-primary/20 p-2 rounded-lg">
+                    <Icon name="MessageSquare" size={20} className="text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl text-marine-dark">Оставить заявку</CardTitle>
+                    <CardDescription className="text-marine-steel">
+                      Заполните форму, и мы свяжемся с вами в течение часа
+                    </CardDescription>
+                  </div>
+                </div>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Input placeholder="Ваше имя" />
-                <Input placeholder="Телефон" type="tel" />
-                <Input placeholder="Email" type="email" />
-                <Textarea placeholder="Опишите проблему с двигателем..." rows={4} />
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  <Icon name="Send" size={16} className="mr-2" />
+              <CardContent className="space-y-4 p-6">
+                <Input placeholder="Ваше имя" className="border-2 focus:border-primary transition-colors duration-300" />
+                <Input placeholder="Телефон" type="tel" className="border-2 focus:border-primary transition-colors duration-300" />
+                <Input placeholder="Email" type="email" className="border-2 focus:border-primary transition-colors duration-300" />
+                <Textarea 
+                  placeholder="Опишите проблему с двигателем..." 
+                  rows={4} 
+                  className="border-2 focus:border-primary transition-colors duration-300 resize-none"
+                />
+                <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 py-3 text-lg font-medium">
+                  <Icon name="Send" size={18} className="mr-2" />
                   Отправить заявку
                 </Button>
-                <p className="text-xs text-marine-steel text-center">
-                  Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                </p>
+                <div className="bg-marine-light/50 rounded-lg p-3 text-center">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <Icon name="Shield" size={16} className="text-green-600" />
+                    <p className="text-sm font-medium text-marine-dark">Гарантируем конфиденциальность</p>
+                  </div>
+                  <p className="text-xs text-marine-steel">
+                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
