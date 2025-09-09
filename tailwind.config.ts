@@ -62,16 +62,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Jivo-inspired color palette
-				jivo: {
-					green: '#00C26D',
-					'green-dark': '#00A85A',
-					'green-light': '#E8F9F2',
-					blue: '#0078FF',
-					'blue-dark': '#0066E6',
-					'blue-light': '#E6F2FF',
-					orange: '#FF6B35',
-					'orange-light': '#FFF0EB',
+				// Brand color palette
+				brand: {
+					blue: '#1d4cd7',
+					'blue-dark': '#1540bd',
+					'blue-light': '#e6ecfd',
+					background: '#f2f6fa',
 					gray: {
 						50: '#F8FAFC',
 						100: '#F1F5F9',

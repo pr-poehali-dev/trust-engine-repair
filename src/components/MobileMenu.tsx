@@ -153,7 +153,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
               {/* CTA Button */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <Button 
-                  className="w-full bg-primary hover:bg-jivo-green-dark text-white font-semibold py-3 rounded-xl shadow-lg"
+                  className="w-full bg-primary hover:bg-brand-blue-dark text-white font-semibold py-3 rounded-xl shadow-lg"
                   onClick={handleLinkClick}
                 >
                   <Icon name="Phone" size={18} className="mr-2" />

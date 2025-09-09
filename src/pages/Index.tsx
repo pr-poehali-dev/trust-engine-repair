@@ -24,38 +24,38 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-jivo-gray-50 via-white to-jivo-green-light/20">
+    <div className="min-h-screen bg-[#f2f6fa]">
       {/* Navigation */}
       <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-4">
               <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
-              <span className="hidden sm:block text-sm text-jivo-gray-600 font-medium">
+              <span className="hidden sm:block text-sm text-brand-gray-600 font-medium">
                 Новая жизнь вашего двигателя
               </span>
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+              <a href="#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Услуги
               </a>
-              <a href="#why-us" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+              <a href="#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Почему мы
               </a>
-              <a href="#gallery" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+              <a href="#gallery" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Наши работы
               </a>
-              <a href="#guarantees" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+              <a href="#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Гарантии
               </a>
-              <a href="#contacts" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+              <a href="#contacts" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Контакты
               </a>
             </div>
             
             <div className="flex items-center gap-3">
-              <Button className="hidden sm:flex bg-primary hover:bg-jivo-green-dark text-white font-medium px-6 py-2.5 rounded-xl">
+              <Button className="hidden sm:flex bg-primary hover:bg-brand-blue-dark text-white font-medium px-6 py-2.5 rounded-xl">
                 <Icon name="Phone" size={16} className="mr-2" />
                 Связаться
               </Button>
@@ -74,7 +74,7 @@ export default function Index() {
         {/* Background decorations */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-40 h-40 bg-jivo-blue/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative">
@@ -85,18 +85,18 @@ export default function Index() {
                   ⚓ Профессиональный ремонт морских двигателей
                 </Badge>
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-jivo-gray-900 leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">
                   Профессиональное{' '}
                   <span className="text-primary">восстановление</span>{' '}
                   морских двигателей
                 </h1>
                 
                 <div className="space-y-4">
-                  <p className="text-xl text-jivo-gray-600 leading-relaxed font-medium">
+                  <p className="text-xl text-brand-gray-600 leading-relaxed font-medium">
                     Специализируемся на ремонте и восстановлении стационарных двигателей 
-                    <span className="text-jivo-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha</span>
+                    <span className="text-brand-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha</span>
                   </p>
-                  <p className="text-lg text-jivo-gray-500">
+                  <p className="text-lg text-brand-gray-500">
                     Более 15 лет опыта • Гарантия качества • Оригинальные запчасти
                   </p>
                 </div>
@@ -105,7 +105,7 @@ export default function Index() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-jivo-green-dark text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30"
+                  className="bg-primary hover:bg-brand-blue-dark text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30"
                 >
                   <Icon name="Wrench" size={20} className="mr-3" />
                   Заказать диагностику
@@ -113,7 +113,7 @@ export default function Index() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="border-2 border-jivo-gray-300 text-jivo-gray-700 hover:bg-jivo-gray-50 font-semibold px-8 py-4 rounded-xl text-base transition-all"
+                  className="border-2 border-brand-gray-300 text-brand-gray-700 hover:bg-brand-gray-50 font-semibold px-8 py-4 rounded-xl text-base transition-all"
                 >
                   <Icon name="Play" size={20} className="mr-3" />
                   Смотреть работы
@@ -121,18 +121,18 @@ export default function Index() {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-jivo-gray-200">
+              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-brand-gray-200">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-jivo-gray-600">Двигателей отремонтировано</div>
+                  <div className="text-sm text-brand-gray-600">Двигателей отремонтировано</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">15</div>
-                  <div className="text-sm text-jivo-gray-600">Лет опыта</div>
+                  <div className="text-sm text-brand-gray-600">Лет опыта</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-jivo-gray-600">Гарантия качества</div>
+                  <div className="text-sm text-brand-gray-600">Гарантия качества</div>
                 </div>
               </div>
             </div>
@@ -140,19 +140,19 @@ export default function Index() {
             {/* Слайдер изображений */}
             <div className="relative order-1 lg:order-2">
               <div className="relative">
-                <div className="rounded-3xl shadow-2xl w-full h-[350px] sm:h-[450px] lg:h-[600px] overflow-hidden bg-gradient-to-br from-jivo-gray-100 to-white">
+                <div className="rounded-3xl shadow-2xl w-full h-[350px] sm:h-[450px] lg:h-[600px] overflow-hidden bg-gradient-to-br from-brand-gray-100 to-white">
                   <BannerSlider images={sliderImages} />
                 </div>
                 
                 {/* Floating elements */}
                 <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-2xl blur-xl"></div>
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-jivo-orange/10 rounded-2xl blur-xl"></div>
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-2xl blur-xl"></div>
                 
                 {/* Quality badge */}
                 <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                    <span className="text-sm font-semibold text-jivo-gray-800">Качество гарантировано</span>
+                    <span className="text-sm font-semibold text-brand-gray-800">Качество гарантировано</span>
                   </div>
                 </div>
               </div>
@@ -162,10 +162,10 @@ export default function Index() {
       </section>
 
       {/* What We Offer Section */}
-      <section id="services" className="py-24 px-4 bg-gradient-to-br from-jivo-gray-50 to-white relative overflow-hidden">
+      <section id="services" className="py-24 px-4 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-40 left-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-40 right-20 w-40 h-40 bg-jivo-orange/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative">
@@ -173,10 +173,10 @@ export default function Index() {
             <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
               🔧 Наши услуги
             </Badge>
-            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-jivo-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-gray-900 mb-6 leading-tight">
               Что мы <span className="text-primary">предлагаем</span>
             </h2>
-            <p className="text-xl text-jivo-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto leading-relaxed">
               Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
             </p>
           </div>
@@ -245,19 +245,19 @@ export default function Index() {
                 </div>
                 
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-xl font-bold text-jivo-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight">
+                  <CardTitle className="text-xl font-bold text-brand-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 
                 <CardContent className="space-y-6">
-                  <p className="text-jivo-gray-600 leading-relaxed">
+                  <p className="text-brand-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                   
                   <div className="space-y-2">
                     {service.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-marine-steel">
+                      <div key={i} className="flex items-center gap-2 text-sm text-brand-gray-500">
                         <Icon name="CheckCircle" size={16} className="text-primary" />
                         <span>{feature}</span>
                       </div>
