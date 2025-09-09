@@ -74,7 +74,7 @@ export default function Index() {
         
         <GallerySection />
         
-        <GuaranteesSection />
+        <GuaranteesSection onContactClick={() => setContactFormOpen(true)} />
         
         <ContactSection />
         
