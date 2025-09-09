@@ -55,10 +55,9 @@ export default function Index() {
                 <Badge className="mb-3 lg:mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-xs sm:text-sm">
                   Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="sm:text-4xl lg:text-5xl xl:text-6xl text-redmar-dark leading-tight font-medium text-5xl">
+                <h1 className="sm:text-4xl lg:text-5xl xl:text-6xl text-marine-dark leading-tight font-medium text-5xl">
                   Профессиональное восстановление стационарных двигателей{' '}
-                  <span className="text-redmar-red whitespace-nowrap font-bold text-4xl">Volvo Penta</span>{' '}
-                  <span className="text-redmar-blue whitespace-nowrap font-bold text-4xl">и Mercruiser</span>
+                  <span className="text-[#1967D2] whitespace-nowrap font-bold text-4xl">Volvo Penta и Mercruiser</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-marine-steel mt-4 lg:mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
@@ -90,8 +89,8 @@ export default function Index() {
             <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-lg px-6 py-2">
               🔧 Наши услуги
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
-              Что мы <span className="text-redmar-red">предлагаем</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
+              Что мы <span className="text-primary">предлагаем</span>
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
@@ -208,8 +207,8 @@ export default function Index() {
             <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-lg px-6 py-2">
               ⭐ Наши преимущества
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
-              Почему выбирают <span className="text-redmar-blue">именно нас</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
+              Почему выбирают <span className="text-primary">именно нас</span>
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Более 15 лет опыта, тысячи восстановленных двигателей и довольных клиентов
