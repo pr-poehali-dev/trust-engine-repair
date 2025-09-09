@@ -92,7 +92,7 @@ export default function Index() {
                 alt="Профессиональный ремонт морских двигателей"
                 className="rounded-2xl shadow-2xl w-full h-auto relative z-0"
                 style={{
-                  filter: 'brightness(1.1) contrast(1.05) saturate(1.1) hue-rotate(-5deg)'
+                  filter: 'brightness(1.1) contrast(1.25) saturate(1.1) hue-rotate(-5deg) blur(0px) sharpen(1.2)'
                 }}
               />
             </div>
