@@ -35,29 +35,31 @@ export default function NavigationSection({
 
   return (
     <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
+        <div className="flex justify-between items-center h-16 sm:h-20">
+          {/* Логотип с адаптивным слоганом */}
+          <div className="flex items-center min-w-0">
             {location.pathname === '/' ? (
-              <div className="flex items-center gap-4">
-                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
-                <span className="hidden sm:block text-brand-gray-600 font-medium text-xs">
+              <div className="flex items-center gap-2 lg:gap-4">
+                <img src="/logo.svg" alt="RED MAR" className="h-6 w-auto sm:h-7 lg:h-8 flex-shrink-0" />
+                <span className="hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
               </div>
             ) : (
-              <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
-                <span className="hidden sm:block text-brand-gray-600 font-medium text-xs">
+              <Link to="/" className="flex items-center gap-2 lg:gap-4 hover:opacity-80 transition-opacity">
+                <img src="/logo.svg" alt="RED MAR" className="h-6 w-auto sm:h-7 lg:h-8 flex-shrink-0" />
+                <span className="hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
               </Link>
             )}
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Главное меню с адаптивными отступами */}
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
             <div className="relative group">
-              <a href="#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px] flex items-center gap-1">
+              <a href="#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] flex items-center gap-1 whitespace-nowrap">
                 Услуги
                 <Icon name="ChevronDown" size={14} className="transition-transform group-hover:rotate-180" />
               </a>
@@ -92,23 +94,23 @@ export default function NavigationSection({
                 </div>
               </div>
             </div>
-            <a href="#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+            <a href="#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap">
               Почему мы
             </a>
             <Link 
               to="/projects" 
-              className={`font-medium transition-colors text-[15px] ${
+              className={`font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap ${
                 isActive('/projects') ? 'text-primary border-b-2 border-primary pb-1' : 'text-brand-gray-700 hover:text-primary'
               }`}
             >
-              Наши работы
+              Работы
             </Link>
-            <a href="#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+            <a href="#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap">
               Гарантии
             </a>
             <Link 
               to="/contact" 
-              className={`font-medium transition-colors text-[15px] ${
+              className={`font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap ${
                 isActive('/contact') ? 'text-primary border-b-2 border-primary pb-1' : 'text-brand-gray-700 hover:text-primary'
               }`}
             >
@@ -116,25 +118,29 @@ export default function NavigationSection({
             </Link>
           </div>
           
-          <div className="flex items-center gap-3">
-            {/* Search Button */}
+          {/* Правая группа элементов с компактным размещением */}
+          <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
+            {/* Search Button - компактный на средних экранах */}
             <Button
               variant="ghost"
               size="sm"
-              className="hidden md:flex items-center gap-2 text-gray-600 hover:text-primary hover:bg-gray-50 px-3 py-2"
+              className="hidden md:flex items-center gap-1 lg:gap-2 text-gray-600 hover:text-primary hover:bg-gray-50 px-2 lg:px-3 py-2"
               onClick={() => setSearchOpen(true)}
               onKeyDown={handleKeyDown}
             >
               <Icon name="Search" size={16} />
-              <span className="hidden lg:block text-sm">Поиск</span>
+              <span className="hidden lg:block text-sm whitespace-nowrap">Поиск</span>
             </Button>
 
+            {/* Контактная кнопка - адаптивный текст */}
             <Button 
-              className="hidden sm:flex bg-primary hover:bg-brand-blue-dark text-white font-medium px-6 py-2.5 rounded-xl"
+              className="hidden sm:flex bg-primary hover:bg-brand-blue-dark text-white font-medium px-3 sm:px-4 lg:px-6 py-2 lg:py-2.5 rounded-xl text-sm lg:text-base"
               onClick={onContactClick}
             >
-              <Icon name="Phone" size={16} className="mr-2" />
-              Связаться
+              <Icon name="Phone" size={16} className="mr-1 lg:mr-2" />
+              <span className="hidden md:inline lg:hidden">Звонок</span>
+              <span className="hidden lg:inline">Связаться</span>
+              <span className="md:hidden">Звонок</span>
             </Button>
             
             <MobileMenu 

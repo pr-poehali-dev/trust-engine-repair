@@ -1,0 +1,99 @@
+/* Адаптивная навигация для разных разрешений */
+
+/* Базовые стили для предотвращения переносов */
+.nav-no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Мобильные устройства - очень компактно */
+@media (max-width: 640px) {
+  .nav-mobile-compact {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Планшеты - средний размер */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .nav-tablet-medium {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+  }
+}
+
+/* Десктоп - полный размер */
+@media (min-width: 1025px) {
+  .nav-desktop-full {
+    font-size: 0.9375rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Специальные breakpoints для навигации */
+@media (min-width: 768px) and (max-width: 1280px) {
+  /* Средние экраны - скрываем слоган для экономии места */
+  .nav-slogan-adaptive {
+    display: none;
+  }
+
+  /* Компактные отступы между элементами меню */
+  .nav-menu-compact {
+    gap: 0.75rem;
+  }
+
+  /* Уменьшенные кнопки */
+  .nav-button-compact {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Очень широкие экраны - показываем всё */
+@media (min-width: 1536px) {
+  .nav-slogan-show {
+    display: block;
+  }
+
+  .nav-menu-spacious {
+    gap: 2rem;
+  }
+
+  .nav-button-spacious {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Предотвращение наложения контента */
+.nav-safe-area {
+  min-height: 4rem; /* 64px */
+}
+
+@media (min-width: 640px) {
+  .nav-safe-area {
+    min-height: 5rem; /* 80px */
+  }
+}
+
+/* Flexbox утилиты для правильного размещения */
+.nav-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.nav-flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.nav-flex-grow-0 {
+  flex-grow: 0;
+}
+
+/* Эллипсис для длинных текстов */
+.nav-text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
