@@ -844,13 +844,13 @@ export default function Index() {
                   Новая жизнь вашего двигателя
                 </span>
               </div>
-              <p className="text-marine-light/70">
+              <p className="text-white/70">
                 Профессиональный ремонт морских двигателей с гарантией качества
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Услуги</h3>
-              <ul className="space-y-2 text-marine-light/70">
+              <ul className="space-y-2 text-white/70">
                 <li>Ремонт Volvo Penta</li>
                 <li>Ремонт Mercruiser</li>
                 <li>Ремонт Indmar</li>
@@ -859,7 +859,7 @@ export default function Index() {
             </div>
             <div>
               <h3 className="font-semibold mb-4">Информация</h3>
-              <ul className="space-y-2 text-marine-light/70">
+              <ul className="space-y-2 text-white/70">
                 <li>О компании</li>
                 <li>Гарантии</li>
                 <li>Сертификаты</li>
@@ -868,7 +868,7 @@ export default function Index() {
             </div>
             <div>
               <h3 className="font-semibold mb-4">Контакты</h3>
-              <div className="space-y-2 text-marine-light/70">
+              <div className="space-y-2 text-white/70">
                 <p>+7 (xxx) xxx-xx-xx</p>
                 <p>info@marineservice.ru</p>
                 <p>г. Москва, ул. Морская, д. 15</p>
@@ -876,7 +876,7 @@ export default function Index() {
             </div>
           </div>
           <div className="border-t border-marine-steel/20 mt-8 pt-8 text-center">
-            <p className="text-marine-light/50">
+            <p className="text-white/50">
               © 2024 MarineService. Все права защищены.
             </p>
           </div>
