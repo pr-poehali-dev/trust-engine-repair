@@ -124,17 +124,17 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                       </div>
                     </a>
                     <a 
-                      href="#services" 
+                      href="/services/repair" 
                       className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl text-base block"
                       onClick={handleLinkClick}
                     >
                       <div className="flex items-center gap-3">
-                        <Icon name="Search" size={18} className="text-gray-500" />
-                        <span>Диагностика</span>
+                        <Icon name="Wrench" size={18} className="text-gray-500" />
+                        <span>Ремонт двигателей</span>
                       </div>
                     </a>
                     <a 
-                      href="#services" 
+                      href="/services/longblocks" 
                       className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl text-base block"
                       onClick={handleLinkClick}
                     >
@@ -176,7 +176,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                   </div>
                 </a>
                 <a 
-                  href="#contacts" 
+                  href="/contact" 
                   className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
                   onClick={handleLinkClick}
                 >

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import NavigationSection from '@/components/home/NavigationSection';
 import FooterSection from '@/components/home/FooterSection';
 import ContactModal from '@/components/ContactModal';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -48,6 +49,8 @@ export default function Contact() {
         onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
         onContactClick={() => setContactFormOpen(true)}
       />
+      
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4">

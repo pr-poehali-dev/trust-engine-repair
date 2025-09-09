@@ -9,6 +9,7 @@ import GuaranteesSection from '@/components/home/GuaranteesSection';
 import ContactSection from '@/components/home/ContactSection';
 import FooterSection from '@/components/home/FooterSection';
 import ContactForm from '@/components/ContactForm';
+import FloatingActionButton from '@/components/FloatingActionButton';
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -57,6 +58,11 @@ export default function Index() {
         isOpen={contactFormOpen}
         onClose={() => setContactFormOpen(false)}
       />
+
+      {/* Floating Action Button - только на мобильных */}
+      <div className="md:hidden">
+        <FloatingActionButton />
+      </div>
     </div>
   );
 }

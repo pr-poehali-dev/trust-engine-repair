@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import MobileMenu from '@/components/MobileMenu';
@@ -14,6 +14,14 @@ export default function NavigationSection({
   onMobileMenuToggle, 
   onContactClick 
 }: NavigationSectionProps) {
+  const location = useLocation();
+  
+  const isActive = (path: string) => {
+    if (path === '/' && location.pathname === '/') return true;
+    if (path !== '/' && location.pathname.startsWith(path)) return true;
+    return false;
+  };
+
   return (
     <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,13 +73,23 @@ export default function NavigationSection({
             <a href="#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
               Почему мы
             </a>
-            <Link to="/projects" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+            <Link 
+              to="/projects" 
+              className={`font-medium transition-colors text-[15px] ${
+                isActive('/projects') ? 'text-primary border-b-2 border-primary pb-1' : 'text-brand-gray-700 hover:text-primary'
+              }`}
+            >
               Наши работы
             </Link>
             <a href="#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
               Гарантии
             </a>
-            <Link to="/contact" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+            <Link 
+              to="/contact" 
+              className={`font-medium transition-colors text-[15px] ${
+                isActive('/contact') ? 'text-primary border-b-2 border-primary pb-1' : 'text-brand-gray-700 hover:text-primary'
+              }`}
+            >
               Контакты
             </Link>
           </div>
