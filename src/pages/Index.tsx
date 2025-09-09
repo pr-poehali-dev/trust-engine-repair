@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,8 +7,11 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import BannerSlider from '@/components/BannerSlider';
+import MobileMenu from '@/components/MobileMenu';
 
 export default function Index() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   const sliderImages = [
     'https://cdn.poehali.dev/files/fa538d5f-21ab-4b35-a595-5b9dca841f5c.jpg',
     'https://cdn.poehali.dev/files/dd89e4b1-5705-418a-84b7-4841c120d189.jpg',
@@ -20,70 +24,137 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-marine-light to-white">
+    <div className="min-h-screen bg-gradient-to-br from-jivo-gray-50 via-white to-jivo-green-light/20">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-jivo-gray-200 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center gap-3">
-              <img src="/logo.svg" alt="RED MAR" className="h-6 w-auto sm:h-7 sm:w-auto md:h-8 md:w-auto" />
-              <span className="hidden sm:block text-xs text-marine-steel italic font-medium">
+          <div className="flex justify-between items-center h-20">
+            <div className="flex items-center gap-4">
+              <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
+              <span className="hidden sm:block text-sm text-jivo-gray-600 font-medium">
                 Новая жизнь вашего двигателя
               </span>
             </div>
+            
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-marine-steel hover:text-primary transition-colors">Услуги</a>
-              <a href="#why-us" className="text-marine-steel hover:text-primary transition-colors">Почему мы</a>
-              <a href="#gallery" className="text-marine-steel hover:text-primary transition-colors">Наши работы</a>
-              <a href="#guarantees" className="text-marine-steel hover:text-primary transition-colors">Гарантии</a>
-              <a href="#contacts" className="text-marine-steel hover:text-primary transition-colors">Контакты</a>
+              <a href="#services" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+                Услуги
+              </a>
+              <a href="#why-us" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+                Почему мы
+              </a>
+              <a href="#gallery" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+                Наши работы
+              </a>
+              <a href="#guarantees" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+                Гарантии
+              </a>
+              <a href="#contacts" className="text-jivo-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+                Контакты
+              </a>
             </div>
-            <Button className="bg-primary hover:bg-primary/90">
-              <Icon name="Phone" size={16} className="mr-2" />
-              Связаться
-            </Button>
+            
+            <div className="flex items-center gap-3">
+              <Button className="hidden sm:flex bg-primary hover:bg-jivo-green-dark text-white font-medium px-6 py-2.5 rounded-xl">
+                <Icon name="Phone" size={16} className="mr-2" />
+                Связаться
+              </Button>
+              
+              <MobileMenu 
+                isOpen={mobileMenuOpen} 
+                onToggle={() => setMobileMenuOpen(!mobileMenuOpen)} 
+              />
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-2.5 py-[75px]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Слайдер изображений */}
-            <div className="relative order-1 lg:order-2">
-              <div className="rounded-2xl shadow-2xl w-full h-[300px] sm:h-[400px] lg:w-[600px] lg:h-[600px] overflow-hidden">
-                <BannerSlider images={sliderImages} />
-              </div>
-              {/* Декоративные элементы для мобильной версии */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/20 rounded-full blur-xl lg:hidden"></div>
-              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-marine-blue/20 rounded-full blur-xl lg:hidden"></div>
-            </div>
-            
-            <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
-              <div>
-                <Badge className="mb-3 lg:mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-xs sm:text-sm">
-                  Профессиональный ремонт морских двигателей
+      <section className="relative px-4 py-20 lg:py-28 overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-jivo-blue/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="space-y-8 order-2 lg:order-1">
+              <div className="space-y-6">
+                <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
+                  ⚓ Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-marine-dark leading-tight font-medium">
-                  Профессиональное восстановление морских двигателей{' '}
-                  <span className="text-primary font-bold">Volvo Penta и Mercruiser</span>
+                
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-jivo-gray-900 leading-tight">
+                  Профессиональное{' '}
+                  <span className="text-primary">восстановление</span>{' '}
+                  морских двигателей
                 </h1>
-                <p className="text-base sm:text-lg lg:text-xl text-marine-steel mt-4 lg:mt-6 leading-relaxed">
-                  Специализируемся на ремонте и восстановлении стационарных двигателей 
-                  Volvo Penta, Mercruiser, Indmar, Yamaha. Более 15 лет опыта.
-                </p>
+                
+                <div className="space-y-4">
+                  <p className="text-xl text-jivo-gray-600 leading-relaxed font-medium">
+                    Специализируемся на ремонте и восстановлении стационарных двигателей 
+                    <span className="text-jivo-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha</span>
+                  </p>
+                  <p className="text-lg text-jivo-gray-500">
+                    Более 15 лет опыта • Гарантия качества • Оригинальные запчасти
+                  </p>
+                </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button className="bg-primary hover:bg-primary/90 text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">
-                  <Icon name="Wrench" size={16} className="mr-2" />
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-jivo-green-dark text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30"
+                >
+                  <Icon name="Wrench" size={20} className="mr-3" />
                   Заказать диагностику
                 </Button>
-                <Button variant="outline" className="border-marine-steel text-marine-steel hover:bg-marine-light text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">
-                  <Icon name="Play" size={16} className="mr-2" />
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-2 border-jivo-gray-300 text-jivo-gray-700 hover:bg-jivo-gray-50 font-semibold px-8 py-4 rounded-xl text-base transition-all"
+                >
+                  <Icon name="Play" size={20} className="mr-3" />
                   Смотреть работы
                 </Button>
+              </div>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-jivo-gray-200">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">500+</div>
+                  <div className="text-sm text-jivo-gray-600">Двигателей отремонтировано</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">15</div>
+                  <div className="text-sm text-jivo-gray-600">Лет опыта</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-jivo-gray-600">Гарантия качества</div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Слайдер изображений */}
+            <div className="relative order-1 lg:order-2">
+              <div className="relative">
+                <div className="rounded-3xl shadow-2xl w-full h-[350px] sm:h-[450px] lg:h-[600px] overflow-hidden bg-gradient-to-br from-jivo-gray-100 to-white">
+                  <BannerSlider images={sliderImages} />
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-2xl blur-xl"></div>
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-jivo-orange/10 rounded-2xl blur-xl"></div>
+                
+                {/* Quality badge */}
+                <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                    <span className="text-sm font-semibold text-jivo-gray-800">Качество гарантировано</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -91,18 +162,21 @@ export default function Index() {
       </section>
 
       {/* What We Offer Section */}
-      <section id="services" className="py-20 px-4 bg-gradient-to-br from-marine-light/20 via-white to-primary/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/5 via-transparent to-primary/5 opacity-60"></div>
+      <section id="services" className="py-24 px-4 bg-gradient-to-br from-jivo-gray-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-40 left-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-40 right-20 w-40 h-40 bg-jivo-orange/5 rounded-full blur-3xl"></div>
+        </div>
         
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-lg px-6 py-2">
+        <div className="max-w-7xl mx-auto relative">
+          <div className="text-center mb-20">
+            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
               🔧 Наши услуги
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-jivo-gray-900 mb-6 leading-tight">
               Что мы <span className="text-primary">предлагаем</span>
             </h2>
-            <p className="text-xl text-marine-steel max-w-3xl mx-auto">
+            <p className="text-xl text-jivo-gray-600 max-w-3xl mx-auto leading-relaxed">
               Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
             </p>
           </div>
@@ -155,29 +229,29 @@ export default function Index() {
                 features: ['Долгосрочная гарантия', 'Сервисная поддержка', 'Техническое обслуживание']
               }
             ].slice(0, 3).map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm">
-                <div className="relative overflow-hidden rounded-t-lg">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white rounded-2xl overflow-hidden">
+                <div className="relative overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 right-4">
-                    <div className={`${service.bgColor} p-3 rounded-full shadow-lg`}>
-                      <Icon name={service.icon} size={24} className={service.accent} />
+                  <div className="absolute top-6 right-6">
+                    <div className="bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-lg">
+                      <Icon name={service.icon} size={20} className="text-primary" />
                     </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                 </div>
                 
-                <CardHeader className="pb-3">
-                  <CardTitle className={`text-xl font-bold ${service.accent} mb-2 group-hover:text-primary transition-colors duration-300`}>
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-xl font-bold text-jivo-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
-                  <p className="text-marine-steel leading-relaxed group-hover:text-marine-dark transition-colors duration-300">
+                <CardContent className="space-y-6">
+                  <p className="text-jivo-gray-600 leading-relaxed"
                     {service.description}
                   </p>
                   

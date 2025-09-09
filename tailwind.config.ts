@@ -62,13 +62,28 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Marine theme colors
-				marine: {
-					blue: '#1967D2',
-					dark: '#0F172A', 
-					steel: '#64748B',
-					light: '#F8FAFC',
-					accent: '#0EA5E9',
+				// Jivo-inspired color palette
+				jivo: {
+					green: '#00C26D',
+					'green-dark': '#00A85A',
+					'green-light': '#E8F9F2',
+					blue: '#0078FF',
+					'blue-dark': '#0066E6',
+					'blue-light': '#E6F2FF',
+					orange: '#FF6B35',
+					'orange-light': '#FFF0EB',
+					gray: {
+						50: '#F8FAFC',
+						100: '#F1F5F9',
+						200: '#E2E8F0',
+						300: '#CBD5E1',
+						400: '#94A3B8',
+						500: '#64748B',
+						600: '#475569',
+						700: '#334155',
+						800: '#1E293B',
+						900: '#0F172A'
+					}
 				},
 				// RED MAR brand colors
 				redmar: {
@@ -80,7 +95,9 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				'2xl': '1rem',
+				'3xl': '1.5rem'
 			},
 			keyframes: {
 				'accordion-down': {
