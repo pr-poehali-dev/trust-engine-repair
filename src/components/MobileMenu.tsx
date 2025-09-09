@@ -65,16 +65,28 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
         <>
           {/* Background overlay - исключаем зону навигации */}
           <div 
-            className="fixed top-16 left-0 right-0 bottom-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
+            className="fixed top-[64px] left-0 right-0 bottom-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
           />
           
-          {/* Menu panel - прикреплен к верхней навигации */}
-          <div className="fixed top-16 left-0 right-0 bottom-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out mobile-menu-slide-down">
+          {/* Menu panel - без щели, прикреплен к навигации */}
+          <div className="fixed top-[64px] left-0 right-0 bottom-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out mobile-menu-slide-down shadow-lg">
+            {/* Кнопка закрытия - выровнена с кнопкой меню */}
+            <div className="absolute top-0 right-0 h-16 flex items-center pr-4">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                onClick={onToggle}
+                className="p-2 hover:bg-gray-100"
+                aria-label="Закрыть меню"
+              >
+                <Icon name="X" size={24} className="text-gray-700" />
+              </Button>
+            </div>
             
             {/* Navigation */}
-            <nav className="h-full flex flex-col justify-start px-6 pt-8 pb-8 overflow-y-auto">
+            <nav className="h-full flex flex-col justify-start px-6 pt-20 pb-8 overflow-y-auto">
               <div className="flex flex-col space-y-3 max-w-sm mx-auto w-full">
                 <div>
                   <a 
