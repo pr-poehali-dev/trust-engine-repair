@@ -29,15 +29,10 @@ export default function WhyUsSection() {
   ];
 
   return (
-    <section id="why-us" className="relative px-4 py-20 lg:py-28 overflow-hidden bg-white">
-      {/* Background decorations - в стиле главного баннера */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary/3 rounded-full blur-2xl"></div>
-      </div>
+    <section id="why-us" className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Заголовок */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16">
           <div className="space-y-6">
