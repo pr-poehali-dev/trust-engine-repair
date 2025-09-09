@@ -68,16 +68,16 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
 
       {/* Mobile menu overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-[9999] md:hidden">
+        <>
           {/* Background overlay */}
           <div 
-            className="fixed inset-0 bg-black/70 transition-opacity duration-300" 
+            className="fixed inset-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
           />
           
           {/* Menu panel */}
-          <div className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ease-out">
+          <div className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl z-[9999] md:hidden transform transition-transform duration-300 ease-out">
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="flex items-center gap-3">
@@ -165,7 +165,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
               </div>
             </nav>
           </div>
-        </div>
+        </>
       )}
     </>
   );
