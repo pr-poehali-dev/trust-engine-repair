@@ -243,13 +243,13 @@ export default function Index() {
                 features: ['Готовые блоки', 'Полная комплектация', 'Тестирование']
               },
               { 
-                title: 'Профессиональная диагностика', 
-                description: 'Комплексная диагностика с детальным отчетом о состоянии и рекомендациями по ремонту.',
-                icon: 'Search',
+                title: 'Ремонт вашего двигателя', 
+                description: 'Качественный ремонт любой сложности с использованием современного оборудования и оригинальных запчастей.',
+                icon: 'Wrench',
                 image: '/img/a78e3607-d6ee-449a-895b-7ab9dc9b726e.jpg',
                 accent: 'text-marine-dark',
                 bgColor: 'bg-primary/10',
-                features: ['Детальный отчет', 'Профессиональное оборудование', 'Рекомендации']
+                features: ['Быстрые сроки', 'Гарантия качества', 'Профессионализм']
               },
               { 
                 title: 'Комплектующие для ремонта', 
@@ -310,6 +310,8 @@ export default function Index() {
                     onClick={() => {
                       if (index === 0) {
                         window.location.href = '/services/restore';
+                      } else if (index === 2) {
+                        window.location.href = '/services/repair';
                       }
                     }}
                   >
