@@ -94,7 +94,7 @@ export default function Index() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">
                   Профессиональное{' '}
                   <span className="text-primary">восстановление</span>{' '}
-                  морских двигателей
+                  двигателей для катеров и яхт
                 </h1>
                 
                 <div className="space-y-4">
