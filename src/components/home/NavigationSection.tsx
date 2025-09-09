@@ -50,13 +50,15 @@ export default function NavigationSection({
                       <div className="text-sm text-gray-500">Комплексная проверка</div>
                     </div>
                   </a>
-                  <a href="#services" className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
+                  <Link 
+                    to="/services/longblocks" 
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
                     <Icon name="Package" size={20} className="text-primary" />
                     <div>
                       <div className="font-medium text-gray-900">Лонг-блоки</div>
                       <div className="text-sm text-gray-500">Готовые решения</div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -69,9 +71,9 @@ export default function NavigationSection({
             <a href="#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
               Гарантии
             </a>
-            <a href="#contacts" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+            <Link to="/contact" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
               Контакты
-            </a>
+            </Link>
           </div>
           
           <div className="flex items-center gap-3">

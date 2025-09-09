@@ -33,11 +33,24 @@ export default function FooterSection() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold mb-4">Контакты</h3>
-            <div className="space-y-2 text-white/70">
-              <p>+7 (xxx) xxx-xx-xx</p>
-              <p>info@marineservice.ru</p>
-              <p>г. Москва, ул. Морская, д. 15</p>
+            <h3 className="font-semibold mb-4 text-lg">Контакты</h3>
+            <div className="space-y-3 text-white/80 text-base">
+              <p className="flex items-center gap-2">
+                <span>📞</span>
+                <a href="tel:+79991234567" className="hover:text-white transition-colors">
+                  +7 (999) 123-45-67
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span>✉️</span>
+                <a href="mailto:info@trust-engine.ru" className="hover:text-white transition-colors">
+                  info@trust-engine.ru
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span>📍</span>
+                <span>г. Москва, ул. Морская, д. 15</span>
+              </p>
             </div>
           </div>
         </div>

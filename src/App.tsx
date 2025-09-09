@@ -12,6 +12,7 @@ import ServiceRepair from "./pages/ServiceRepair";
 import LongBlocks from "./pages/LongBlocks";
 import Projects from "./pages/Projects";
 import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/services/repair" element={<ServiceRepair />} />
           <Route path="/services/longblocks" element={<LongBlocks />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
