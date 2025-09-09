@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -444,7 +445,8 @@ export default function Index() {
                 duration: '14 дней',
                 features: ['Новая поршневая', 'Обновленная электроника', 'Модернизация системы охлаждения'],
                 accent: 'text-blue-600',
-                bgColor: 'bg-blue-50'
+                bgColor: 'bg-blue-50',
+                link: '/projects/volvo-d6-350'
               },
               { 
                 title: 'Mercruiser 5.7L', 
@@ -454,7 +456,8 @@ export default function Index() {
                 duration: '10 дней',
                 features: ['Форсированные поршни', 'Балансировка коленвала', 'Новые форсунки'],
                 accent: 'text-green-600',
-                bgColor: 'bg-green-50'
+                bgColor: 'bg-green-50',
+                link: '/projects/mercruiser-5-7l'
               },
               { 
                 title: 'Yamaha 6.2L', 
@@ -464,7 +467,8 @@ export default function Index() {
                 duration: '18 дней',
                 features: ['Турбонаддув', 'Интеркулер', 'Программная настройка'],
                 accent: 'text-orange-600',
-                bgColor: 'bg-orange-50'
+                bgColor: 'bg-orange-50',
+                link: '#'
               },
               { 
                 title: 'Indmar Raptor 6.0L', 
@@ -474,7 +478,8 @@ export default function Index() {
                 duration: '21 день',
                 features: ['Расточка блока', 'Новая ГБЦ', 'Система впрыска'],
                 accent: 'text-purple-600',
-                bgColor: 'bg-purple-50'
+                bgColor: 'bg-purple-50',
+                link: '#'
               },
               { 
                 title: 'Volvo Penta D4-180', 
@@ -484,7 +489,8 @@ export default function Index() {
                 duration: '7 дней',
                 features: ['Новый картридж', 'Обновленные магистрали', 'Калибровка системы'],
                 accent: 'text-red-600',
-                bgColor: 'bg-red-50'
+                bgColor: 'bg-red-50',
+                link: '#'
               },
               { 
                 title: 'Mercruiser 6.2L', 
@@ -494,7 +500,8 @@ export default function Index() {
                 duration: '25 дней',
                 features: ['Капремонт блока', 'Новая трансмиссия', 'Полная электроника'],
                 accent: 'text-indigo-600',
-                bgColor: 'bg-indigo-50'
+                bgColor: 'bg-indigo-50',
+                link: '#'
               }
             ].map((project, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm">
@@ -538,9 +545,11 @@ export default function Index() {
                     ))}
                   </div>
                   
-                  <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                    <Icon name="Eye" size={16} className="mr-2" />
-                    Посмотреть детали
+                  <Button asChild className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                    <Link to={project.link || '#'}>
+                      <Icon name="Eye" size={16} className="mr-2" />
+                      Посмотреть детали
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
