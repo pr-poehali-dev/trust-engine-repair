@@ -63,7 +63,7 @@ export default function Index() {
               <img 
                 src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
                 alt="Профессиональный ремонт морских двигателей"
-                className="rounded-2xl shadow-2xl w-full h-auto max-h-[300px] sm:max-h-[400px] lg:max-h-none object-cover"
+                className="rounded-2xl shadow-2xl w-full h-auto max-h-[300px] sm:max-h-[400px] lg:w-[600px] lg:h-[600px] object-cover"
               />
               {/* Декоративные элементы для мобильной версии */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/20 rounded-full blur-xl lg:hidden"></div>
