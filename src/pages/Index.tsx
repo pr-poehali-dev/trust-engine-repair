@@ -13,7 +13,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <svg width="120" height="28" viewBox="0 0 124.771 30.07" className="h-8 w-auto">
+              <svg width="120" height="28" viewBox="0 0 124.771 30.07" className="h-10 md:h-8 w-auto">
                 <rect x="62.611" y="2.068" fill="#1967D2" width="53.578" height="25.933"/>
                 <rect x="8.586" y="2.068" fill="#E21D3D" width="52.48" height="25.933"/>
                 <g>
@@ -35,7 +35,7 @@ export default function Index() {
                     L49.739,19.107z"/>
                 </g>
               </svg>
-              <span className="text-xs text-marine-steel  font-medium">
+              <span className="hidden md:block text-xs text-marine-steel italic font-medium">
                 Новая жизнь вашего двигателя
               </span>
             </div>
