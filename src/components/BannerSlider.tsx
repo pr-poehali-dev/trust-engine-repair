@@ -49,11 +49,16 @@ export default function BannerSlider({
           >
             <img
               src={image}
-              alt={`Морской сервис ${index + 1}`}
-              className="w-full h-full object-cover"
+              alt={`Профессиональный морской сервис ${index + 1}`}
+              className="w-full h-full object-cover filter brightness-110 contrast-110 saturate-110 transition-all duration-700 hover:brightness-105 hover:contrast-105"
+              style={{
+                filter: 'brightness(1.1) contrast(1.15) saturate(1.2) hue-rotate(5deg)',
+                imageRendering: 'crisp-edges'
+              }}
               loading={index === 0 ? 'eager' : 'lazy'}
             />
-            <div className="absolute inset-0 bg-marine-dark/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
           </div>
         ))}
       </div>
