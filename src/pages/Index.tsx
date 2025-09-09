@@ -84,29 +84,12 @@ export default function Index() {
                 </Button>
               </div>
             </div>
-            <div className="relative w-4/5 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/20 to-transparent rounded-2xl z-10"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-marine-blue/5 to-marine-blue/10 rounded-2xl z-5"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
-                  alt="Профессиональный ремонт морских двигателей - размытый фон"
-                  className="w-full h-auto relative z-0"
-                  style={{
-                    filter: 'brightness(1.1) contrast(1.25) saturate(1.1) hue-rotate(-5deg) blur(2px)'
-                  }}
-                />
-                <img 
-                  src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
-                  alt="Профессиональный ремонт морских двигателей"
-                  className="absolute inset-0 w-full h-auto z-10"
-                  style={{
-                    filter: 'brightness(1.1) contrast(1.25) saturate(1.1) hue-rotate(-5deg) sharpen(1.2)',
-                    maskImage: 'radial-gradient(ellipse 60% 70% at center, black 30%, rgba(0,0,0,0.8) 50%, transparent 70%)',
-                    WebkitMaskImage: 'radial-gradient(ellipse 60% 70% at center, black 30%, rgba(0,0,0,0.8) 50%, transparent 70%)'
-                  }}
-                />
-              </div>
+            <div className="relative">
+              <img 
+                src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
+                alt="Профессиональный ремонт морских двигателей"
+                className="rounded-2xl shadow-2xl w-full h-auto"
+              />
             </div>
           </div>
         </div>
