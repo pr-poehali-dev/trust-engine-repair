@@ -63,30 +63,18 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
       {/* Mobile menu overlay */}
       {isOpen && (
         <>
-          {/* Background overlay */}
+          {/* Background overlay - исключаем зону навигации */}
           <div 
-            className="fixed inset-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
+            className="fixed top-16 left-0 right-0 bottom-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
           />
           
           {/* Menu panel - прикреплен к верхней навигации */}
-          <div className="fixed top-16 left-0 right-0 bottom-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out">
-            {/* Кнопка закрытия в правом верхнем углу */}
-            <div className="absolute top-4 right-4 z-10">
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={onToggle}
-                className="hover:bg-gray-100 p-2 rounded-full"
-                aria-label="Закрыть меню"
-              >
-                <Icon name="X" size={20} className="text-gray-700" />
-              </Button>
-            </div>
+          <div className="fixed top-16 left-0 right-0 bottom-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out mobile-menu-slide-down">
             
             {/* Navigation */}
-            <nav className="h-full flex flex-col justify-start px-6 pt-16 pb-8 overflow-y-auto">
+            <nav className="h-full flex flex-col justify-start px-6 pt-8 pb-8 overflow-y-auto">
               <div className="flex flex-col space-y-3 max-w-sm mx-auto w-full">
                 <div>
                   <a 

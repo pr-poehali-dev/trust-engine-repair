@@ -37,18 +37,18 @@ export default function NavigationSection({
     <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
-          {/* Логотип с адаптивным слоганом */}
-          <div className="flex items-center min-w-0">
+          {/* Логотип с адаптивным слоганом - сдвинут правее, увеличен на 15% */}
+          <div className="flex items-center min-w-0 ml-3 sm:ml-4">
             {location.pathname === '/' ? (
               <div className="flex items-center gap-2 lg:gap-4">
-                <img src="/logo.svg" alt="RED MAR" className="h-6 w-auto sm:h-7 lg:h-8 flex-shrink-0" />
+                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
                 <span className="hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
               </div>
             ) : (
               <Link to="/" className="flex items-center gap-2 lg:gap-4 hover:opacity-80 transition-opacity">
-                <img src="/logo.svg" alt="RED MAR" className="h-6 w-auto sm:h-7 lg:h-8 flex-shrink-0" />
+                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
                 <span className="hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
