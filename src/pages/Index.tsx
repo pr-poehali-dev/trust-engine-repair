@@ -57,39 +57,45 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative px-2.5 py-[75px]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Мобильная картинка - показываем сверху на мобильных */}
+            <div className="relative order-1 lg:order-2">
+              <img 
+                src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
+                alt="Профессиональный ремонт морских двигателей"
+                className="rounded-2xl shadow-2xl w-full h-auto max-h-[300px] sm:max-h-[400px] lg:max-h-none object-cover"
+              />
+              {/* Декоративные элементы для мобильной версии */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/20 rounded-full blur-xl lg:hidden"></div>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-marine-blue/20 rounded-full blur-xl lg:hidden"></div>
+            </div>
+            
+            <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
               <div>
-                <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20">
+                <Badge className="mb-3 lg:mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-xs sm:text-sm">
                   Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-marine-dark leading-tight">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-marine-dark leading-tight">
                   Профессиональное восстановление стационарных двигателей{' '}
-                  <span className="text-[#1967D2]">Volvo Penta</span> и{' '}
-                  <span className="text-[#1967D2]">Mercruiser</span>
+                  <span className="text-[#1967D2] block sm:inline">Volvo Penta</span> и{' '}
+                  <span className="text-[#1967D2] block sm:inline">Mercruiser</span>
                 </h1>
-                <p className="text-xl text-marine-steel mt-6 leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-marine-steel mt-4 lg:mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
                   Volvo Penta, Mercruiser, Indmar, Yamaha. Более 15 лет опыта.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  <Icon name="Wrench" size={20} className="mr-2" />
+              
+              <div className="flex flex-col gap-3 sm:gap-4">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4">
+                  <Icon name="Wrench" size={18} className="mr-2" />
                   Заказать диагностику
                 </Button>
-                <Button variant="outline" size="lg" className="border-marine-steel text-marine-steel hover:bg-marine-light">
-                  <Icon name="Play" size={20} className="mr-2" />
+                <Button variant="outline" size="lg" className="border-marine-steel text-marine-steel hover:bg-marine-light w-full sm:w-auto text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4">
+                  <Icon name="Play" size={18} className="mr-2" />
                   Смотреть работы
                 </Button>
               </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
-                alt="Профессиональный ремонт морских двигателей"
-                className="rounded-2xl shadow-2xl w-full h-auto"
-              />
             </div>
           </div>
         </div>
