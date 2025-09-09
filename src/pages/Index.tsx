@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavigationSection from '@/components/home/NavigationSection';
 import HeroSection from '@/components/home/HeroSection';
 import ServicesSection from '@/components/home/ServicesSection';
@@ -9,11 +9,37 @@ import GuaranteesSection from '@/components/home/GuaranteesSection';
 import ContactSection from '@/components/home/ContactSection';
 import FooterSection from '@/components/home/FooterSection';
 import ContactForm from '@/components/ContactForm';
+import MultiStepForm from '@/components/MultiStepForm';
 import FloatingActionButton from '@/components/FloatingActionButton';
+import PullToRefresh from '@/components/PullToRefresh';
+import OfflineBanner from '@/components/OfflineBanner';
+import { useAnalytics } from '@/utils/analytics';
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactFormOpen, setContactFormOpen] = useState(false);
+  const [multiStepFormOpen, setMultiStepFormOpen] = useState(false);
+  const analytics = useAnalytics();
+
+  // Трекинг времени на странице
+  useEffect(() => {
+    analytics.trackPageView('home');
+    const timeTracker = analytics.trackTimeOnPage();
+    
+    return timeTracker;
+  }, [analytics]);
+
+  // Обработка обновления страницы
+  const handleRefresh = async () => {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    analytics.trackEvent({
+      event: 'pull_to_refresh',
+      category: 'Interaction',
+      action: 'refresh',
+      label: 'home_page'
+    });
+    window.location.reload();
+  };
   
   const sliderImages = [
     'https://cdn.poehali.dev/files/fa538d5f-21ab-4b35-a595-5b9dca841f5c.jpg',
@@ -27,42 +53,53 @@ export default function Index() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f2f6fa]">
-      <NavigationSection
-        mobileMenuOpen={mobileMenuOpen}
-        onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
-        onContactClick={() => setContactFormOpen(true)}
-      />
-      
-      <HeroSection
-        onContactClick={() => setContactFormOpen(true)}
-        sliderImages={sliderImages}
-      />
-      
-      <ServicesSection />
-      
-      <WhyUsSection />
-      
-      <BenefitsSection />
-      
-      <GallerySection />
-      
-      <GuaranteesSection />
-      
-      <ContactSection />
-      
-      <FooterSection />
+    <PullToRefresh onRefresh={handleRefresh}>
+      <div className="min-h-screen bg-[#f2f6fa]">
+        <NavigationSection
+          mobileMenuOpen={mobileMenuOpen}
+          onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onContactClick={() => setContactFormOpen(true)}
+        />
+        
+        <HeroSection
+          onContactClick={() => setContactFormOpen(true)}
+          sliderImages={sliderImages}
+        />
+        
+        <ServicesSection />
+        
+        <WhyUsSection />
+        
+        <BenefitsSection />
+        
+        <GallerySection />
+        
+        <GuaranteesSection />
+        
+        <ContactSection />
+        
+        <FooterSection />
 
-      {/* Contact Form Modal */}
-      <ContactForm 
-        isOpen={contactFormOpen}
-        onClose={() => setContactFormOpen(false)}
-      />
+        {/* Contact Form Modal */}
+        <ContactForm 
+          isOpen={contactFormOpen}
+          onClose={() => setContactFormOpen(false)}
+        />
 
-      {/* Floating Action Button - только на мобильных */}
-      <div className="md:hidden">
-        <FloatingActionButton />
+        {/* Multi-Step Form */}
+        <MultiStepForm
+          isOpen={multiStepFormOpen}
+          onClose={() => setMultiStepFormOpen(false)}
+        />
+
+        {/* Floating Action Button - только на мобильных */}
+        <div className="md:hidden">
+          <FloatingActionButton />
+        </div>
+
+        {/* Offline Banner */}
+        <OfflineBanner />
       </div>
-    </div>
+    </PullToRefresh>
   );
 }

@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import MobileMenu from '@/components/MobileMenu';
+import SearchModal from '@/components/SearchModal';
 
 interface NavigationSectionProps {
   mobileMenuOpen: boolean;
@@ -15,11 +17,20 @@ export default function NavigationSection({
   onContactClick 
 }: NavigationSectionProps) {
   const location = useLocation();
+  const [searchOpen, setSearchOpen] = useState(false);
   
   const isActive = (path: string) => {
     if (path === '/' && location.pathname === '/') return true;
     if (path !== '/' && location.pathname.startsWith(path)) return true;
     return false;
+  };
+
+  // Обработка горячих клавиш
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      setSearchOpen(true);
+    }
   };
 
   return (
@@ -95,6 +106,19 @@ export default function NavigationSection({
           </div>
           
           <div className="flex items-center gap-3">
+            {/* Search Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hidden md:flex items-center gap-2 text-gray-600 hover:text-primary hover:bg-gray-50 px-3 py-2"
+              onClick={() => setSearchOpen(true)}
+              onKeyDown={handleKeyDown}
+            >
+              <Icon name="Search" size={16} />
+              <span className="hidden lg:block text-sm">Поиск</span>
+              <kbd className="hidden lg:block px-2 py-1 text-xs bg-gray-100 rounded border">⌘K</kbd>
+            </Button>
+
             <Button 
               className="hidden sm:flex bg-primary hover:bg-brand-blue-dark text-white font-medium px-6 py-2.5 rounded-xl"
               onClick={onContactClick}
@@ -111,6 +135,12 @@ export default function NavigationSection({
           </div>
         </div>
       </div>
+
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={searchOpen}
+        onClose={() => setSearchOpen(false)}
+      />
     </nav>
   );
 }
