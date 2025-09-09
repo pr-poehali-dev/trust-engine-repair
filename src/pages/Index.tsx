@@ -86,11 +86,11 @@ export default function Index() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/20 to-transparent rounded-2xl z-10"></div>
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%231967D2" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30 rounded-2xl z-5"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-marine-blue/5 to-marine-blue/10 rounded-2xl z-5"></div>
               <img 
                 src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
                 alt="Профессиональный ремонт морских двигателей"
-                className="rounded-2xl shadow-2xl w-full h-auto relative z-0 filter brightness-110 contrast-105 saturate-110"
+                className="rounded-2xl shadow-2xl w-full h-auto relative z-0"
                 style={{
                   filter: 'brightness(1.1) contrast(1.05) saturate(1.1) hue-rotate(-5deg)'
                 }}
