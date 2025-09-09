@@ -1,4 +1,3 @@
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
 export default function WhyUsSection() {
@@ -42,8 +41,6 @@ export default function WhyUsSection() {
         {/* Заголовок */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start mb-16">
           <div className="space-y-6">
-            <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">⚒️ Наши преимущества</Badge>
-            
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-gray-900 leading-tight">
               Почему выбирают{' '}
               <span className="text-primary">именно нас</span>
