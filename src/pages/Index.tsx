@@ -216,9 +216,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-marine-dark mb-4">Наши работы</h2>
-            <p className="text-xl text-marine-steel max-w-2xl mx-auto">
-              Примеры успешно выполненных проектов по восстановлению морских двигателей
-            </p>
+            <p className="text-xl text-marine-steel max-w-2xl mx-auto text-center">Примеры выполненных Нами проектов по восстановлению стационарных двигателей</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
