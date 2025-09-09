@@ -112,38 +112,58 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* What We Offer Section */}
       <section id="services" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-marine-dark mb-4">Наши услуги</h2>
+            <h2 className="text-4xl font-bold text-marine-dark mb-4">Что мы предлагаем</h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
-              Полный спектр услуг по ремонту и обслуживанию морских двигателей ведущих производителей
+              Комплексные решения для восстановления и обслуживания морских двигателей
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {[
-              { brand: 'Volvo Penta', icon: 'Cog', color: 'bg-blue-50 text-blue-600' },
-              { brand: 'Mercruiser', icon: 'Settings', color: 'bg-green-50 text-green-600' },
-              { brand: 'Indmar', icon: 'Wrench', color: 'bg-orange-50 text-orange-600' },
-              { brand: 'Yamaha', icon: 'Hammer', color: 'bg-purple-50 text-purple-600' }
-            ].map((service) => (
-              <Card key={service.brand} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
-                <CardHeader className="text-center">
-                  <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                    <Icon name={service.icon} size={24} />
+              { 
+                title: 'Восстановление двигателей под ключ', 
+                description: 'Полное восстановление с гарантией качества и современными технологиями',
+                icon: 'RefreshCw'
+              },
+              { 
+                title: 'Продажа лонг-блоков', 
+                description: 'Готовые к установке блоки двигателей с полной комплектацией',
+                icon: 'Package'
+              },
+              { 
+                title: 'Профессиональная диагностика', 
+                description: 'Комплексная диагностика с детальным отчетом о состоянии',
+                icon: 'Search'
+              },
+              { 
+                title: 'Комплектующие для ремонта', 
+                description: 'Оригинальные запчасти и расходные материалы',
+                icon: 'Settings'
+              },
+              { 
+                title: 'Гарантийное обслуживание', 
+                description: 'Сервисная поддержка и обслуживание восстановленных двигателей',
+                icon: 'Shield'
+              }
+            ].map((service, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
+                <div className="aspect-video bg-marine-light rounded-t-lg flex items-center justify-center mb-4">
+                  <div className="bg-white/80 p-4 rounded-lg">
+                    <Icon name={service.icon} size={32} className="text-marine-blue" />
                   </div>
-                  <CardTitle className="text-xl">{service.brand}</CardTitle>
+                </div>
+                <CardHeader className="pt-0">
+                  <CardTitle className="text-lg leading-tight">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-center space-y-2">
-                  <p className="text-marine-steel mb-4">Полный ремонт и обслуживание</p>
-                  <ul className="text-sm text-marine-steel space-y-1">
-                    <li>• Диагностика двигателя</li>
-                    <li>• Капитальный ремонт</li>
-                    <li>• Замена запчастей</li>
-                    <li>• Настройка системы</li>
-                  </ul>
+                <CardContent className="pt-0">
+                  <p className="text-marine-steel text-sm leading-relaxed">{service.description}</p>
+                  <Button variant="outline" className="w-full mt-4 text-marine-blue border-marine-blue hover:bg-marine-blue hover:text-white">
+                    Подробнее
+                  </Button>
                 </CardContent>
               </Card>
             ))}
