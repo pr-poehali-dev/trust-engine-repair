@@ -127,7 +127,6 @@ export default function NavigationSection({
             >
               <Icon name="Search" size={16} />
               <span className="hidden lg:block text-sm">Поиск</span>
-              <kbd className="hidden lg:block px-2 py-1 text-xs bg-gray-100 rounded border">⌘K</kbd>
             </Button>
 
             <Button 
