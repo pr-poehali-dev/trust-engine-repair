@@ -220,9 +220,7 @@ export default function Index() {
             <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
               Почему выбирают <span className="text-primary">именно нас</span>
             </h2>
-            <p className="text-xl text-marine-steel max-w-3xl mx-auto">
-              Более 15 лет опыта, тысячи восстановленных двигателей и довольных клиентов
-            </p>
+            <p className="text-xl text-marine-steel max-w-3xl mx-auto">Более 12 лет опыта, сотни восстановленных двигателей и довольных клиентов</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
