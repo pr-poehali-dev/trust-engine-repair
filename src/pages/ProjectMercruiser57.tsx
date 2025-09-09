@@ -35,7 +35,7 @@ export default function ProjectMercruiser57() {
             </Button>
             <div className="flex items-center gap-2">
               <Icon name="Anchor" size={24} className="text-primary" />
-              <span className="text-lg font-bold text-marine-dark">MarineService</span>
+              <span className="font-bold text-marine-dark">MarineService</span>
             </div>
           </div>
         </div>
