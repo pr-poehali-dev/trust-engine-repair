@@ -62,9 +62,9 @@ export default function Index() {
                 <Badge className="mb-3 lg:mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-xs sm:text-sm">
                   Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="sm:text-4xl lg:text-5xl xl:text-6xl text-marine-dark leading-tight font-medium text-5xl">
-                  Профессиональное восстановление стационарных двигателей{' '}
-                  <span className="text-[#1967D2] whitespace-nowrap font-bold text-4xl">Volvo Penta и Mercruiser</span>
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-marine-dark leading-tight font-medium">
+                  Профессиональное восстановление морских двигателей{' '}
+                  <span className="text-primary font-bold">Volvo Penta и Mercruiser</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-marine-steel mt-4 lg:mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
@@ -72,13 +72,13 @@ export default function Index() {
                 </p>
               </div>
               
-              <div className="flex flex-col gap-3 sm:gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4">
-                  <Icon name="Wrench" size={18} className="mr-2" />
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Button className="bg-primary hover:bg-primary/90 text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">
+                  <Icon name="Wrench" size={16} className="mr-2" />
                   Заказать диагностику
                 </Button>
-                <Button variant="outline" size="lg" className="border-marine-steel text-marine-steel hover:bg-marine-light w-full sm:w-auto text-base sm:text-lg px-6 py-3 sm:px-8 sm:py-4">
-                  <Icon name="Play" size={18} className="mr-2" />
+                <Button variant="outline" className="border-marine-steel text-marine-steel hover:bg-marine-light text-sm sm:text-base px-4 py-2 sm:px-6 sm:py-3">
+                  <Icon name="Play" size={16} className="mr-2" />
                   Смотреть работы
                 </Button>
               </div>
