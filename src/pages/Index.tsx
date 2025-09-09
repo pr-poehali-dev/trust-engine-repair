@@ -760,7 +760,9 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto brightness-0 invert" />
+                <div className="relative">
+                  <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto mix-blend-difference brightness-0 invert" />
+                </div>
                 <span className="text-xs text-white/70 italic font-medium">
                   Новая жизнь вашего двигателя
                 </span>
