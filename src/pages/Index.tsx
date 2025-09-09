@@ -834,7 +834,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-marine-dark text-white py-12 px-4">
+      <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -875,7 +875,7 @@ export default function Index() {
               </div>
             </div>
           </div>
-          <div className="border-t border-marine-steel/20 mt-8 pt-8 text-center">
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <p className="text-white/50">
               © 2024 MarineService. Все права защищены.
             </p>
