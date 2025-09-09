@@ -149,12 +149,15 @@ export default function Index() {
                   Заказать диагностику
                 </Button>
                 <Button 
+                  asChild
                   variant="outline" 
                   size="lg"
                   className="border-2 border-brand-gray-300 text-brand-gray-700 hover:bg-brand-gray-50 font-semibold px-8 py-4 rounded-xl text-base transition-all"
                 >
-                  <Icon name="Play" size={20} className="mr-3" />
-                  Смотреть работы
+                  <Link to="/projects">
+                    <Icon name="Play" size={20} className="mr-3" />
+                    Смотреть работы
+                  </Link>
                 </Button>
               </div>
               
