@@ -78,7 +78,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
           />
           
           {/* Menu panel */}
-          <div className="fixed top-0 right-0 bottom-0 w-72 max-w-[80vw] bg-white shadow-2xl z-[9999] md:hidden transform transition-transform duration-300 ease-out">
+          <div className="fixed inset-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out">
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="flex items-center gap-3">
@@ -96,73 +96,73 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
             </div>
             
             {/* Navigation */}
-            <nav className="p-6 flex-1 overflow-y-auto">
-              <div className="flex flex-col space-y-2">
+            <nav className="flex-1 flex flex-col justify-center px-6 py-12">
+              <div className="flex flex-col space-y-4 max-w-sm mx-auto w-full">
                 <a 
                   href="#services" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
                   onClick={handleLinkClick}
                 >
-                  <div className="flex items-center gap-3">
-                    <Icon name="Settings" size={20} className="text-gray-600" />
+                  <div className="flex items-center gap-4">
+                    <Icon name="Settings" size={24} className="text-gray-600" />
                     <span>Услуги</span>
                   </div>
                 </a>
                 <a 
                   href="#why-us" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
                   onClick={handleLinkClick}
                 >
-                  <div className="flex items-center gap-3">
-                    <Icon name="Award" size={20} className="text-gray-600" />
+                  <div className="flex items-center gap-4">
+                    <Icon name="Award" size={24} className="text-gray-600" />
                     <span>Почему мы</span>
                   </div>
                 </a>
                 <a 
                   href="#gallery" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
                   onClick={handleLinkClick}
                 >
-                  <div className="flex items-center gap-3">
-                    <Icon name="Image" size={20} className="text-gray-600" />
+                  <div className="flex items-center gap-4">
+                    <Icon name="Image" size={24} className="text-gray-600" />
                     <span>Наши работы</span>
                   </div>
                 </a>
                 <a 
                   href="#guarantees" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
                   onClick={handleLinkClick}
                 >
-                  <div className="flex items-center gap-3">
-                    <Icon name="Shield" size={20} className="text-gray-600" />
+                  <div className="flex items-center gap-4">
+                    <Icon name="Shield" size={24} className="text-gray-600" />
                     <span>Гарантии</span>
                   </div>
                 </a>
                 <a 
                   href="#contacts" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
                   onClick={handleLinkClick}
                 >
-                  <div className="flex items-center gap-3">
-                    <Icon name="MapPin" size={20} className="text-gray-600" />
+                  <div className="flex items-center gap-4">
+                    <Icon name="MapPin" size={24} className="text-gray-600" />
                     <span>Контакты</span>
                   </div>
                 </a>
               </div>
               
               {/* CTA Button */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
+              <div className="mt-12 pt-8 border-t border-gray-200">
                 <Button 
-                  className="w-full bg-primary hover:bg-brand-blue-dark text-white font-semibold py-3 rounded-xl shadow-lg"
+                  className="w-full bg-primary hover:bg-brand-blue-dark text-white font-bold py-4 text-lg rounded-2xl shadow-lg"
                   onClick={() => {
                     onContactClick();
                     handleLinkClick();
                   }}
                 >
-                  <Icon name="Phone" size={18} className="mr-2" />
+                  <Icon name="Phone" size={20} className="mr-3" />
                   Связаться с нами
                 </Button>
-                <p className="text-center text-sm text-gray-500 mt-3">
+                <p className="text-center text-gray-500 mt-4 font-medium">
                   Получите бесплатную консультацию
                 </p>
               </div>
