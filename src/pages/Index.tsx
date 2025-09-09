@@ -13,12 +13,28 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <img 
-                src="/img/c11cb2c1-c739-4b31-886f-50d4588ed777.jpg" 
-                alt="REDMAR Logo" 
-                className="h-8 w-auto"
-              />
-              <span className="text-xl font-bold text-marine-dark">REDMAR</span>
+              <svg width="100" height="24" viewBox="0 0 124.771 30.07" className="h-6 w-auto">
+                <rect x="62.611" y="2.068" fill="#1967D2" width="53.578" height="25.933"/>
+                <rect x="8.586" y="2.068" fill="#E21D3D" width="52.48" height="25.933"/>
+                <g>
+                  <path fill="#FFFFFF" d="M67.16,6.875h4.069l3.386,7.868l3.411-7.868h4.067v16.093H78l0.024-4.638l0.25-3.249l-0.137-0.022
+                    l-2.114,5.522h-2.795l-2.159-5.524l-0.115,0.023l0.274,3.25v4.638H67.16V6.875z"/>
+                  <path fill="#FFFFFF" d="M98.302,22.969h-4.363l-1.044-3.229h-4.297l-1.004,3.229h-4.36l5.614-16.094h3.705L98.302,22.969z
+                     M91.914,16.125L90.8,11.423h-0.111l-1.181,4.702H91.914z"/>
+                  <path fill="#FFFFFF" d="M104.212,17.854h-0.729v5.114h-4.111V6.875h6.432c3.317,0,5.886,1.525,5.979,5.298
+                    c0,2.979-1.208,4.658-3.16,5.276l4.386,5.52h-5.068L104.212,17.854z M105.873,14.353c2.567,0,2.567-3.682,0-3.682h-2.389v3.682
+                    H105.873z"/>
+                </g>
+                <g>
+                  <path fill="#FFFFFF" d="M20.663,17.824h-0.719v5.062h-4.071V6.957h6.366c3.285,0,5.826,1.507,5.916,5.244
+                    c0,2.945-1.191,4.612-3.126,5.218l4.342,5.468h-5.018L20.663,17.824z M22.306,14.359c2.542,0,2.542-3.646,0-3.646h-2.362v3.646
+                    H22.306z"/>
+                  <path fill="#FFFFFF" d="M34.481,13.212h6.457v3.486h-6.457v2.387h7.02v3.801H30.41V6.957h11.091v3.781h-7.02V13.212z"/>
+                  <path fill="#FFFFFF" d="M49.604,6.957c3.195,0,6.186,1.621,6.186,5.333v5.355c0,3.667-2.992,5.264-6.186,5.241h-5.962V6.957H49.604
+                    z M49.739,19.107c1.372,0,2.001-0.697,2.001-1.731v-4.973c0-1.034-0.651-1.689-2.001-1.689h-2.047v8.392L49.739,19.107
+                    L49.739,19.107z"/>
+                </g>
+              </svg>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-marine-steel hover:text-primary transition-colors">Услуги</a>
