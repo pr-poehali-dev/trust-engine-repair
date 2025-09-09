@@ -85,16 +85,17 @@ export default function Index() {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/20 to-transparent rounded-2xl z-10"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-marine-blue/5 to-marine-blue/10 rounded-2xl z-5"></div>
               <img 
                 src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
                 alt="Профессиональный ремонт морских двигателей"
-                className="rounded-2xl shadow-2xl w-full h-auto relative z-0"
+                className="rounded-2xl w-full h-auto relative z-0"
                 style={{
-                  filter: 'brightness(1.1) contrast(1.25) saturate(1.1) hue-rotate(-5deg) blur(0px) sharpen(1.2)'
+                  filter: 'brightness(1.1) contrast(1.25) saturate(1.1) hue-rotate(-5deg) blur(0px) sharpen(1.2)',
+                  maskImage: 'radial-gradient(ellipse 80% 70% at center, black 40%, rgba(0,0,0,0.8) 70%, transparent 100%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 80% 70% at center, black 40%, rgba(0,0,0,0.8) 70%, transparent 100%)'
                 }}
               />
+              <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/10 to-transparent rounded-2xl z-10 pointer-events-none"></div>
             </div>
           </div>
         </div>
