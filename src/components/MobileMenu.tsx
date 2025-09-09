@@ -8,17 +8,40 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
-  // Блокируем скролл при открытом меню
+  // Блокируем скролл при открытом меню без смещения контента
   useEffect(() => {
     if (isOpen) {
+      // Вычисляем ширину скроллбара
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      
+      // Применяем стили для предотвращения смещения
       document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      
+      // Также применяем к элементам с position: fixed
+      const fixedElements = document.querySelectorAll('[class*="sticky"], [class*="fixed"]');
+      fixedElements.forEach((el) => {
+        (el as HTMLElement).style.paddingRight = `${scrollbarWidth}px`;
+      });
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      
+      // Убираем padding с fixed элементов
+      const fixedElements = document.querySelectorAll('[class*="sticky"], [class*="fixed"]');
+      fixedElements.forEach((el) => {
+        (el as HTMLElement).style.paddingRight = '';
+      });
     }
 
     // Очищаем при размонтировании
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      const fixedElements = document.querySelectorAll('[class*="sticky"], [class*="fixed"]');
+      fixedElements.forEach((el) => {
+        (el as HTMLElement).style.paddingRight = '';
+      });
     };
   }, [isOpen]);
 
@@ -36,7 +59,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
       <Button
         variant="ghost"
         size="sm"
-        className="md:hidden p-2 hover:bg-jivo-gray-100 relative z-50"
+        className="md:hidden p-2 hover:bg-jivo-gray-100"
         onClick={onToggle}
         aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
       >
@@ -45,10 +68,10 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
 
       {/* Mobile menu overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-[100] md:hidden">
+        <div className="fixed inset-0 z-[9999] md:hidden">
           {/* Background overlay */}
           <div 
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300" 
+            className="fixed inset-0 bg-black/70 transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
           />
@@ -56,19 +79,19 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
           {/* Menu panel */}
           <div className="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-white shadow-2xl transform transition-transform duration-300 ease-out">
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-jivo-gray-200">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="flex items-center gap-3">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto" />
-                <span className="text-sm text-jivo-gray-600 font-medium">RED MAR</span>
+                <span className="text-sm text-gray-600 font-medium">RED MAR</span>
               </div>
               <Button 
                 variant="ghost" 
                 size="sm" 
                 onClick={onToggle}
-                className="hover:bg-jivo-gray-100 p-2"
+                className="hover:bg-gray-100 p-2"
                 aria-label="Закрыть меню"
               >
-                <Icon name="X" size={20} className="text-jivo-gray-700" />
+                <Icon name="X" size={20} className="text-gray-700" />
               </Button>
             </div>
             
@@ -77,58 +100,58 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
               <div className="flex flex-col space-y-2">
                 <a 
                   href="#services" 
-                  className="text-jivo-gray-700 hover:text-primary hover:bg-jivo-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
                   onClick={handleLinkClick}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon name="Settings" size={20} className="text-jivo-gray-400" />
-                    Услуги
+                    <Icon name="Settings" size={20} className="text-gray-600" />
+                    <span>Услуги</span>
                   </div>
                 </a>
                 <a 
                   href="#why-us" 
-                  className="text-jivo-gray-700 hover:text-primary hover:bg-jivo-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
                   onClick={handleLinkClick}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon name="Award" size={20} className="text-jivo-gray-400" />
-                    Почему мы
+                    <Icon name="Award" size={20} className="text-gray-600" />
+                    <span>Почему мы</span>
                   </div>
                 </a>
                 <a 
                   href="#gallery" 
-                  className="text-jivo-gray-700 hover:text-primary hover:bg-jivo-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
                   onClick={handleLinkClick}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon name="Image" size={20} className="text-jivo-gray-400" />
-                    Наши работы
+                    <Icon name="Image" size={20} className="text-gray-600" />
+                    <span>Наши работы</span>
                   </div>
                 </a>
                 <a 
                   href="#guarantees" 
-                  className="text-jivo-gray-700 hover:text-primary hover:bg-jivo-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
                   onClick={handleLinkClick}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon name="Shield" size={20} className="text-jivo-gray-400" />
-                    Гарантии
+                    <Icon name="Shield" size={20} className="text-gray-600" />
+                    <span>Гарантии</span>
                   </div>
                 </a>
                 <a 
                   href="#contacts" 
-                  className="text-jivo-gray-700 hover:text-primary hover:bg-jivo-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base"
+                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-4 rounded-xl font-medium text-base block"
                   onClick={handleLinkClick}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon name="MapPin" size={20} className="text-jivo-gray-400" />
-                    Контакты
+                    <Icon name="MapPin" size={20} className="text-gray-600" />
+                    <span>Контакты</span>
                   </div>
                 </a>
               </div>
               
               {/* CTA Button */}
-              <div className="mt-8 pt-6 border-t border-jivo-gray-200">
+              <div className="mt-8 pt-6 border-t border-gray-200">
                 <Button 
                   className="w-full bg-primary hover:bg-jivo-green-dark text-white font-semibold py-3 rounded-xl shadow-lg"
                   onClick={handleLinkClick}
@@ -136,7 +159,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
                   <Icon name="Phone" size={18} className="mr-2" />
                   Связаться с нами
                 </Button>
-                <p className="text-center text-sm text-jivo-gray-500 mt-3">
+                <p className="text-center text-sm text-gray-500 mt-3">
                   Получите бесплатную консультацию
                 </p>
               </div>

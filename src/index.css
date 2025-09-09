@@ -109,4 +109,22 @@
       "cv08" 1,
       "cv11" 1;
   }
+
+  /* Предотвращение смещения контента при блокировке скролла */
+  body.scroll-locked {
+    overflow: hidden;
+    padding-right: var(--scrollbar-width, 0px);
+  }
+}
+
+@layer utilities {
+  /* Стили для мобильного меню */
+  .mobile-menu-panel {
+    transform: translateX(100%);
+    transition: transform 300ms ease-out;
+  }
+
+  .mobile-menu-panel.open {
+    transform: translateX(0);
+  }
 }
