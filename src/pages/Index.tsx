@@ -664,7 +664,7 @@ export default function Index() {
           
           <div className="text-center mt-12">
             <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
-              <Link to="/portfolio">
+              <Link to="/projects">
                 <Icon name="Grid3X3" size={20} className="mr-2" />
                 Посмотреть все проекты
               </Link>
