@@ -38,10 +38,21 @@ export default function NavigationSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center gap-4">
-            <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
-            <span className="hidden sm:block text-brand-gray-600 font-medium text-xs">
-              Новая жизнь вашего двигателя
-            </span>
+            {location.pathname === '/' ? (
+              <div className="flex items-center gap-4">
+                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
+                <span className="hidden sm:block text-brand-gray-600 font-medium text-xs">
+                  Новая жизнь вашего двигателя
+                </span>
+              </div>
+            ) : (
+              <Link to="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
+                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
+                <span className="hidden sm:block text-brand-gray-600 font-medium text-xs">
+                  Новая жизнь вашего двигателя
+                </span>
+              </Link>
+            )}
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
