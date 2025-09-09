@@ -103,7 +103,7 @@ export default function Index() {
                     <span className="text-brand-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha</span>
                   </p>
                   <p className="text-lg text-brand-gray-500">
-                    Более 15 лет опыта • Гарантия качества • Оригинальные запчасти
+                    Более 12 лет опыта • Гарантия качества • Оригинальные запчасти
                   </p>
                 </div>
               </div>
