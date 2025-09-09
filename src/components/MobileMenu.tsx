@@ -71,7 +71,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
           />
           
           {/* Menu panel - цельная панель с навигацией */}
-          <div className="fixed inset-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out">
+          <div className="fixed inset-0 bg-red-500 z-[99999] md:hidden" style={{display: 'block !important'}}>
             {/* Навигационная полоса с логотипом и кнопкой закрытия */}
             <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-white">
               <div className="flex items-center gap-2 ml-3">
