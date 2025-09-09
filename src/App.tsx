@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProjectVolvoD6350 from "./pages/ProjectVolvoD6350";
 import ProjectMercruiser57 from "./pages/ProjectMercruiser57";
+import ServiceRestore from "./pages/ServiceRestore";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/projects/volvo-d6-350" element={<ProjectVolvoD6350 />} />
           <Route path="/projects/mercruiser-5-7l" element={<ProjectMercruiser57 />} />
+          <Route path="/services/restore" element={<ServiceRestore />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
