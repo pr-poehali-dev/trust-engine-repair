@@ -759,9 +759,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Anchor" size={24} className="text-marine-accent" />
-                <span className="text-lg font-bold">MarineService</span>
+              <div className="flex items-center gap-3 mb-4">
+                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto brightness-0 invert" />
+                <span className="text-xs text-white/70 italic font-medium">
+                  Новая жизнь вашего двигателя
+                </span>
               </div>
               <p className="text-marine-light/70">
                 Профессиональный ремонт морских двигателей с гарантией качества
