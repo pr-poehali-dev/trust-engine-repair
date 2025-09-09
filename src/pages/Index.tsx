@@ -217,9 +217,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-          </div>
-        </div>
-      </section>
 
       {/* Why Us Section */}
       <section id="why-us" className="py-20 px-4 bg-gradient-to-br from-marine-light/30 via-white to-marine-blue/10 relative overflow-hidden">
