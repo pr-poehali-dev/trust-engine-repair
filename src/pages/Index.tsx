@@ -5,8 +5,17 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import BannerSlider from '@/components/BannerSlider';
 
 export default function Index() {
+  const sliderImages = [
+    '/img/8180abc8-fee9-4c51-8f26-b21e6b6df676.jpg',
+    '/img/71d63af2-023e-4d5d-9258-2490a6e0866d.jpg', 
+    '/img/35d875d5-c63b-42d0-b607-1ce11982c54d.jpg',
+    '/img/52be5474-4310-45d3-8fad-700139b098d8.jpg',
+    '/img/60f4f76e-510f-4684-bacc-254d89c2cee5.jpg'
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-marine-light to-white">
       {/* Navigation */}
@@ -38,13 +47,11 @@ export default function Index() {
       <section className="relative px-2.5 py-[75px]">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Мобильная картинка - показываем сверху на мобильных */}
+            {/* Слайдер изображений */}
             <div className="relative order-1 lg:order-2">
-              <img 
-                src="https://cdn.poehali.dev/files/171bd53a-6976-43ff-a29e-15f48b06b64a.jpg" 
-                alt="Профессиональный ремонт морских двигателей"
-                className="rounded-2xl shadow-2xl w-full h-auto max-h-[300px] sm:max-h-[400px] lg:w-[600px] lg:h-[600px] object-cover"
-              />
+              <div className="rounded-2xl shadow-2xl w-full h-[300px] sm:h-[400px] lg:w-[600px] lg:h-[600px] overflow-hidden">
+                <BannerSlider images={sliderImages} />
+              </div>
               {/* Декоративные элементы для мобильной версии */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-primary/20 rounded-full blur-xl lg:hidden"></div>
               <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-marine-blue/20 rounded-full blur-xl lg:hidden"></div>
