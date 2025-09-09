@@ -9,11 +9,14 @@ import BannerSlider from '@/components/BannerSlider';
 
 export default function Index() {
   const sliderImages = [
-    '/img/8180abc8-fee9-4c51-8f26-b21e6b6df676.jpg',
-    '/img/71d63af2-023e-4d5d-9258-2490a6e0866d.jpg', 
-    '/img/35d875d5-c63b-42d0-b607-1ce11982c54d.jpg',
-    '/img/52be5474-4310-45d3-8fad-700139b098d8.jpg',
-    '/img/60f4f76e-510f-4684-bacc-254d89c2cee5.jpg'
+    'https://cdn.poehali.dev/files/fa538d5f-21ab-4b35-a595-5b9dca841f5c.jpg',
+    'https://cdn.poehali.dev/files/dd89e4b1-5705-418a-84b7-4841c120d189.jpg',
+    'https://cdn.poehali.dev/files/e9db4344-bf21-4dd5-9a26-9c299533c229.jpg',
+    'https://cdn.poehali.dev/files/ee3eb90a-2c16-4144-9fb0-64f097e14e11.jpg',
+    'https://cdn.poehali.dev/files/5c4e00a1-0034-4bde-a7f1-dee200d28490.jpg',
+    'https://cdn.poehali.dev/files/f3a88b95-0f65-463a-b23b-9c1465301093.jpg',
+    'https://cdn.poehali.dev/files/b163f792-26c9-4578-a9ba-b9328e56ff08.jpg',
+    'https://cdn.poehali.dev/files/759bb574-0830-464d-a4ed-733474a377fe.jpg'
   ];
 
   return (
