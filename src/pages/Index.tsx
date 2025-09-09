@@ -42,12 +42,14 @@ export default function Index() {
   };
   
   const sliderImages = [
-    '/img/c65a7395-9ada-46a3-91ad-d430abfa1e8e.jpg',
-    '/img/01d60de6-1d1f-42bf-af90-d433d2d1bed3.jpg',
-    '/img/07bae983-4b7e-4c23-b096-c8cb1a7b38bd.jpg',
-    '/img/6dfaa8a1-1b1b-48a8-914c-60cb8fb83c49.jpg',
-    '/img/b5a19461-13e4-4104-91f7-e244311173c1.jpg',
-    '/img/59c8beda-27f0-4fc2-92d4-b9a70a339d30.jpg'
+    'https://cdn.poehali.dev/files/fa538d5f-21ab-4b35-a595-5b9dca841f5c.jpg',
+    'https://cdn.poehali.dev/files/dd89e4b1-5705-418a-84b7-4841c120d189.jpg',
+    'https://cdn.poehali.dev/files/e9db4344-bf21-4dd5-9a26-9c299533c229.jpg',
+    'https://cdn.poehali.dev/files/ee3eb90a-2c16-4144-9fb0-64f097e14e11.jpg',
+    'https://cdn.poehali.dev/files/5c4e00a1-0034-4bde-a7f1-dee200d28490.jpg',
+    'https://cdn.poehali.dev/files/f3a88b95-0f65-463a-b23b-9c1465301093.jpg',
+    'https://cdn.poehali.dev/files/b163f792-26c9-4578-a9ba-b9328e56ff08.jpg',
+    'https://cdn.poehali.dev/files/759bb574-0830-464d-a4ed-733474a377fe.jpg'
   ];
 
   return (

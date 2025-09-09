@@ -37,7 +37,7 @@ export default function BannerSlider({
   };
 
   return (
-    <div className="relative w-full h-full overflow-hidden rounded-lg">
+    <div className="relative w-full h-full overflow-hidden rounded-lg group">
       {/* Slides */}
       <div className="relative h-full">
         {images.map((image, index) => (
@@ -50,15 +50,20 @@ export default function BannerSlider({
             <img
               src={image}
               alt={`Профессиональный морской сервис ${index + 1}`}
-              className="w-full h-full object-cover filter brightness-110 contrast-110 saturate-110 transition-all duration-700 hover:brightness-105 hover:contrast-105"
-              style={{
-                filter: 'brightness(1.1) contrast(1.15) saturate(1.2) hue-rotate(5deg)',
-                imageRendering: 'crisp-edges'
-              }}
+              className="w-full h-full object-cover hdr-image professional-transition"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 via-transparent to-transparent"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+            
+            {/* Многослойные HDR градиентные overlay для максимального эффекта */}
+            <div className="absolute inset-0 hdr-overlay-primary"></div>
+            <div className="absolute inset-0 hdr-overlay-secondary"></div>
+            <div className="absolute inset-0 hdr-overlay-tertiary"></div>
+            
+            {/* Интерактивный HDR эффект при hover */}
+            <div className="absolute inset-0 hdr-overlay-hover group-hover:opacity-100"></div>
+            
+            {/* Дополнительный слой для глубины и атмосферы */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent"></div>
           </div>
         ))}
       </div>
