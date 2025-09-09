@@ -55,7 +55,7 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4">
+      <section className="relative px-2.5 py-[75px]">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -63,10 +63,8 @@ export default function Index() {
                 <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20">
                   Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-marine-dark leading-tight">
-                  Надёжный сервис для вашего
-                  <span className="text-primary block">двигателя</span>
-                </h1>
+                <h1 className="text-5xl lg:text-6xl font-bold text-marine-dark leading-tight">Профессиональное восстановление стационарных двигателей
+Volvo Penta и Mercruiser</h1>
                 <p className="text-xl text-marine-steel mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
                   Volvo Penta, Mercruiser, Indmar, Yamaha. Более 15 лет опыта.
