@@ -55,9 +55,10 @@ export default function Index() {
                 <Badge className="mb-3 lg:mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-xs sm:text-sm">
                   Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="sm:text-4xl lg:text-5xl xl:text-6xl text-marine-dark leading-tight font-medium text-5xl">
+                <h1 className="sm:text-4xl lg:text-5xl xl:text-6xl text-redmar-dark leading-tight font-medium text-5xl">
                   Профессиональное восстановление стационарных двигателей{' '}
-                  <span className="text-[#1967D2] whitespace-nowrap font-bold text-4xl">Volvo Penta и Mercruiser</span>
+                  <span className="text-redmar-red whitespace-nowrap font-bold text-4xl">Volvo Penta</span>{' '}
+                  <span className="text-redmar-blue whitespace-nowrap font-bold text-4xl">и Mercruiser</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-marine-steel mt-4 lg:mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
@@ -89,8 +90,8 @@ export default function Index() {
             <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-lg px-6 py-2">
               🔧 Наши услуги
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
-              Что мы <span className="text-primary">предлагаем</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
+              Что мы <span className="text-redmar-red">предлагаем</span>
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
@@ -207,8 +208,8 @@ export default function Index() {
             <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-lg px-6 py-2">
               ⭐ Наши преимущества
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
-              Почему выбирают <span className="text-primary">именно нас</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
+              Почему выбирают <span className="text-redmar-blue">именно нас</span>
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Более 15 лет опыта, тысячи восстановленных двигателей и довольных клиентов
@@ -258,7 +259,7 @@ export default function Index() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className={`text-xl font-bold ${item.accent} group-hover:text-primary transition-colors duration-300`}>
+                        <h3 className={`text-xl font-bold text-redmar-dark group-hover:text-redmar-red transition-colors duration-300`}>
                           {item.title}
                         </h3>
                         <Badge variant="outline" className="text-xs font-medium">
@@ -316,8 +317,8 @@ export default function Index() {
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 text-lg px-6 py-2">
               💰 Выгодное предложение
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
-              Почему это <span className="text-primary">выгодно</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
+              Почему это <span className="text-redmar-red">выгодно</span>
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Восстановление двигателя — это не только экономия, но и инвестиция в будущее вашего катера
@@ -406,8 +407,8 @@ export default function Index() {
             <Badge className="mb-4 bg-green-50 text-green-600 border-green-200 text-lg px-6 py-2">
               🏆 Наши работы
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
-              Примеры <span className="text-primary">выполненных проектов</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
+              Примеры <span className="text-redmar-red">выполненных проектов</span>
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Профессиональное восстановление стационарных двигателей с гарантией качества
@@ -553,7 +554,7 @@ export default function Index() {
             🛡️ Наши гарантии
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Гарантии <span className="text-marine-accent">качества</span>
+            Гарантии <span className="text-redmar-blue">качества</span>
           </h2>
           <p className="text-xl text-marine-light/90 mb-12 max-w-3xl mx-auto">
             Мы настолько уверены в качестве наших услуг, что предоставляем расширенные гарантии
@@ -591,7 +592,7 @@ export default function Index() {
                   <div className={`${guarantee.bgColor} w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon name={guarantee.icon} size={36} className={guarantee.accent} />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-marine-accent transition-colors duration-300">
+                  <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-redmar-blue transition-colors duration-300">
                     {guarantee.title}
                   </h3>
                   <p className="text-marine-light/80 mb-6 leading-relaxed">
@@ -629,8 +630,8 @@ export default function Index() {
             <Badge className="mb-4 bg-primary/10 text-primary border-primary/20 text-lg px-6 py-2">
               📞 Связаться с нами
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-marine-dark mb-6">
-              Готовы начать <span className="text-primary">восстановление</span>?
+            <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
+              Готовы начать <span className="text-redmar-red">восстановление</span>?
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Свяжитесь с нами любым удобным способом, и получите персональную консультацию эксперта
@@ -685,7 +686,7 @@ export default function Index() {
                           <Icon name={contact.icon} size={24} className={contact.accent} />
                         </div>
                         <div className="flex-1">
-                          <h3 className={`font-bold text-lg ${contact.accent} mb-1 group-hover:text-primary transition-colors duration-300`}>
+                          <h3 className={`font-bold text-lg text-redmar-dark mb-1 group-hover:text-redmar-red transition-colors duration-300`}>
                             {contact.title}
                           </h3>
                           <p className="text-marine-dark font-medium mb-1">{contact.value}</p>

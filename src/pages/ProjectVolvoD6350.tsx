@@ -46,8 +46,8 @@ export default function ProjectVolvoD6350() {
           <Badge className="bg-blue-50 text-blue-600 border-blue-200 text-lg px-6 py-2">
             🔧 Капитальный ремонт
           </Badge>
-          <h1 className="text-4xl lg:text-5xl font-bold text-marine-dark">
-            Восстановление <span className="text-primary">Volvo Penta D6-350</span>
+          <h1 className="text-4xl lg:text-5xl font-bold text-redmar-dark">
+            Восстановление <span className="text-redmar-red">Volvo Penta</span> <span className="text-redmar-blue">D6-350</span>
           </h1>
           <p className="text-xl text-marine-steel max-w-3xl mx-auto">
             Полное восстановление морского двигателя с заменой всех изношенных компонентов 
@@ -96,7 +96,7 @@ export default function ProjectVolvoD6350() {
                 <div className={`${item.bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <Icon name={item.icon} size={24} className={item.color} />
                 </div>
-                <h3 className="font-semibold text-marine-dark mb-1">{item.title}</h3>
+                <h3 className="font-semibold text-redmar-dark mb-1">{item.title}</h3>
                 <p className={`text-2xl font-bold ${item.color} mb-1`}>{item.value}</p>
                 <p className="text-sm text-marine-steel">{item.description}</p>
               </CardContent>
@@ -115,8 +115,8 @@ export default function ProjectVolvoD6350() {
         {/* Проблемы */}
         <Card className="p-8">
           <CardHeader className="px-0 pt-0">
-            <CardTitle className="text-2xl font-bold text-marine-dark flex items-center gap-3">
-              <Icon name="AlertTriangle" size={24} className="text-red-500" />
+            <CardTitle className="text-2xl font-bold text-redmar-dark flex items-center gap-3">
+              <Icon name="AlertTriangle" size={24} className="text-redmar-red" />
               Выявленные проблемы
             </CardTitle>
           </CardHeader>
@@ -140,8 +140,8 @@ export default function ProjectVolvoD6350() {
         {/* Процесс восстановления */}
         <Card className="p-8">
           <CardHeader className="px-0 pt-0">
-            <CardTitle className="text-2xl font-bold text-marine-dark flex items-center gap-3">
-              <Icon name="Cog" size={24} className="text-primary" />
+            <CardTitle className="text-2xl font-bold text-redmar-dark flex items-center gap-3">
+              <Icon name="Cog" size={24} className="text-redmar-red" />
               Процесс восстановления
             </CardTitle>
           </CardHeader>
@@ -211,7 +211,7 @@ export default function ProjectVolvoD6350() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2">
-                        <h4 className="text-lg font-semibold text-marine-dark">{stage.stage}</h4>
+                        <h4 className="text-lg font-semibold text-redmar-dark">{stage.stage}</h4>
                         <Badge variant="outline" className="text-xs">
                           {stage.duration}
                         </Badge>
@@ -239,15 +239,15 @@ export default function ProjectVolvoD6350() {
         {/* Результаты */}
         <Card className="p-8 bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
           <CardHeader className="px-0 pt-0">
-            <CardTitle className="text-2xl font-bold text-marine-dark flex items-center gap-3">
-              <Icon name="Trophy" size={24} className="text-green-600" />
+            <CardTitle className="text-2xl font-bold text-redmar-dark flex items-center gap-3">
+              <Icon name="Trophy" size={24} className="text-redmar-blue" />
               Результаты проекта
             </CardTitle>
           </CardHeader>
           <CardContent className="px-0">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
-                <h4 className="font-semibold text-marine-dark">Технические показатели:</h4>
+                <h4 className="font-semibold text-redmar-dark">Технические показатели:</h4>
                 {[
                   'Мощность восстановлена до 350 л.с. (было 280 л.с.)',
                   'Расход топлива снижен на 15%',
@@ -261,7 +261,7 @@ export default function ProjectVolvoD6350() {
                 ))}
               </div>
               <div className="space-y-4">
-                <h4 className="font-semibold text-marine-dark">Гарантии:</h4>
+                <h4 className="font-semibold text-redmar-dark">Гарантии:</h4>
                 {[
                   '2 года гарантии на двигатель',
                   '6 месяцев на расходные материалы',
@@ -281,8 +281,8 @@ export default function ProjectVolvoD6350() {
         {/* CTA */}
         <Card className="p-8 text-center bg-gradient-to-r from-primary/5 to-marine-blue/5">
           <CardContent>
-            <h3 className="text-2xl font-bold text-marine-dark mb-4">
-              Нужен ремонт морского двигателя?
+            <h3 className="text-2xl font-bold text-redmar-dark mb-4">
+              Нужен ремонт морского <span className="text-redmar-red">двигателя</span>?
             </h3>
             <p className="text-marine-steel mb-6 max-w-2xl mx-auto">
               Получите бесплатную консультацию и предварительную оценку стоимости ремонта

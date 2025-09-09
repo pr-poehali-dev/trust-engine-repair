@@ -69,6 +69,12 @@ export default {
 					steel: '#64748B',
 					light: '#F8FAFC',
 					accent: '#0EA5E9',
+				},
+				// RED MAR brand colors
+				redmar: {
+					red: '#F40C23',
+					blue: '#1D4CD7',
+					dark: '#000000',
 				}
 			},
 			borderRadius: {
