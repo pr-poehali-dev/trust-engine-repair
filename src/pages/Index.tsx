@@ -31,7 +31,7 @@ export default function Index() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-4">
               <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 sm:w-auto" />
-              <span className="hidden sm:block text-sm text-brand-gray-600 font-medium">
+              <span className="hidden sm:block text-brand-gray-600 font-medium text-xs">
                 Новая жизнь вашего двигателя
               </span>
             </div>
