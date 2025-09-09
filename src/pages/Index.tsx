@@ -270,7 +270,7 @@ export default function Index() {
                 features: ['Долгосрочная гарантия', 'Сервисная поддержка', 'Техническое обслуживание']
               }
             ].slice(0, 3).map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white rounded-2xl overflow-hidden">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white rounded-2xl overflow-hidden h-full flex flex-col">
                 <div className="relative overflow-hidden">
                   <img 
                     src={service.image} 
@@ -291,12 +291,12 @@ export default function Index() {
                   </CardTitle>
                 </CardHeader>
                 
-                <CardContent className="space-y-6">
+                <CardContent className="flex flex-col flex-grow space-y-6">
                   <p className="text-brand-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 flex-grow">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2 text-sm text-brand-gray-500">
                         <Icon name="CheckCircle" size={16} className="text-primary" />
@@ -306,7 +306,7 @@ export default function Index() {
                   </div>
                   
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 mt-auto"
                     onClick={() => {
                       if (index === 0) {
                         window.location.href = '/services/restore';
