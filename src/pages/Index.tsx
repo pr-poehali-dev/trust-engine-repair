@@ -39,9 +39,40 @@ export default function Index() {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
-                Услуги
-              </a>
+              <div className="relative group">
+                <a href="#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px] flex items-center gap-1">
+                  Услуги
+                  <Icon name="ChevronDown" size={14} className="transition-transform group-hover:rotate-180" />
+                </a>
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="p-2">
+                    <Link 
+                      to="/services/restore" 
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
+                    >
+                      <Icon name="RefreshCw" size={20} className="text-primary" />
+                      <div>
+                        <div className="font-medium text-gray-900">Восстановление под ключ</div>
+                        <div className="text-sm text-gray-500">Полный цикл ремонта</div>
+                      </div>
+                    </Link>
+                    <a href="#services" className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
+                      <Icon name="Search" size={20} className="text-primary" />
+                      <div>
+                        <div className="font-medium text-gray-900">Диагностика</div>
+                        <div className="text-sm text-gray-500">Комплексная проверка</div>
+                      </div>
+                    </a>
+                    <a href="#services" className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
+                      <Icon name="Package" size={20} className="text-primary" />
+                      <div>
+                        <div className="font-medium text-gray-900">Лонг-блоки</div>
+                        <div className="text-sm text-gray-500">Готовые решения</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
               <a href="#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Почему мы
               </a>
@@ -271,7 +302,14 @@ export default function Index() {
                     ))}
                   </div>
                   
-                  <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                    onClick={() => {
+                      if (index === 0) {
+                        window.location.href = '/services/restore';
+                      }
+                    }}
+                  >
                     <Icon name="ArrowRight" size={16} className="ml-2" />
                     Подробнее
                   </Button>

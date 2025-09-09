@@ -98,16 +98,53 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
             {/* Navigation */}
             <nav className="flex-1 flex flex-col justify-center px-6 py-12">
               <div className="flex flex-col space-y-4 max-w-sm mx-auto w-full">
-                <a 
-                  href="#services" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
-                  onClick={handleLinkClick}
-                >
-                  <div className="flex items-center gap-4">
-                    <Icon name="Settings" size={24} className="text-gray-600" />
-                    <span>Услуги</span>
+                <div>
+                  <a 
+                    href="#services" 
+                    className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
+                    onClick={handleLinkClick}
+                  >
+                    <div className="flex items-center gap-4">
+                      <Icon name="Settings" size={24} className="text-gray-600" />
+                      <span>Услуги</span>
+                      <Icon name="ChevronRight" size={20} className="text-gray-400 ml-auto" />
+                    </div>
+                  </a>
+                  
+                  {/* Submenu */}
+                  <div className="ml-8 mt-2 space-y-2">
+                    <a 
+                      href="/services/restore"
+                      className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl text-base block"
+                      onClick={handleLinkClick}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon name="RefreshCw" size={18} className="text-gray-500" />
+                        <span>Восстановление под ключ</span>
+                      </div>
+                    </a>
+                    <a 
+                      href="#services" 
+                      className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl text-base block"
+                      onClick={handleLinkClick}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon name="Search" size={18} className="text-gray-500" />
+                        <span>Диагностика</span>
+                      </div>
+                    </a>
+                    <a 
+                      href="#services" 
+                      className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl text-base block"
+                      onClick={handleLinkClick}
+                    >
+                      <div className="flex items-center gap-3">
+                        <Icon name="Package" size={18} className="text-gray-500" />
+                        <span>Лонг-блоки</span>
+                      </div>
+                    </a>
                   </div>
-                </a>
+                </div>
                 <a 
                   href="#why-us" 
                   className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
