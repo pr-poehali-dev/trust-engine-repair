@@ -75,10 +75,9 @@ export default function Index() {
                 <Badge className="mb-3 lg:mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20 text-xs sm:text-sm">
                   Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-marine-dark leading-tight text-2xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-marine-dark leading-tight">
                   Профессиональное восстановление стационарных двигателей{' '}
-                  <span className="text-[#1967D2] block sm:inline">Volvo Penta</span> и{' '}
-                  <span className="text-[#1967D2] block sm:inline">Mercruiser</span>
+                  <span className="text-[#1967D2] whitespace-nowrap">Volvo Penta и Mercruiser</span>
                 </h1>
                 <p className="text-base sm:text-lg lg:text-xl text-marine-steel mt-4 lg:mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
