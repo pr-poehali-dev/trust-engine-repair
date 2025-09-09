@@ -310,6 +310,8 @@ export default function Index() {
                     onClick={() => {
                       if (index === 0) {
                         window.location.href = '/services/restore';
+                      } else if (index === 1) {
+                        window.location.href = '/services/longblocks';
                       } else if (index === 2) {
                         window.location.href = '/services/repair';
                       }
@@ -323,12 +325,7 @@ export default function Index() {
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
-              <Icon name="Grid3X3" size={20} className="mr-2" />
-              Посмотреть все услуги
-            </Button>
-          </div>
+
         </div>
       </section>
 
