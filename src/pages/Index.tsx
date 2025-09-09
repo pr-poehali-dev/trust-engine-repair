@@ -150,17 +150,17 @@ export default function Index() {
                 icon: 'Shield'
               }
             ].map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/20 flex flex-col h-full">
                 <div className="aspect-video bg-marine-light rounded-t-lg flex items-center justify-center mb-4">
                   <div className="bg-white/80 p-4 rounded-lg">
                     <Icon name={service.icon} size={32} className="text-marine-blue" />
                   </div>
                 </div>
-                <CardHeader className="pt-0">
+                <CardHeader className="pt-0 flex-shrink-0">
                   <CardTitle className="text-lg leading-tight">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-marine-steel text-sm leading-relaxed">{service.description}</p>
+                <CardContent className="pt-0 flex flex-col flex-grow">
+                  <p className="text-marine-steel text-sm leading-relaxed flex-grow">{service.description}</p>
                   <Button variant="outline" className="w-full mt-4 text-marine-blue border-marine-blue hover:bg-marine-blue hover:text-white">
                     Подробнее
                   </Button>
