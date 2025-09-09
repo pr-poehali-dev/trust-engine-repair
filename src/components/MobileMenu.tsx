@@ -156,7 +156,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                   </div>
                 </a>
                 <a 
-                  href="#gallery" 
+                  href="/projects" 
                   className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-5 px-6 rounded-2xl font-semibold text-lg block"
                   onClick={handleLinkClick}
                 >

@@ -76,9 +76,9 @@ export default function Index() {
               <a href="#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Почему мы
               </a>
-              <a href="#gallery" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
+              <Link to="/projects" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Наши работы
-              </a>
+              </Link>
               <a href="#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-[15px]">
                 Гарантии
               </a>
@@ -585,7 +585,7 @@ export default function Index() {
                 features: ['Расточка блока', 'Новая ГБЦ', 'Система впрыска'],
                 accent: 'text-marine-dark',
                 bgColor: 'bg-primary/10',
-                link: '#'
+                link: '/projects/volvo-d6-350'
               },
               { 
                 title: 'Volvo Penta D4-180', 
@@ -596,7 +596,7 @@ export default function Index() {
                 features: ['Новый картридж', 'Обновленные магистрали', 'Калибровка системы'],
                 accent: 'text-marine-dark',
                 bgColor: 'bg-primary/10',
-                link: '#'
+                link: '/portfolio'
               },
               { 
                 title: 'Mercruiser 6.2L', 
@@ -607,7 +607,7 @@ export default function Index() {
                 features: ['Капремонт блока', 'Новая трансмиссия', 'Полная электроника'],
                 accent: 'text-marine-dark',
                 bgColor: 'bg-primary/10',
-                link: '#'
+                link: '/projects/mercruiser-5-7l'
               }
             ].map((project, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm">
@@ -663,9 +663,11 @@ export default function Index() {
           </div>
           
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
-              <Icon name="Grid3X3" size={20} className="mr-2" />
-              Посмотреть все проекты
+            <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
+              <Link to="/portfolio">
+                <Icon name="Grid3X3" size={20} className="mr-2" />
+                Посмотреть все проекты
+              </Link>
             </Button>
           </div>
         </div>
