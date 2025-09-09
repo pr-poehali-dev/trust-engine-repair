@@ -4,7 +4,7 @@ import Icon from '@/components/ui/icon';
 export default function LongBlocksCTASection() {
   return (
     <section className="py-20 px-4 bg-primary">
-      <div className="max-w-4xl mx-auto text-center text-white">
+      <div className="max-w-7xl mx-auto relative z-10 text-center text-white">
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           Нужен лонг-блок для вашего двигателя?
         </h2>

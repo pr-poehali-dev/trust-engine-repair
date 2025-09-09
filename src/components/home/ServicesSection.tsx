@@ -38,13 +38,10 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-24 px-4 bg-white relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute top-40 left-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
-      </div>
+    <section id="services" className="py-24 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
             🔧 Наши услуги

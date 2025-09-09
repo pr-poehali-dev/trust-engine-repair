@@ -129,8 +129,9 @@ export default function Portfolio() {
       </nav>
 
       {/* Header */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
           <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full mb-6">
             🏆 Портфолио работ
           </Badge>
@@ -156,8 +157,9 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project) => (
               <Card key={project.id} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white rounded-2xl overflow-hidden">

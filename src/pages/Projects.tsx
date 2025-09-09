@@ -123,8 +123,9 @@ export default function Projects() {
       </nav>
 
       {/* Header */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
           <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full mb-6">
             🏆 Портфолио работ
           </Badge>
@@ -159,8 +160,9 @@ export default function Projects() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={project.id} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden">
@@ -254,8 +256,9 @@ export default function Projects() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-white/50">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+        <div className="max-w-7xl mx-auto relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
             Хотите стать следующим успешным проектом?
           </h2>

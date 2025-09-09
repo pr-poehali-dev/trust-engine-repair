@@ -11,14 +11,10 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onContactClick, sliderImages }: HeroSectionProps) {
   return (
-    <section className="relative px-4 py-20 lg:py-28 overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 right-20 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-40 h-40 bg-primary/5 rounded-full blur-3xl"></div>
-      </div>
+    <section className="py-20 px-4 lg:py-28 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
-      <div className="max-w-7xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Заголовок для мобильных устройств */}
         <div className="lg:hidden space-y-6 mb-8 text-center">
           <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
