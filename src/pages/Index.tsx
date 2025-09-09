@@ -317,7 +317,7 @@ export default function Index() {
               💰 Выгодное предложение
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
-              Почему это <span className="text-redmar-red">выгодно</span>
+              Почему это <span className="text-[#1d4cd7]">выгодно</span>
             </h2>
             <p className="text-xl text-marine-steel max-w-3xl mx-auto">
               Восстановление двигателя — это не только экономия, но и инвестиция в будущее вашего катера
