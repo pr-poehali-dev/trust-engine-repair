@@ -34,7 +34,7 @@ export default function NavigationSection({
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-50">
+    <nav className={`bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-50 ${mobileMenuOpen ? 'md:block hidden' : 'block'}`}>
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Логотип с адаптивным слоганом - сдвинут правее, увеличен на 15% */}

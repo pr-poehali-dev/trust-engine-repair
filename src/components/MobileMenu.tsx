@@ -63,17 +63,20 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
       {/* Mobile menu overlay */}
       {isOpen && (
         <>
-          {/* Background overlay - исключаем зону навигации */}
+          {/* Background overlay - только под меню */}
           <div 
-            className="fixed top-[64px] left-0 right-0 bottom-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
+            className="fixed inset-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
           />
           
-          {/* Menu panel - без щели, прикреплен к навигации */}
-          <div className="fixed top-[64px] left-0 right-0 bottom-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out mobile-menu-slide-down shadow-lg">
-            {/* Кнопка закрытия - выровнена с кнопкой меню */}
-            <div className="absolute top-0 right-0 h-16 flex items-center pr-4">
+          {/* Menu panel - цельная панель с навигацией */}
+          <div className="fixed inset-0 bg-white z-[9999] md:hidden transform transition-transform duration-300 ease-out">
+            {/* Навигационная полоса с логотипом и кнопкой закрытия */}
+            <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-white">
+              <div className="flex items-center gap-2 ml-3">
+                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto" />
+              </div>
               <Button 
                 variant="ghost" 
                 size="sm" 
@@ -86,7 +89,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
             </div>
             
             {/* Navigation */}
-            <nav className="h-full flex flex-col justify-start px-6 pt-20 pb-8 overflow-y-auto">
+            <nav className="flex-1 flex flex-col justify-start px-6 pt-8 pb-8 overflow-y-auto">
               <div className="flex flex-col space-y-3 max-w-sm mx-auto w-full">
                 <div>
                   <a 
