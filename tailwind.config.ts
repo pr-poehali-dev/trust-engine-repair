@@ -64,7 +64,7 @@ export default {
 				},
 				// Marine theme colors
 				marine: {
-					blue: '#1E40AF',
+					blue: '#1967D2',
 					dark: '#0F172A', 
 					steel: '#64748B',
 					light: '#F8FAFC',

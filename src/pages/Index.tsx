@@ -63,8 +63,11 @@ export default function Index() {
                 <Badge className="mb-4 bg-marine-blue/10 text-marine-blue border-marine-blue/20">
                   Профессиональный ремонт морских двигателей
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-marine-dark leading-tight">Профессиональное восстановление стационарных двигателей
-Volvo Penta и Mercruiser</h1>
+                <h1 className="text-5xl lg:text-6xl font-bold text-marine-dark leading-tight">
+                  Профессиональное восстановление стационарных двигателей{' '}
+                  <span className="text-[#1967D2]">Volvo Penta</span> и{' '}
+                  <span className="text-[#1967D2]">Mercruiser</span>
+                </h1>
                 <p className="text-xl text-marine-steel mt-6 leading-relaxed">
                   Специализируемся на ремонте и восстановлении стационарных двигателей 
                   Volvo Penta, Mercruiser, Indmar, Yamaha. Более 15 лет опыта.
