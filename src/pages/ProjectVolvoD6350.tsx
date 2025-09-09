@@ -34,8 +34,8 @@ export default function ProjectVolvoD6350() {
               Вернуться к проектам
             </Button>
             <div className="flex items-center gap-2">
-              <Icon name="Anchor" size={24} className="text-primary" />
-              <span className="font-bold text-marine-dark">MarineService</span>
+              <img src="/favicon.svg" alt="MarineService" className="h-6 w-6 sm:h-7 sm:w-7" />
+              <span className="font-bold text-marine-dark text-sm sm:text-base">MarineService</span>
             </div>
           </div>
         </div>
