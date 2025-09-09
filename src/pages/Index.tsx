@@ -35,7 +35,7 @@ export default function Index() {
                     L49.739,19.107z"/>
                 </g>
               </svg>
-              <span className="text-xs text-marine-steel italic font-medium">
+              <span className="text-xs text-marine-steel  font-medium">
                 Новая жизнь вашего двигателя
               </span>
             </div>
