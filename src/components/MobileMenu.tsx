@@ -9,36 +9,18 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileMenuProps) {
-  // Блокируем скролл при открытом меню
+  // Простая блокировка скролла без смещения
   useEffect(() => {
     if (isOpen) {
-      // Сохраняем текущую позицию скролла
-      const scrollY = window.scrollY;
-      
-      // Блокируем скролл
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = '100%';
+      // Просто блокируем скролл
       document.body.style.overflow = 'hidden';
     } else {
       // Восстанавливаем скролл
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
       document.body.style.overflow = '';
-      
-      // Возвращаемся к исходной позиции
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      }
     }
 
     // Очищаем при размонтировании
     return () => {
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
       document.body.style.overflow = '';
     };
   }, [isOpen]);
@@ -71,9 +53,9 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
           />
           
           {/* Menu panel - цельная панель с навигацией */}
-          <div className="fixed inset-0 bg-red-500 z-[99999] md:hidden" style={{display: 'block !important'}}>
+          <div className="fixed inset-0 bg-white z-[99999] md:hidden animate-in fade-in duration-300">
             {/* Навигационная полоса с логотипом и кнопкой закрытия */}
-            <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-white">
+            <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-white shadow-sm">
               <div className="flex items-center gap-2 ml-3">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto" />
               </div>
@@ -81,7 +63,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                 variant="ghost" 
                 size="sm" 
                 onClick={onToggle}
-                className="p-2 hover:bg-gray-100"
+                className="p-2 hover:bg-gray-100 rounded-full"
                 aria-label="Закрыть меню"
               >
                 <Icon name="X" size={24} className="text-gray-700" />
