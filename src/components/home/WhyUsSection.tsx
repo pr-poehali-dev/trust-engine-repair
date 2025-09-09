@@ -1,278 +1,212 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
-import { useState, useEffect } from 'react';
 
 export default function WhyUsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const companyMetrics = [
+    { value: '500+', label: 'Двигателей восстановлено', sublabel: 'за все время работы' },
+    { value: '15+', label: 'Лет экспертного опыта', sublabel: 'на рынке морской техники' },
+    { value: '98%', label: 'Довольных клиентов', sublabel: 'рекомендуют нас' },
+    { value: '24 мес.', label: 'Расширенная гарантия', sublabel: 'на все работы' }
+  ];
 
   const advantages = [
     {
+      category: 'Экспертиза',
       icon: 'Award',
-      title: 'Профессиональное восстановление',
-      description: 'Не просто ремонт, а полная реконструкция с использованием современных компонентов и технологий.',
-      stats: '500+',
-      unit: 'двигателей в год',
-      gradient: 'from-amber-500 to-orange-500',
-      benefits: ['Сертифицированные запчасти', 'Современное оборудование', 'Стендовые испытания']
+      title: 'Сертифицированные специалисты',
+      description: 'Наши мастера имеют официальные сертификаты Volvo Penta и Mercruiser. Регулярно проходят обучение на заводах производителей.',
+      keyPoints: ['Заводская сертификация', 'Постоянное повышение квалификации', 'Доступ к технической документации'],
+      accent: 'border-l-blue-500',
+      iconBg: 'bg-blue-50',
+      iconColor: 'text-blue-600'
     },
     {
-      icon: 'Clock',
-      title: 'Быстрые сроки выполнения',
-      description: 'Оперативное восстановление благодаря отлаженным процессам и большому складу компонентов.',
-      stats: '7-14',
-      unit: 'дней на ремонт',
-      gradient: 'from-blue-500 to-cyan-500',
-      benefits: ['Экспресс-диагностика', 'Собственный склад', 'Параллельные процессы']
+      category: 'Технологии',
+      icon: 'Settings',
+      title: 'Современное оборудование',
+      description: 'Диагностические комплексы последнего поколения, специализированный инструмент и оригинальные компоненты от производителей.',
+      keyPoints: ['Компьютерная диагностика', 'Стендовые испытания', 'Оригинальные запасные части'],
+      accent: 'border-l-emerald-500',
+      iconBg: 'bg-emerald-50',
+      iconColor: 'text-emerald-600'
     },
     {
-      icon: 'Users',
-      title: 'Экспертная команда',
-      description: 'Квалифицированные мастера с глубоким знанием морских двигателей и постоянным обучением.',
-      stats: '15+',
-      unit: 'лет опыта',
-      gradient: 'from-green-500 to-emerald-500',
-      benefits: ['Сертифицированные специалисты', 'Регулярное обучение', 'Индивидуальный подход']
-    },
-    {
+      category: 'Качество',
       icon: 'Shield',
-      title: 'Расширенная гарантия',
-      description: 'Комплексная гарантия с тщательным тестированием и техподдержкой на весь период службы.',
-      stats: '2',
-      unit: 'года гарантии',
-      gradient: 'from-purple-500 to-violet-500',
-      benefits: ['Полное тестирование', 'Техподдержка 24/7', 'Бесплатное ТО в период гарантии']
+      title: 'Контроль качества на всех этапах',
+      description: 'Многоступенчатая система контроля: входная диагностика, промежуточные проверки, финальные испытания и гарантийное обслуживание.',
+      keyPoints: ['Пошаговая документация', 'Стандарты производителя', '24-месячная гарантия'],
+      accent: 'border-l-amber-500',
+      iconBg: 'bg-amber-50',
+      iconColor: 'text-amber-600'
+    },
+    {
+      category: 'Сервис',
+      icon: 'Clock',
+      title: 'Оптимизированные процессы',
+      description: 'Собственная логистика, склад запчастей и отлаженные бизнес-процессы обеспечивают минимальные сроки без компромиссов в качестве.',
+      keyPoints: ['Экспресс-диагностика 24 часа', 'Склад запчастей 500+ позиций', 'Прозрачные сроки выполнения'],
+      accent: 'border-l-violet-500',
+      iconBg: 'bg-violet-50',
+      iconColor: 'text-violet-600'
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Михаил Петров',
-      role: 'Владелец яхты Princess 45',
-      text: 'Двигатель работает как новый уже 2 года. Профессионализм команды на высшем уровне!',
-      rating: 5
-    },
-    {
-      name: 'Алексей Семенов',
-      role: 'Капитан катера Azimut',
-      text: 'Качество работ превзошло ожидания. Рекомендую всем владельцам морской техники.',
-      rating: 5
-    },
-    {
-      name: 'Дмитрий Козлов',
-      role: 'Владелец Bayliner 285',
-      text: 'Быстро, качественно, с полной гарантией. Теперь обслуживаюсь только здесь.',
-      rating: 5
-    }
+  const certifications = [
+    { name: 'Volvo Penta', logo: '🔧', status: 'Авторизованный сервис' },
+    { name: 'Mercruiser', logo: '⚙️', status: 'Сертифицированный партнер' },
+    { name: 'ISO 9001', logo: '🏆', status: 'Система менеджмента качества' }
   ];
-
-  const companyStats = [
-    { icon: 'Wrench', value: '500+', label: 'Восстановленных двигателей' },
-    { icon: 'Users', value: '15+', label: 'Лет опыта в отрасли' },
-    { icon: 'Star', value: '4.9', label: 'Средний рейтинг клиентов' },
-    { icon: 'Award', value: '100%', label: 'Выполненных проектов' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
-    <section id="why-us" className="py-24 px-4 bg-gradient-to-br from-slate-50 via-white to-blue-50/30 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section id="why-us" className="py-20 px-4 bg-white">
+      <div className="max-w-7xl mx-auto">
+        
         {/* Header */}
-        <div className="text-center mb-20">
-          <Badge className="mb-6 bg-blue-100 text-blue-700 border-blue-200 text-lg px-8 py-3 rounded-full font-semibold">
-            <Icon name="Award" size={18} className="mr-2" />
-            Почему мы лучшие
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4 border-slate-300 text-slate-700 px-4 py-2">
+            Наши преимущества
           </Badge>
-          <h2 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-8 leading-tight">
-            Выбирают именно{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              нас
-            </span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            Почему выбирают именно нас
           </h2>
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            Более 15 лет опыта, сотни восстановленных двигателей и репутация надежного партнера в мире морской техники
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Профессиональный подход, современные технологии и многолетний опыт — 
+            основа нашей репутации в сфере восстановления морских двигателей
           </p>
         </div>
 
-        {/* Company Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {companyStats.map((stat, index) => (
-            <Card key={index} className="text-center p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Icon name={stat.icon} size={24} className="text-white" />
+        {/* Company Metrics */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {companyMetrics.map((metric, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-slate-50 rounded-xl p-6 mb-4">
+                <div className="text-3xl lg:text-4xl font-bold text-slate-900 mb-1">{metric.value}</div>
+                <div className="text-sm font-semibold text-slate-700">{metric.label}</div>
+                <div className="text-xs text-slate-500 mt-1">{metric.sublabel}</div>
               </div>
-              <div className="text-3xl lg:text-4xl font-bold text-slate-900 mb-2">{stat.value}</div>
-              <div className="text-slate-600 font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Main Advantages */}
+        <div className="space-y-8 mb-16">
+          {advantages.map((advantage, index) => (
+            <Card key={index} className={`border-0 border-l-4 ${advantage.accent} bg-slate-50/50 hover:bg-white hover:shadow-lg transition-all duration-300`}>
+              <div className="p-8">
+                <div className="flex items-start gap-8">
+                  
+                  {/* Icon & Category */}
+                  <div className="flex-shrink-0">
+                    <div className={`${advantage.iconBg} w-16 h-16 rounded-xl flex items-center justify-center mb-3`}>
+                      <Icon name={advantage.icon} size={28} className={advantage.iconColor} />
+                    </div>
+                    <div className="text-xs font-medium text-slate-500 text-center">
+                      {advantage.category}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-slate-900 mb-3">
+                      {advantage.title}
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed mb-6">
+                      {advantage.description}
+                    </p>
+                    
+                    {/* Key Points */}
+                    <div className="grid md:grid-cols-3 gap-4">
+                      {advantage.keyPoints.map((point, pointIndex) => (
+                        <div key={pointIndex} className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-slate-400 rounded-full flex-shrink-0"></div>
+                          <span className="text-sm text-slate-600 font-medium">{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </Card>
           ))}
         </div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
-          {/* Advantages */}
-          <div className="space-y-8">
-            <div className="mb-12">
-              <h3 className="text-3xl font-bold text-slate-900 mb-4">Наши ключевые преимущества</h3>
-              <p className="text-slate-600 text-lg">Каждое преимущество подкреплено многолетним опытом и сотнями довольных клиентов</p>
-            </div>
-            
-            {advantages.map((item, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/90 backdrop-blur-sm overflow-hidden">
-                <div className="p-8">
-                  <div className="flex items-start gap-6">
-                    {/* Icon */}
-                    <div className="relative">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.gradient} p-4 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
-                        <Icon name={item.icon} size={32} className="text-white" />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                        <Icon name="Check" size={14} className="text-white" />
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1">
-                      {/* Header */}
-                      <div className="flex items-center justify-between mb-4">
-                        <h4 className="text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300">
-                          {item.title}
-                        </h4>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-blue-600">{item.stats}</div>
-                          <div className="text-sm text-slate-500 font-medium">{item.unit}</div>
-                        </div>
-                      </div>
-                      
-                      {/* Description */}
-                      <p className="text-slate-600 leading-relaxed mb-6 text-lg">
-                        {item.description}
-                      </p>
-                      
-                      {/* Benefits */}
-                      <div className="space-y-2">
-                        {item.benefits.map((benefit, idx) => (
-                          <div key={idx} className="flex items-center gap-3 text-slate-700">
-                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                            <span className="font-medium">{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Bottom accent */}
-                <div className={`h-1 bg-gradient-to-r ${item.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500`}></div>
-              </Card>
-            ))}
+        {/* Certifications & Trust Indicators */}
+        <div className="bg-slate-50 rounded-2xl p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">
+              Сертификации и партнерства
+            </h3>
+            <p className="text-slate-600">
+              Официальные подтверждения нашей компетентности и надежности
+            </p>
           </div>
           
-          {/* Testimonials & Image */}
-          <div className="space-y-8">
-            {/* Workshop Image */}
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
-              <img 
-                src="/img/69551f2d-ae28-47dc-8b0c-008881fafee8.jpg" 
-                alt="Современная мастерская для ремонта морских двигателей"
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-              
-              {/* Workshop Info Overlay */}
-              <div className="absolute bottom-8 left-8 right-8">
-                <Card className="bg-white/95 backdrop-blur-md border-0 p-6 shadow-xl">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center">
-                      <Icon name="MapPin" size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-slate-900 text-lg">Современная мастерская</h4>
-                      <p className="text-slate-600">Профессиональное оборудование и условия</p>
-                    </div>
-                  </div>
-                </Card>
+          <div className="grid md:grid-cols-3 gap-6">
+            {certifications.map((cert, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 text-center">
+                <div className="text-3xl mb-3">{cert.logo}</div>
+                <div className="font-semibold text-slate-900 mb-1">{cert.name}</div>
+                <div className="text-sm text-slate-600">{cert.status}</div>
               </div>
-            </div>
-
-            {/* Testimonials Carousel */}
-            <Card className="bg-gradient-to-r from-blue-600 to-purple-600 border-0 text-white overflow-hidden">
-              <div className="p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <Icon name="Quote" size={24} className="text-blue-200" />
-                  <h4 className="text-xl font-bold">Отзывы клиентов</h4>
-                </div>
-                
-                <div className="min-h-[120px] relative">
-                  {testimonials.map((testimonial, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-opacity duration-500 ${
-                        index === currentTestimonial ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    >
-                      <p className="text-lg leading-relaxed mb-4 text-blue-50">
-                        "{testimonial.text}"
-                      </p>
-                      
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <div className="font-semibold">{testimonial.name}</div>
-                          <div className="text-blue-200 text-sm">{testimonial.role}</div>
-                        </div>
-                        
-                        <div className="flex gap-1">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Icon key={i} name="Star" size={18} className="text-yellow-400 fill-current" />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Testimonial indicators */}
-                <div className="flex justify-center gap-2 mt-6">
-                  {testimonials.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentTestimonial(index)}
-                      className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                        index === currentTestimonial ? 'bg-white' : 'bg-white/40'
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </Card>
-
-            {/* Call to Action */}
-            <Card className="bg-gradient-to-r from-slate-900 to-slate-800 border-0 text-white text-center p-8">
-              <h4 className="text-2xl font-bold mb-4">Готовы доверить нам ваш двигатель?</h4>
-              <p className="text-slate-300 mb-6 text-lg">
-                Получите бесплатную консультацию и персональное предложение
-              </p>
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <Icon name="Phone" size={20} className="mr-2" />
-                Получить консультацию
-              </Button>
-            </Card>
+            ))}
           </div>
         </div>
+
+        {/* Image Section */}
+        <div className="mt-16">
+          <div className="relative rounded-2xl overflow-hidden">
+            <img 
+              src="/img/69551f2d-ae28-47dc-8b0c-008881fafee8.jpg" 
+              alt="Профессиональная мастерская по восстановлению морских двигателей"
+              className="w-full h-64 lg:h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+            
+            {/* Workshop Info */}
+            <div className="absolute bottom-8 left-8 right-8">
+              <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6">
+                <div className="flex items-center gap-4">
+                  <div className="bg-slate-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                    <Icon name="MapPin" size={20} className="text-slate-600" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-slate-900">
+                      Современная производственная база
+                    </div>
+                    <div className="text-sm text-slate-600">
+                      Собственные мощности • Складской комплекс • Испытательные стенды
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <div className="bg-slate-900 rounded-2xl p-8 lg:p-12">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+              Доверьте восстановление двигателя профессионалам
+            </h3>
+            <p className="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+              Получите детальную диагностику, прозрачную смету и гарантированный результат
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors duration-200 flex items-center justify-center gap-2">
+                <Icon name="Phone" size={18} />
+                Консультация специалиста
+              </button>
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
+                <Icon name="Calculator" size={18} />
+                Рассчитать стоимость
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
