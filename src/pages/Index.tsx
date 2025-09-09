@@ -68,7 +68,7 @@ export default function Index() {
         
         <ServicesSection />
         
-        <WhyUsSection />
+        <WhyUsSection onContactClick={() => setContactFormOpen(true)} />
         
         <BenefitsSection />
         
