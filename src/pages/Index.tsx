@@ -251,7 +251,7 @@ export default function Index() {
                 </CardHeader>
                 
                 <CardContent className="space-y-6">
-                  <p className="text-jivo-gray-600 leading-relaxed"
+                  <p className="text-jivo-gray-600 leading-relaxed">
                     {service.description}
                   </p>
                   
