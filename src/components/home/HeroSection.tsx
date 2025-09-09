@@ -72,7 +72,7 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
                 <div className="text-sm text-brand-gray-600">Двигателей отремонтировано</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">15</div>
+                <div className="text-2xl font-bold text-primary">12</div>
                 <div className="text-sm text-brand-gray-600">Лет опыта</div>
               </div>
               <div className="text-center">
