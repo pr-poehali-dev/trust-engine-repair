@@ -104,8 +104,8 @@ export default function Index() {
                 description: 'Полное восстановление с гарантией качества и современными технологиями. Используем только оригинальные компоненты.',
                 icon: 'RefreshCw',
                 image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
-                accent: 'text-blue-600',
-                bgColor: 'bg-blue-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 features: ['Капитальный ремонт', 'Современные технологии', 'Гарантия качества']
               },
               { 
@@ -113,8 +113,8 @@ export default function Index() {
                 description: 'Готовые к установке блоки двигателей с полной комплектацией и тестированием на стенде.',
                 icon: 'Package',
                 image: '/img/04333da0-be06-4c2d-ac1d-74f71868a541.jpg',
-                accent: 'text-green-600',
-                bgColor: 'bg-green-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 features: ['Готовые блоки', 'Полная комплектация', 'Тестирование']
               },
               { 
@@ -122,8 +122,8 @@ export default function Index() {
                 description: 'Комплексная диагностика с детальным отчетом о состоянии и рекомендациями по ремонту.',
                 icon: 'Search',
                 image: '/img/a78e3607-d6ee-449a-895b-7ab9dc9b726e.jpg',
-                accent: 'text-orange-600',
-                bgColor: 'bg-orange-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 features: ['Детальный отчет', 'Профессиональное оборудование', 'Рекомендации']
               },
               { 
@@ -131,8 +131,8 @@ export default function Index() {
                 description: 'Оригинальные запчасти и расходные материалы от официальных поставщиков с доставкой.',
                 icon: 'Settings',
                 image: '/img/04333da0-be06-4c2d-ac1d-74f71868a541.jpg',
-                accent: 'text-purple-600',
-                bgColor: 'bg-purple-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 features: ['Оригинальные запчасти', 'Быстрая доставка', 'Гарантия качества']
               },
               { 
@@ -140,8 +140,8 @@ export default function Index() {
                 description: 'Сервисная поддержка и обслуживание восстановленных двигателей с долгосрочной гарантией.',
                 icon: 'Shield',
                 image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
-                accent: 'text-red-600',
-                bgColor: 'bg-red-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 features: ['Долгосрочная гарантия', 'Сервисная поддержка', 'Техническое обслуживание']
               }
             ].slice(0, 3).map((service, index) => (
@@ -174,7 +174,7 @@ export default function Index() {
                   <div className="space-y-2">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2 text-sm text-marine-steel">
-                        <Icon name="CheckCircle" size={16} className="text-green-500" />
+                        <Icon name="CheckCircle" size={16} className="text-primary" />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -222,32 +222,32 @@ export default function Index() {
                   icon: 'Award',
                   title: 'Профессиональное восстановление',
                   description: 'Не просто ремонт, а полная реконструкция с использованием современных компонентов.',
-                  accent: 'text-blue-600',
-                  bgColor: 'bg-blue-50',
+                  accent: 'text-primary',
+                  bgColor: 'bg-primary/10',
                   stats: '500+ двигателей в год'
                 },
                 {
                   icon: 'Package',
                   title: 'Широкий ассортимент',
                   description: 'Готовые решения «под ключ» и лонг-блоки для самостоятельной сборки.',
-                  accent: 'text-green-600',
-                  bgColor: 'bg-green-50',
+                  accent: 'text-primary',
+                  bgColor: 'bg-primary/10',
                   stats: '50+ моделей в наличии'
                 },
                 {
                   icon: 'Users',
                   title: 'Экспертная команда',
                   description: 'Квалифицированные мастера с глубоким знанием Volvo Penta и Mercruiser.',
-                  accent: 'text-orange-600',
-                  bgColor: 'bg-orange-50',
+                  accent: 'text-primary',
+                  bgColor: 'bg-primary/10',
                   stats: '15+ лет опыта'
                 },
                 {
                   icon: 'Shield',
                   title: 'Гарантийные обязательства',
                   description: 'Тщательное тестирование и официальная гарантия на каждый двигатель.',
-                  accent: 'text-purple-600',
-                  bgColor: 'bg-purple-50',
+                  accent: 'text-primary',
+                  bgColor: 'bg-primary/10',
                   stats: '2 года гарантии'
                 }
               ].map((item, index) => (
@@ -258,7 +258,7 @@ export default function Index() {
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className={`text-xl font-bold text-redmar-dark group-hover:text-redmar-red transition-colors duration-300`}>
+                        <h3 className={`text-xl font-bold text-marine-dark group-hover:text-primary transition-colors duration-300`}>
                           {item.title}
                         </h3>
                         <Badge variant="outline" className="text-xs font-medium">
@@ -268,7 +268,7 @@ export default function Index() {
                       <p className="text-marine-steel leading-relaxed group-hover:text-marine-dark transition-colors duration-300">
                         {item.description}
                       </p>
-                      <div className="flex items-center gap-2 mt-3 text-sm text-green-600 font-medium">
+                      <div className="flex items-center gap-2 mt-3 text-sm text-primary font-medium">
                         <Icon name="CheckCircle" size={16} />
                         <span>Проверено временем</span>
                       </div>
@@ -403,7 +403,7 @@ export default function Index() {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-green-50 text-green-600 border-green-200 text-lg px-6 py-2">
+            <Badge className="mb-4 bg-primary/10 text-marine-dark border-primary/20 text-lg px-6 py-2">
               🏆 Наши работы
             </Badge>
             <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
@@ -423,8 +423,8 @@ export default function Index() {
                 image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
                 duration: '14 дней',
                 features: ['Новая поршневая', 'Обновленная электроника', 'Модернизация системы охлаждения'],
-                accent: 'text-blue-600',
-                bgColor: 'bg-blue-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 link: '/projects/volvo-d6-350'
               },
               { 
@@ -434,8 +434,8 @@ export default function Index() {
                 image: '/img/7f7497d1-f1ad-4824-b35d-61928133340f.jpg',
                 duration: '10 дней',
                 features: ['Форсированные поршни', 'Балансировка коленвала', 'Новые форсунки'],
-                accent: 'text-green-600',
-                bgColor: 'bg-green-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 link: '/projects/mercruiser-5-7l'
               },
               { 
@@ -445,8 +445,8 @@ export default function Index() {
                 image: '/img/7362f21a-774e-4981-abe9-d46ef65ceb65.jpg',
                 duration: '18 дней',
                 features: ['Турбонаддув', 'Интеркулер', 'Программная настройка'],
-                accent: 'text-orange-600',
-                bgColor: 'bg-orange-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 link: '#'
               },
               { 
@@ -456,8 +456,8 @@ export default function Index() {
                 image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
                 duration: '21 день',
                 features: ['Расточка блока', 'Новая ГБЦ', 'Система впрыска'],
-                accent: 'text-purple-600',
-                bgColor: 'bg-purple-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 link: '#'
               },
               { 
@@ -467,8 +467,8 @@ export default function Index() {
                 image: '/img/7f7497d1-f1ad-4824-b35d-61928133340f.jpg',
                 duration: '7 дней',
                 features: ['Новый картридж', 'Обновленные магистрали', 'Калибровка системы'],
-                accent: 'text-red-600',
-                bgColor: 'bg-red-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 link: '#'
               },
               { 
@@ -478,8 +478,8 @@ export default function Index() {
                 image: '/img/7362f21a-774e-4981-abe9-d46ef65ceb65.jpg',
                 duration: '25 дней',
                 features: ['Капремонт блока', 'Новая трансмиссия', 'Полная электроника'],
-                accent: 'text-indigo-600',
-                bgColor: 'bg-indigo-50',
+                accent: 'text-marine-dark',
+                bgColor: 'bg-primary/10',
                 link: '#'
               }
             ].map((project, index) => (
@@ -491,7 +491,7 @@ export default function Index() {
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-green-50 text-green-600 border-green-200 shadow-lg">
+                    <Badge className="bg-primary/10 text-marine-dark border-primary/20 shadow-lg">
                       {project.status}
                     </Badge>
                   </div>
@@ -518,7 +518,7 @@ export default function Index() {
                   <div className="space-y-2">
                     {project.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2 text-sm text-marine-steel">
-                        <Icon name="CheckCircle" size={14} className="text-green-500 flex-shrink-0" />
+                        <Icon name="CheckCircle" size={14} className="text-primary flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -646,8 +646,8 @@ export default function Index() {
                     title: 'Телефон',
                     value: '+7 (xxx) xxx-xx-xx',
                     description: 'Звоните с 9:00 до 18:00',
-                    accent: 'text-green-600',
-                    bgColor: 'bg-green-50',
+                    accent: 'text-primary',
+                    bgColor: 'bg-primary/10',
                     action: 'Позвонить сейчас'
                   },
                   {
@@ -655,8 +655,8 @@ export default function Index() {
                     title: 'Email',
                     value: 'info@marineservice.ru',
                     description: 'Отвечаем в течение часа',
-                    accent: 'text-blue-600',
-                    bgColor: 'bg-blue-50',
+                    accent: 'text-marine-dark',
+                    bgColor: 'bg-primary/10',
                     action: 'Написать письмо'
                   },
                   {
@@ -664,8 +664,8 @@ export default function Index() {
                     title: 'Адрес мастерской',
                     value: 'г. Москва, ул. Морская, д. 15',
                     description: 'Приезжайте на экскурсию',
-                    accent: 'text-orange-600',
-                    bgColor: 'bg-orange-50',
+                    accent: 'text-marine-dark',
+                    bgColor: 'bg-primary/10',
                     action: 'Построить маршрут'
                   },
                   {
@@ -673,8 +673,8 @@ export default function Index() {
                     title: 'Режим работы',
                     value: 'Пн-Пт: 9:00-18:00, Сб: 10:00-16:00',
                     description: 'Воскресенье - выходной',
-                    accent: 'text-purple-600',
-                    bgColor: 'bg-purple-50',
+                    accent: 'text-marine-dark',
+                    bgColor: 'bg-primary/10',
                     action: 'Записаться на визит'
                   }
                 ].map((contact, index) => (
@@ -731,7 +731,7 @@ export default function Index() {
                 </Button>
                 <div className="bg-marine-light/50 rounded-lg p-3 text-center">
                   <div className="flex items-center justify-center gap-2 mb-2">
-                    <Icon name="Shield" size={16} className="text-green-600" />
+                    <Icon name="Shield" size={16} className="text-primary" />
                     <p className="text-sm font-medium text-marine-dark">Гарантируем конфиденциальность</p>
                   </div>
                   <p className="text-xs text-marine-steel">

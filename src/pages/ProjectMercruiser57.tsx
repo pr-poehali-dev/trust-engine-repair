@@ -43,7 +43,7 @@ export default function ProjectMercruiser57() {
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-12">
         {/* Заголовок проекта */}
         <div className="text-center space-y-6">
-          <Badge className="bg-green-50 text-green-600 border-green-200 text-lg px-6 py-2">
+          <Badge className="bg-primary/10 text-marine-dark border-primary/20 text-lg px-6 py-2">
             🔧 Замена поршневой
           </Badge>
           <h1 className="text-4xl lg:text-5xl font-bold text-marine-dark">
@@ -63,32 +63,32 @@ export default function ProjectMercruiser57() {
               value: '10 дней',
               icon: 'Clock',
               description: 'Включая настройку',
-              color: 'text-green-600',
-              bg: 'bg-green-50'
+              color: 'text-primary',
+              bg: 'bg-primary/10'
             },
             {
               title: 'Бюджет проекта',
               value: '₽ 320 000',
               icon: 'DollarSign',
               description: 'С форсированными деталями',
-              color: 'text-blue-600',
-              bg: 'bg-blue-50'
+              color: 'text-marine-dark',
+              bg: 'bg-primary/10'
             },
             {
               title: 'Тип ремонта',
               value: 'Форсирование',
               icon: 'Zap',
               description: 'Увеличение мощности',
-              color: 'text-orange-600',
-              bg: 'bg-orange-50'
+              color: 'text-marine-dark',
+              bg: 'bg-primary/10'
             },
             {
               title: 'Статус',
               value: 'Завершено',
               icon: 'CheckCircle',
               description: 'Мощность +35 л.с.',
-              color: 'text-emerald-600',
-              bg: 'bg-emerald-50'
+              color: 'text-primary',
+              bg: 'bg-primary/10'
             }
           ].map((item, index) => (
             <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
@@ -116,7 +116,7 @@ export default function ProjectMercruiser57() {
         <Card className="p-8">
           <CardHeader className="px-0 pt-0">
             <CardTitle className="text-2xl font-bold text-marine-dark flex items-center gap-3">
-              <Icon name="AlertTriangle" size={24} className="text-red-500" />
+              <Icon name="AlertTriangle" size={24} className="text-marine-dark" />
               Исходные проблемы
             </CardTitle>
           </CardHeader>
@@ -129,8 +129,8 @@ export default function ProjectMercruiser57() {
               'Желание владельца увеличить мощность до 335 л.с.',
               'Устаревшие форсунки не обеспечивали оптимальное смесообразование'
             ].map((problem, index) => (
-              <div key={index} className="flex items-start gap-3 p-4 bg-yellow-50 rounded-lg">
-                <Icon name="AlertTriangle" size={16} className="text-yellow-500 mt-0.5 flex-shrink-0" />
+              <div key={index} className="flex items-start gap-3 p-4 bg-primary/10 rounded-lg">
+                <Icon name="AlertTriangle" size={16} className="text-marine-dark mt-0.5 flex-shrink-0" />
                 <p className="text-marine-dark">{problem}</p>
               </div>
             ))}
@@ -220,7 +220,7 @@ export default function ProjectMercruiser57() {
                       <div className="grid sm:grid-cols-2 gap-2">
                         {stage.tasks.map((task, taskIndex) => (
                           <div key={taskIndex} className="flex items-center gap-2 text-sm">
-                            <Icon name="CheckCircle" size={14} className="text-green-500" />
+                            <Icon name="CheckCircle" size={14} className="text-primary" />
                             <span className="text-marine-steel">{task}</span>
                           </div>
                         ))}
@@ -237,10 +237,10 @@ export default function ProjectMercruiser57() {
         </Card>
 
         {/* Результаты */}
-        <Card className="p-8 bg-gradient-to-r from-emerald-50 to-green-50 border-emerald-200">
+        <Card className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
           <CardHeader className="px-0 pt-0">
             <CardTitle className="text-2xl font-bold text-marine-dark flex items-center gap-3">
-              <Icon name="Trophy" size={24} className="text-emerald-600" />
+              <Icon name="Trophy" size={24} className="text-primary" />
               Достигнутые результаты
             </CardTitle>
           </CardHeader>
@@ -255,7 +255,7 @@ export default function ProjectMercruiser57() {
                   'Стабильная работа на всех оборотах'
                 ].map((result, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <Icon name="TrendingUp" size={16} className="text-emerald-600" />
+                    <Icon name="TrendingUp" size={16} className="text-primary" />
                     <span className="text-marine-dark">{result}</span>
                   </div>
                 ))}
@@ -269,7 +269,7 @@ export default function ProjectMercruiser57() {
                   'Оптимальный тепловой режим'
                 ].map((guarantee, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <Icon name="Shield" size={16} className="text-emerald-600" />
+                    <Icon name="Shield" size={16} className="text-primary" />
                     <span className="text-marine-dark">{guarantee}</span>
                   </div>
                 ))}
@@ -282,7 +282,7 @@ export default function ProjectMercruiser57() {
         <Card className="p-8 text-center bg-gradient-to-r from-primary/5 to-marine-blue/5">
           <CardContent>
             <h3 className="text-2xl font-bold text-marine-dark mb-4">
-              Хотите форсировать свой <span className="text-red-500">двигатель</span>?
+              Хотите форсировать свой <span className="text-primary">двигатель</span>?
             </h3>
             <p className="text-marine-steel mb-6 max-w-2xl mx-auto">
               Получите расчет прироста мощности и стоимости форсирования для вашего двигателя

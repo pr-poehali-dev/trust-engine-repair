@@ -43,7 +43,7 @@ export default function ProjectVolvoD6350() {
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-12">
         {/* Заголовок проекта */}
         <div className="text-center space-y-6">
-          <Badge className="bg-blue-50 text-blue-600 border-blue-200 text-lg px-6 py-2">
+          <Badge className="bg-primary/10 text-marine-dark border-primary/20 text-lg px-6 py-2">
             🔧 Капитальный ремонт
           </Badge>
           <h1 className="text-4xl lg:text-5xl font-bold text-marine-dark">
@@ -63,32 +63,32 @@ export default function ProjectVolvoD6350() {
               value: '14 дней',
               icon: 'Clock',
               description: 'Включая тестирование',
-              color: 'text-green-600',
-              bg: 'bg-green-50'
+              color: 'text-primary',
+              bg: 'bg-primary/10'
             },
             {
               title: 'Бюджет проекта',
               value: '₽ 485 000',
               icon: 'DollarSign',
               description: 'Все работы включены',
-              color: 'text-blue-600',
-              bg: 'bg-blue-50'
+              color: 'text-marine-dark',
+              bg: 'bg-primary/10'
             },
             {
               title: 'Тип ремонта',
               value: 'Капитальный',
               icon: 'Wrench',
               description: 'Полное восстановление',
-              color: 'text-orange-600',
-              bg: 'bg-orange-50'
+              color: 'text-marine-dark',
+              bg: 'bg-primary/10'
             },
             {
               title: 'Статус',
               value: 'Завершено',
               icon: 'CheckCircle',
               description: 'Успешно сдан клиенту',
-              color: 'text-emerald-600',
-              bg: 'bg-emerald-50'
+              color: 'text-primary',
+              bg: 'bg-primary/10'
             }
           ].map((item, index) => (
             <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
@@ -116,7 +116,7 @@ export default function ProjectVolvoD6350() {
         <Card className="p-8">
           <CardHeader className="px-0 pt-0">
             <CardTitle className="text-2xl font-bold text-marine-dark flex items-center gap-3">
-              <Icon name="AlertTriangle" size={24} className="text-red-500" />
+              <Icon name="AlertTriangle" size={24} className="text-marine-dark" />
               Выявленные проблемы
             </CardTitle>
           </CardHeader>
@@ -129,8 +129,8 @@ export default function ProjectVolvoD6350() {
               'Неисправность системы впрыска топлива - засорение форсунок',
               'Повышенная вибрация из-за разбалансировки коленчатого вала'
             ].map((problem, index) => (
-              <div key={index} className="flex items-start gap-3 p-4 bg-red-50 rounded-lg">
-                <Icon name="X" size={16} className="text-red-500 mt-0.5 flex-shrink-0" />
+              <div key={index} className="flex items-start gap-3 p-4 bg-primary/10 rounded-lg">
+                <Icon name="X" size={16} className="text-marine-dark mt-0.5 flex-shrink-0" />
                 <p className="text-marine-dark">{problem}</p>
               </div>
             ))}
@@ -220,7 +220,7 @@ export default function ProjectVolvoD6350() {
                       <div className="grid sm:grid-cols-2 gap-2">
                         {stage.tasks.map((task, taskIndex) => (
                           <div key={taskIndex} className="flex items-center gap-2 text-sm">
-                            <Icon name="CheckCircle" size={14} className="text-green-500" />
+                            <Icon name="CheckCircle" size={14} className="text-primary" />
                             <span className="text-marine-steel">{task}</span>
                           </div>
                         ))}
@@ -237,10 +237,10 @@ export default function ProjectVolvoD6350() {
         </Card>
 
         {/* Результаты */}
-        <Card className="p-8 bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
+        <Card className="p-8 bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
           <CardHeader className="px-0 pt-0">
             <CardTitle className="text-2xl font-bold text-marine-dark flex items-center gap-3">
-              <Icon name="Trophy" size={24} className="text-emerald-600" />
+              <Icon name="Trophy" size={24} className="text-primary" />
               Результаты проекта
             </CardTitle>
           </CardHeader>
@@ -255,7 +255,7 @@ export default function ProjectVolvoD6350() {
                   'Компрессия во всех цилиндрах 12-12.5 атм'
                 ].map((result, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <Icon name="CheckCircle" size={16} className="text-green-600" />
+                    <Icon name="CheckCircle" size={16} className="text-primary" />
                     <span className="text-marine-dark">{result}</span>
                   </div>
                 ))}
@@ -269,7 +269,7 @@ export default function ProjectVolvoD6350() {
                   'Техническая поддержка 24/7'
                 ].map((guarantee, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <Icon name="Shield" size={16} className="text-green-600" />
+                    <Icon name="Shield" size={16} className="text-primary" />
                     <span className="text-marine-dark">{guarantee}</span>
                   </div>
                 ))}
@@ -282,7 +282,7 @@ export default function ProjectVolvoD6350() {
         <Card className="p-8 text-center bg-gradient-to-r from-primary/5 to-marine-blue/5">
           <CardContent>
             <h3 className="text-2xl font-bold text-marine-dark mb-4">
-              Нужен ремонт морского <span className="text-red-500">двигателя</span>?
+              Нужен ремонт морского <span className="text-primary">двигателя</span>?
             </h3>
             <p className="text-marine-steel mb-6 max-w-2xl mx-auto">
               Получите бесплатную консультацию и предварительную оценку стоимости ремонта
