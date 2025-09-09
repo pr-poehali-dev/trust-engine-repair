@@ -84,7 +84,7 @@ export default function Index() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative w-4/5 mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/20 to-transparent rounded-2xl z-10"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-marine-blue/5 to-marine-blue/10 rounded-2xl z-5"></div>
               <img 
