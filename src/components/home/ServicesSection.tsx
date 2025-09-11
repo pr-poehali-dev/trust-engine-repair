@@ -47,9 +47,10 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
-            🔧 Наши услуги
-          </Badge>
+          <div className="mb-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 px-4 py-2 rounded-full shadow-sm">
+            <img src="/logo.svg" alt="RED MAR" className="h-4 w-auto" />
+            <span className="text-sm font-semibold text-gray-700">Наши услуги</span>
+          </div>
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-gray-900 mb-6 leading-tight">
             Что мы <span className="text-primary">предлагаем</span>
           </h2>
