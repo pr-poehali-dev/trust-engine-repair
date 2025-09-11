@@ -84,7 +84,7 @@ export default function GallerySection() {
       <div className="absolute bottom-16 left-16 w-36 h-36 bg-blue-500/8 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-primary/6 rounded-full blur-2xl"></div>
       
-      <div className="max-w-7xl mx-auto pt-16 relative z-10">
+      <div className="max-w-7xl mx-auto pt-16 pb-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Примеры <span className="text-primary">выполненных проектов</span>
