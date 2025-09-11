@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -10,6 +10,26 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileMenuProps) {
+  const [headerHeight, setHeaderHeight] = useState(65);
+
+  // Динамическое вычисление высоты шапки
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      const nav = document.querySelector('nav[class*="sticky"]');
+      if (nav) {
+        const height = nav.getBoundingClientRect().height;
+        setHeaderHeight(height);
+      }
+    };
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+    
+    return () => {
+      window.removeEventListener('resize', updateHeaderHeight);
+    };
+  }, []);
+
   // Блокировка скролла при открытом меню
   useEffect(() => {
     if (isOpen) {
@@ -37,7 +57,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
         onClick={onToggle}
         aria-hidden="true"
         style={{ 
-          top: 'calc(4rem + 1px)', 
+          top: `${headerHeight}px`, 
           left: 0, 
           right: 0, 
           bottom: 0 
@@ -48,7 +68,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
       <div 
         className="fixed bg-white z-[99999] md:hidden shadow-xl animate-in slide-in-from-top-2 duration-300"
         style={{ 
-          top: 'calc(4rem + 1px)', 
+          top: `${headerHeight}px`, 
           left: 0, 
           right: 0, 
           bottom: 0 
