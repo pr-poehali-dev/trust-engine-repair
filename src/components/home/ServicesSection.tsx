@@ -50,11 +50,15 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
 
   return (
     <section id={id || "services"} className="relative overflow-hidden py-20 lg:py-28">
-      {/* Декоративные геометрические элементы */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-primary/12 rounded-2xl blur-xl"></div>
-      <div className="absolute bottom-20 right-16 w-28 h-28 bg-secondary/10 rounded-3xl blur-2xl"></div>
-      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-primary/8 rounded-xl blur-lg"></div>
-      <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-secondary/12 rounded-lg blur-md"></div>
+      {/* Декоративные геометрические элементы - задний фон */}
+      <div className="absolute -z-10 -top-5 -left-5 w-36 h-36 bg-primary/10 rounded-2xl blur-xl"></div>
+      <div className="absolute -z-10 bottom-10 -right-10 w-42 h-42 bg-secondary/8 rounded-3xl blur-2xl"></div>
+      <div className="absolute -z-10 top-1/3 right-1/5 w-28 h-28 bg-primary/6 rounded-xl blur-lg"></div>
+      <div className="absolute -z-10 bottom-1/4 left-1/4 w-32 h-32 bg-secondary/10 rounded-lg blur-md"></div>
+      <div className="absolute -z-10 top-2/3 -left-8 w-40 h-40 bg-primary/5 rounded-3xl blur-2xl"></div>
+      <div className="absolute -z-10 top-1/4 right-1/3 w-24 h-24 bg-secondary/7 rounded-2xl blur-xl"></div>
+      <div className="absolute -z-10 bottom-2/3 left-2/3 w-20 h-20 bg-primary/8 rounded-lg blur-md"></div>
+      <div className="absolute -z-10 top-10 left-1/2 w-48 h-48 bg-secondary/4 rounded-3xl blur-2xl"></div>
       
       <div className="relative z-10 px-4">
 

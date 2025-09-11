@@ -77,12 +77,17 @@ export default function GallerySection() {
 
   return (
     <section id="gallery" className="relative overflow-hidden py-20 lg:py-28">
-      {/* Декоративные геометрические элементы */}
-      <div className="absolute top-16 left-12 w-28 h-28 bg-primary/10 rounded-3xl blur-xl"></div>
-      <div className="absolute bottom-24 right-20 w-32 h-32 bg-secondary/8 rounded-2xl blur-2xl"></div>
-      <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-primary/12 rounded-xl blur-lg"></div>
-      <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-secondary/10 rounded-2xl blur-xl"></div>
-      <div className="absolute top-2/3 left-1/6 w-16 h-16 bg-primary/8 rounded-lg blur-md"></div>
+      {/* Декоративные геометрические элементы - задний фон */}
+      <div className="absolute -z-10 top-8 -left-10 w-40 h-40 bg-primary/8 rounded-3xl blur-xl"></div>
+      <div className="absolute -z-10 bottom-12 -right-12 w-46 h-46 bg-secondary/6 rounded-2xl blur-2xl"></div>
+      <div className="absolute -z-10 top-1/5 right-1/5 w-32 h-32 bg-primary/10 rounded-xl blur-lg"></div>
+      <div className="absolute -z-10 bottom-1/4 left-1/4 w-36 h-36 bg-secondary/8 rounded-2xl blur-xl"></div>
+      <div className="absolute -z-10 top-3/5 -left-8 w-28 h-28 bg-primary/6 rounded-lg blur-md"></div>
+      <div className="absolute -z-10 top-1/2 right-1/6 w-24 h-24 bg-secondary/9 rounded-xl blur-lg"></div>
+      <div className="absolute -z-10 bottom-2/3 left-2/3 w-20 h-20 bg-primary/7 rounded-2xl blur-md"></div>
+      <div className="absolute -z-10 top-10 right-1/3 w-44 h-44 bg-secondary/5 rounded-3xl blur-2xl"></div>
+      <div className="absolute -z-10 bottom-1/6 left-1/2 w-16 h-16 bg-primary/9 rounded-lg blur-lg"></div>
+      <div className="absolute -z-10 top-1/3 -right-6 w-38 h-38 bg-secondary/7 rounded-2xl blur-xl"></div>
       
       <div className="relative z-10 px-4">
 
