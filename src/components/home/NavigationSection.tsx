@@ -34,7 +34,7 @@ export default function NavigationSection({
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-50">
+    <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-[99998]">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Логотип с адаптивным слоганом - сдвинут правее, увеличен на 15% */}
@@ -143,11 +143,16 @@ export default function NavigationSection({
               <span className="md:hidden">Звонок</span>
             </Button>
             
-            <MobileMenu 
-              isOpen={mobileMenuOpen} 
-              onToggle={onMobileMenuToggle}
-              onContactClick={onContactClick}
-            />
+            {/* Mobile menu button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="md:hidden p-2 hover:bg-jivo-gray-100"
+              onClick={onMobileMenuToggle}
+              aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
+            >
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} className="text-jivo-gray-700" />
+            </Button>
           </div>
         </div>
       </div>
@@ -156,6 +161,13 @@ export default function NavigationSection({
       <SearchModal 
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}
+      />
+      
+      {/* Mobile Menu */}
+      <MobileMenu 
+        isOpen={mobileMenuOpen} 
+        onToggle={onMobileMenuToggle}
+        onContactClick={onContactClick}
       />
     </nav>
   );

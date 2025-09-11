@@ -10,22 +10,16 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileMenuProps) {
-  // Простая блокировка скролла без изменения позиции
+  // Блокировка скролла основного контента, но не шапки
   useEffect(() => {
     if (isOpen) {
-      // Просто блокируем скролл основного контента
       document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
     } else {
-      // Восстанавливаем скролл
       document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
     }
 
-    // Очищаем при размонтировании
     return () => {
       document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -35,54 +29,25 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
 
   return (
     <>
-      {/* Mobile menu button */}
-      <Button
-        variant="ghost"
-        size="sm"
-        className="md:hidden p-2 hover:bg-jivo-gray-100"
-        onClick={onToggle}
-        aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
-      >
-        <Icon name={isOpen ? "X" : "Menu"} size={24} className="text-jivo-gray-700" />
-      </Button>
-
       {/* Mobile menu overlay */}
       {isOpen && createPortal(
         <>
-          {/* Background overlay - только под меню */}
+          {/* Background overlay - начинается под шапкой */}
           <div 
-            className="fixed inset-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
+            className="fixed bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
-            style={{ position: 'fixed' }}
+            style={{ position: 'fixed', top: '64px', left: 0, right: 0, bottom: 0 }}
           />
           
-          {/* Menu panel - цельная панель с навигацией */}
+          {/* Menu panel - начинается под шапкой */}
           <div 
-            className="fixed inset-0 bg-white z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto"
-            style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
+            className="fixed bg-white z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto shadow-xl border-t border-gray-200"
+            style={{ position: 'fixed', top: '64px', left: 0, right: 0, bottom: 0 }}
           >
-            {/* Навигационная полоса с логотипом и кнопкой закрытия */}
-            <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-white shadow-sm">
-              <div className="flex items-center gap-3 ml-3">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">RM</span>
-                </div>
-                <span className="font-bold text-gray-900 text-lg">RED MAR</span>
-              </div>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={onToggle}
-                className="p-2 hover:bg-gray-100 rounded-full"
-                aria-label="Закрыть меню"
-              >
-                <Icon name="X" size={24} className="text-gray-700" />
-              </Button>
-            </div>
             
             {/* Navigation */}
-            <nav className="flex-1 flex flex-col justify-start px-6 pt-8 pb-8 overflow-y-auto">
+            <nav className="flex-1 flex flex-col justify-start px-6 pt-4 pb-8 overflow-y-auto">
               <div className="flex flex-col space-y-3 max-w-sm mx-auto w-full">
                 <div>
                   <a 
