@@ -40,13 +40,6 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
       <div className="absolute bottom-16 right-24 w-36 h-36 bg-secondary/8 rounded-2xl blur-2xl"></div>
       <div className="absolute top-1/2 right-1/6 w-20 h-20 bg-primary/12 rounded-xl blur-lg"></div>
       <div className="absolute bottom-1/3 left-1/4 w-24 h-24 bg-secondary/10 rounded-2xl blur-xl"></div>
-        </div>
-        
-        {/* Мелкие акценты */}
-        <div className="absolute inset-0">
-          <div className="absolute top-2/3 left-1/3 w-[400px] h-[300px] bg-gradient-to-r from-primary/15 to-transparent rounded-full blur-xl opacity-70 transform rotate-60"></div>
-        </div>
-      </div>
       
       <div className="relative z-10 px-4">
 
