@@ -6,8 +6,8 @@ interface SectionSeparatorProps {
 
 export default function SectionSeparator({ text, position = 'bottom', className = '' }: SectionSeparatorProps) {
   const positionClass = position === 'top' 
-    ? 'absolute -top-8 left-1/2 transform -translate-x-1/2 z-30 w-full' 
-    : 'absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-30 w-full';
+    ? 'absolute -top-8 left-1/2 transform -translate-x-1/2 z-50 w-full' 
+    : 'absolute -bottom-8 left-1/2 transform -translate-x-1/2 z-50 w-full';
 
   return (
     <div className={`${positionClass} ${className}`}>
