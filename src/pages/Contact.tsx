@@ -91,6 +91,16 @@ export default function Contact() {
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary/5 rounded-full blur-2xl"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
+          {/* Разделитель */}
+          <div className="flex items-center justify-center py-8">
+            <div className="flex items-center w-full max-w-4xl">
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
+              <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+                <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Наши контакты</span>
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
+            </div>
+          </div>
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Свяжитесь с <span className="text-primary">нами</span>
           </h1>
