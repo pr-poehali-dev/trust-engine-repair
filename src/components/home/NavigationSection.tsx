@@ -147,11 +147,11 @@ export default function NavigationSection({
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden p-2 hover:bg-jivo-gray-100 flex-shrink-0 w-10 h-10"
+              className="md:hidden hover:bg-jivo-gray-100 flex-shrink-0 w-12 h-12 flex items-center justify-center"
               onClick={onMobileMenuToggle}
               aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
             >
-              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} className="text-jivo-gray-700" />
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={28} className="text-jivo-gray-700" />
             </Button>
           </div>
         </div>
