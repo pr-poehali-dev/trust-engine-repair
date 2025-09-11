@@ -46,7 +46,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
               <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
                 <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Наши гарантии</span>
               </div>
-              <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/40 via-primary/20 to-transparent"></div>
+              <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
             </div>
           </div>
           
@@ -68,7 +68,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
                   <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
                     <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Наши гарантии</span>
                   </div>
-                  <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/40 via-primary/20 to-transparent"></div>
+                  <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
                 </div>
               </div>
               
