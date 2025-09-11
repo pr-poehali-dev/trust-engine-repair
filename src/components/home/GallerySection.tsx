@@ -80,9 +80,17 @@ export default function GallerySection() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-primary/10 text-marine-dark border-primary/20 text-lg px-6 py-2">
-            🏆 Наши работы
-          </Badge>
+          <div className="mb-4 flex justify-center">
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
+              {/* Декоративные элементы */}
+              <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
+              <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
+              
+              <span className="text-sm font-bold text-primary">Наши работы</span>
+              
+              <div className="w-2 h-2 bg-primary rounded-full"></div>
+            </div>
+          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
             Примеры <span className="text-redmar-red">выполненных проектов</span>
           </h2>
