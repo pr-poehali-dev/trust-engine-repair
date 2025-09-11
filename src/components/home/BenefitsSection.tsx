@@ -67,8 +67,8 @@ export default function BenefitsSection() {
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4">
-                  <div className="bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg border border-white/20">
-                    <Icon name={benefit.icon} size={24} className="text-primary" />
+                  <div className="px-4 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+                    <Icon name={benefit.icon} size={20} className="text-primary" />
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

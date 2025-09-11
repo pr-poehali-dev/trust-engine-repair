@@ -152,11 +152,8 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/25 rounded-2xl blur-xl"></div>
             
             {/* Quality badge */}
-            <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 shadow-lg">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold text-brand-gray-800">Гарантия качества</span>
-              </div>
+            <div className="absolute top-4 left-4 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+              <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Гарантия качества</span>
             </div>
           </div>
         </div>

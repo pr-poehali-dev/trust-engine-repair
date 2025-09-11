@@ -124,13 +124,13 @@ export default function GallerySection() {
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute top-4 left-4">
-                  <Badge className="bg-primary/10 text-marine-dark border-primary/20 shadow-lg">
-                    {project.status}
-                  </Badge>
+                  <div className="px-4 py-2 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+                    <span className="text-xs font-bold text-primary uppercase tracking-wide whitespace-nowrap">{project.status}</span>
+                  </div>
                 </div>
                 <div className="absolute top-4 right-4">
-                  <div className={`${project.bgColor} px-3 py-1 rounded-full shadow-lg`}>
-                    <span className={`text-sm font-medium ${project.accent}`}>{project.duration}</span>
+                  <div className="px-4 py-2 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+                    <span className="text-xs font-bold text-primary uppercase tracking-wide whitespace-nowrap">{project.duration}</span>
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
