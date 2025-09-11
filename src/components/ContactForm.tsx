@@ -50,15 +50,16 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 overflow-y-auto min-h-screen">
+    <div className="fixed inset-0 z-[10000]">
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black/60 transition-opacity duration-300"
         onClick={onClose}
       />
       
-      {/* Form */}
-      <Card className="relative w-full max-w-md mx-auto bg-white rounded-2xl shadow-2xl my-auto">
+      {/* Modal Container with proper viewport centering */}
+      <div className="fixed inset-0 flex items-center justify-center p-4 pointer-events-none">
+        <Card className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl pointer-events-auto transform transition-all duration-300 ease-out animate-in zoom-in-95 fade-in-0">
         <CardHeader className="text-center pb-4">
           <div className="flex justify-between items-center mb-4">
             <div></div>
@@ -146,7 +147,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             </div>
           </form>
         </CardContent>
-      </Card>
+        </Card>
+      </div>
     </div>
   );
 }
