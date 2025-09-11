@@ -45,9 +45,18 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
     <section id={id || "services"} className="pt-24 pb-16 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
-
-      
       <div className="max-w-7xl mx-auto relative z-10">
+        {/* Разделитель */}
+        <div className="flex items-center justify-center py-8 mb-12">
+          <div className="flex items-center w-full max-w-4xl">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
+            <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+              <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Что мы предлагаем</span>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
+          </div>
+        </div>
+        
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6 leading-tight">
             Что мы <span className="text-primary">предлагаем</span>
