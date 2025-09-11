@@ -21,6 +21,10 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
       <div className="absolute z-0 bottom-1/4 right-1/3 w-24 h-24 bg-secondary/22 rounded-lg blur-sm"></div>
       <div className="absolute z-0 top-3/4 left-1/6 w-20 h-20 bg-primary/18 rounded-xl blur-md"></div>
       <div className="absolute z-0 top-10 left-2/3 w-44 h-44 bg-secondary/20 rounded-3xl blur-lg"></div>
+      {/* Дополнительные элементы (+30%) */}
+      <div className="absolute z-0 top-1/8 right-3/4 w-24 h-24 bg-indigo-300/19 rounded-2xl blur-md"></div>
+      <div className="absolute z-0 bottom-1/8 left-3/4 w-18 h-18 bg-primary/28 rounded-lg blur-sm"></div>
+      <div className="absolute z-0 top-5/6 right-1/8 w-30 h-30 bg-purple-400/16 rounded-xl blur-md"></div>
       
       <div className="relative z-10 px-4">
       

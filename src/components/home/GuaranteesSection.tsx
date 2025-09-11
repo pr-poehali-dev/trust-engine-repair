@@ -35,6 +35,20 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
 
   return (
     <section id={id || "guarantees"} className="relative overflow-hidden py-20 lg:py-28">
+      {/* Декоративные геометрические элементы - задний фон */}
+      <div className="absolute z-0 top-8 right-12 w-52 h-52 bg-primary/18 rounded-3xl blur-lg"></div>
+      <div className="absolute z-0 bottom-6 left-8 w-44 h-44 bg-blue-400/22 rounded-2xl blur-md"></div>
+      <div className="absolute z-0 top-1/5 left-1/6 w-38 h-38 bg-primary/25 rounded-xl blur-sm"></div>
+      <div className="absolute z-0 bottom-1/4 right-1/5 w-34 h-34 bg-cyan-300/20 rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-2/3 right-8 w-42 h-42 bg-primary/16 rounded-3xl blur-lg"></div>
+      <div className="absolute z-0 top-1/3 left-1/3 w-30 h-30 bg-teal-400/18 rounded-2xl blur-md"></div>
+      <div className="absolute z-0 bottom-2/3 right-2/3 w-26 h-26 bg-primary/22 rounded-lg blur-sm"></div>
+      <div className="absolute z-0 top-4 left-1/2 w-48 h-48 bg-blue-300/15 rounded-3xl blur-xl"></div>
+      <div className="absolute z-0 bottom-1/6 left-2/3 w-22 h-22 bg-primary/20 rounded-2xl blur-md"></div>
+      <div className="absolute z-0 top-1/4 right-1/3 w-36 h-36 bg-indigo-400/16 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 bottom-1/3 left-1/4 w-28 h-28 bg-primary/19 rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-1/2 right-1/6 w-32 h-32 bg-sky-300/17 rounded-2xl blur-md"></div>
+      <div className="absolute z-0 bottom-3/4 left-3/4 w-18 h-18 bg-primary/24 rounded-xl blur-sm"></div>
       {/* Простой чистый фон */}
       <div className="absolute inset-0 bg-white"></div>
       

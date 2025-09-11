@@ -88,6 +88,10 @@ export default function GallerySection() {
       <div className="absolute z-0 top-10 right-1/3 w-44 h-44 bg-secondary/15 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-1/6 left-1/2 w-16 h-16 bg-primary/26 rounded-lg blur-md"></div>
       <div className="absolute z-0 top-1/3 right-6 w-38 h-38 bg-secondary/19 rounded-2xl blur-lg"></div>
+      {/* Дополнительные элементы (+30%) */}
+      <div className="absolute z-0 top-1/8 left-5/6 w-22 h-22 bg-rose-300/20 rounded-xl blur-md"></div>
+      <div className="absolute z-0 bottom-1/8 right-5/6 w-26 h-26 bg-primary/27 rounded-2xl blur-sm"></div>
+      <div className="absolute z-0 top-7/8 left-1/8 w-34 h-34 bg-pink-400/15 rounded-lg blur-lg"></div>
       
       <div className="relative z-10 px-4">
 

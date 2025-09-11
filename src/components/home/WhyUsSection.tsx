@@ -45,6 +45,10 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
       <div className="absolute z-0 bottom-2/3 left-2/3 w-20 h-20 bg-primary/18 rounded-2xl blur-md"></div>
       <div className="absolute z-0 top-6 left-1/2 w-44 h-44 bg-secondary/15 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-1/6 right-2/3 w-16 h-16 bg-primary/26 rounded-lg blur-md"></div>
+      {/* Дополнительные элементы (+30%) */}
+      <div className="absolute z-0 top-1/8 left-5/6 w-26 h-26 bg-violet-400/18 rounded-xl blur-md"></div>
+      <div className="absolute z-0 bottom-1/8 right-5/6 w-20 h-20 bg-primary/27 rounded-2xl blur-sm"></div>
+      <div className="absolute z-0 top-7/8 left-1/8 w-30 h-30 bg-purple-300/14 rounded-lg blur-lg"></div>
       
       <div className="relative z-10 px-4">
 
