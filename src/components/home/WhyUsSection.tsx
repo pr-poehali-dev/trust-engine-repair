@@ -36,17 +36,23 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
     <section id={id || "why-us"} className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      {/* Разделитель секций с фоновым переходом */}
+      <div className="absolute top-0 left-0 right-0 h-20 -mt-10">
+        <div className="h-full bg-gradient-to-b from-primary/3 via-primary/8 to-transparent"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="flex items-center">
+            <div className="w-24 h-px bg-gradient-to-r from-transparent via-primary/40 to-primary"></div>
+            <div className="mx-4 px-6 py-2 bg-white rounded-full border border-primary/30 shadow-lg backdrop-blur-sm">
+              <span className="text-sm font-bold text-primary uppercase tracking-wide">Наши преимущества</span>
+            </div>
+            <div className="w-24 h-px bg-gradient-to-l from-primary via-primary/40 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10 pt-10">
         {/* Заголовок */}
         <div className="text-center mb-16">
-          {/* Разделитель */}
-          <div className="flex items-center justify-center mb-8">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
-            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
-              <span className="text-base font-bold text-primary uppercase tracking-wide">Наши преимущества</span>
-            </div>
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
-          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Почему выбирают{' '}
             <span className="text-primary">именно нас</span>
