@@ -48,8 +48,8 @@ export default function BenefitsSection() {
               <div className="w-2 h-2 bg-primary rounded-full"></div>
             </div>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
-            Почему это <span className="text-[#1d4cd7]">выгодно</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
+            Почему это <span className="text-primary">выгодно</span>
           </h2>
           <p className="text-xl text-marine-steel max-w-3xl mx-auto">
             Восстановление двигателя — это не только экономия, но и инвестиция в будущее вашего катера

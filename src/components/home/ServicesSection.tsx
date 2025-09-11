@@ -78,7 +78,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             
             <div className="w-2 h-2 bg-primary rounded-full"></div>
           </div>
-          <h2 className="text-5xl xl:text-6xl font-bold text-brand-gray-900 mb-6 leading-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6 leading-tight">
             Что мы <span className="text-primary">предлагаем</span>
           </h2>
           <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto leading-relaxed">

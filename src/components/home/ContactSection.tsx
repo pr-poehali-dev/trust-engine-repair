@@ -62,8 +62,8 @@ export default function ContactSection() {
               <div className="w-2 h-2 bg-primary rounded-full"></div>
             </div>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
-            Готовы начать <span className="text-redmar-red">восстановление</span>?
+          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
+            Готовы начать <span className="text-primary">восстановление</span>?
           </h2>
           <p className="text-xl text-marine-steel max-w-3xl mx-auto">
             Свяжитесь с нами любым удобным способом, и получите персональную консультацию эксперта

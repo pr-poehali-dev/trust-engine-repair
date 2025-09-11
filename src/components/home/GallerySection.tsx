@@ -91,8 +91,8 @@ export default function GallerySection() {
               <div className="w-2 h-2 bg-primary rounded-full"></div>
             </div>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-redmar-dark mb-6">
-            Примеры <span className="text-redmar-red">выполненных проектов</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
+            Примеры <span className="text-primary">выполненных проектов</span>
           </h2>
           <p className="text-xl text-marine-steel max-w-3xl mx-auto">
             Профессиональное восстановление стационарных двигателей с гарантией качества
