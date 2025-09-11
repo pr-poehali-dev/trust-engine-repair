@@ -60,7 +60,7 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
                 <span className="text-brand-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha</span>
               </p>
               <p className="text-base lg:text-lg text-brand-gray-500 text-center lg:text-left">
-                Более 12 лет опыта • Гарантия качества • Оригинальные запчасти
+                Более 12 лет опыта • Оригинальные запчасти
               </p>
             </div>
             
