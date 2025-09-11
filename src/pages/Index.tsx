@@ -99,6 +99,7 @@ export default function Index() {
           onContactClick={() => setContactFormOpen(true)}
           sliderImages={sliderImages}
         />
+        <SectionSeparator text="Наши услуги" theme="light" />
         
         <ServicesSection id="services" />
         <SectionSeparator text="Наши преимущества" theme="light" />
