@@ -33,8 +33,8 @@ export default function LongBlocksHeroSection() {
             <div className="w-2 h-2 bg-primary rounded-full"></div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Лонг-блоки для{' '}
-            <span className="text-primary">морских двигателей</span>
+            Лонг-блоки для стационарных двигателей{' '}
+            <span className="text-primary">Mercruiser \ Volvo Penta \ Indmar</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Готовые к установке лонг-блоки морских двигателей. 
