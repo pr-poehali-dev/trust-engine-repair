@@ -64,8 +64,11 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
           >
             {/* Навигационная полоса с логотипом и кнопкой закрытия */}
             <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-white shadow-sm">
-              <div className="flex items-center gap-2 ml-3">
-                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto" />
+              <div className="flex items-center gap-3 ml-3">
+                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">RM</span>
+                </div>
+                <span className="font-bold text-gray-900 text-lg">RED MAR</span>
               </div>
               <Button 
                 variant="ghost" 
