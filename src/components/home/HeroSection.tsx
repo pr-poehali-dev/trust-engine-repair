@@ -11,15 +11,23 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onContactClick, sliderImages }: HeroSectionProps) {
   return (
-    <section className="py-20 px-4 lg:py-28 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+    <section className="pt-12 pb-20 px-4 lg:py-28 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Заголовок для мобильных устройств */}
         <div className="lg:hidden space-y-6 mb-8 text-center">
-          <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">
-            ⚓ Профессиональный ремонт морских двигателей
-          </Badge>
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-4 py-2 rounded-full shadow-lg relative">
+              {/* Декоративные элементы для мобильной */}
+              <div className="absolute -left-2 top-1/2 transform -translate-y-1/2 w-4 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
+              <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
+              
+              <span className="text-sm font-bold text-primary">Профессиональный ремонт двигателей</span>
+              
+              <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+            </div>
+          </div>
           
           <h1 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
             Профессиональное{' '}
