@@ -72,22 +72,23 @@ export default function ContactSection() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            <div className="space-y-6">
+            {/* Компактное отображение контактов */}
+            <div className="grid sm:grid-cols-2 gap-4">
               {contacts.map((contact, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/30 bg-white/90 backdrop-blur-sm">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className={`${contact.bgColor} p-4 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon name={contact.icon} size={24} className={contact.accent} />
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border hover:border-primary/30 bg-white/90 backdrop-blur-sm">
+                  <CardContent className="p-4">
+                    <div className="text-center space-y-3">
+                      <div className={`${contact.bgColor} w-12 h-12 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon name={contact.icon} size={20} className={contact.accent} />
                       </div>
-                      <div className="flex-1">
-                        <h3 className={`font-bold text-lg text-redmar-dark mb-1 group-hover:text-redmar-red transition-colors duration-300`}>
+                      <div>
+                        <h3 className="font-bold text-sm text-brand-gray-900 mb-1">
                           {contact.title}
                         </h3>
-                        <p className="text-marine-dark font-medium mb-1">{contact.value}</p>
-                        <p className="text-sm text-marine-steel mb-3">{contact.description}</p>
-                        <Button variant="outline" size="sm" className={`${contact.accent} border-current hover:bg-current hover:text-white transition-all duration-300`}>
-                          <Icon name="ArrowRight" size={14} className="mr-1" />
+                        <p className="text-brand-gray-700 font-medium text-sm mb-1">{contact.value}</p>
+                        <p className="text-xs text-brand-gray-500 mb-3">{contact.description}</p>
+                        <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 text-xs">
+                          <Icon name="ArrowRight" size={12} className="mr-1" />
                           {contact.action}
                         </Button>
                       </div>
