@@ -32,11 +32,12 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
       {/* Mobile menu overlay */}
       {isOpen && createPortal(
         <>
-          {/* Background overlay - полный экран */}
+          {/* Background overlay - только под шапкой */}
           <div 
-            className="fixed inset-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
+            className="fixed bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
+            style={{ top: 'calc(4rem + 1px)', left: 0, right: 0, bottom: 0 }}
           />
           
           {/* Menu panel - полный экран с отступом сверху */}
