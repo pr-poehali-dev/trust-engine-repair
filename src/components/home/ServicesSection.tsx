@@ -132,7 +132,13 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white rounded-2xl overflow-hidden h-full flex flex-col">
+            <Card 
+              key={index} 
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer"
+              onClick={() => {
+                window.location.href = service.link;
+              }}
+            >
               <div className="relative overflow-hidden">
                 <img 
                   src={service.image} 
@@ -169,7 +175,8 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                 
                 <Button 
                   className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 mt-auto"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     window.location.href = service.link;
                   }}
                 >
