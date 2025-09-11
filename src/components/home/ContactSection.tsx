@@ -68,16 +68,16 @@ export default function ContactSection() {
   return (
     <section id="contacts" className="relative overflow-hidden py-20 lg:py-28">
       {/* Декоративные геометрические элементы - задний фон */}
-      <div className="absolute -z-10 top-5 -right-10 w-50 h-50 bg-primary/4 rounded-3xl blur-2xl"></div>
-      <div className="absolute -z-10 bottom-8 -left-8 w-42 h-42 bg-secondary/8 rounded-2xl blur-xl"></div>
-      <div className="absolute -z-10 top-1/4 left-1/5 w-36 h-36 bg-primary/6 rounded-xl blur-lg"></div>
-      <div className="absolute -z-10 bottom-1/3 right-1/4 w-32 h-32 bg-secondary/10 rounded-lg blur-md"></div>
-      <div className="absolute -z-10 top-3/5 -right-6 w-38 h-38 bg-primary/8 rounded-2xl blur-xl"></div>
-      <div className="absolute -z-10 top-1/2 left-1/6 w-28 h-28 bg-secondary/7 rounded-xl blur-lg"></div>
-      <div className="absolute -z-10 bottom-2/3 right-2/3 w-24 h-24 bg-primary/9 rounded-lg blur-md"></div>
-      <div className="absolute -z-10 top-8 left-1/2 w-46 h-46 bg-secondary/5 rounded-3xl blur-2xl"></div>
-      <div className="absolute -z-10 bottom-1/5 left-2/3 w-20 h-20 bg-primary/7 rounded-2xl blur-lg"></div>
-      <div className="absolute -z-10 top-1/3 -left-4 w-44 h-44 bg-secondary/6 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-0 top-5 right-10 w-50 h-50 bg-primary/12 rounded-3xl blur-xl"></div>
+      <div className="absolute z-0 bottom-8 left-8 w-42 h-42 bg-secondary/20 rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 top-1/4 left-1/5 w-36 h-36 bg-primary/18 rounded-xl blur-md"></div>
+      <div className="absolute z-0 bottom-1/3 right-1/4 w-32 h-32 bg-secondary/25 rounded-lg blur-sm"></div>
+      <div className="absolute z-0 top-3/5 right-6 w-38 h-38 bg-primary/22 rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 top-1/2 left-1/6 w-28 h-28 bg-secondary/19 rounded-xl blur-md"></div>
+      <div className="absolute z-0 bottom-2/3 right-2/3 w-24 h-24 bg-primary/24 rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-8 left-1/2 w-46 h-46 bg-secondary/15 rounded-3xl blur-xl"></div>
+      <div className="absolute z-0 bottom-1/5 left-2/3 w-20 h-20 bg-primary/21 rounded-2xl blur-md"></div>
+      <div className="absolute z-0 top-1/3 left-4 w-44 h-44 bg-secondary/18 rounded-3xl blur-xl"></div>
       
       <div className="relative z-10 px-4">
 
