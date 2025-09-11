@@ -47,8 +47,6 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
             </div>
             <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
           </div>
-            </div>
-          </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Почему выбирают{' '}
             <span className="text-primary">именно нас</span>
