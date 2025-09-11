@@ -49,6 +49,11 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
       <div className="absolute z-0 bottom-1/3 left-1/4 w-28 h-28 bg-primary/19 rounded-lg blur-md"></div>
       <div className="absolute z-0 top-1/2 right-1/6 w-32 h-32 bg-sky-300/17 rounded-2xl blur-md"></div>
       <div className="absolute z-0 bottom-3/4 left-3/4 w-18 h-18 bg-primary/24 rounded-xl blur-sm"></div>
+      {/* Крупные элементы в области заголовка */}
+      <div className="absolute z-0 top-0 left-28 w-30 h-30 bg-primary/18 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-0 top-2 right-36 w-26 h-26 bg-[#0f29768c] rounded-2xl blur-xl"></div>
+      <div className="absolute z-0 top-8 left-1/4 w-22 h-22 bg-primary/22 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 top-4 right-1/3 w-18 h-18 bg-[#0f29768c] rounded-lg blur-md"></div>
       {/* Простой чистый фон */}
       <div className="absolute inset-0 bg-white"></div>
       

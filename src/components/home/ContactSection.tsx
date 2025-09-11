@@ -79,9 +79,14 @@ export default function ContactSection() {
       <div className="absolute z-0 bottom-1/5 left-2/3 w-20 h-20 bg-primary/21 rounded-2xl blur-md"></div>
       <div className="absolute z-0 top-1/3 left-4 w-44 h-44 bg-secondary/18 rounded-3xl blur-xl"></div>
       {/* Дополнительные элементы (+30%) */}
-      <div className="absolute z-0 top-1/8 right-3/4 w-28 h-28 bg-blue-500/17 rounded-2xl blur-md"></div>
+      <div className="absolute z-0 top-1/8 right-3/4 w-28 h-28 bg-[#0f29768c] rounded-2xl blur-md"></div>
       <div className="absolute z-0 bottom-1/8 left-5/6 w-24 h-24 bg-primary/29 rounded-xl blur-sm"></div>
-      <div className="absolute z-0 top-6/7 right-1/8 w-32 h-32 bg-cyan-400/16 rounded-lg blur-lg"></div>
+      <div className="absolute z-0 top-6/7 right-1/8 w-32 h-32 bg-[#0f29768c] rounded-lg blur-lg"></div>
+      {/* Крупные элементы в области заголовка */}
+      <div className="absolute z-0 top-0 left-32 w-28 h-28 bg-primary/20 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-0 top-2 right-40 w-24 h-24 bg-[#0f29768c] rounded-2xl blur-xl"></div>
+      <div className="absolute z-0 top-6 left-1/4 w-20 h-20 bg-primary/24 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 top-4 right-1/3 w-16 h-16 bg-[#0f29768c] rounded-lg blur-md"></div>
       
       <div className="relative z-10 px-4">
 
