@@ -33,7 +33,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       title: 'Ремонт вашего двигателя', 
       description: 'Качественный ремонт любой сложности с использованием современного оборудования и оригинальных запчастей.',
       icon: 'Wrench',
-      image: '/img/a78e3607-d6ee-449a-895b-7ab9dc9b726e.jpg',
+      image: 'https://cdn.poehali.dev/files/7b8ab9c2-3b62-42b5-9cdc-aff54a685b4a.JPG',
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
       features: ['Быстрые сроки', 'Гарантия качества', 'Профессионализм'],
