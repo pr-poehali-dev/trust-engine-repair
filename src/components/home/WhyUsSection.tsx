@@ -33,10 +33,10 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
   ];
 
   return (
-    <section id={id || "why-us"} className="pt-16 pb-8 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative">
+    <section id={id || "why-us"} className="pt-0 pb-0 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto py-16 relative z-10">
         {/* Заголовок */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
