@@ -82,7 +82,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             Свяжитесь с нами
           </CardTitle>
           <CardDescription className="text-gray-600">
-            Получите бесплатную консультацию по ремонту морских двигателей
+            Получите бесплатную консультацию по ремонту стационарных двигателей
           </CardDescription>
         </CardHeader>
         

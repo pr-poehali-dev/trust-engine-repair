@@ -28,13 +28,13 @@ export default function RepairHeroSection() {
             <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
             <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
             
-            <span className="text-sm font-bold text-primary">Качественный ремонт морских двигателей</span>
+            <span className="text-sm font-bold text-primary">Качественный ремонт стационарных двигателей</span>
             
             <div className="w-2 h-2 bg-primary rounded-full"></div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             Качественный ремонт{' '}
-            <span className="text-primary">морских двигателей</span>
+            <span className="text-primary">стационарных двигателей</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Профессиональный ремонт любой сложности с использованием современного оборудования. 

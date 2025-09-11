@@ -63,7 +63,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             Что мы <span className="text-primary">предлагаем</span>
           </h2>
           <p className="text-xl text-brand-gray-600 leading-relaxed">
-            Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
+            Комплексные решения для восстановления и обслуживания стационарных двигателей с гарантией качества
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             Что мы <span className="text-primary">предлагаем</span>
           </h2>
           <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
+            Комплексные решения для восстановления и обслуживания стационарных двигателей с гарантией качества
           </p>
         </div>
 

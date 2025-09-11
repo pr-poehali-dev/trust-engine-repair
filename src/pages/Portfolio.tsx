@@ -13,7 +13,7 @@ export default function Portfolio() {
     {
       id: 'volvo-d6-350',
       title: 'Восстановление Volvo Penta D6-350',
-      description: 'Полное восстановление морского двигателя с заменой всех изношенных компонентов и модернизацией системы охлаждения',
+      description: 'Полное восстановление стационарного двигателя с заменой всех изношенных компонентов и модернизацией системы охлаждения',
       image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
       duration: '14 дней',
       budget: '₽ 485 000',
@@ -130,7 +130,7 @@ export default function Portfolio() {
             Наши <span className="text-primary">работы</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Примеры успешно выполненных проектов по восстановлению морских двигателей. 
+            Примеры успешно выполненных проектов по восстановлению стационарных двигателей. 
             Каждый проект — это история возвращения к жизни.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">

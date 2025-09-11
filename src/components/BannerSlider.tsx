@@ -49,7 +49,7 @@ export default function BannerSlider({
           >
             <img
               src={image}
-              alt={`Профессиональный морской сервис ${index + 1}`}
+              alt={`Профессиональный сервис стационарных двигателей ${index + 1}`}
               className="w-full h-full object-cover hdr-image professional-transition"
               loading={index === 0 ? 'eager' : 'lazy'}
             />

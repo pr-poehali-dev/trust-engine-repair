@@ -13,7 +13,7 @@ interface ContactModalProps {
   subtitle?: string;
 }
 
-export default function ContactModal({ isOpen, onClose, title = "Свяжитесь с нами", subtitle = "Получите бесплатную консультацию по ремонту морских двигателей" }: ContactModalProps) {
+export default function ContactModal({ isOpen, onClose, title = "Свяжитесь с нами", subtitle = "Получите бесплатную консультацию по ремонту стационарных двигателей" }: ContactModalProps) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});

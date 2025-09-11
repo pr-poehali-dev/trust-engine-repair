@@ -72,7 +72,7 @@ export default function ProjectVolvoD6350() {
             Восстановление <span className="text-primary">Volvo Penta D6-350</span>
           </h1>
           <p className="text-xl text-marine-steel max-w-3xl mx-auto">
-            Полное восстановление морского двигателя с заменой всех изношенных компонентов 
+            Полное восстановление стационарного двигателя с заменой всех изношенных компонентов 
             и модернизацией системы охлаждения
           </p>
         </div>
@@ -304,7 +304,7 @@ export default function ProjectVolvoD6350() {
         <Card className="p-8 text-center bg-gradient-to-r from-primary/5 to-marine-blue/5">
           <CardContent>
             <h3 className="text-2xl font-bold text-marine-dark mb-4">
-              Нужен ремонт морского <span className="text-primary">двигателя</span>?
+              Нужен ремонт стационарного <span className="text-primary">двигателя</span>?
             </h3>
             <p className="text-marine-steel mb-6 max-w-2xl mx-auto">
               Получите бесплатную консультацию и предварительную оценку стоимости ремонта

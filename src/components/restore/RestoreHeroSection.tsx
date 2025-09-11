@@ -37,7 +37,7 @@ export default function RestoreHeroSection() {
             <span className="text-primary">под ключ</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Полное восстановление морского двигателя с гарантией качества. 
+            Полное восстановление стационарного двигателя с гарантией качества. 
             От диагностики до финального тестирования — весь процесс под контролем профессионалов.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

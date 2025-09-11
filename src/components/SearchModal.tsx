@@ -27,7 +27,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const searchDatabase: SearchResult[] = [
     {
       title: 'Восстановление двигателей',
-      description: 'Полное восстановление морских двигателей под ключ',
+      description: 'Полное восстановление стационарных двигателей под ключ',
       url: '/services/restore',
       type: 'service'
     },

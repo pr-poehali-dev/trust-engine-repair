@@ -89,7 +89,7 @@ export default function Contact() {
             Свяжитесь с <span className="text-primary">нами</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Готовы ответить на все ваши вопросы по ремонту и восстановлению морских двигателей
+            Готовы ответить на все ваши вопросы по ремонту и восстановлению стационарных двигателей
           </p>
           <Button 
             size="lg"
@@ -190,7 +190,7 @@ export default function Contact() {
               },
               {
                 question: "Какие марки двигателей вы ремонтируете?",
-                answer: "Специализируемся на Volvo Penta, Mercruiser, Indmar, Yamaha. Также работаем с другими марками морских двигателей."
+                answer: "Специализируемся на Volvo Penta, Mercruiser, Indmar, Yamaha. Также работаем с другими марками стационарных двигателей."
               }
             ].map((faq, index) => (
               <Card key={index} className="border-0 rounded-2xl">

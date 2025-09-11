@@ -37,7 +37,7 @@ export default function LongBlocksHeroSection() {
             <span className="text-primary">Mercruiser \ Volvo Penta \ Indmar</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Готовые к установке лонг-блоки морских двигателей. 
+            Готовые к установке лонг-блоки стационарных двигателей. 
             Полностью восстановленные с гарантией качества и долговечности работы.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
