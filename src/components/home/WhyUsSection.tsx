@@ -34,10 +34,20 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
   ];
 
   return (
-    <section id={id || "why-us"} className="pt-0 pb-0 px-4 relative">
+    <section id={id || "why-us"} className="relative overflow-hidden py-20 lg:py-28">
+      {/* Голубоватый градиентный фон с сферическими пятнами */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/70 via-white to-primary/10"></div>
+        {/* Сферические пятна */}
+        <div className="absolute top-16 left-16 w-80 h-80 bg-primary/15 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute bottom-24 right-12 w-88 h-88 bg-brand-blue-light/60 rounded-full blur-3xl opacity-40"></div>
+        <div className="absolute top-1/2 right-1/3 w-60 h-60 bg-primary/8 rounded-full blur-2xl opacity-30"></div>
+      </div>
+      
+      <div className="relative z-10 px-4">
 
       
-      <div className="max-w-7xl mx-auto pt-28 pb-14 relative z-10">
+      <div className="max-w-7xl mx-auto">
         <SectionTitle text="Наши преимущества" />
         {/* Заголовок */}
         <div className="text-center mb-16">
@@ -79,6 +89,8 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
             </div>
           ))}
         </div>
+      </div>
+      
       </div>
     </section>
   );

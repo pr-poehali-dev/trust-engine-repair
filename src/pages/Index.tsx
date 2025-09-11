@@ -88,7 +88,7 @@ export default function Index() {
 
   return (
     <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
-      <div className="min-h-screen bg-gradient-to-br from-primary/5 via-white to-marine-light/20">
+      <div className="min-h-screen bg-white relative overflow-hidden">
         <NavigationSection
           mobileMenuOpen={mobileMenuOpen}
           onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}

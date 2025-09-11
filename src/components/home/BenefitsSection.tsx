@@ -25,8 +25,18 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="pt-0 pb-0 px-4 relative">
-      <div className="max-w-7xl mx-auto pt-28 pb-14">
+    <section className="relative overflow-hidden py-20 lg:py-28">
+      {/* Светло-серый градиентный фон с сферическими пятнами */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-gray-100 via-brand-gray-50 to-white"></div>
+        {/* Сферические пятна */}
+        <div className="absolute top-12 right-16 w-72 h-72 bg-brand-gray-300/40 rounded-full blur-3xl opacity-70"></div>
+        <div className="absolute bottom-16 left-10 w-84 h-84 bg-brand-gray-200/50 rounded-full blur-3xl opacity-60"></div>
+        <div className="absolute top-2/3 right-1/4 w-48 h-48 bg-brand-gray-400/20 rounded-full blur-2xl opacity-40"></div>
+      </div>
+      
+      <div className="relative z-10 px-4">
+      <div className="max-w-7xl mx-auto">
         <SectionTitle text="Выгодное предложение" />
         {/* Заголовок */}
         <div className="text-center mb-16">
@@ -87,6 +97,8 @@ export default function BenefitsSection() {
             Рассчитать экономию
           </Button>
         </div>
+      </div>
+      
       </div>
     </section>
   );

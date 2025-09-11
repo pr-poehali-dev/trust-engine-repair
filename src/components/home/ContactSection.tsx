@@ -66,10 +66,20 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contacts" className="pt-0 pb-0 px-4 relative overflow-hidden">
+    <section id="contacts" className="relative overflow-hidden py-20 lg:py-28">
+      {/* Финальный голубой градиентный фон с сферическими пятнами */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-brand-blue-light to-white"></div>
+        {/* Сферические пятна */}
+        <div className="absolute top-24 left-20 w-84 h-84 bg-primary/25 rounded-full blur-3xl opacity-60"></div>
+        <div className="absolute bottom-16 right-12 w-96 h-96 bg-brand-blue/18 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-1/2 right-2/3 w-64 h-64 bg-primary/12 rounded-full blur-2xl opacity-40"></div>
+      </div>
+      
+      <div className="relative z-10 px-4">
 
       
-      <div className="max-w-7xl mx-auto py-16 relative z-10">
+      <div className="max-w-7xl mx-auto">
         <SectionTitle text="Связаться с нами" />
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
@@ -176,6 +186,8 @@ export default function ContactSection() {
             </CardContent>
           </Card>
         </div>
+      </div>
+      
       </div>
     </section>
   );

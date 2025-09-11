@@ -95,6 +95,24 @@ export default {
 				'2xl': '1rem',
 				'3xl': '1.5rem'
 			},
+			width: {
+				'72': '18rem',
+				'76': '19rem',
+				'80': '20rem',
+				'84': '21rem',
+				'88': '22rem',
+				'92': '23rem',
+				'96': '24rem'
+			},
+			height: {
+				'72': '18rem',
+				'76': '19rem',
+				'80': '20rem',
+				'84': '21rem',
+				'88': '22rem',
+				'92': '23rem',
+				'96': '24rem'
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {

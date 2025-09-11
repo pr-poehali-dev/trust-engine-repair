@@ -11,9 +11,19 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onContactClick, sliderImages }: HeroSectionProps) {
   return (
-    <section className="pt-12 pb-0 px-4 lg:pt-12 lg:pb-0 relative overflow-hidden">
+    <section className="relative overflow-hidden py-20 lg:py-28">
+      {/* Градиентный фон с сферическими пятнами */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white to-brand-blue-light"></div>
+        {/* Сферические пятна */}
+        <div className="absolute top-10 left-10 w-80 h-80 bg-primary/20 rounded-full blur-3xl opacity-60"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-brand-blue/15 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-primary/10 rounded-full blur-2xl opacity-40"></div>
+      </div>
       
-      <div className="max-w-7xl mx-auto relative z-10 pb-20">
+      <div className="relative z-10 px-4">
+      
+      <div className="max-w-7xl mx-auto pb-20">
         {/* Заголовок для мобильных устройств */}
         <div className="lg:hidden space-y-6 mb-8 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
@@ -97,6 +107,8 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
             </div>
           </div>
         </div>
+      </div>
+      
       </div>
     </section>
   );
