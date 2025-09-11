@@ -130,7 +130,8 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                 </div>
                 
                 <Button 
-                  className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 mt-auto"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 mt-auto"
+                  variant="outline"
                   onClick={(e) => {
                     e.stopPropagation();
                     window.location.href = service.link;
@@ -149,7 +150,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
           <Button 
             size="lg"
             variant="outline" 
-            className="px-8 py-4 text-lg font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+            className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-lg font-semibold"
             onClick={() => {
               window.location.href = '/services';
             }}

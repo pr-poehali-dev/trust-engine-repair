@@ -74,7 +74,7 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
                 asChild
                 variant="outline" 
                 size="lg"
-                className="border-2 border-brand-gray-300 text-brand-gray-700 hover:bg-brand-gray-50 font-semibold px-8 py-4 rounded-xl text-base transition-all"
+                className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-8 py-4 rounded-xl text-base"
               >
                 <Link to="/projects">
                   <Icon name="Play" size={20} className="mr-3" />

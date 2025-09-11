@@ -142,7 +142,11 @@ export default function GallerySection() {
                   ))}
                 </div>
                 
-                <Button asChild className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                >
                   <Link to={project.link || '#'}>
                     <Icon name="Eye" size={16} className="mr-2" />
                     Посмотреть детали

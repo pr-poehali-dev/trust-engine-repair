@@ -121,7 +121,10 @@ export default function ContactSection() {
                 rows={4} 
                 className="border-2 focus:border-primary transition-colors duration-300 resize-none"
               />
-              <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300 py-3 text-lg font-medium">
+              <Button 
+                variant="outline" 
+                className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 py-3 text-lg font-medium"
+              >
                 <Icon name="Send" size={18} className="mr-2" />
                 Отправить заявку
               </Button>
