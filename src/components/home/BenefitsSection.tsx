@@ -26,15 +26,15 @@ export default function BenefitsSection() {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-white to-brand-gray-50 relative">
       {/* Разделитель секций с фоновым переходом */}
-      <div className="absolute top-0 left-0 right-0 h-20 -mt-10">
+      <div className="absolute top-0 left-0 right-0 h-24 -mt-12 z-30">
         <div className="h-full bg-gradient-to-b from-primary/8 via-white/80 to-brand-gray-50/50"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="flex items-center">
-            <div className="w-24 h-px bg-gradient-to-r from-primary/30 via-primary/50 to-primary"></div>
-            <div className="mx-4 px-6 py-2 bg-white rounded-full border border-primary/30 shadow-lg backdrop-blur-sm">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+          <div className="flex items-center justify-center">
+            <div className="w-20 h-px bg-gradient-to-r from-primary/30 via-primary/50 to-primary"></div>
+            <div className="mx-6 px-8 py-3 bg-white rounded-full border border-primary/30 shadow-lg backdrop-blur-sm">
               <span className="text-sm font-bold text-primary uppercase tracking-wide">Выгодное предложение</span>
             </div>
-            <div className="w-24 h-px bg-gradient-to-l from-primary via-primary/50 to-brand-gray-400"></div>
+            <div className="w-20 h-px bg-gradient-to-l from-primary via-primary/50 to-brand-gray-400"></div>
           </div>
         </div>
       </div>

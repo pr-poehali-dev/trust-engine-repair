@@ -75,7 +75,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-50/80 relative overflow-hidden">
+    <section id="gallery" className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-50/80 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
       
@@ -85,15 +85,15 @@ export default function GallerySection() {
       <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-primary/6 rounded-full blur-2xl"></div>
       
       {/* Разделитель секций с фоновым переходом */}
-      <div className="absolute top-0 left-0 right-0 h-20 -mt-10 z-20">
+      <div className="absolute top-0 left-0 right-0 h-24 -mt-12 z-30">
         <div className="h-full bg-gradient-to-b from-brand-gray-50 via-white to-blue-50/60"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-          <div className="flex items-center">
-            <div className="w-24 h-px bg-gradient-to-r from-brand-gray-300 via-blue-300 to-primary"></div>
-            <div className="mx-4 px-6 py-2 bg-white rounded-full border border-blue-200 shadow-lg backdrop-blur-sm">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
+          <div className="flex items-center justify-center">
+            <div className="w-20 h-px bg-gradient-to-r from-brand-gray-300 via-blue-300 to-primary"></div>
+            <div className="mx-6 px-8 py-3 bg-white rounded-full border border-blue-200 shadow-lg backdrop-blur-sm">
               <span className="text-sm font-bold text-primary uppercase tracking-wide">Наши работы</span>
             </div>
-            <div className="w-24 h-px bg-gradient-to-l from-primary via-blue-300 to-blue-200"></div>
+            <div className="w-20 h-px bg-gradient-to-l from-primary via-blue-300 to-blue-200"></div>
           </div>
         </div>
       </div>
