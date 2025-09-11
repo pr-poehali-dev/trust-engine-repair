@@ -75,8 +75,14 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="py-20 px-4 bg-gradient-to-br from-white via-marine-light/10 to-primary/5 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-marine-blue/2 via-transparent to-primary/2 opacity-50"></div>
+    <section id="gallery" className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-50/80 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
+      
+      {/* Декоративные элементы */}
+      <div className="absolute top-16 right-16 w-28 h-28 bg-primary/8 rounded-full blur-3xl opacity-50"></div>
+      <div className="absolute bottom-16 left-16 w-36 h-36 bg-blue-500/8 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-primary/6 rounded-full blur-2xl"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
