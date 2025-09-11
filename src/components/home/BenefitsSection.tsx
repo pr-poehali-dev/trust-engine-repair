@@ -28,19 +28,13 @@ export default function BenefitsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Заголовок */}
         <div className="text-center mb-16">
-          {/* Разделитель с переходом фона */}
-          <div className="relative -mt-20 pt-20 mb-8">
-            {/* Фоновый переход */}
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-white to-brand-gray-50"></div>
-            
-            <div className="relative z-10 flex items-center justify-center">
-              <div className="flex-1 h-px bg-gradient-to-r from-primary/5 via-primary/20 to-primary"></div>
-              <div className="px-8 py-3 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
-                <span className="text-base font-bold uppercase tracking-wide relative z-10">Выгодное предложение</span>
-              </div>
-              <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/20 to-brand-gray-200"></div>
+          {/* Разделитель */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
+            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
+              <span className="text-base font-bold text-primary uppercase tracking-wide">Выгодное предложение</span>
             </div>
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Почему это{' '}

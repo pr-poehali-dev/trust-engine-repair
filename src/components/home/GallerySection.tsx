@@ -86,19 +86,13 @@ export default function GallerySection() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          {/* Разделитель с переходом фона */}
-          <div className="relative -mt-20 pt-20 mb-8">
-            {/* Фоновый переход от серого к голубому */}
-            <div className="absolute inset-0 bg-gradient-to-b from-brand-gray-50 via-white to-blue-50"></div>
-            
-            <div className="relative z-10 flex items-center justify-center">
-              <div className="flex-1 h-px bg-gradient-to-r from-brand-gray-200 via-blue-300/50 to-primary"></div>
-              <div className="px-8 py-3 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
-                <span className="text-base font-bold uppercase tracking-wide relative z-10">Наши работы</span>
-              </div>
-              <div className="flex-1 h-px bg-gradient-to-l from-primary via-blue-300/50 to-blue-200"></div>
+          {/* Разделитель */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
+            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
+              <span className="text-base font-bold text-primary uppercase tracking-wide">Наши работы</span>
             </div>
+            <div className="flex-1 h-px bg-gradient-to-l from-primary/60 via-primary/30 to-transparent"></div>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Примеры <span className="text-primary">выполненных проектов</span>
