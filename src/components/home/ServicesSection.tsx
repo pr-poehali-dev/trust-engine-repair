@@ -68,31 +68,22 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
         </div>
 
         {/* Десктопная версия */}
-        <div className="hidden lg:block mb-20">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            {/* Левая колонка с badge */}
-            <div className="flex justify-start">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
-                {/* Декоративные элементы */}
-                <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
-                
-                <span className="text-sm font-bold text-primary">Наши услуги</span>
-                
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-              </div>
-            </div>
+        <div className="hidden lg:block text-center mb-20">
+          <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
+            {/* Декоративные элементы */}
+            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
+            <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
             
-            {/* Правая колонка с заголовком и описанием */}
-            <div className="text-center">
-              <h2 className="text-5xl xl:text-6xl font-bold text-brand-gray-900 mb-6 leading-tight">
-                Что мы <span className="text-primary">предлагаем</span>
-              </h2>
-              <p className="text-xl text-brand-gray-600 leading-relaxed">
-                Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
-              </p>
-            </div>
+            <span className="text-sm font-bold text-primary">Наши услуги</span>
+            
+            <div className="w-2 h-2 bg-primary rounded-full"></div>
           </div>
+          <h2 className="text-5xl xl:text-6xl font-bold text-brand-gray-900 mb-6 leading-tight">
+            Что мы <span className="text-primary">предлагаем</span>
+          </h2>
+          <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
