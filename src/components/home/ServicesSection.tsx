@@ -50,14 +50,13 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Мобильная версия */}
         <div className="lg:hidden text-center mb-20">
-          <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
-            {/* Декоративные элементы */}
-            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
-            <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
-            
-            <span className="text-sm font-bold text-primary">Наши услуги</span>
-            
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
+          {/* Разделитель */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
+            <div className="px-6 py-2 bg-white rounded-full border border-primary/20 shadow-sm">
+              <span className="text-sm font-bold text-primary uppercase tracking-wide">Наши услуги</span>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
           </div>
           <h2 className="text-4xl font-bold text-brand-gray-900 mb-6 leading-tight">
             Что мы <span className="text-primary">предлагаем</span>
@@ -69,14 +68,13 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
 
         {/* Десктопная версия */}
         <div className="hidden lg:block text-center mb-20">
-          <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
-            {/* Декоративные элементы */}
-            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
-            <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
-            
-            <span className="text-sm font-bold text-primary">Наши услуги</span>
-            
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
+          {/* Разделитель */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
+            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
+              <span className="text-base font-bold text-primary uppercase tracking-wide">Наши услуги</span>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6 leading-tight">
             Что мы <span className="text-primary">предлагаем</span>

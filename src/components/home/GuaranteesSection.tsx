@@ -39,16 +39,13 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Заголовок для мобильных */}
         <div className="lg:hidden space-y-6 mb-12 text-center">
-          <div className="flex justify-center">
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
-              {/* Декоративные элементы */}
-              <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
-              <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
-              
-              <span className="text-sm font-bold text-primary">Наши гарантии качества</span>
-              
-              <div className="w-2 h-2 bg-primary rounded-full"></div>
+          {/* Разделитель */}
+          <div className="flex items-center justify-center">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
+            <div className="px-6 py-2 bg-white rounded-full border border-primary/20 shadow-sm">
+              <span className="text-sm font-bold text-primary uppercase tracking-wide">Наши гарантии</span>
             </div>
+            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
           </div>
           
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
@@ -62,16 +59,13 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
           <div className="space-y-8 order-2 lg:order-1">
             {/* Заголовок для десктопа */}
             <div className="hidden lg:block space-y-6">
-              <div className="flex justify-center">
-                <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
-                  {/* Декоративные элементы */}
-                  <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
-                  <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
-                  
-                  <span className="text-sm font-bold text-primary">Наши гарантии качества</span>
-                  
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+              {/* Разделитель */}
+              <div className="flex items-center justify-center">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
+                <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
+                  <span className="text-base font-bold text-primary uppercase tracking-wide">Наши гарантии</span>
                 </div>
+                <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
               </div>
               
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">
