@@ -9,19 +9,48 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileMenuProps) {
-  // Простая блокировка скролла без смещения
+  // Блокировка скролла с сохранением позиции
   useEffect(() => {
     if (isOpen) {
-      // Просто блокируем скролл
+      // Сохраняем текущее положение скролла
+      const scrollY = window.scrollY;
+      
+      // Блокируем скролл и фиксируем позицию
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
+      
+      // Сохраняем позицию скролла в data-атрибуте
+      document.body.setAttribute('data-scroll-y', scrollY.toString());
     } else {
-      // Восстанавливаем скролл
+      // Получаем сохранённую позицию скролла
+      const scrollY = document.body.getAttribute('data-scroll-y');
+      
+      // Восстанавливаем стили
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
       document.body.style.overflow = '';
+      
+      // Восстанавливаем позицию скролла
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY));
+        document.body.removeAttribute('data-scroll-y');
+      }
     }
 
     // Очищаем при размонтировании
     return () => {
+      const scrollY = document.body.getAttribute('data-scroll-y');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
       document.body.style.overflow = '';
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY));
+        document.body.removeAttribute('data-scroll-y');
+      }
     };
   }, [isOpen]);
 
@@ -47,13 +76,13 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
         <>
           {/* Background overlay - только под меню */}
           <div 
-            className="fixed inset-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
+            className="fixed top-0 left-0 right-0 bottom-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
           />
           
           {/* Menu panel - цельная панель с навигацией */}
-          <div className="fixed inset-0 bg-white z-[99999] md:hidden animate-in fade-in duration-300">
+          <div className="fixed top-0 left-0 right-0 bottom-0 bg-white z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto">
             {/* Навигационная полоса с логотипом и кнопкой закрытия */}
             <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200 bg-white shadow-sm">
               <div className="flex items-center gap-2 ml-3">
