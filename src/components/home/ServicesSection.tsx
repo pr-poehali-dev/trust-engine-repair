@@ -127,15 +127,11 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                   
                   <div className="flex flex-col gap-2 p-3 bg-gray-50 rounded-lg border">
                     <div className="flex items-center justify-between">
-                      <div className="px-3 py-1 bg-white rounded-full border border-primary/20 shadow-sm">
-                        <span className="text-xs font-bold text-primary uppercase tracking-wide whitespace-nowrap">Стоимость</span>
-                      </div>
+                      <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">Стоимость</span>
                       <span className="text-lg font-bold text-primary">{service.price}</span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <div className="px-3 py-1 bg-white rounded-full border border-primary/20 shadow-sm">
-                        <span className="text-xs font-bold text-primary uppercase tracking-wide whitespace-nowrap">Срок</span>
-                      </div>
+                      <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">Срок</span>
                       <span className="text-sm font-semibold text-gray-700">{service.duration}</span>
                     </div>
                   </div>
