@@ -117,15 +117,23 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <div className="mb-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 px-4 py-2 rounded-full shadow-sm">
-            <img src="/logo.svg" alt="RED MAR" className="h-4 w-auto" />
-            <span className="text-sm font-semibold text-gray-700">Наши услуги</span>
+        <div className="text-left mb-20">
+          <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
+            {/* Декоративные элементы связанные с инфографикой */}
+            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
+            <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
+            
+            {/* Логотип и текст */}
+            <img src="/logo.svg" alt="RED MAR" className="h-5 w-auto" />
+            <span className="text-sm font-bold text-primary">Наши услуги</span>
+            
+            {/* Декоративная точка справа */}
+            <div className="w-2 h-2 bg-primary rounded-full"></div>
           </div>
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-gray-900 mb-6 leading-tight">
             Что мы <span className="text-primary">предлагаем</span>
           </h2>
-          <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-brand-gray-600 max-w-3xl leading-relaxed">
             Комплексные решения для восстановления и обслуживания морских двигателей с гарантией качества
           </p>
         </div>
