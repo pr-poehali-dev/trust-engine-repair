@@ -104,13 +104,13 @@ export default function Index() {
         <SectionSeparator text="Наши преимущества" theme="light" />
         
         <WhyUsSection id="why-us" />
-        <SectionSeparator text="Выгодное предложение" theme="light-to-gray" />
+        <SectionSeparator text="Выгодное предложение" theme="light" />
         
         <BenefitsSection />
-        <SectionSeparator text="Наши работы" theme="gray-to-blue" />
+        <SectionSeparator text="Наши работы" theme="light" />
         
         <GallerySection />
-        <SectionSeparator text="Наши гарантии" theme="blue-to-light" />
+        <SectionSeparator text="Наши гарантии" theme="light" />
         
         <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
         <SectionSeparator text="Связаться с нами" theme="light" />
