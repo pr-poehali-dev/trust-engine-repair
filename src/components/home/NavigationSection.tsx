@@ -75,11 +75,11 @@ export default function NavigationSection({
                       <div className="text-sm text-gray-500">Полный цикл ремонта</div>
                     </div>
                   </Link>
-                  <Link to="/#services" className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
-                    <Icon name="Search" size={20} className="text-primary" />
+                  <Link to="/services/repair" className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
+                    <Icon name="Wrench" size={20} className="text-primary" />
                     <div>
-                      <div className="font-medium text-gray-900">Диагностика</div>
-                      <div className="text-sm text-gray-500">Комплексная проверка</div>
+                      <div className="font-medium text-gray-900">Ремонт двигателей</div>
+                      <div className="text-sm text-gray-500">Ремонт вашего двигателя</div>
                     </div>
                   </Link>
                   <Link 

@@ -31,9 +31,10 @@ export default function RepairHeroSection() {
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full mb-6">
-            🔧 Ремонт вашего двигателя
-          </Badge>
+          <div className="mb-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 px-4 py-2 rounded-full shadow-sm">
+            <img src="/logo.svg" alt="RED MAR" className="h-4 w-auto" />
+            <span className="text-sm font-semibold text-gray-700">Ремонт вашего двигателя</span>
+          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             Качественный ремонт{' '}
             <span className="text-primary">морских двигателей</span>
