@@ -4,9 +4,10 @@ import Icon from '@/components/ui/icon';
 
 interface GuaranteesSectionProps {
   onContactClick: () => void;
+  id?: string;
 }
 
-export default function GuaranteesSection({ onContactClick }: GuaranteesSectionProps) {
+export default function GuaranteesSection({ onContactClick, id }: GuaranteesSectionProps) {
   const guarantees = [
     {
       icon: 'Shield',
@@ -32,7 +33,7 @@ export default function GuaranteesSection({ onContactClick }: GuaranteesSectionP
   ];
 
   return (
-    <section id="guarantees" className="py-20 px-4 lg:py-28 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+    <section id={id || "guarantees"} className="py-20 px-4 lg:py-28 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">

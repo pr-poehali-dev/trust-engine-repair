@@ -100,7 +100,7 @@ export default function NavigationSection({
             <Link 
               to="/projects" 
               className={`font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap ${
-                isActive('/projects') ? 'text-primary border-b-2 border-primary pb-1' : 'text-brand-gray-700 hover:text-primary'
+                isActive('/projects') ? 'text-primary' : 'text-brand-gray-700 hover:text-primary'
               }`}
             >
               Работы
@@ -111,7 +111,7 @@ export default function NavigationSection({
             <Link 
               to="/contact" 
               className={`font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap ${
-                isActive('/contact') ? 'text-primary border-b-2 border-primary pb-1' : 'text-brand-gray-700 hover:text-primary'
+                isActive('/contact') ? 'text-primary' : 'text-brand-gray-700 hover:text-primary'
               }`}
             >
               Контакты

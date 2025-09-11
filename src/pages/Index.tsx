@@ -29,6 +29,36 @@ export default function Index() {
     return timeTracker;
   }, [analytics]);
 
+  // Обработка якорных ссылок
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const element = document.getElementById(hash);
+        if (element) {
+          const headerHeight = 80; // Высота навигации
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    // Обработка при загрузке страницы
+    setTimeout(handleHashChange, 100);
+
+    // Обработка при изменении hash
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
   // Обработка обновления страницы
   const handleRefresh = async () => {
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -66,15 +96,15 @@ export default function Index() {
           sliderImages={sliderImages}
         />
         
-        <ServicesSection />
+        <ServicesSection id="services" />
         
-        <WhyUsSection />
+        <WhyUsSection id="why-us" />
         
         <BenefitsSection />
         
         <GallerySection />
         
-        <GuaranteesSection onContactClick={() => setContactFormOpen(true)} />
+        <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
         
         <ContactSection />
         
