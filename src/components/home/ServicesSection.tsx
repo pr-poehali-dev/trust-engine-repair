@@ -54,7 +54,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-white"></div>
         {/* Сферические пятна */}
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-brand-gray-100/50 rounded-full blur-3xl opacity-[0.15]"></div>
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-brand-gray-100/50 rounded-full blur-3xl opacity-[0.25]"></div>
       </div>
       
       <div className="relative z-10 px-4">

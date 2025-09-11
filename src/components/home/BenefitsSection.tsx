@@ -30,7 +30,7 @@ export default function BenefitsSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-white"></div>
         {/* Сферические пятна */}
-        <div className="absolute bottom-16 right-1/4 w-80 h-80 bg-brand-gray-50/60 rounded-full blur-3xl opacity-[0.15]"></div>
+        <div className="absolute bottom-16 right-1/4 w-80 h-80 bg-brand-gray-50/60 rounded-full blur-3xl opacity-[0.25]"></div>
       </div>
       
       <div className="relative z-10 px-4">

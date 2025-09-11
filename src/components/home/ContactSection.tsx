@@ -71,8 +71,8 @@ export default function ContactSection() {
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-white"></div>
         {/* Сферические пятна */}
-        <div className="absolute top-24 left-20 w-80 h-80 bg-brand-blue-light/50 rounded-full blur-3xl opacity-[0.1]"></div>
-        <div className="absolute bottom-16 right-12 w-96 h-96 bg-brand-blue-light/40 rounded-full blur-3xl opacity-[0.15]"></div>
+        <div className="absolute top-24 left-20 w-80 h-80 bg-brand-blue-light/50 rounded-full blur-3xl opacity-[0.3]"></div>
+        <div className="absolute bottom-16 right-12 w-96 h-96 bg-brand-blue-light/40 rounded-full blur-3xl opacity-[0.3]"></div>
       </div>
       
       <div className="relative z-10 px-4">
