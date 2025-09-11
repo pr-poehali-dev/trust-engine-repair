@@ -98,6 +98,14 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                 {/* Submenu */}
                 <div className="ml-6 space-y-1">
                   <Link 
+                    to="/services"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 transition-colors border-b border-gray-100"
+                    onClick={handleLinkClick}
+                  >
+                    <Icon name="Grid3X3" size={16} className="text-primary" />
+                    <span className="font-semibold text-gray-800">Все услуги</span>
+                  </Link>
+                  <Link 
                     to="/services/restore"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
                     onClick={handleLinkClick}

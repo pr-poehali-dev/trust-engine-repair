@@ -66,6 +66,16 @@ export default function NavigationSection({
               <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="p-2">
                   <Link 
+                    to="/services" 
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/10 transition-colors border-b border-gray-100"
+                  >
+                    <Icon name="Grid3X3" size={20} className="text-primary" />
+                    <div>
+                      <div className="font-semibold text-gray-900">Все услуги</div>
+                      <div className="text-sm text-gray-500">Полный каталог</div>
+                    </div>
+                  </Link>
+                  <Link 
                     to="/services/restore" 
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
                   >
