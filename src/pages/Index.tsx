@@ -53,7 +53,7 @@ export default function Index() {
   ];
 
   return (
-    <PullToRefresh onRefresh={handleRefresh}>
+    <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
       <div className="min-h-screen bg-[#f2f6fa]">
         <NavigationSection
           mobileMenuOpen={mobileMenuOpen}
