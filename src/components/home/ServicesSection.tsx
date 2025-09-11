@@ -23,7 +23,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       title: 'Продажа лонг-блоков', 
       description: 'Готовые к установке блоки двигателей с полной комплектацией и тестированием на стенде.',
       icon: 'Package',
-      image: '/img/04333da0-be06-4c2d-ac1d-74f71868a541.jpg',
+      image: 'https://cdn.poehali.dev/files/811d07e9-db2e-4e27-8f77-ac99bbc0e281.jpg',
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
       features: ['Готовые блоки', 'Полная комплектация', 'Тестирование'],
