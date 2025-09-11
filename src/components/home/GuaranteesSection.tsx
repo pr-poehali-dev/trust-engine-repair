@@ -64,9 +64,9 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
         <SectionTitle text="Наши гарантии" />
         {/* Заголовок для мобильных */}
         <div className="lg:hidden space-y-6 mb-12 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
+          <h2 className="text-3xl sm:text-4xl font-medium text-brand-gray-900 leading-tight px-2">
             Максимальные{' '}
-            <span className="text-primary">гарантии</span>{' '}
+            <span className="text-primary font-bold">гарантии</span>{' '}
             на все виды работ
           </h2>
         </div>
@@ -75,9 +75,9 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
           <div className="space-y-8 order-2 lg:order-1">
             {/* Заголовок для десктопа */}
             <div className="hidden lg:block space-y-6">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight">
                 Максимальные{' '}
-                <span className="text-primary">гарантии</span>{' '}
+                <span className="text-primary font-bold">гарантии</span>{' '}
                 на все виды работ
               </h2>
             </div>

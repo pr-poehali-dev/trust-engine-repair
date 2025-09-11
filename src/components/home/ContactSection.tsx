@@ -94,8 +94,8 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto">
         <SectionTitle text="Связаться с нами" />
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
-            Готовы начать <span className="text-primary">восстановление</span>?
+          <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
+            Готовы начать <span className="text-primary font-bold">восстановление</span>?
           </h2>
           <p className="text-xl text-marine-steel max-w-3xl mx-auto">
             Свяжитесь с нами любым удобным способом, и получите персональную консультацию эксперта

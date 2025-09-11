@@ -52,9 +52,9 @@ export default function BenefitsSection() {
         <SectionTitle text="Выгодное предложение" />
         {/* Заголовок */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
             Почему это{' '}
-            <span className="text-primary">выгодно</span>
+            <span className="text-primary font-bold">выгодно</span>
           </h2>
           <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto">
             Восстановление двигателя — это не только экономия, но и инвестиция в будущее вашего катера

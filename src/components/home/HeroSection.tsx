@@ -36,9 +36,9 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
       <div className="max-w-7xl mx-auto pb-20">
         {/* Заголовок для мобильных устройств */}
         <div className="lg:hidden space-y-6 mb-8 text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
+          <h1 className="text-3xl sm:text-4xl font-medium text-brand-gray-900 leading-tight px-2">
             Профессиональное{' '}
-            <span className="text-primary">восстановление</span>{' '}
+            <span className="text-primary font-bold">восстановление</span>{' '}
             двигателей для катеров и яхт
           </h1>
         </div>
@@ -47,9 +47,9 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
           <div className="space-y-8 order-2 lg:order-1">
             {/* Заголовок для десктопа */}
             <div className="hidden lg:block space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight">
                 Профессиональное{' '}
-                <span className="text-primary">восстановление</span>{' '}
+                <span className="text-primary font-bold">восстановление</span>{' '}
                 двигателей для катеров и яхт
               </h1>
             </div>

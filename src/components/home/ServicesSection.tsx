@@ -76,8 +76,8 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
         <SectionTitle text="Наши услуги" />
         
         <div className="text-center mb-20">
-          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6 leading-tight">
-            Что мы <span className="text-primary">предлагаем</span>
+          <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6 leading-tight">
+            Что мы <span className="text-primary font-bold">предлагаем</span>
           </h2>
           <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto leading-relaxed">
             Комплексные решения для восстановления и обслуживания стационарных двигателей с гарантией качества

@@ -62,9 +62,9 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
         <SectionTitle text="Наши преимущества" />
         {/* Заголовок */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
             Почему выбирают{' '}
-            <span className="text-primary">именно нас</span>
+            <span className="text-primary font-bold">именно нас</span>
           </h2>
           <p className="text-xl text-brand-gray-600 max-w-3xl mx-auto">
             Профессиональный подход, современные технологии и многолетний опыт — основа нашей репутации

@@ -107,8 +107,8 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto">
         <SectionTitle text="Наши работы" />
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
-            Примеры <span className="text-primary">выполненных проектов</span>
+          <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
+            Примеры <span className="text-primary font-bold">выполненных проектов</span>
           </h2>
           <p className="text-xl text-marine-steel max-w-3xl mx-auto">
             Профессиональное восстановление стационарных двигателей с гарантией качества
