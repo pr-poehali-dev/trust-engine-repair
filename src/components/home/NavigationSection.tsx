@@ -59,10 +59,10 @@ export default function NavigationSection({
           {/* Главное меню с адаптивными отступами */}
           <div className="hidden md:flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
             <div className="relative group">
-              <a href="#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] flex items-center gap-1 whitespace-nowrap">
+              <Link to="/#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] flex items-center gap-1 whitespace-nowrap">
                 Услуги
                 <Icon name="ChevronDown" size={14} className="transition-transform group-hover:rotate-180" />
-              </a>
+              </Link>
               <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="p-2">
                   <Link 
@@ -75,13 +75,13 @@ export default function NavigationSection({
                       <div className="text-sm text-gray-500">Полный цикл ремонта</div>
                     </div>
                   </Link>
-                  <a href="#services" className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
+                  <Link to="/#services" className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
                     <Icon name="Search" size={20} className="text-primary" />
                     <div>
                       <div className="font-medium text-gray-900">Диагностика</div>
                       <div className="text-sm text-gray-500">Комплексная проверка</div>
                     </div>
-                  </a>
+                  </Link>
                   <Link 
                     to="/services/longblocks" 
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors">
@@ -94,9 +94,9 @@ export default function NavigationSection({
                 </div>
               </div>
             </div>
-            <a href="#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap">
+            <Link to="/#why-us" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap">
               Почему мы
-            </a>
+            </Link>
             <Link 
               to="/projects" 
               className={`font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap ${
@@ -105,9 +105,9 @@ export default function NavigationSection({
             >
               Работы
             </Link>
-            <a href="#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap">
+            <Link to="/#guarantees" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap">
               Гарантии
-            </a>
+            </Link>
             <Link 
               to="/contact" 
               className={`font-medium transition-colors text-sm lg:text-[15px] whitespace-nowrap ${

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
@@ -82,8 +83,8 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
               
               {/* Services with submenu */}
               <div className="space-y-1">
-                <a 
-                  href="#services" 
+                <Link 
+                  to="/#services" 
                   className="flex items-center justify-between p-4 rounded-xl hover:bg-gray-50 transition-colors group"
                   onClick={handleLinkClick}
                 >
@@ -96,72 +97,72 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                 
                 {/* Submenu */}
                 <div className="ml-6 space-y-1">
-                  <a 
-                    href="/services/restore"
+                  <Link 
+                    to="/services/restore"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
                     onClick={handleLinkClick}
                   >
                     <Icon name="RefreshCw" size={16} className="text-primary" />
                     <span className="text-gray-600">Восстановление под ключ</span>
-                  </a>
-                  <a 
-                    href="/services/repair" 
+                  </Link>
+                  <Link 
+                    to="/services/repair" 
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
                     onClick={handleLinkClick}
                   >
                     <Icon name="Wrench" size={16} className="text-primary" />
                     <span className="text-gray-600">Ремонт двигателей</span>
-                  </a>
-                  <a 
-                    href="/services/longblocks" 
+                  </Link>
+                  <Link 
+                    to="/services/longblocks" 
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
                     onClick={handleLinkClick}
                   >
                     <Icon name="Package" size={16} className="text-primary" />
                     <span className="text-gray-600">Лонг-блоки</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               {/* Why Us */}
-              <a 
-                href="#why-us" 
+              <Link 
+                to="/#why-us" 
                 className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
                 onClick={handleLinkClick}
               >
                 <Icon name="Award" size={20} className="text-gray-600" />
                 <span className="font-medium text-gray-800">Почему мы</span>
-              </a>
+              </Link>
 
               {/* Our Works */}
-              <a 
-                href="/projects" 
+              <Link 
+                to="/projects" 
                 className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
                 onClick={handleLinkClick}
               >
                 <Icon name="Image" size={20} className="text-gray-600" />
                 <span className="font-medium text-gray-800">Наши работы</span>
-              </a>
+              </Link>
 
               {/* Guarantees */}
-              <a 
-                href="#guarantees" 
+              <Link 
+                to="/#guarantees" 
                 className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
                 onClick={handleLinkClick}
               >
                 <Icon name="Shield" size={20} className="text-gray-600" />
                 <span className="font-medium text-gray-800">Гарантии</span>
-              </a>
+              </Link>
 
               {/* Contacts */}
-              <a 
-                href="/contact" 
+              <Link 
+                to="/contact" 
                 className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
                 onClick={handleLinkClick}
               >
                 <Icon name="MapPin" size={20} className="text-gray-600" />
                 <span className="font-medium text-gray-800">Контакты</span>
-              </a>
+              </Link>
             </div>
             
             {/* CTA Section */}
