@@ -59,7 +59,12 @@ export default function NavigationSection({
           {/* Главное меню с адаптивными отступами */}
           <div className="hidden md:flex items-center space-x-3 lg:space-x-4 xl:space-x-6">
             <div className="relative group">
-              <Link to="/#services" className="text-brand-gray-700 hover:text-primary font-medium transition-colors text-sm lg:text-[15px] flex items-center gap-1 whitespace-nowrap">
+              <Link 
+                to="/services" 
+                className={`font-medium transition-colors text-sm lg:text-[15px] flex items-center gap-1 whitespace-nowrap ${
+                  isActive('/services') ? 'text-primary' : 'text-brand-gray-700 hover:text-primary'
+                }`}
+              >
                 Услуги
                 <Icon name="ChevronDown" size={14} className="transition-transform group-hover:rotate-180" />
               </Link>

@@ -84,7 +84,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
               {/* Services with submenu */}
               <div className="space-y-1">
                 <Link 
-                  to="/#services" 
+                  to="/services" 
                   className="flex items-center justify-between p-4 rounded-xl hover:bg-gray-50 transition-colors group"
                   onClick={handleLinkClick}
                 >
