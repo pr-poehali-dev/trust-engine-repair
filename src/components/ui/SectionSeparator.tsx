@@ -66,8 +66,8 @@ export default function SectionSeparator({ text, position = 'bottom', theme = 'l
           <div className={`flex-1 h-px ${styles.lineRight}`}></div>
         </div>
       </div>
-      {/* Спейсер для сохранения вертикального пространства */}
-      <div className="h-16"></div>
+      {/* Минимальный спейсер для эффекта мостика */}
+      <div className="h-4"></div>
     </div>
   );
 }
