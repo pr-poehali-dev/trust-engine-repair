@@ -33,7 +33,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
   ];
 
   return (
-    <section id={id || "guarantees"} className="pt-8 pb-16 px-4 lg:pt-8 lg:pb-16 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+    <section id={id || "guarantees"} className="pt-16 pb-8 px-4 lg:pt-16 lg:pb-8 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">

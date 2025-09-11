@@ -100,34 +100,22 @@ export default function Index() {
           sliderImages={sliderImages}
         />
         
-        <div className="relative">
-          <ServicesSection id="services" />
-          <SectionSeparator text="Наши преимущества" position="bottom" />
-        </div>
+        <ServicesSection id="services" />
+        <SectionSeparator text="Наши преимущества" theme="light" />
         
-        <div className="relative pt-16">
-          <WhyUsSection id="why-us" />
-          <SectionSeparator text="Выгодное предложение" position="bottom" />
-        </div>
+        <WhyUsSection id="why-us" />
+        <SectionSeparator text="Выгодное предложение" theme="light-to-gray" />
         
-        <div className="relative pt-16">
-          <BenefitsSection />
-          <SectionSeparator text="Наши работы" position="bottom" />
-        </div>
+        <BenefitsSection />
+        <SectionSeparator text="Наши работы" theme="gray-to-blue" />
         
-        <div className="relative pt-16">
-          <GallerySection />
-          <SectionSeparator text="Наши гарантии" position="bottom" />
-        </div>
+        <GallerySection />
+        <SectionSeparator text="Наши гарантии" theme="blue-to-light" />
         
-        <div className="relative pt-16">
-          <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
-          <SectionSeparator text="Связаться с нами" position="bottom" />
-        </div>
+        <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
+        <SectionSeparator text="Связаться с нами" theme="light" />
         
-        <div className="pt-16">
-          <ContactSection />
-        </div>
+        <ContactSection />
         
         <FooterSection />
 

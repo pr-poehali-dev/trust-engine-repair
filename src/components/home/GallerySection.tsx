@@ -75,7 +75,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="pt-8 pb-16 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-50/80 relative">
+    <section id="gallery" className="pt-16 pb-8 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-50/80 relative">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
       

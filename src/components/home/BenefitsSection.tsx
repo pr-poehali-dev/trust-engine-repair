@@ -24,7 +24,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="pt-8 pb-16 px-4 bg-gradient-to-b from-white to-brand-gray-50 relative">
+    <section className="pt-16 pb-8 px-4 bg-gradient-to-b from-white to-brand-gray-50 relative">
       <div className="max-w-7xl mx-auto">
         {/* Заголовок */}
         <div className="text-center mb-16">

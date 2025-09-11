@@ -46,7 +46,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contacts" className="pt-8 pb-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
+    <section id="contacts" className="pt-16 pb-16 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
