@@ -7,6 +7,25 @@ import Icon from '@/components/ui/icon';
 import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function ContactSection() {
+  const handleContactClick = (contact: any) => {
+    switch (contact.icon) {
+      case 'Phone':
+        window.open(`tel:${contact.value}`, '_self');
+        break;
+      case 'Mail':
+        window.open(`mailto:${contact.value}?subject=Запрос на восстановление двигателя`, '_self');
+        break;
+      case 'MapPin':
+        window.open(`https://yandex.ru/maps/?text=${encodeURIComponent(contact.value)}`, '_blank');
+        break;
+      case 'Clock':
+        alert(`📞 Записаться на визит:\n+7 (999) 555-00-12\n\n⏰ ${contact.value}\n\n${contact.description}`);
+        break;
+      default:
+        alert(`📞 Свяжитесь с нами: +7 (999) 555-00-12`);
+    }
+  };
+
   const contacts = [
     {
       icon: 'Phone',
@@ -63,9 +82,9 @@ export default function ContactSection() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
-            {/* Компактное отображение контактов */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {contacts.map((contact, index) => (
+            {/* Упрощенное отображение контактов для мобильных */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {contacts.slice(0, 2).map((contact, index) => (
                 <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border hover:border-primary/30 bg-white/90 backdrop-blur-sm h-full">
                   <CardContent className="p-6">
                     <div className="text-center space-y-4 flex flex-col h-full">
@@ -79,7 +98,12 @@ export default function ContactSection() {
                         <p className="text-brand-gray-700 font-medium text-base mb-2">{contact.value}</p>
                         <p className="text-sm text-brand-gray-500 mb-4">{contact.description}</p>
                       </div>
-                      <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 text-sm mt-auto">
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 text-sm mt-auto"
+                        onClick={() => handleContactClick(contact)}
+                      >
                         <Icon name="ArrowRight" size={14} className="mr-1" />
                         {contact.action}
                       </Button>
@@ -87,6 +111,23 @@ export default function ContactSection() {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            {/* Дополнительная информация для мобильных */}
+            <div className="mt-6 p-4 bg-gray-50 rounded-lg border md:hidden">
+              <div className="text-center space-y-2">
+                <h4 className="font-semibold text-brand-gray-900">Также доступны:</h4>
+                <div className="flex justify-center gap-4 text-sm text-brand-gray-600">
+                  <div className="flex items-center gap-1">
+                    <Icon name="MapPin" size={14} />
+                    <span>Адрес мастерской</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Icon name="Clock" size={14} />
+                    <span>Режим работы</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -116,6 +157,9 @@ export default function ContactSection() {
               <Button 
                 variant="outline" 
                 className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 py-3 text-lg font-medium"
+                onClick={() => {
+                  alert('📧 Ваша заявка принята!\n\n📞 Мы свяжемся с вами в течение часа:\n+7 (999) 555-00-12\n\n📧 Или напишите прямо сейчас: info@marineservice.ru');
+                }}
               >
                 <Icon name="Send" size={18} className="mr-2" />
                 Отправить заявку
@@ -125,7 +169,7 @@ export default function ContactSection() {
                   <Icon name="Shield" size={16} className="text-primary" />
                   <p className="text-sm font-medium text-marine-dark">Гарантируем конфиденциальность</p>
                 </div>
-                <p className="text-xs text-marine-steel">
+                <p className="text-sm text-marine-steel">
                   Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
                 </p>
               </div>

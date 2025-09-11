@@ -70,15 +70,15 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
             <div className="grid grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t border-brand-gray-200">
               <div className="text-center">
                 <div className="text-xl lg:text-2xl font-bold text-primary">500+</div>
-                <div className="text-xs lg:text-sm text-brand-gray-600">Двигателей отремонтировано</div>
+                <div className="text-sm lg:text-base text-brand-gray-600">Двигателей отремонтировано</div>
               </div>
               <div className="text-center">
                 <div className="text-xl lg:text-2xl font-bold text-primary">12</div>
-                <div className="text-xs lg:text-sm text-brand-gray-600">Лет опыта</div>
+                <div className="text-sm lg:text-base text-brand-gray-600">Лет опыта</div>
               </div>
               <div className="text-center">
                 <div className="text-xl lg:text-2xl font-bold text-primary">100%</div>
-                <div className="text-xs lg:text-sm text-brand-gray-600">Гарантия качества</div>
+                <div className="text-sm lg:text-base text-brand-gray-600">Гарантия качества</div>
               </div>
             </div>
           </div>

@@ -76,7 +76,13 @@ export default function BenefitsSection() {
         
         {/* CTA */}
         <div className="text-center mt-16">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-lg font-semibold rounded-xl">
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-lg font-semibold rounded-xl"
+            onClick={() => {
+              alert('📞 Для расчета экономии свяжитесь с нами:\n\n+7 (999) 555-00-12\n\nМы рассчитаем точную экономию для вашего двигателя!');
+            }}
+          >
             <Icon name="Calculator" size={20} className="mr-2" />
             Рассчитать экономию
           </Button>

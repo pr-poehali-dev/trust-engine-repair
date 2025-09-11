@@ -18,6 +18,8 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
       features: ['Капитальный ремонт', 'Современные технологии', 'Гарантия качества'],
+      price: 'от 150 000 ₽',
+      duration: '14-21 день',
       link: '/services/restore'
     },
     { 
@@ -28,6 +30,8 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
       features: ['Готовые блоки', 'Полная комплектация', 'Тестирование'],
+      price: 'от 180 000 ₽',
+      duration: '3-5 дней',
       link: '/services/longblocks'
     },
     { 
@@ -38,6 +42,8 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
       features: ['Быстрые сроки', 'Гарантия качества', 'Профессионализм'],
+      price: 'от 80 000 ₽',
+      duration: '7-14 дней',
       link: '/services/repair'
     }
   ];
@@ -92,13 +98,26 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                   {service.description}
                 </p>
                 
-                <div className="space-y-2 flex-grow">
-                  {service.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-brand-gray-500">
-                      <Icon name="CheckCircle" size={16} className="text-primary" />
-                      <span>{feature}</span>
+                <div className="space-y-4 flex-grow">
+                  <div className="space-y-2">
+                    {service.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-base text-brand-gray-500">
+                        <Icon name="CheckCircle" size={16} className="text-primary" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex flex-col gap-2 p-3 bg-gray-50 rounded-lg border">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">Стоимость</span>
+                      <span className="text-lg font-bold text-primary">{service.price}</span>
                     </div>
-                  ))}
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">Срок</span>
+                      <span className="text-sm font-semibold text-gray-700">{service.duration}</span>
+                    </div>
+                  </div>
                 </div>
                 
                 <Button 

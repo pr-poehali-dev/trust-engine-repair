@@ -136,16 +136,29 @@ export default function GallerySection() {
                   ))}
                 </div>
                 
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
-                >
-                  <Link to={project.link || '#'}>
+                {project.link && project.link !== '#' ? (
+                  <Button 
+                    asChild 
+                    variant="outline" 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                  >
+                    <Link to={project.link}>
+                      <Icon name="Eye" size={16} className="mr-2" />
+                      Посмотреть детали
+                    </Link>
+                  </Button>
+                ) : (
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
+                    onClick={() => {
+                      alert(`📋 Проект "${project.title}" - ${project.type}\n\n⏱ Срок выполнения: ${project.duration}\n\n📞 Подробности по телефону: +7 (999) 555-00-12`);
+                    }}
+                  >
                     <Icon name="Eye" size={16} className="mr-2" />
                     Посмотреть детали
-                  </Link>
-                </Button>
+                  </Button>
+                )}
               </CardContent>
             </Card>
           ))}

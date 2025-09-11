@@ -68,8 +68,8 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
                   </p>
                   <div className="space-y-1">
                     {advantage.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-brand-gray-500">
-                        <Icon name="CheckCircle" size={12} className="text-primary flex-shrink-0" />
+                      <div key={i} className="flex items-center gap-2 text-sm text-brand-gray-500">
+                        <Icon name="CheckCircle" size={14} className="text-primary flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
                     ))}

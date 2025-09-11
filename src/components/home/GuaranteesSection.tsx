@@ -82,6 +82,9 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
                 variant="outline" 
                 size="lg"
                 className="border-2 border-brand-gray-300 text-brand-gray-700 hover:bg-brand-gray-50 font-semibold px-8 py-4 rounded-xl text-base transition-all"
+                onClick={() => {
+                  alert('📄 Договор гарантии предоставляется при заключении сделки.\n\n📞 Для получения образца договора:\n+7 (999) 555-00-12\n\n📧 info@marineservice.ru');
+                }}
               >
                 <Icon name="FileText" size={20} className="mr-3" />
                 Договор гарантии
@@ -92,15 +95,15 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
             <div className="grid grid-cols-3 gap-4 lg:gap-6 pt-6 lg:pt-8 border-t border-brand-gray-200">
               <div className="text-center">
                 <div className="text-xl lg:text-2xl font-bold text-primary">2 года</div>
-                <div className="text-xs lg:text-sm text-brand-gray-600">Гарантия на ремонт</div>
+                <div className="text-sm lg:text-base text-brand-gray-600">Гарантия на ремонт</div>
               </div>
               <div className="text-center">
                 <div className="text-xl lg:text-2xl font-bold text-primary">100%</div>
-                <div className="text-xs lg:text-sm text-brand-gray-600">Качество работ</div>
+                <div className="text-sm lg:text-base text-brand-gray-600">Качество работ</div>
               </div>
               <div className="text-center">
                 <div className="text-xl lg:text-2xl font-bold text-primary">24/7</div>
-                <div className="text-xs lg:text-sm text-brand-gray-600">Поддержка клиентов</div>
+                <div className="text-sm lg:text-base text-brand-gray-600">Поддержка клиентов</div>
               </div>
             </div>
           </div>
@@ -128,8 +131,8 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
                       </p>
                       <div className="space-y-1">
                         {guarantee.features.map((feature, i) => (
-                          <div key={i} className="flex items-center gap-2 text-xs text-brand-gray-500">
-                            <Icon name="CheckCircle" size={12} className="text-primary flex-shrink-0" />
+                          <div key={i} className="flex items-center gap-2 text-sm text-brand-gray-500">
+                            <Icon name="CheckCircle" size={14} className="text-primary flex-shrink-0" />
                             <span>{feature}</span>
                           </div>
                         ))}
@@ -148,7 +151,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
             <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-2 shadow-lg">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                <span className="text-xs font-semibold text-brand-gray-800">Гарантия качества</span>
+                <span className="text-sm font-semibold text-brand-gray-800">Гарантия качества</span>
               </div>
             </div>
           </div>
