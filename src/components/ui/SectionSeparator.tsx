@@ -67,7 +67,7 @@ export default function SectionSeparator({ text, position = 'bottom', theme = 'l
         </div>
       </div>
       {/* Минимальный спейсер для эффекта мостика */}
-      <div className="h-4"></div>
+      <div className="h-5"></div>
     </div>
   );
 }
