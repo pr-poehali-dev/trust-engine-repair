@@ -77,25 +77,12 @@ export default function GallerySection() {
 
   return (
     <section id="gallery" className="relative overflow-hidden py-20 lg:py-28">
-      {/* 5. GallerySection - светло-голубой с organic формами */}
-      <div className="absolute inset-0">
-        {/* Основной градиент */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/55 via-white to-brand-blue-light/35"></div>
-        
-        {/* Organic волнообразные формы */}
-        <div className="absolute inset-0">
-          <div className="absolute -top-40 -left-24 w-[650px] h-[500px] bg-gradient-to-br from-primary/15 via-brand-blue-light/30 to-transparent rounded-full blur-3xl opacity-80 transform rotate-45"></div>
-        </div>
-        
-        <div className="absolute inset-0">
-          <div className="absolute -bottom-32 -right-48 w-[800px] h-[600px] bg-gradient-to-tl from-brand-blue-light/50 via-primary/15 to-transparent rounded-full blur-3xl opacity-80 transform -rotate-25"></div>
-        </div>
-        
-        {/* Мелкие organic акценты */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-2/3 w-[350px] h-[280px] bg-gradient-to-l from-brand-blue-light/35 to-transparent rounded-full blur-xl opacity-80 transform rotate-75"></div>
-        </div>
-      </div>
+      {/* Декоративные геометрические элементы */}
+      <div className="absolute top-16 left-12 w-28 h-28 bg-primary/10 rounded-3xl blur-xl"></div>
+      <div className="absolute bottom-24 right-20 w-32 h-32 bg-secondary/8 rounded-2xl blur-2xl"></div>
+      <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-primary/12 rounded-xl blur-lg"></div>
+      <div className="absolute bottom-1/3 left-1/3 w-24 h-24 bg-secondary/10 rounded-2xl blur-xl"></div>
+      <div className="absolute top-2/3 left-1/6 w-16 h-16 bg-primary/8 rounded-lg blur-md"></div>
       
       <div className="relative z-10 px-4">
 

@@ -35,18 +35,11 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
 
   return (
     <section id={id || "why-us"} className="relative overflow-hidden py-20 lg:py-28">
-      {/* 3. WhyUsSection - деликатный primary градиент с волнами */}
-      <div className="absolute inset-0">
-        {/* Основной градиент */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-brand-blue-light/35 to-brand-gray-50/70"></div>
-        
-        {/* Волнообразные элементы */}
-        <div className="absolute inset-0">
-          <div className="absolute -top-40 -left-40 w-[750px] h-[600px] bg-gradient-to-br from-primary/18 to-transparent rounded-full blur-3xl opacity-80 transform rotate-45"></div>
-        </div>
-        
-        <div className="absolute inset-0">
-          <div className="absolute -bottom-48 -right-32 w-[800px] h-[650px] bg-gradient-to-tl from-primary/16 via-brand-blue-light/25 to-transparent rounded-full blur-3xl opacity-80 transform -rotate-30"></div>
+      {/* Декоративные геометрические элементы */}
+      <div className="absolute top-20 left-16 w-28 h-28 bg-primary/10 rounded-3xl blur-xl"></div>
+      <div className="absolute bottom-16 right-24 w-36 h-36 bg-secondary/8 rounded-2xl blur-2xl"></div>
+      <div className="absolute top-1/2 right-1/6 w-20 h-20 bg-primary/12 rounded-xl blur-lg"></div>
+      <div className="absolute bottom-1/3 left-1/4 w-24 h-24 bg-secondary/10 rounded-2xl blur-xl"></div>
         </div>
         
         {/* Мелкие акценты */}

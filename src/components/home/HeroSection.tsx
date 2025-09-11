@@ -12,8 +12,10 @@ interface HeroSectionProps {
 export default function HeroSection({ onContactClick, sliderImages }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Простой чистый фон */}
-      <div className="absolute inset-0 bg-white"></div>
+      {/* Декоративные геометрические элементы */}
+      <div className="absolute top-16 right-20 w-32 h-32 bg-primary/10 rounded-3xl blur-2xl"></div>
+      <div className="absolute bottom-32 left-16 w-24 h-24 bg-secondary/15 rounded-2xl blur-xl"></div>
+      <div className="absolute top-1/3 left-1/4 w-16 h-16 bg-primary/8 rounded-xl blur-lg"></div>
       
       <div className="relative z-10 px-4">
       

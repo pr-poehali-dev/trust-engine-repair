@@ -27,20 +27,11 @@ export default function BenefitsSection() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
       {/* 4. BenefitsSection - светло-серый волнообразный фон */}
-      <div className="absolute inset-0">
-        {/* Основной градиент */}
-        <div className="absolute inset-0 bg-gradient-to-bl from-brand-gray-100/60 via-brand-gray-50/70 to-white"></div>
-        
-        {/* Волнообразный элемент */}
-        <div className="absolute inset-0">
-          <div className="absolute -bottom-32 -right-48 w-[700px] h-[550px] bg-gradient-to-tl from-brand-gray-100/80 via-brand-gray-50/40 to-transparent rounded-full blur-3xl opacity-80 transform rotate-20"></div>
-        </div>
-        
-        {/* Дополнительный акцент */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 -left-40 w-[600px] h-[450px] bg-gradient-to-br from-brand-blue-light/35 to-transparent rounded-full blur-2xl opacity-70 transform -rotate-12"></div>
-        </div>
-      </div>
+      {/* Декоративные геометрические элементы */}
+      <div className="absolute top-20 right-12 w-36 h-36 bg-primary/8 rounded-3xl blur-2xl"></div>
+      <div className="absolute bottom-16 left-20 w-24 h-24 bg-secondary/12 rounded-2xl blur-xl"></div>
+      <div className="absolute top-1/3 left-1/4 w-20 h-20 bg-primary/10 rounded-xl blur-lg"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-16 h-16 bg-secondary/8 rounded-lg blur-md"></div>
       
       <div className="relative z-10 px-4">
       <div className="max-w-7xl mx-auto">
