@@ -40,14 +40,14 @@ export default function NavigationSection({
           {/* Логотип с адаптивным слоганом - сдвинут правее, увеличен на 15% */}
           <div className="flex items-center min-w-0 ml-3 sm:ml-4">
             {location.pathname === '/' ? (
-              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 lg:gap-4">
+              <div className="flex items-center gap-2 lg:gap-4">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
                 <span className="block md:hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
               </div>
             ) : (
-              <Link to="/" className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 lg:gap-4 hover:opacity-80 transition-opacity">
+              <Link to="/" className="flex items-center gap-2 lg:gap-4 hover:opacity-80 transition-opacity">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
                 <span className="block md:hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
