@@ -50,7 +50,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
         <div className="flex items-center justify-center py-8 mb-12 relative z-50">
           <div className="flex items-center w-full max-w-4xl">
             <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
-            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm relative z-50">
+            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg relative z-50" style={{backgroundColor: '#ffffff'}}>
               <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Что мы предлагаем</span>
             </div>
             <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>

@@ -14,7 +14,7 @@ export default function SectionSeparator({ text, position = 'bottom', className 
       <div className="flex items-center justify-center px-4">
         <div className="flex items-center w-full max-w-4xl mx-auto">
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
-          <div className="px-4 sm:px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm transform hover:scale-105 transition-transform duration-300">
+          <div className="px-4 sm:px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg transform hover:scale-105 transition-transform duration-300" style={{backgroundColor: '#ffffff'}}>
             <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">
               {text}
             </span>
