@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -49,17 +50,17 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-[10000]">
+  return createPortal(
+    <div className="fixed inset-0 z-[50000]" style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}>
       {/* Overlay */}
       <div 
-        className="fixed inset-0 bg-black/60 transition-opacity duration-300"
+        className="absolute inset-0 bg-black/60 transition-opacity duration-300"
         onClick={onClose}
       />
       
-      {/* Modal Container with proper viewport centering */}
-      <div className="fixed inset-0 flex items-center justify-center p-4 pointer-events-none">
-        <Card className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl pointer-events-auto transform transition-all duration-300 ease-out animate-in zoom-in-95 fade-in-0">
+      {/* Modal Container - absolute positioning to viewport */}
+      <div className="absolute inset-0 flex items-center justify-center p-4">
+        <Card className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl transform transition-all duration-300 ease-out animate-in zoom-in-95 fade-in-0">
         <CardHeader className="text-center pb-4">
           <div className="flex justify-between items-center mb-4">
             <div></div>
@@ -149,6 +150,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         </CardContent>
         </Card>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
