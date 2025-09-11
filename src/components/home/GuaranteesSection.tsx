@@ -39,14 +39,19 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Заголовок для мобильных */}
         <div className="lg:hidden space-y-6 mb-12 text-center">
-          {/* Разделитель */}
-          <div className="flex items-center justify-center">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 to-primary"></div>
-            <div className="px-6 py-2 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
-              <span className="text-sm font-bold uppercase tracking-wide relative z-10">Наши гарантии</span>
+          {/* Разделитель с переходом фона */}
+          <div className="relative -mt-20 pt-20 mb-8">
+            {/* Фоновый переход от голубого к primary */}
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-primary/5"></div>
+            
+            <div className="relative z-10 flex items-center justify-center">
+              <div className="flex-1 h-px bg-gradient-to-r from-blue-200 via-primary/50 to-primary"></div>
+              <div className="px-6 py-2 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
+                <span className="text-sm font-bold uppercase tracking-wide relative z-10">Наши гарантии</span>
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/50 to-primary/20"></div>
             </div>
-            <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/20 to-transparent"></div>
           </div>
           
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
@@ -60,14 +65,19 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
           <div className="space-y-8 order-2 lg:order-1">
             {/* Заголовок для десктопа */}
             <div className="hidden lg:block space-y-6">
-              {/* Разделитель */}
-              <div className="flex items-center justify-center">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 to-primary"></div>
-                <div className="px-8 py-3 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
-                  <span className="text-base font-bold uppercase tracking-wide relative z-10">Наши гарантии</span>
+              {/* Разделитель с переходом фона */}
+              <div className="relative -mt-20 pt-20 mb-8">
+                {/* Фоновый переход от голубого к primary */}
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-primary/5"></div>
+                
+                <div className="relative z-10 flex items-center justify-center">
+                  <div className="flex-1 h-px bg-gradient-to-r from-blue-200 via-primary/50 to-primary"></div>
+                  <div className="px-8 py-3 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
+                    <span className="text-base font-bold uppercase tracking-wide relative z-10">Наши гарантии</span>
+                  </div>
+                  <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/50 to-primary/20"></div>
                 </div>
-                <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/20 to-transparent"></div>
               </div>
               
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">

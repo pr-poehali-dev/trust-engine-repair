@@ -1,6 +1,10 @@
 export default function FooterSection() {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4">
+    <footer className="relative">
+      {/* Градиентный переход от светлого к тёмному */}
+      <div className="h-20 bg-gradient-to-b from-primary/5 via-gray-100 to-gray-900"></div>
+      
+      <div className="bg-gray-900 text-white py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
