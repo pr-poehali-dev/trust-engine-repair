@@ -15,21 +15,21 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
       {/* 1. HeroSection - светло-голубой волнообразный градиент */}
       <div className="absolute inset-0">
         {/* Базовый градиентный фон */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/40 via-brand-gray-50/60 to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/60 via-brand-gray-50/70 to-white"></div>
         
         {/* Волнообразный слой 1 */}
         <div className="absolute inset-0">
-          <div className="absolute -top-32 -left-32 w-[800px] h-[600px] bg-gradient-to-br from-primary/8 to-transparent rounded-full blur-3xl opacity-60 transform rotate-12"></div>
+          <div className="absolute -top-32 -left-32 w-[800px] h-[600px] bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl opacity-80 transform rotate-12"></div>
         </div>
         
         {/* Волнообразный слой 2 */}
         <div className="absolute inset-0">
-          <div className="absolute -bottom-40 -right-40 w-[900px] h-[700px] bg-gradient-to-tl from-brand-blue-light/30 to-transparent rounded-full blur-3xl opacity-50 transform -rotate-6"></div>
+          <div className="absolute -bottom-40 -right-40 w-[900px] h-[700px] bg-gradient-to-tl from-brand-blue-light/60 to-transparent rounded-full blur-3xl opacity-80 transform -rotate-6"></div>
         </div>
         
         {/* Дополнительный органический элемент */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/4 w-[500px] h-[400px] bg-gradient-to-r from-primary/5 to-transparent rounded-full blur-2xl opacity-40 transform rotate-45"></div>
+          <div className="absolute top-1/3 left-1/4 w-[500px] h-[400px] bg-gradient-to-r from-primary/15 to-transparent rounded-full blur-2xl opacity-70 transform rotate-45"></div>
         </div>
       </div>
       
@@ -113,8 +113,8 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
               </div>
               
               {/* Floating elements */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-2xl blur-xl"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-2xl blur-xl"></div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/25 rounded-2xl blur-xl"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/25 rounded-2xl blur-xl"></div>
 
             </div>
           </div>

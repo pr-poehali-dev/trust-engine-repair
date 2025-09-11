@@ -70,20 +70,20 @@ export default function ContactSection() {
       {/* 7. ContactSection - финальный голубой волнообразный градиент */}
       <div className="absolute inset-0">
         {/* Финальный градиент */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/35 via-brand-blue-light/20 to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/65 via-brand-blue-light/50 to-white"></div>
         
         {/* Главные волнообразные элементы */}
         <div className="absolute inset-0">
-          <div className="absolute -top-48 -left-40 w-[850px] h-[650px] bg-gradient-to-br from-primary/8 via-brand-blue-light/15 to-transparent rounded-full blur-3xl opacity-80 transform rotate-30"></div>
+          <div className="absolute -top-48 -left-40 w-[850px] h-[650px] bg-gradient-to-br from-primary/20 via-brand-blue-light/35 to-transparent rounded-full blur-3xl opacity-80 transform rotate-30"></div>
         </div>
         
         <div className="absolute inset-0">
-          <div className="absolute -bottom-40 -right-40 w-[900px] h-[700px] bg-gradient-to-tl from-brand-blue-light/25 via-primary/4 to-transparent rounded-full blur-3xl opacity-70 transform -rotate-15"></div>
+          <div className="absolute -bottom-40 -right-40 w-[900px] h-[700px] bg-gradient-to-tl from-brand-blue-light/55 via-primary/16 to-transparent rounded-full blur-3xl opacity-80 transform -rotate-15"></div>
         </div>
         
         {/* Малые детали */}
         <div className="absolute inset-0">
-          <div className="absolute top-2/3 right-1/3 w-[400px] h-[320px] bg-gradient-to-l from-brand-blue-light/18 to-transparent rounded-full blur-xl opacity-60 transform rotate-50"></div>
+          <div className="absolute top-2/3 right-1/3 w-[400px] h-[320px] bg-gradient-to-l from-brand-blue-light/38 to-transparent rounded-full blur-xl opacity-80 transform rotate-50"></div>
         </div>
       </div>
       

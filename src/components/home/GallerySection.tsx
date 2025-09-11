@@ -80,20 +80,20 @@ export default function GallerySection() {
       {/* 5. GallerySection - светло-голубой с organic формами */}
       <div className="absolute inset-0">
         {/* Основной градиент */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/25 via-white to-brand-blue-light/15"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/55 via-white to-brand-blue-light/35"></div>
         
         {/* Organic волнообразные формы */}
         <div className="absolute inset-0">
-          <div className="absolute -top-40 -left-24 w-[650px] h-[500px] bg-gradient-to-br from-primary/5 via-brand-blue-light/12 to-transparent rounded-full blur-3xl opacity-80 transform rotate-45"></div>
+          <div className="absolute -top-40 -left-24 w-[650px] h-[500px] bg-gradient-to-br from-primary/15 via-brand-blue-light/30 to-transparent rounded-full blur-3xl opacity-80 transform rotate-45"></div>
         </div>
         
         <div className="absolute inset-0">
-          <div className="absolute -bottom-32 -right-48 w-[800px] h-[600px] bg-gradient-to-tl from-brand-blue-light/20 via-primary/3 to-transparent rounded-full blur-3xl opacity-70 transform -rotate-25"></div>
+          <div className="absolute -bottom-32 -right-48 w-[800px] h-[600px] bg-gradient-to-tl from-brand-blue-light/50 via-primary/15 to-transparent rounded-full blur-3xl opacity-80 transform -rotate-25"></div>
         </div>
         
         {/* Мелкие organic акценты */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-2/3 w-[350px] h-[280px] bg-gradient-to-l from-brand-blue-light/15 to-transparent rounded-full blur-xl opacity-60 transform rotate-75"></div>
+          <div className="absolute top-1/2 left-2/3 w-[350px] h-[280px] bg-gradient-to-l from-brand-blue-light/35 to-transparent rounded-full blur-xl opacity-80 transform rotate-75"></div>
         </div>
       </div>
       

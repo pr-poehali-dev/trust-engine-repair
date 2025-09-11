@@ -29,16 +29,16 @@ export default function BenefitsSection() {
       {/* 4. BenefitsSection - светло-серый волнообразный фон */}
       <div className="absolute inset-0">
         {/* Основной градиент */}
-        <div className="absolute inset-0 bg-gradient-to-bl from-brand-gray-100/30 via-brand-gray-50/40 to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-bl from-brand-gray-100/60 via-brand-gray-50/70 to-white"></div>
         
         {/* Волнообразный элемент */}
         <div className="absolute inset-0">
-          <div className="absolute -bottom-32 -right-48 w-[700px] h-[550px] bg-gradient-to-tl from-brand-gray-100/50 via-brand-gray-50/20 to-transparent rounded-full blur-3xl opacity-70 transform rotate-20"></div>
+          <div className="absolute -bottom-32 -right-48 w-[700px] h-[550px] bg-gradient-to-tl from-brand-gray-100/80 via-brand-gray-50/40 to-transparent rounded-full blur-3xl opacity-80 transform rotate-20"></div>
         </div>
         
         {/* Дополнительный акцент */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 -left-40 w-[600px] h-[450px] bg-gradient-to-br from-brand-blue-light/15 to-transparent rounded-full blur-2xl opacity-50 transform -rotate-12"></div>
+          <div className="absolute top-1/4 -left-40 w-[600px] h-[450px] bg-gradient-to-br from-brand-blue-light/35 to-transparent rounded-full blur-2xl opacity-70 transform -rotate-12"></div>
         </div>
       </div>
       

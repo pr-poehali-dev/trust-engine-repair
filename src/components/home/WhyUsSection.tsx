@@ -38,20 +38,20 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
       {/* 3. WhyUsSection - деликатный primary градиент с волнами */}
       <div className="absolute inset-0">
         {/* Основной градиент */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary/8 via-brand-blue-light/15 to-brand-gray-50/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-brand-blue-light/35 to-brand-gray-50/70"></div>
         
         {/* Волнообразные элементы */}
         <div className="absolute inset-0">
-          <div className="absolute -top-40 -left-40 w-[750px] h-[600px] bg-gradient-to-br from-primary/6 to-transparent rounded-full blur-3xl opacity-70 transform rotate-45"></div>
+          <div className="absolute -top-40 -left-40 w-[750px] h-[600px] bg-gradient-to-br from-primary/18 to-transparent rounded-full blur-3xl opacity-80 transform rotate-45"></div>
         </div>
         
         <div className="absolute inset-0">
-          <div className="absolute -bottom-48 -right-32 w-[800px] h-[650px] bg-gradient-to-tl from-primary/4 via-brand-blue-light/10 to-transparent rounded-full blur-3xl opacity-60 transform -rotate-30"></div>
+          <div className="absolute -bottom-48 -right-32 w-[800px] h-[650px] bg-gradient-to-tl from-primary/16 via-brand-blue-light/25 to-transparent rounded-full blur-3xl opacity-80 transform -rotate-30"></div>
         </div>
         
         {/* Мелкие акценты */}
         <div className="absolute inset-0">
-          <div className="absolute top-2/3 left-1/3 w-[400px] h-[300px] bg-gradient-to-r from-primary/3 to-transparent rounded-full blur-xl opacity-50 transform rotate-60"></div>
+          <div className="absolute top-2/3 left-1/3 w-[400px] h-[300px] bg-gradient-to-r from-primary/15 to-transparent rounded-full blur-xl opacity-70 transform rotate-60"></div>
         </div>
       </div>
       

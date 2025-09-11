@@ -53,16 +53,16 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       {/* 2. ServicesSection - очень светлый серо-голубой фон */}
       <div className="absolute inset-0">
         {/* Базовый градиент */}
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-gray-50/30 via-white to-brand-gray-100/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-gray-50/60 via-white to-brand-gray-100/40"></div>
         
         {/* Органические волнообразные элементы */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 -right-48 w-[700px] h-[500px] bg-gradient-to-l from-brand-gray-100/40 to-transparent rounded-full blur-3xl opacity-60 transform rotate-12"></div>
+          <div className="absolute top-1/4 -right-48 w-[700px] h-[500px] bg-gradient-to-l from-brand-gray-100/70 to-transparent rounded-full blur-3xl opacity-80 transform rotate-12"></div>
         </div>
         
         {/* Дополнительный волнообразный элемент */}
         <div className="absolute inset-0">
-          <div className="absolute -bottom-32 -left-32 w-[600px] h-[400px] bg-gradient-to-tr from-brand-blue-light/20 to-transparent rounded-full blur-2xl opacity-40 transform -rotate-15"></div>
+          <div className="absolute -bottom-32 -left-32 w-[600px] h-[400px] bg-gradient-to-tr from-brand-blue-light/50 to-transparent rounded-full blur-2xl opacity-70 transform -rotate-15"></div>
         </div>
       </div>
       
