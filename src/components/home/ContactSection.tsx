@@ -73,25 +73,25 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-12">
           <div>
             {/* Компактное отображение контактов */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-6">
               {contacts.map((contact, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border hover:border-primary/30 bg-white/90 backdrop-blur-sm">
-                  <CardContent className="p-4">
-                    <div className="text-center space-y-3">
-                      <div className={`${contact.bgColor} w-12 h-12 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon name={contact.icon} size={20} className={contact.accent} />
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border hover:border-primary/30 bg-white/90 backdrop-blur-sm h-full">
+                  <CardContent className="p-6">
+                    <div className="text-center space-y-4 flex flex-col h-full">
+                      <div className={`${contact.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon name={contact.icon} size={24} className={contact.accent} />
                       </div>
-                      <div>
-                        <h3 className="font-bold text-sm text-brand-gray-900 mb-1">
+                      <div className="flex-1">
+                        <h3 className="font-bold text-base text-brand-gray-900 mb-2">
                           {contact.title}
                         </h3>
-                        <p className="text-brand-gray-700 font-medium text-sm mb-1">{contact.value}</p>
-                        <p className="text-xs text-brand-gray-500 mb-3">{contact.description}</p>
-                        <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 text-xs">
-                          <Icon name="ArrowRight" size={12} className="mr-1" />
-                          {contact.action}
-                        </Button>
+                        <p className="text-brand-gray-700 font-medium text-base mb-2">{contact.value}</p>
+                        <p className="text-sm text-brand-gray-500 mb-4">{contact.description}</p>
                       </div>
+                      <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 text-sm mt-auto">
+                        <Icon name="ArrowRight" size={14} className="mr-1" />
+                        {contact.action}
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
