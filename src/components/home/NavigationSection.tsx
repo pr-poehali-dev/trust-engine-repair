@@ -119,7 +119,7 @@ export default function NavigationSection({
           </div>
           
           {/* Правая группа элементов с компактным размещением */}
-          <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
+          <div className="flex items-center gap-1 sm:gap-2 lg:gap-3 flex-shrink-0">
             {/* Search Button - компактный на средних экранах */}
             <Button
               variant="ghost"
@@ -147,7 +147,7 @@ export default function NavigationSection({
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden p-2 hover:bg-jivo-gray-100"
+              className="md:hidden p-2 hover:bg-jivo-gray-100 flex-shrink-0 w-10 h-10"
               onClick={onMobileMenuToggle}
               aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
             >

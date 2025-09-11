@@ -40,9 +40,9 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
             style={{ position: 'fixed', top: '64px', left: 0, right: 0, bottom: 0 }}
           />
           
-          {/* Menu panel - начинается под шапкой */}
+          {/* Menu panel - начинается под шапкой без щели */}
           <div 
-            className="fixed bg-white z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto shadow-xl border-t border-gray-200"
+            className="fixed bg-white z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto shadow-xl"
             style={{ position: 'fixed', top: '64px', left: 0, right: 0, bottom: 0 }}
           >
             
