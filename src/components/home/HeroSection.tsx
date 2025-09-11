@@ -25,11 +25,11 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
       <div className="absolute z-0 top-1/8 right-3/4 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-md"></div>
       <div className="absolute z-0 bottom-1/8 left-3/4 w-18 h-18 bg-primary/28 rounded-lg blur-sm"></div>
       <div className="absolute z-0 top-5/6 right-1/8 w-30 h-30 bg-[#039fcb0d] rounded-xl blur-md"></div>
-      {/* Крупные элементы в области заголовка */}
-      <div className="absolute z-0 top-12 left-8 w-40 h-40 bg-primary/12 rounded-3xl blur-2xl"></div>
-      <div className="absolute z-0 top-6 right-16 w-36 h-36 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-20 left-1/4 w-32 h-32 bg-primary/15 rounded-xl blur-lg"></div>
-      <div className="absolute z-0 top-16 right-1/3 w-28 h-28 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      {/* Крупные элементы в области заголовка - уменьшены до 50% */}
+      <div className="absolute z-0 top-14 left-12 w-20 h-20 bg-primary/12 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-0 top-8 right-20 w-18 h-18 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
+      <div className="absolute z-0 top-24 left-1/5 w-16 h-16 bg-primary/15 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 top-18 right-2/5 w-14 h-14 bg-[#039fcb0d] rounded-lg blur-md"></div>
       
       <div className="relative z-10 px-4">
       
