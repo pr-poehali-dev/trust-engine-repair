@@ -32,22 +32,21 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
       {/* Mobile menu overlay */}
       {isOpen && createPortal(
         <>
-          {/* Background overlay - начинается под шапкой */}
+          {/* Background overlay - полный экран */}
           <div 
-            className="fixed bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
+            className="fixed inset-0 bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
             onClick={onToggle} 
             aria-hidden="true"
-            style={{ position: 'fixed', top: 'calc(4rem + 1px)', left: 0, right: 0, bottom: 0 }}
           />
           
-          {/* Menu panel - начинается под шапкой без щели */}
+          {/* Menu panel - полный экран с отступом сверху */}
           <div 
-            className="fixed bg-white z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto shadow-xl"
-            style={{ position: 'fixed', top: 'calc(4rem + 1px)', left: 0, right: 0, bottom: 0 }}
+            className="fixed inset-0 z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto"
+            style={{ paddingTop: 'calc(4rem + 1px)' }}
           >
-            
-            {/* Navigation */}
-            <nav className="flex-1 flex flex-col justify-start px-6 pt-4 pb-8 overflow-y-auto">
+            <div className="bg-white min-h-full shadow-xl">
+              {/* Navigation */}
+              <nav className="flex-1 flex flex-col justify-start px-6 pt-4 pb-8 overflow-y-auto">
               <div className="flex flex-col space-y-3 max-w-sm mx-auto w-full">
                 <div>
                   <a 
@@ -154,7 +153,8 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                   Получите бесплатную консультацию
                 </p>
               </div>
-            </nav>
+              </nav>
+            </div>
           </div>
         </>,
         document.body
