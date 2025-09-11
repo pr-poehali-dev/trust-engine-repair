@@ -13,7 +13,7 @@ import MultiStepForm from '@/components/MultiStepForm';
 import FloatingActionButton from '@/components/FloatingActionButton';
 import PullToRefresh from '@/components/PullToRefresh';
 import OfflineBanner from '@/components/OfflineBanner';
-import SectionSeparator from '@/components/ui/SectionSeparator';
+import SectionTitle from '@/components/ui/SectionTitle';
 import { useAnalytics } from '@/utils/analytics';
 
 export default function Index() {
@@ -88,7 +88,7 @@ export default function Index() {
 
   return (
     <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
-      <div className="min-h-screen bg-[#f2f6fa]">
+      <div className="min-h-screen bg-gradient-to-br from-primary/5 via-white to-marine-light/20">
         <NavigationSection
           mobileMenuOpen={mobileMenuOpen}
           onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -99,22 +99,16 @@ export default function Index() {
           onContactClick={() => setContactFormOpen(true)}
           sliderImages={sliderImages}
         />
-        <SectionSeparator text="Наши услуги" theme="light" />
         
         <ServicesSection id="services" />
-        <SectionSeparator text="Наши преимущества" theme="light" />
         
         <WhyUsSection id="why-us" />
-        <SectionSeparator text="Выгодное предложение" theme="light" />
         
         <BenefitsSection />
-        <SectionSeparator text="Наши работы" theme="light" />
         
         <GallerySection />
-        <SectionSeparator text="Наши гарантии" theme="light" />
         
         <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
-        <SectionSeparator text="Связаться с нами" theme="light" />
         
         <ContactSection />
         

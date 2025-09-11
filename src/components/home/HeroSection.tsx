@@ -11,8 +11,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onContactClick, sliderImages }: HeroSectionProps) {
   return (
-    <section className="pt-12 pb-0 px-4 lg:pt-12 lg:pb-0 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+    <section className="pt-12 pb-0 px-4 lg:pt-12 lg:pb-0 relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto relative z-10 pb-20">
         {/* Заголовок для мобильных устройств */}

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import SectionTitle from '@/components/ui/SectionTitle';
 
 interface GuaranteesSectionProps {
   onContactClick: () => void;
@@ -33,10 +34,11 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
   ];
 
   return (
-    <section id={id || "guarantees"} className="pt-0 pb-0 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+    <section id={id || "guarantees"} className="pt-0 pb-0 px-4 relative overflow-hidden">
+
       
       <div className="max-w-7xl mx-auto pt-20 pb-10 relative z-10">
+        <SectionTitle text="Наши гарантии" />
         {/* Заголовок для мобильных */}
         <div className="lg:hidden space-y-6 mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">

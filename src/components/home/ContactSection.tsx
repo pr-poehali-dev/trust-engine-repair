@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function ContactSection() {
   const contacts = [
@@ -46,10 +47,11 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contacts" className="pt-0 pb-0 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+    <section id="contacts" className="pt-0 pb-0 px-4 relative overflow-hidden">
+
       
       <div className="max-w-7xl mx-auto py-16 relative z-10">
+        <SectionTitle text="Связаться с нами" />
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Готовы начать <span className="text-primary">восстановление</span>?
