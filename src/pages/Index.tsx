@@ -13,6 +13,7 @@ import MultiStepForm from '@/components/MultiStepForm';
 import FloatingActionButton from '@/components/FloatingActionButton';
 import PullToRefresh from '@/components/PullToRefresh';
 import OfflineBanner from '@/components/OfflineBanner';
+import SectionSeparator from '@/components/ui/SectionSeparator';
 import { useAnalytics } from '@/utils/analytics';
 
 export default function Index() {
@@ -99,17 +100,34 @@ export default function Index() {
           sliderImages={sliderImages}
         />
         
-        <ServicesSection id="services" />
+        <div className="relative">
+          <ServicesSection id="services" />
+          <SectionSeparator text="Наши преимущества" position="bottom" />
+        </div>
         
-        <WhyUsSection id="why-us" />
+        <div className="relative pt-16">
+          <WhyUsSection id="why-us" />
+          <SectionSeparator text="Выгодное предложение" position="bottom" />
+        </div>
         
-        <BenefitsSection />
+        <div className="relative pt-16">
+          <BenefitsSection />
+          <SectionSeparator text="Наши работы" position="bottom" />
+        </div>
         
-        <GallerySection />
+        <div className="relative pt-16">
+          <GallerySection />
+          <SectionSeparator text="Наши гарантии" position="bottom" />
+        </div>
         
-        <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
+        <div className="relative pt-16">
+          <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
+          <SectionSeparator text="Связаться с нами" position="bottom" />
+        </div>
         
-        <ContactSection />
+        <div className="pt-16">
+          <ContactSection />
+        </div>
         
         <FooterSection />
 
