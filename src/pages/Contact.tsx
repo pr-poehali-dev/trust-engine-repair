@@ -15,9 +15,9 @@ export default function Contact() {
     {
       icon: 'Phone',
       title: 'Телефон',
-      content: '+7 (999) 123-45-67',
+      content: '+7 (999) 555-00-12',
       description: 'Звоните с 9:00 до 18:00 (пн-сб)',
-      action: 'tel:+79991234567'
+      action: 'tel:+79995550012'
     },
     {
       icon: 'Mail',

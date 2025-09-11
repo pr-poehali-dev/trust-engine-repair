@@ -180,6 +180,13 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
               <p className="text-center text-gray-500 mt-3 text-sm">
                 Получите бесплатную консультацию
               </p>
+              <a 
+                href="tel:+79995550012"
+                className="block text-center text-primary font-semibold mt-2 text-lg hover:text-primary/80 transition-colors"
+                onClick={handleLinkClick}
+              >
+                +7 (999) 555-00-12
+              </a>
             </div>
           </nav>
         </div>

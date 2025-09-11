@@ -10,7 +10,7 @@ export default function ContactSection() {
     {
       icon: 'Phone',
       title: 'Телефон',
-      value: '+7 (xxx) xxx-xx-xx',
+      value: '+7 (999) 555-00-12',
       description: 'Звоните с 9:00 до 18:00',
       accent: 'text-primary',
       bgColor: 'bg-primary/10',

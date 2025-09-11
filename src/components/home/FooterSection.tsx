@@ -37,8 +37,8 @@ export default function FooterSection() {
             <div className="space-y-3 text-white/80 text-base">
               <p className="flex items-center gap-2">
                 <span>📞</span>
-                <a href="tel:+79991234567" className="hover:text-white transition-colors">
-                  +7 (999) 123-45-67
+                <a href="tel:+79995550012" className="hover:text-white transition-colors">
+                  +7 (999) 555-00-12
                 </a>
               </p>
               <p className="flex items-center gap-2">

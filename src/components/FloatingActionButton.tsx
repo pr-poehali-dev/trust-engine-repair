@@ -30,7 +30,7 @@ export default function FloatingActionButton() {
       {/* Quick Contact Options */}
       <div className="fixed bottom-24 right-6 z-40 flex flex-col gap-3">
         <a
-          href="tel:+79991234567"
+          href="tel:+79995550012"
           className="w-12 h-12 bg-green-500 hover:bg-green-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         >
           <Icon name="Phone" size={20} />
