@@ -26,11 +26,20 @@ export default function BenefitsSection() {
 
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* 4. BenefitsSection - белый фон с 1 серо-голубым пятном */}
+      {/* 4. BenefitsSection - светло-серый волнообразный фон */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-white"></div>
-        {/* Сферические пятна */}
-        <div className="absolute bottom-16 right-1/4 w-80 h-80 bg-brand-gray-50/60 rounded-full blur-3xl opacity-[0.25]"></div>
+        {/* Основной градиент */}
+        <div className="absolute inset-0 bg-gradient-to-bl from-brand-gray-100/30 via-brand-gray-50/40 to-white"></div>
+        
+        {/* Волнообразный элемент */}
+        <div className="absolute inset-0">
+          <div className="absolute -bottom-32 -right-48 w-[700px] h-[550px] bg-gradient-to-tl from-brand-gray-100/50 via-brand-gray-50/20 to-transparent rounded-full blur-3xl opacity-70 transform rotate-20"></div>
+        </div>
+        
+        {/* Дополнительный акцент */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 -left-40 w-[600px] h-[450px] bg-gradient-to-br from-brand-blue-light/15 to-transparent rounded-full blur-2xl opacity-50 transform -rotate-12"></div>
+        </div>
       </div>
       
       <div className="relative z-10 px-4">

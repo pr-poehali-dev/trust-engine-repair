@@ -67,12 +67,24 @@ export default function ContactSection() {
 
   return (
     <section id="contacts" className="relative overflow-hidden py-20 lg:py-28">
-      {/* 7. ContactSection - белый фон с 2 деликатными голубыми пятнами */}
+      {/* 7. ContactSection - финальный голубой волнообразный градиент */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-white"></div>
-        {/* Сферические пятна */}
-        <div className="absolute top-24 left-20 w-80 h-80 bg-brand-blue-light/50 rounded-full blur-3xl opacity-[0.3]"></div>
-        <div className="absolute bottom-16 right-12 w-96 h-96 bg-brand-blue-light/40 rounded-full blur-3xl opacity-[0.3]"></div>
+        {/* Финальный градиент */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/35 via-brand-blue-light/20 to-white"></div>
+        
+        {/* Главные волнообразные элементы */}
+        <div className="absolute inset-0">
+          <div className="absolute -top-48 -left-40 w-[850px] h-[650px] bg-gradient-to-br from-primary/8 via-brand-blue-light/15 to-transparent rounded-full blur-3xl opacity-80 transform rotate-30"></div>
+        </div>
+        
+        <div className="absolute inset-0">
+          <div className="absolute -bottom-40 -right-40 w-[900px] h-[700px] bg-gradient-to-tl from-brand-blue-light/25 via-primary/4 to-transparent rounded-full blur-3xl opacity-70 transform -rotate-15"></div>
+        </div>
+        
+        {/* Малые детали */}
+        <div className="absolute inset-0">
+          <div className="absolute top-2/3 right-1/3 w-[400px] h-[320px] bg-gradient-to-l from-brand-blue-light/18 to-transparent rounded-full blur-xl opacity-60 transform rotate-50"></div>
+        </div>
       </div>
       
       <div className="relative z-10 px-4">

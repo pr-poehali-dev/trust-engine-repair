@@ -35,12 +35,24 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
 
   return (
     <section id={id || "why-us"} className="relative overflow-hidden py-20 lg:py-28">
-      {/* 3. WhyUsSection - белый фон с 2 деликатными primary пятнами */}
+      {/* 3. WhyUsSection - деликатный primary градиент с волнами */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-white"></div>
-        {/* Сферические пятна */}
-        <div className="absolute top-16 left-16 w-80 h-80 bg-primary/10 rounded-full blur-3xl opacity-[0.25]"></div>
-        <div className="absolute bottom-24 right-12 w-96 h-96 bg-primary/8 rounded-full blur-3xl opacity-[0.25]"></div>
+        {/* Основной градиент */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/8 via-brand-blue-light/15 to-brand-gray-50/40"></div>
+        
+        {/* Волнообразные элементы */}
+        <div className="absolute inset-0">
+          <div className="absolute -top-40 -left-40 w-[750px] h-[600px] bg-gradient-to-br from-primary/6 to-transparent rounded-full blur-3xl opacity-70 transform rotate-45"></div>
+        </div>
+        
+        <div className="absolute inset-0">
+          <div className="absolute -bottom-48 -right-32 w-[800px] h-[650px] bg-gradient-to-tl from-primary/4 via-brand-blue-light/10 to-transparent rounded-full blur-3xl opacity-60 transform -rotate-30"></div>
+        </div>
+        
+        {/* Мелкие акценты */}
+        <div className="absolute inset-0">
+          <div className="absolute top-2/3 left-1/3 w-[400px] h-[300px] bg-gradient-to-r from-primary/3 to-transparent rounded-full blur-xl opacity-50 transform rotate-60"></div>
+        </div>
       </div>
       
       <div className="relative z-10 px-4">

@@ -50,11 +50,20 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
 
   return (
     <section id={id || "services"} className="relative overflow-hidden py-20 lg:py-28">
-      {/* 2. ServicesSection - белый фон с 1 серым пятном */}
+      {/* 2. ServicesSection - очень светлый серо-голубой фон */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-white"></div>
-        {/* Сферические пятна */}
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-brand-gray-100/50 rounded-full blur-3xl opacity-[0.25]"></div>
+        {/* Базовый градиент */}
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-gray-50/30 via-white to-brand-gray-100/20"></div>
+        
+        {/* Органические волнообразные элементы */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 -right-48 w-[700px] h-[500px] bg-gradient-to-l from-brand-gray-100/40 to-transparent rounded-full blur-3xl opacity-60 transform rotate-12"></div>
+        </div>
+        
+        {/* Дополнительный волнообразный элемент */}
+        <div className="absolute inset-0">
+          <div className="absolute -bottom-32 -left-32 w-[600px] h-[400px] bg-gradient-to-tr from-brand-blue-light/20 to-transparent rounded-full blur-2xl opacity-40 transform -rotate-15"></div>
+        </div>
       </div>
       
       <div className="relative z-10 px-4">
