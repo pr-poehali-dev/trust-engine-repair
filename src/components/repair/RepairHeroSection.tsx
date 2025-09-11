@@ -31,9 +31,14 @@ export default function RepairHeroSection() {
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <div className="mb-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 px-4 py-2 rounded-full shadow-sm">
-            <img src="/logo.svg" alt="RED MAR" className="h-4 w-auto" />
-            <span className="text-sm font-semibold text-gray-700">Ремонт вашего двигателя</span>
+          <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
+            {/* Декоративные элементы */}
+            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
+            <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
+            
+            <span className="text-sm font-bold text-primary">Ремонт вашего двигателя</span>
+            
+            <div className="w-2 h-2 bg-primary rounded-full"></div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             Качественный ремонт{' '}

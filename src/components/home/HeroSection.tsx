@@ -32,7 +32,17 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
           <div className="space-y-8 order-2 lg:order-1">
             {/* Заголовок для десктопа */}
             <div className="hidden lg:block space-y-6">
-              <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full">⚓ Профессиональный ремонт двигателей</Badge>
+              <div className="flex justify-center lg:justify-start">
+                <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
+                  {/* Декоративные элементы */}
+                  <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
+                  <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
+                  
+                  <span className="text-sm font-bold text-primary">⚓ Профессиональный ремонт двигателей</span>
+                  
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                </div>
+              </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">
                 Профессиональное{' '}

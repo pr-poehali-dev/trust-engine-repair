@@ -48,7 +48,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
 
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-left mb-20">
+        <div className="text-center mb-20">
           <div className="mb-6 inline-flex items-center gap-3 bg-gradient-to-r from-primary/10 to-marine-blue/5 backdrop-blur-sm border border-primary/20 px-6 py-3 rounded-full shadow-lg relative">
             {/* Декоративные элементы связанные с инфографикой */}
             <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
