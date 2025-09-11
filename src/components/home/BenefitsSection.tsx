@@ -41,11 +41,14 @@ export default function BenefitsSection() {
       <div className="absolute z-0 top-1/6 right-2/5 w-26 h-26 bg-[#039fcb0d] rounded-2xl blur-md"></div>
       <div className="absolute z-0 bottom-1/5 left-3/4 w-22 h-22 bg-primary/21 rounded-lg blur-sm"></div>
       <div className="absolute z-0 top-3/4 right-1/8 w-30 h-30 bg-[#039fcb0d] rounded-xl blur-md"></div>
-      {/* Крупные элементы в области заголовка */}
-      <div className="absolute z-0 top-4 left-20 w-34 h-34 bg-primary/14 rounded-3xl blur-2xl"></div>
-      <div className="absolute z-0 top-0 right-28 w-30 h-30 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-12 left-1/4 w-26 h-26 bg-primary/18 rounded-xl blur-lg"></div>
-      <div className="absolute z-0 top-8 right-1/3 w-22 h-22 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      {/* Крупные элементы в области заголовка - увеличено */}
+      <div className="absolute z-0 top-4 left-16 w-36 h-36 bg-primary/12 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-0 top-2 right-24 w-32 h-32 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
+      <div className="absolute z-0 top-14 left-1/5 w-28 h-28 bg-primary/15 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 top-10 right-2/5 w-24 h-24 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-6 left-1/3 w-20 h-20 bg-primary/18 rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 top-12 right-1/4 w-18 h-18 bg-[#039fcb0d] rounded-xl blur-md"></div>
+      <div className="absolute z-0 top-2 left-2/3 w-26 h-26 bg-primary/14 rounded-lg blur-sm"></div>
       
       <div className="relative z-10 px-4">
       <div className="max-w-7xl mx-auto">

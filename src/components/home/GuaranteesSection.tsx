@@ -49,15 +49,16 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
       <div className="absolute z-0 bottom-1/3 left-1/4 w-28 h-28 bg-primary/19 rounded-lg blur-md"></div>
       <div className="absolute z-0 top-1/2 right-1/6 w-32 h-32 bg-sky-300/17 rounded-2xl blur-md"></div>
       <div className="absolute z-0 bottom-3/4 left-3/4 w-18 h-18 bg-primary/24 rounded-xl blur-sm"></div>
-      {/* Крупные элементы в области заголовка */}
-      <div className="absolute z-0 top-0 left-28 w-30 h-30 bg-primary/18 rounded-3xl blur-2xl"></div>
-      <div className="absolute z-0 top-2 right-36 w-26 h-26 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-8 left-1/4 w-22 h-22 bg-primary/22 rounded-xl blur-lg"></div>
-      <div className="absolute z-0 top-4 right-1/3 w-18 h-18 bg-[#039fcb0d] rounded-lg blur-md"></div>
-      {/* Простой чистый фон */}
-      <div className="absolute inset-0 bg-white"></div>
+      {/* Крупные элементы в области заголовка - увеличено */}
+      <div className="absolute z-0 top-0 left-20 w-32 h-32 bg-primary/15 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-0 top-4 right-28 w-28 h-28 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
+      <div className="absolute z-0 top-12 left-1/5 w-24 h-24 bg-primary/18 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 top-6 right-2/5 w-20 h-20 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-2 left-1/3 w-16 h-16 bg-primary/20 rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 top-10 right-1/4 w-18 h-18 bg-[#039fcb0d] rounded-xl blur-md"></div>
+      <div className="absolute z-0 top-8 left-2/3 w-22 h-22 bg-primary/16 rounded-lg blur-sm"></div>
       
-      <div className="relative z-10 px-4">
+      <div className="relative z-10 px-4 bg-gradient-to-br from-gray-50/50 via-white/90 to-gray-50/50">
 
       
       <div className="max-w-7xl mx-auto">
