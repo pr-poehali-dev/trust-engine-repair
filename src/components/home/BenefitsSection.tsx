@@ -29,23 +29,23 @@ export default function BenefitsSection() {
       {/* 4. BenefitsSection - светло-серый волнообразный фон */}
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-12 right-8 w-44 h-44 bg-primary/18 rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 bottom-8 left-12 w-36 h-36 bg-[#0f29768c] rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 bottom-8 left-12 w-36 h-36 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
       <div className="absolute z-0 top-1/4 left-1/5 w-32 h-32 bg-primary/22 rounded-xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/3 right-1/4 w-28 h-28 bg-[#0f29768c] rounded-lg blur-sm"></div>
+      <div className="absolute z-0 bottom-1/3 right-1/4 w-28 h-28 bg-[#039fcb0d] rounded-lg blur-sm"></div>
       <div className="absolute z-0 top-2/3 left-6 w-40 h-40 bg-primary/15 rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 top-1/2 right-1/6 w-24 h-24 bg-[#0f29768c] rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 top-1/2 right-1/6 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
       <div className="absolute z-0 bottom-2/3 left-1/2 w-20 h-20 bg-primary/19 rounded-lg blur-md"></div>
-      <div className="absolute z-0 top-5 left-2/3 w-48 h-48 bg-[#0f29768c] rounded-3xl blur-xl"></div>
+      <div className="absolute z-0 top-5 left-2/3 w-48 h-48 bg-[#039fcb0d] rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-1/4 right-2/3 w-16 h-16 bg-primary/26 rounded-xl blur-md"></div>
       {/* Дополнительные элементы (+30%) */}
-      <div className="absolute z-0 top-1/6 right-2/5 w-26 h-26 bg-[#0f29768c] rounded-2xl blur-md"></div>
+      <div className="absolute z-0 top-1/6 right-2/5 w-26 h-26 bg-[#039fcb0d] rounded-2xl blur-md"></div>
       <div className="absolute z-0 bottom-1/5 left-3/4 w-22 h-22 bg-primary/21 rounded-lg blur-sm"></div>
-      <div className="absolute z-0 top-3/4 right-1/8 w-30 h-30 bg-[#0f29768c] rounded-xl blur-md"></div>
+      <div className="absolute z-0 top-3/4 right-1/8 w-30 h-30 bg-[#039fcb0d] rounded-xl blur-md"></div>
       {/* Крупные элементы в области заголовка */}
       <div className="absolute z-0 top-4 left-20 w-34 h-34 bg-primary/14 rounded-3xl blur-2xl"></div>
-      <div className="absolute z-0 top-0 right-28 w-30 h-30 bg-[#0f29768c] rounded-2xl blur-xl"></div>
+      <div className="absolute z-0 top-0 right-28 w-30 h-30 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
       <div className="absolute z-0 top-12 left-1/4 w-26 h-26 bg-primary/18 rounded-xl blur-lg"></div>
-      <div className="absolute z-0 top-8 right-1/3 w-22 h-22 bg-[#0f29768c] rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-8 right-1/3 w-22 h-22 bg-[#039fcb0d] rounded-lg blur-md"></div>
       
       <div className="relative z-10 px-4">
       <div className="max-w-7xl mx-auto">
