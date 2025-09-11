@@ -14,7 +14,7 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
     <section className="pt-12 pb-0 px-4 lg:pt-12 lg:pb-0 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
-      <div className="max-w-7xl mx-auto relative z-10 pb-20">
+      <div className="max-w-7xl mx-auto relative z-10 pb-28">
         {/* Заголовок для мобильных устройств */}
         <div className="lg:hidden space-y-6 mb-8 text-center">
           <h1 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
