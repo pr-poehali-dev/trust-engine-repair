@@ -34,22 +34,25 @@ export default function Index() {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
       if (hash) {
-        const element = document.getElementById(hash);
-        if (element) {
-          const headerHeight = 80; // Высота навигации
-          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-          const offsetPosition = elementPosition - headerHeight;
+        // Дополнительная задержка для полной загрузки компонентов
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            const headerHeight = 80; // Высота навигации
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerHeight;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }, 200);
       }
     };
 
     // Обработка при загрузке страницы
-    setTimeout(handleHashChange, 100);
+    handleHashChange();
 
     // Обработка при изменении hash
     window.addEventListener('hashchange', handleHashChange);
