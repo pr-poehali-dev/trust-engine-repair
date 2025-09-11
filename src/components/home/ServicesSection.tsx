@@ -123,8 +123,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-primary/60 to-transparent"></div>
             <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-l from-primary/60 to-transparent"></div>
             
-            {/* Логотип и текст */}
-            <img src="/logo.svg" alt="RED MAR" className="h-5 w-auto" />
+            {/* Текст без логотипа */}
             <span className="text-sm font-bold text-primary">Наши услуги</span>
             
             {/* Декоративная точка справа */}
