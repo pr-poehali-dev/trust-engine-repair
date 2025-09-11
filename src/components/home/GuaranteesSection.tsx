@@ -41,11 +41,12 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
         <div className="lg:hidden space-y-6 mb-12 text-center">
           {/* Разделитель */}
           <div className="flex items-center justify-center">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
-            <div className="px-6 py-2 bg-white rounded-full border border-primary/20 shadow-sm">
-              <span className="text-sm font-bold text-primary uppercase tracking-wide">Наши гарантии</span>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 to-primary"></div>
+            <div className="px-6 py-2 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
+              <span className="text-sm font-bold uppercase tracking-wide relative z-10">Наши гарантии</span>
             </div>
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
+            <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/20 to-transparent"></div>
           </div>
           
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-tight px-2">
@@ -61,11 +62,12 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
             <div className="hidden lg:block space-y-6">
               {/* Разделитель */}
               <div className="flex items-center justify-center">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
-                <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
-                  <span className="text-base font-bold text-primary uppercase tracking-wide">Наши гарантии</span>
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 to-primary"></div>
+                <div className="px-8 py-3 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
+                  <span className="text-base font-bold uppercase tracking-wide relative z-10">Наши гарантии</span>
                 </div>
-                <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
+                <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/20 to-transparent"></div>
               </div>
               
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-tight">

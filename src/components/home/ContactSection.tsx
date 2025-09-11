@@ -53,11 +53,12 @@ export default function ContactSection() {
         <div className="text-center mb-16">
           {/* Разделитель */}
           <div className="flex items-center justify-center mb-8">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
-            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
-              <span className="text-base font-bold text-primary uppercase tracking-wide">Связаться с нами</span>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 to-primary"></div>
+            <div className="px-8 py-3 bg-gradient-to-r from-primary via-primary to-primary text-white rounded-full shadow-lg relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary to-primary/90"></div>
+              <span className="text-base font-bold uppercase tracking-wide relative z-10">Связаться с нами</span>
             </div>
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent via-primary/30 to-primary/60"></div>
+            <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/20 to-transparent"></div>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Готовы начать <span className="text-primary">восстановление</span>?
