@@ -10,7 +10,7 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileMenuProps) {
-  // Блокировка скролла основного контента, но не шапки
+  // Блокировка скролла при открытом меню
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -27,139 +27,143 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
     onToggle();
   };
 
-  return (
+  if (!isOpen) return null;
+
+  return createPortal(
     <>
-      {/* Mobile menu overlay */}
-      {isOpen && createPortal(
-        <>
-          {/* Background overlay - только под шапкой */}
-          <div 
-            className="fixed bg-black/80 z-[9998] md:hidden transition-opacity duration-300" 
-            onClick={onToggle} 
-            aria-hidden="true"
-            style={{ top: 'calc(4rem + 1px)', left: 0, right: 0, bottom: 0 }}
-          />
-          
-          {/* Menu panel - полный экран с отступом сверху */}
-          <div 
-            className="fixed inset-0 z-[99999] md:hidden animate-in fade-in duration-300 overflow-y-auto"
-            style={{ paddingTop: 'calc(4rem + 1px)' }}
-          >
-            <div className="bg-white min-h-full shadow-xl">
-              {/* Navigation */}
-              <nav className="flex-1 flex flex-col justify-start px-6 pt-4 pb-8 overflow-y-auto">
-              <div className="flex flex-col space-y-3 max-w-sm mx-auto w-full">
-                <div>
+      {/* Background overlay - только под шапкой */}
+      <div 
+        className="fixed bg-black/50 z-[9998] md:hidden transition-opacity duration-300"
+        onClick={onToggle}
+        aria-hidden="true"
+        style={{ 
+          top: 'calc(4rem + 1px)', 
+          left: 0, 
+          right: 0, 
+          bottom: 0 
+        }}
+      />
+      
+      {/* Menu panel */}
+      <div 
+        className="fixed bg-white z-[99999] md:hidden shadow-xl animate-in slide-in-from-top-2 duration-300"
+        style={{ 
+          top: 'calc(4rem + 1px)', 
+          left: 0, 
+          right: 0, 
+          bottom: 0 
+        }}
+      >
+        {/* Navigation content */}
+        <div className="h-full overflow-y-auto">
+          <nav className="px-6 py-6">
+            {/* Menu items */}
+            <div className="space-y-1 max-w-sm mx-auto">
+              
+              {/* Services with submenu */}
+              <div className="space-y-1">
+                <a 
+                  href="#services" 
+                  className="flex items-center justify-between p-4 rounded-xl hover:bg-gray-50 transition-colors group"
+                  onClick={handleLinkClick}
+                >
+                  <div className="flex items-center gap-3">
+                    <Icon name="Settings" size={20} className="text-gray-600" />
+                    <span className="font-medium text-gray-800">Услуги</span>
+                  </div>
+                  <Icon name="ChevronRight" size={16} className="text-gray-400" />
+                </a>
+                
+                {/* Submenu */}
+                <div className="ml-6 space-y-1">
                   <a 
-                    href="#services" 
-                    className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-5 rounded-xl font-medium text-base block"
+                    href="/services/restore"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
                     onClick={handleLinkClick}
                   >
-                    <div className="flex items-center gap-3">
-                      <Icon name="Settings" size={20} className="text-gray-600" />
-                      <span>Услуги</span>
-                      <Icon name="ChevronRight" size={16} className="text-gray-400 ml-auto" />
-                    </div>
+                    <Icon name="RefreshCw" size={16} className="text-primary" />
+                    <span className="text-gray-600">Восстановление под ключ</span>
                   </a>
-                  
-                  {/* Submenu */}
-                  <div className="ml-6 mt-1 space-y-1">
-                    <a 
-                      href="/services/restore"
-                      className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-2 px-3 rounded-lg text-sm block"
-                      onClick={handleLinkClick}
-                    >
-                      <div className="flex items-center gap-2">
-                        <Icon name="RefreshCw" size={16} className="text-gray-500" />
-                        <span>Восстановление под ключ</span>
-                      </div>
-                    </a>
-                    <a 
-                      href="/services/repair" 
-                      className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-2 px-3 rounded-lg text-sm block"
-                      onClick={handleLinkClick}
-                    >
-                      <div className="flex items-center gap-2">
-                        <Icon name="Wrench" size={16} className="text-gray-500" />
-                        <span>Ремонт двигателей</span>
-                      </div>
-                    </a>
-                    <a 
-                      href="/services/longblocks" 
-                      className="text-gray-600 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-2 px-3 rounded-lg text-sm block"
-                      onClick={handleLinkClick}
-                    >
-                      <div className="flex items-center gap-2">
-                        <Icon name="Package" size={16} className="text-gray-500" />
-                        <span>Лонг-блоки</span>
-                      </div>
-                    </a>
-                  </div>
+                  <a 
+                    href="/services/repair" 
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    <Icon name="Wrench" size={16} className="text-primary" />
+                    <span className="text-gray-600">Ремонт двигателей</span>
+                  </a>
+                  <a 
+                    href="/services/longblocks" 
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-primary/5 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    <Icon name="Package" size={16} className="text-primary" />
+                    <span className="text-gray-600">Лонг-блоки</span>
+                  </a>
                 </div>
-                <a 
-                  href="#why-us" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-5 rounded-xl font-medium text-base block"
-                  onClick={handleLinkClick}
-                >
-                  <div className="flex items-center gap-3">
-                    <Icon name="Award" size={20} className="text-gray-600" />
-                    <span>Почему мы</span>
-                  </div>
-                </a>
-                <a 
-                  href="/projects" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-5 rounded-xl font-medium text-base block"
-                  onClick={handleLinkClick}
-                >
-                  <div className="flex items-center gap-3">
-                    <Icon name="Image" size={20} className="text-gray-600" />
-                    <span>Наши работы</span>
-                  </div>
-                </a>
-                <a 
-                  href="#guarantees" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-5 rounded-xl font-medium text-base block"
-                  onClick={handleLinkClick}
-                >
-                  <div className="flex items-center gap-3">
-                    <Icon name="Shield" size={20} className="text-gray-600" />
-                    <span>Гарантии</span>
-                  </div>
-                </a>
-                <a 
-                  href="/contact" 
-                  className="text-gray-800 hover:text-primary hover:bg-gray-50 transition-all duration-200 py-4 px-5 rounded-xl font-medium text-base block"
-                  onClick={handleLinkClick}
-                >
-                  <div className="flex items-center gap-3">
-                    <Icon name="MapPin" size={20} className="text-gray-600" />
-                    <span>Контакты</span>
-                  </div>
-                </a>
               </div>
-              
-              {/* CTA Button */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <Button 
-                  className="w-full bg-primary hover:bg-brand-blue-dark text-white font-medium py-3 text-base rounded-xl shadow-md"
-                  onClick={() => {
-                    onContactClick();
-                    handleLinkClick();
-                  }}
-                >
-                  <Icon name="Phone" size={18} className="mr-2" />
-                  Связаться с нами
-                </Button>
-                <p className="text-center text-gray-500 mt-3 text-sm">
-                  Получите бесплатную консультацию
-                </p>
-              </div>
-              </nav>
+
+              {/* Why Us */}
+              <a 
+                href="#why-us" 
+                className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                onClick={handleLinkClick}
+              >
+                <Icon name="Award" size={20} className="text-gray-600" />
+                <span className="font-medium text-gray-800">Почему мы</span>
+              </a>
+
+              {/* Our Works */}
+              <a 
+                href="/projects" 
+                className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                onClick={handleLinkClick}
+              >
+                <Icon name="Image" size={20} className="text-gray-600" />
+                <span className="font-medium text-gray-800">Наши работы</span>
+              </a>
+
+              {/* Guarantees */}
+              <a 
+                href="#guarantees" 
+                className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                onClick={handleLinkClick}
+              >
+                <Icon name="Shield" size={20} className="text-gray-600" />
+                <span className="font-medium text-gray-800">Гарантии</span>
+              </a>
+
+              {/* Contacts */}
+              <a 
+                href="/contact" 
+                className="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors"
+                onClick={handleLinkClick}
+              >
+                <Icon name="MapPin" size={20} className="text-gray-600" />
+                <span className="font-medium text-gray-800">Контакты</span>
+              </a>
             </div>
-          </div>
-        </>,
-        document.body
-      )}
-    </>
+            
+            {/* CTA Section */}
+            <div className="mt-8 pt-6 border-t border-gray-200 max-w-sm mx-auto">
+              <Button 
+                className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 text-base rounded-xl shadow-lg"
+                onClick={() => {
+                  onContactClick();
+                  handleLinkClick();
+                }}
+              >
+                <Icon name="Phone" size={18} className="mr-2" />
+                Связаться с нами
+              </Button>
+              <p className="text-center text-gray-500 mt-3 text-sm">
+                Получите бесплатную консультацию
+              </p>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </>,
+    document.body
   );
 }
