@@ -1,7 +1,11 @@
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
-export default function LongBlocksCTASection() {
+interface LongBlocksCTASectionProps {
+  onContactClick?: () => void;
+}
+
+export default function LongBlocksCTASection({ onContactClick }: LongBlocksCTASectionProps) {
   return (
     <section className="py-20 px-4 bg-primary">
       <div className="max-w-7xl mx-auto relative z-10 text-center text-white">
@@ -12,13 +16,13 @@ export default function LongBlocksCTASection() {
           Получите консультацию специалиста и точный расчет стоимости
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold">
+          <Button size="lg" variant="secondary" className="px-8 py-4 text-lg font-semibold" onClick={onContactClick}>
             <Icon name="Phone" size={20} className="mr-2" />
-            +7 (xxx) xxx-xx-xx
+            Получить консультацию
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold">
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold" onClick={onContactClick}>
             <Icon name="MessageCircle" size={20} className="mr-2" />
-            Написать в WhatsApp
+            Рассчитать стоимость
           </Button>
         </div>
       </div>

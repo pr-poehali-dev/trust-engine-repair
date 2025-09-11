@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import NavigationSection from '@/components/home/NavigationSection';
+import FooterSection from '@/components/home/FooterSection';
+import ContactForm from '@/components/ContactForm';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -19,26 +22,16 @@ const projectImages = [
 ];
 
 export default function ProjectVolvoD6350() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-marine-light/5 to-primary/5">
-      {/* Навигация */}
-      <nav className="bg-white/90 backdrop-blur-sm border-b sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Button 
-              variant="ghost" 
-              onClick={() => window.history.back()}
-              className="text-marine-dark hover:text-primary"
-            >
-              <Icon name="ArrowLeft" size={20} className="mr-2" />
-              Вернуться к проектам
-            </Button>
-            <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="RED MAR" className="h-5 w-auto sm:h-6 sm:w-auto" />
-            </div>
-          </div>
-        </div>
-      </nav>
+      <NavigationSection
+        mobileMenuOpen={mobileMenuOpen}
+        onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+        onContactClick={() => setContactFormOpen(true)}
+      />
 
       <div className="max-w-7xl mx-auto px-4 py-12 space-y-12">
         {/* Заголовок проекта */}
@@ -288,11 +281,11 @@ export default function ProjectVolvoD6350() {
               Получите бесплатную консультацию и предварительную оценку стоимости ремонта
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-primary hover:bg-primary/90" onClick={() => setContactFormOpen(true)}>
                 <Icon name="Phone" size={20} className="mr-2" />
                 Заказать диагностику
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" onClick={() => setContactFormOpen(true)}>
                 <Icon name="MessageSquare" size={20} className="mr-2" />
                 Написать в WhatsApp
               </Button>
@@ -300,6 +293,14 @@ export default function ProjectVolvoD6350() {
           </CardContent>
         </Card>
       </div>
+
+      <FooterSection />
+
+      {/* Contact Form Modal */}
+      <ContactForm 
+        isOpen={contactFormOpen}
+        onClose={() => setContactFormOpen(false)}
+      />
     </div>
   );
 }

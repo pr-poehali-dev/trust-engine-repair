@@ -1,4 +1,8 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import NavigationSection from '@/components/home/NavigationSection';
+import FooterSection from '@/components/home/FooterSection';
+import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -98,29 +102,16 @@ const statusColors = {
 };
 
 export default function Projects() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [contactFormOpen, setContactFormOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-white via-primary/5 to-primary/10">
-      {/* Навигация */}
-      <nav className="bg-white/90 backdrop-blur-sm border-b sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Button 
-              variant="ghost" 
-              onClick={() => window.location.href = '/'}
-              className="text-gray-700 hover:text-primary"
-            >
-              <Icon name="ArrowLeft" size={20} className="mr-2" />
-              На главную
-            </Button>
-            <div className="flex items-center gap-2">
-              <img src="/logo.svg" alt="RED MAR" className="h-5 w-auto sm:h-6 sm:w-auto" />
-              <span className="hidden sm:block text-gray-600 font-medium text-xs">
-                Новая жизнь вашего двигателя
-              </span>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <NavigationSection
+        mobileMenuOpen={mobileMenuOpen}
+        onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+        onContactClick={() => setContactFormOpen(true)}
+      />
 
       {/* Header */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
@@ -266,17 +257,25 @@ export default function Projects() {
             Доверьте восстановление вашего двигателя профессионалам с 12-летним опытом
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold" onClick={() => setContactFormOpen(true)}>
               <Icon name="Phone" size={20} className="mr-2" />
               Получить консультацию
             </Button>
-            <Button size="lg" variant="outline" className="px-8 py-4 text-lg font-semibold">
+            <Button size="lg" variant="outline" className="px-8 py-4 text-lg font-semibold" onClick={() => setContactFormOpen(true)}>
               <Icon name="Calculator" size={20} className="mr-2" />
               Рассчитать стоимость
             </Button>
           </div>
         </div>
       </section>
+
+      <FooterSection />
+
+      {/* Contact Form Modal */}
+      <ContactForm 
+        isOpen={contactFormOpen}
+        onClose={() => setContactFormOpen(false)}
+      />
     </div>
   );
 }
