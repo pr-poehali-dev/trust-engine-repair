@@ -58,7 +58,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
       <div className="absolute z-0 top-10 right-1/4 w-18 h-18 bg-[#039fcb0d] rounded-xl blur-md"></div>
       <div className="absolute z-0 top-8 left-2/3 w-22 h-22 bg-primary/16 rounded-lg blur-sm"></div>
       
-      <div className="relative z-10 px-4 bg-gradient-to-br from-gray-50/50 via-white/90 to-gray-50/50">
+      <div className="relative z-10 px-4 bg-gradient-to-br from-gray-50/30 via-white/70 to-gray-50/30">
 
       
       <div className="max-w-7xl mx-auto">
@@ -136,7 +136,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
           <div className="relative order-1 lg:order-2">
             <div className="space-y-4">
               {guarantees.map((guarantee, index) => (
-                <div key={index} className="group bg-white border border-brand-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div key={index} className="group bg-white/60 backdrop-blur-sm border border-brand-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
                       <Icon name={guarantee.icon} size={24} className="text-primary" />
