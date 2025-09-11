@@ -13,7 +13,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       title: 'Восстановление двигателей под ключ', 
       description: 'Полное восстановление с гарантией качества и современными технологиями. Используем только оригинальные компоненты.',
       icon: 'RefreshCw',
-      image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
+      image: 'https://cdn.poehali.dev/files/a31b135c-00a4-4f44-aaca-204186c9bdda.jpg',
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
       features: ['Капитальный ремонт', 'Современные технологии', 'Гарантия качества'],
