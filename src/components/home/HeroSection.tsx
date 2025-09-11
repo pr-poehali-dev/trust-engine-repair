@@ -118,14 +118,7 @@ export default function HeroSection({ onContactClick, sliderImages }: HeroSectio
               {/* Floating elements */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-2xl blur-xl"></div>
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-2xl blur-xl"></div>
-              
-              {/* Quality badge */}
-              <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-brand-gray-800">Качество гарантировано</span>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
