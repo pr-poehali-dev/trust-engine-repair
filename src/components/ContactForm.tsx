@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -34,10 +34,23 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     });
   };
 
+  // Блокировка скролла при открытой форме
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 overflow-y-auto min-h-screen">
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black/60 transition-opacity duration-300"
@@ -45,7 +58,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
       />
       
       {/* Form */}
-      <Card className="relative w-full max-w-md mx-auto bg-white rounded-2xl shadow-2xl">
+      <Card className="relative w-full max-w-md mx-auto bg-white rounded-2xl shadow-2xl my-auto">
         <CardHeader className="text-center pb-4">
           <div className="flex justify-between items-center mb-4">
             <div></div>
