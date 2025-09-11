@@ -67,13 +67,12 @@ export default function ContactSection() {
 
   return (
     <section id="contacts" className="relative overflow-hidden py-20 lg:py-28">
-      {/* Финальный голубой градиентный фон с сферическими пятнами */}
+      {/* 7. ContactSection - белый фон с 2 деликатными голубыми пятнами */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-brand-blue-light to-white"></div>
+        <div className="absolute inset-0 bg-white"></div>
         {/* Сферические пятна */}
-        <div className="absolute top-24 left-20 w-84 h-84 bg-primary/25 rounded-full blur-3xl opacity-60"></div>
-        <div className="absolute bottom-16 right-12 w-96 h-96 bg-brand-blue/18 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute top-1/2 right-2/3 w-64 h-64 bg-primary/12 rounded-full blur-2xl opacity-40"></div>
+        <div className="absolute top-24 left-20 w-80 h-80 bg-brand-blue-light/50 rounded-full blur-3xl opacity-[0.1]"></div>
+        <div className="absolute bottom-16 right-12 w-96 h-96 bg-brand-blue-light/40 rounded-full blur-3xl opacity-[0.15]"></div>
       </div>
       
       <div className="relative z-10 px-4">

@@ -35,13 +35,12 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
 
   return (
     <section id={id || "why-us"} className="relative overflow-hidden py-20 lg:py-28">
-      {/* Голубоватый градиентный фон с сферическими пятнами */}
+      {/* 3. WhyUsSection - белый фон с 2 деликатными primary пятнами */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/70 via-white to-primary/10"></div>
+        <div className="absolute inset-0 bg-white"></div>
         {/* Сферические пятна */}
-        <div className="absolute top-16 left-16 w-80 h-80 bg-primary/15 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-24 right-12 w-88 h-88 bg-brand-blue-light/60 rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute top-1/2 right-1/3 w-60 h-60 bg-primary/8 rounded-full blur-2xl opacity-30"></div>
+        <div className="absolute top-16 left-16 w-80 h-80 bg-primary/10 rounded-full blur-3xl opacity-[0.1]"></div>
+        <div className="absolute bottom-24 right-12 w-96 h-96 bg-primary/8 rounded-full blur-3xl opacity-[0.12]"></div>
       </div>
       
       <div className="relative z-10 px-4">

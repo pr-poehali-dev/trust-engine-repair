@@ -12,13 +12,12 @@ interface HeroSectionProps {
 export default function HeroSection({ onContactClick, sliderImages }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* Градиентный фон с сферическими пятнами */}
+      {/* 1. HeroSection - белый фон с 2 очень деликатными голубыми пятнами */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white to-brand-blue-light"></div>
+        <div className="absolute inset-0 bg-white"></div>
         {/* Сферические пятна */}
-        <div className="absolute top-10 left-10 w-80 h-80 bg-primary/20 rounded-full blur-3xl opacity-60"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-brand-blue/15 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-primary/10 rounded-full blur-2xl opacity-40"></div>
+        <div className="absolute top-20 left-16 w-80 h-80 bg-brand-blue-light/60 rounded-full blur-3xl opacity-[0.15]"></div>
+        <div className="absolute bottom-24 right-20 w-96 h-96 bg-brand-blue-light/40 rounded-full blur-3xl opacity-[0.1]"></div>
       </div>
       
       <div className="relative z-10 px-4">

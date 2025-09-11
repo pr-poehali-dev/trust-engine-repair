@@ -77,13 +77,12 @@ export default function GallerySection() {
 
   return (
     <section id="gallery" className="relative overflow-hidden py-20 lg:py-28">
-      {/* Голубой градиентный фон с сферическими пятнами */}
+      {/* 5. GallerySection - белый фон с 2 деликатными primary пятнами */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-brand-blue-light/50 to-white"></div>
+        <div className="absolute inset-0 bg-white"></div>
         {/* Сферические пятна */}
-        <div className="absolute top-20 left-12 w-76 h-76 bg-primary/20 rounded-full blur-3xl opacity-60"></div>
-        <div className="absolute bottom-12 right-20 w-92 h-92 bg-brand-blue/12 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute top-1/3 left-2/3 w-52 h-52 bg-primary/15 rounded-full blur-2xl opacity-35"></div>
+        <div className="absolute top-20 left-12 w-80 h-80 bg-primary/8 rounded-full blur-3xl opacity-[0.1]"></div>
+        <div className="absolute bottom-12 right-20 w-96 h-96 bg-primary/6 rounded-full blur-3xl opacity-[0.12]"></div>
       </div>
       
       <div className="relative z-10 px-4">
