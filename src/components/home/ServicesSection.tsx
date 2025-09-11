@@ -55,14 +55,6 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       <div className="absolute bottom-20 right-16 w-28 h-28 bg-secondary/10 rounded-3xl blur-2xl"></div>
       <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-primary/8 rounded-xl blur-lg"></div>
       <div className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-secondary/12 rounded-lg blur-md"></div>
-          <div className="absolute top-1/4 -right-48 w-[700px] h-[500px] bg-gradient-to-l from-brand-gray-100/70 to-transparent rounded-full blur-3xl opacity-80 transform rotate-12"></div>
-        </div>
-        
-        {/* Дополнительный волнообразный элемент */}
-        <div className="absolute inset-0">
-          <div className="absolute -bottom-32 -left-32 w-[600px] h-[400px] bg-gradient-to-tr from-brand-blue-light/50 to-transparent rounded-full blur-2xl opacity-70 transform -rotate-15"></div>
-        </div>
-      </div>
       
       <div className="relative z-10 px-4">
 
