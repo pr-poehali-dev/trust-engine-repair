@@ -45,6 +45,77 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
     <section id={id || "services"} className="py-24 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Left Arrow */}
+        <div className="absolute left-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+          <svg width="120" height="80" viewBox="0 0 120 80" className="text-primary/20">
+            <path 
+              d="M10 40 L80 10 L80 25 L100 25 L100 55 L80 55 L80 70 Z" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              strokeDasharray="5,5"
+            />
+          </svg>
+        </div>
+
+        {/* Right Arrow */}
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 rotate-180 hidden lg:block">
+          <svg width="120" height="80" viewBox="0 0 120 80" className="text-primary/20">
+            <path 
+              d="M10 40 L80 10 L80 25 L100 25 L100 55 L80 55 L80 70 Z" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              strokeDasharray="5,5"
+            />
+          </svg>
+        </div>
+
+        {/* Top Left Circle */}
+        <div className="absolute left-12 top-20 hidden xl:block">
+          <div className="w-24 h-24 border-3 border-primary/20 rounded-full border-dashed"></div>
+        </div>
+
+        {/* Top Right Dots */}
+        <div className="absolute right-16 top-32 hidden xl:block">
+          <div className="grid grid-cols-3 gap-2">
+            {[...Array(9)].map((_, i) => (
+              <div key={i} className="w-2 h-2 bg-primary/20 rounded-full"></div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom Left Triangle */}
+        <div className="absolute left-20 bottom-20 hidden xl:block">
+          <svg width="40" height="40" viewBox="0 0 40 40" className="text-primary/15">
+            <polygon points="20,5 35,30 5,30" fill="currentColor" />
+          </svg>
+        </div>
+
+        {/* Bottom Right Plus */}
+        <div className="absolute right-24 bottom-24 hidden xl:block">
+          <svg width="30" height="30" viewBox="0 0 30 30" className="text-primary/20">
+            <path d="M15 5 L15 25 M5 15 L25 15" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+          </svg>
+        </div>
+
+        {/* Curved Arrow pointing to header */}
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 hidden lg:block">
+          <svg width="100" height="60" viewBox="0 0 100 60" className="text-primary/25">
+            <path 
+              d="M20 50 Q50 10 80 50" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              strokeDasharray="4,4"
+            />
+            <polygon points="75,45 85,50 75,55" fill="currentColor" />
+          </svg>
+        </div>
+      </div>
+      
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <div className="mb-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-gray-200 px-4 py-2 rounded-full shadow-sm">
