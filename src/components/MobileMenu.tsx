@@ -93,7 +93,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                     <span className="font-medium text-gray-800">Услуги</span>
                   </div>
                   <Icon name="ChevronRight" size={16} className="text-gray-400" />
-                </a>
+                </Link>
                 
                 {/* Submenu */}
                 <div className="ml-6 space-y-1">
