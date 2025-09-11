@@ -35,21 +35,8 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
 
   return (
     <section id={id || "guarantees"} className="relative overflow-hidden py-20 lg:py-28">
-      {/* 6. GuaranteesSection - нейтральный серо-белый с волнами */}
-      <div className="absolute inset-0">
-        {/* Основной нейтральный градиент */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-brand-gray-50/70 via-white to-brand-gray-100/55"></div>
-        
-        {/* Нейтральные волнообразные элементы */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 -left-32 w-[600px] h-[450px] bg-gradient-to-r from-brand-gray-100/60 to-transparent rounded-full blur-3xl opacity-80 transform rotate-30"></div>
-        </div>
-        
-        {/* Дополнительный волнообразный элемент */}
-        <div className="absolute inset-0">
-          <div className="absolute -bottom-40 right-1/4 w-[750px] h-[500px] bg-gradient-to-tl from-brand-gray-50/80 via-brand-gray-100/35 to-transparent rounded-full blur-3xl opacity-70 transform -rotate-20"></div>
-        </div>
-      </div>
+      {/* Простой чистый фон */}
+      <div className="absolute inset-0 bg-white"></div>
       
       <div className="relative z-10 px-4">
 

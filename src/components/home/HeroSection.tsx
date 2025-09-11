@@ -12,26 +12,8 @@ interface HeroSectionProps {
 export default function HeroSection({ onContactClick, sliderImages }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      {/* 1. HeroSection - светло-голубой волнообразный градиент */}
-      <div className="absolute inset-0">
-        {/* Базовый градиентный фон */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-blue-light/60 via-brand-gray-50/70 to-white"></div>
-        
-        {/* Волнообразный слой 1 */}
-        <div className="absolute inset-0">
-          <div className="absolute -top-32 -left-32 w-[800px] h-[600px] bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl opacity-80 transform rotate-12"></div>
-        </div>
-        
-        {/* Волнообразный слой 2 */}
-        <div className="absolute inset-0">
-          <div className="absolute -bottom-40 -right-40 w-[900px] h-[700px] bg-gradient-to-tl from-brand-blue-light/60 to-transparent rounded-full blur-3xl opacity-80 transform -rotate-6"></div>
-        </div>
-        
-        {/* Дополнительный органический элемент */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/4 w-[500px] h-[400px] bg-gradient-to-r from-primary/15 to-transparent rounded-full blur-2xl opacity-70 transform rotate-45"></div>
-        </div>
-      </div>
+      {/* Простой чистый фон */}
+      <div className="absolute inset-0 bg-white"></div>
       
       <div className="relative z-10 px-4">
       
