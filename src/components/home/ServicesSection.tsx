@@ -48,33 +48,16 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
 
       
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Мобильная версия */}
-        <div className="lg:hidden text-center mb-20">
+        <div className="text-center mb-20">
           {/* Разделитель */}
-          <div className="flex items-center justify-center mb-8">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
-            <div className="px-6 py-2 bg-white rounded-full border border-primary/20 shadow-sm">
-              <span className="text-sm font-bold text-primary uppercase tracking-wide">Наши услуги</span>
+          <div className="flex items-center justify-center py-8">
+            <div className="flex items-center w-full max-w-4xl">
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
+              <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+                <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Наши услуги</span>
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/40 via-primary/20 to-transparent"></div>
             </div>
-            <div className="flex-1 h-px bg-gradient-to-l from-primary/60 via-primary/30 to-transparent"></div>
-          </div>
-          <h2 className="text-4xl font-bold text-brand-gray-900 mb-6 leading-tight">
-            Что мы <span className="text-primary">предлагаем</span>
-          </h2>
-          <p className="text-xl text-brand-gray-600 leading-relaxed">
-            Комплексные решения для восстановления и обслуживания стационарных двигателей с гарантией качества
-          </p>
-        </div>
-
-        {/* Десктопная версия */}
-        <div className="hidden lg:block text-center mb-20">
-          {/* Разделитель */}
-          <div className="flex items-center justify-center mb-8">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/30 to-primary/60"></div>
-            <div className="px-8 py-3 bg-white rounded-full border border-primary/20 shadow-sm">
-              <span className="text-base font-bold text-primary uppercase tracking-wide">Наши услуги</span>
-            </div>
-            <div className="flex-1 h-px bg-gradient-to-l from-primary/60 via-primary/30 to-transparent"></div>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6 leading-tight">
             Что мы <span className="text-primary">предлагаем</span>

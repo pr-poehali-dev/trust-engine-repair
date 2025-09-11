@@ -84,21 +84,18 @@ export default function GallerySection() {
       <div className="absolute bottom-16 left-16 w-36 h-36 bg-blue-500/8 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute top-1/3 right-1/3 w-20 h-20 bg-primary/6 rounded-full blur-2xl"></div>
       
-      {/* Разделитель секций с фоновым переходом */}
-      <div className="absolute top-0 left-0 right-0 h-24 -mt-12 z-30">
-        <div className="h-full bg-gradient-to-b from-brand-gray-50 via-white to-blue-50/60"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">
-          <div className="flex items-center justify-center">
-            <div className="w-20 h-px bg-gradient-to-r from-brand-gray-300 via-blue-300 to-primary"></div>
-            <div className="mx-6 px-8 py-3 bg-white rounded-full border border-blue-200 shadow-lg backdrop-blur-sm">
-              <span className="text-sm font-bold text-primary uppercase tracking-wide">Наши работы</span>
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Разделитель */}
+        <div className="flex items-center justify-center py-8">
+          <div className="flex items-center w-full max-w-4xl">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
+            <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+              <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Наши работы</span>
             </div>
-            <div className="w-20 h-px bg-gradient-to-l from-primary via-blue-300 to-blue-200"></div>
+            <div className="flex-1 h-px bg-gradient-to-l from-primary via-primary/40 via-primary/20 to-transparent"></div>
           </div>
         </div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto relative z-10 pt-10">
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-brand-gray-900 mb-6">
             Примеры <span className="text-primary">выполненных проектов</span>
