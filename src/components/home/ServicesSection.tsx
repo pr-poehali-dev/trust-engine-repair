@@ -58,7 +58,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white rounded-2xl overflow-hidden h-full flex flex-col">
               <div className="relative overflow-hidden">
@@ -107,6 +107,21 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* View All Services Button */}
+        <div className="text-center">
+          <Button 
+            size="lg"
+            variant="outline" 
+            className="px-8 py-4 text-lg font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+            onClick={() => {
+              window.location.href = '/services';
+            }}
+          >
+            <Icon name="Grid3X3" size={20} className="mr-2" />
+            Посмотреть все услуги
+          </Button>
         </div>
       </div>
     </section>
