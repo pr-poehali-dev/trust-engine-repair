@@ -1,3 +1,5 @@
+import Icon from '@/components/ui/icon';
+
 export default function FooterSection() {
   return (
     <footer className="relative bg-white text-gray-900 py-12 px-4">
@@ -27,7 +29,7 @@ export default function FooterSection() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto" />
-              <span className="text-xs text-gray-600 italic font-medium">
+              <span className="text-xs text-gray-600 font-medium">
                 Новая жизнь вашего двигателя
               </span>
             </div>
@@ -57,20 +59,20 @@ export default function FooterSection() {
             <h3 className="font-semibold mb-4 text-lg text-gray-900">Контакты</h3>
             <div className="space-y-3 text-gray-700 text-base">
               <p className="flex items-center gap-2">
-                <span>📞</span>
+                <Icon name="Phone" size={16} />
                 <a href="tel:+79995550012" className="hover:text-gray-900 transition-colors">
                   +7 (999) 555-00-12
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <span>✉️</span>
-                <a href="mailto:info@trust-engine.ru" className="hover:text-gray-900 transition-colors">
-                  info@trust-engine.ru
+                <Icon name="Mail" size={16} />
+                <a href="mailto:info@redmar.pro" className="hover:text-gray-900 transition-colors">
+                  info@redmar.pro
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <span>📍</span>
-                <span>г. Москва, ул. Морская, д. 15</span>
+                <Icon name="MapPin" size={16} />
+                <span>М.О. г.Домодедово Объездное шоссе вл.1 стр.6</span>
               </p>
             </div>
           </div>
