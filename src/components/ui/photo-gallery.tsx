@@ -112,9 +112,9 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           {/* Кнопка закрытия */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 z-[60] w-10 h-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+            className="absolute top-4 right-4 z-[60] w-12 h-12 bg-white/30 backdrop-blur-sm hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/30 shadow-lg"
           >
-            <Icon name="X" size={20} />
+            <Icon name="X" size={24} />
           </button>
 
           {/* Стрелки навигации */}
@@ -122,33 +122,33 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <>
               <button
                 onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-[60] w-10 h-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-[60] w-12 h-12 bg-white/30 backdrop-blur-sm hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/30 shadow-lg"
               >
-                <Icon name="ChevronLeft" size={20} />
+                <Icon name="ChevronLeft" size={24} />
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-[60] w-10 h-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-[60] w-12 h-12 bg-white/30 backdrop-blur-sm hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/30 shadow-lg"
               >
-                <Icon name="ChevronRight" size={20} />
+                <Icon name="ChevronRight" size={24} />
               </button>
             </>
           )}
 
-          {/* Контейнер изображения с правильным центрированием */}
-          <div className="absolute inset-4 flex items-center justify-center">
+          {/* Контейнер изображения */}
+          <div className="flex items-center justify-center h-full w-full p-4">
             <div 
-              className="relative max-w-full max-h-full flex items-center justify-center"
+              className="relative flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={photos[selectedPhoto].url}
                 alt={photos[selectedPhoto].alt}
-                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl filter brightness-110 contrast-105 saturate-105"
+                className="max-w-[calc(100vw-6rem)] max-h-[calc(100vh-10rem)] md:max-w-4xl md:max-h-[80vh] object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
               />
               
               {/* Индикатор страниц */}
-              <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-full bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20">
                 {selectedPhoto + 1} из {photos.length}
               </div>
             </div>
