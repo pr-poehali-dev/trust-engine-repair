@@ -77,7 +77,7 @@ export default function FooterSection() {
         </div>
         <div className="border-t border-gray-300 mt-8 pt-8 text-center">
           <p className="text-gray-500">
-            © 2024 MarineService. Все права защищены.
+            © 2025 Redmar.pro. Все права защищены.
           </p>
         </div>
       </div>
