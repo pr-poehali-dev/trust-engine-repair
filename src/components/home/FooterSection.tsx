@@ -59,19 +59,19 @@ export default function FooterSection() {
             <h3 className="font-semibold mb-4 text-lg text-gray-900">Контакты</h3>
             <div className="space-y-3 text-gray-700 text-base">
               <p className="flex items-center gap-2">
-                <Icon name="PhoneCall" size={16} className="text-primary" />
+                <Icon name="PhoneCall" size={20} className="text-primary" />
                 <a href="tel:+79995550012" className="hover:text-gray-900 transition-colors">
                   +7 (999) 555-00-12
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <Icon name="AtSign" size={16} className="text-primary" />
+                <Icon name="AtSign" size={20} className="text-primary" />
                 <a href="mailto:info@redmar.pro" className="hover:text-gray-900 transition-colors">
                   info@redmar.pro
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <Icon name="Navigation" size={16} className="text-primary" />
+                <Icon name="Navigation" size={20} className="text-primary" />
                 <span>М.О. г.Домодедово Объездное шоссе вл.1 стр.6</span>
               </p>
             </div>
