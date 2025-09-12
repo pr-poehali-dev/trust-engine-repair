@@ -111,7 +111,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
         >
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors"
+            className="absolute top-6 right-6 z-50 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
           >
             <Icon name="X" size={24} />
           </button>
@@ -120,13 +120,13 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <>
               <button
                 onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
-                className="absolute left-4 z-10 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors"
+                className="absolute left-6 top-1/2 -translate-y-1/2 z-50 w-14 h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
               >
                 <Icon name="ChevronLeft" size={24} />
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
-                className="absolute right-20 z-10 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors"
+                className="absolute right-6 top-1/2 -translate-y-1/2 z-50 w-14 h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
               >
                 <Icon name="ChevronRight" size={24} />
               </button>
@@ -134,16 +134,16 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           )}
 
           <div 
-            className="relative max-w-6xl max-h-[90vh] flex items-center justify-center"
+            className="relative w-full h-full flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={photos[selectedPhoto].url}
               alt={photos[selectedPhoto].alt}
-              className="w-auto h-auto max-w-full max-h-full object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
+              className="max-w-[calc(100vw-3rem)] max-h-[calc(100vh-3rem)] w-auto h-auto object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
             />
             
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm border border-white/20">
               {selectedPhoto + 1} из {photos.length}
             </div>
           </div>
