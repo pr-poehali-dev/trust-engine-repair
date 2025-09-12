@@ -118,7 +118,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
       {/* Modal */}
       {selectedPhoto !== null && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center overflow-hidden"
+          className="fixed inset-0 z-50 bg-black/90 overflow-hidden"
           onClick={closeModal}
         >
           {/* Кнопка закрытия */}
@@ -147,21 +147,23 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             </>
           )}
 
-          {/* Контейнер изображения - абсолютное центрирование */}
-          <div 
-            className="relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={photos[selectedPhoto].url}
-              alt={photos[selectedPhoto].alt}
-              className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
-            />
-            
-            {/* Индикатор страниц */}
-            <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20">
-              {selectedPhoto + 1} из {photos.length}
+          {/* Центральная область для изображения */}
+          <div className="absolute left-16 right-16 top-16 bottom-16 flex items-center justify-center">
+            <div 
+              className="relative max-w-full max-h-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={photos[selectedPhoto].url}
+                alt={photos[selectedPhoto].alt}
+                className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
+              />
             </div>
+          </div>
+          
+          {/* Индикатор страниц */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20 z-[60]">
+            {selectedPhoto + 1} из {photos.length}
           </div>
         </div>
       )}
