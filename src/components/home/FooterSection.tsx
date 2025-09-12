@@ -4,7 +4,7 @@ export default function FooterSection() {
       {/* Декоративные геометрические элементы из GallerySection */}
 
       <div className="absolute z-0 bottom-12 right-12 w-46 h-46 bg-secondary/18 rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-1/5 right-1/5 w-32 h-32 bg-primary/25 rounded-xl blur-md"></div>
+      <div className="absolute z-0 top-1/5 right-1/5 w-32 h-32 rounded-xl blur-md" style={{ backgroundColor: 'hsl(220.85deg 100% 56.41% / 14%)' }}></div>
       <div className="absolute z-0 bottom-1/4 left-1/4 w-36 h-36 bg-secondary/22 rounded-2xl blur-lg"></div>
       <div className="absolute z-0 top-3/5 left-8 w-28 h-28 bg-primary/18 rounded-lg blur-sm"></div>
       <div className="absolute z-0 top-1/2 right-1/6 w-24 h-24 bg-secondary/24 rounded-xl blur-md"></div>
