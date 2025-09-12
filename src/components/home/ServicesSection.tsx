@@ -104,17 +104,19 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer"
+                className="group shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-0 rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer"
                 onClick={() => {
                   window.location.href = service.link;
                 }}
               >
                 <div className="relative overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                  <div className="h-40 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 rounded-t-2xl"
+                    />
+                  </div>
                   <div className="absolute top-6 right-6">
                     <div className="bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-lg">
                       <Icon
@@ -143,12 +145,12 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                   </div>
                 </CardHeader>
 
-                <CardContent className="flex flex-col flex-grow space-y-4 px-4 pb-4">
+                <CardContent className="flex flex-col h-full px-4 pb-4">
                   <p className="text-brand-gray-700 leading-relaxed font-medium">
                     {service.description}
                   </p>
 
-                  <div className="border-t border-gray-100 pt-4">
+                  <div className="border-t border-gray-100 pt-4 flex-1">
                     <div className="space-y-2">
                       {service.features.map((feature, i) => (
                         <div
