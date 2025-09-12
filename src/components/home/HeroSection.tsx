@@ -50,9 +50,9 @@ export default function HeroSection({
               {/* Заголовок для десктопа */}
               <div className="hidden lg:block space-y-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight">
-                  Профессиональное{" "}
-                  <span className="text-primary font-bold">восстановление</span>{" "}
-                  двигателей для катеров и яхт
+                  Восстановленые{" "}
+                  <span className="text-primary font-bold">двигатели</span> для
+                  катеров и яхт
                 </h1>
               </div>
 
