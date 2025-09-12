@@ -140,7 +140,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <img
               src={photos[selectedPhoto].url}
               alt={photos[selectedPhoto].alt}
-              className="max-w-[calc(100vw-3rem)] max-h-[calc(100vh-3rem)] w-auto h-auto object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
+              className="w-[calc(100vw-6rem)] h-[calc(100vh-6rem)] object-cover rounded-lg filter brightness-110 contrast-105 saturate-105"
             />
             
             <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm border border-white/20">
