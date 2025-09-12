@@ -118,7 +118,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                   {service.description}
                 </p>
                 
-                <div className="space-y-4 flex-grow">
+                <div className="flex-grow">
                   <div className="space-y-2">
                     {service.features.map((feature, i) => (
                       <div key={i} className="flex items-center gap-2 text-base text-brand-gray-500">
@@ -127,7 +127,9 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                       </div>
                     ))}
                   </div>
-                  
+                </div>
+                
+                <div className="mt-auto space-y-4">
                   <div className="flex flex-col gap-2 p-3 bg-gray-50 rounded-lg border">
                     <div className="flex items-center justify-between">
                       <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">Стоимость</span>
@@ -138,19 +140,19 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                       <span className="text-sm font-semibold text-gray-700">{service.duration}</span>
                     </div>
                   </div>
+                  
+                  <Button 
+                    className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                    variant="outline"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.location.href = service.link;
+                    }}
+                  >
+                    <Icon name="ArrowRight" size={16} className="ml-2" />
+                    Подробнее
+                  </Button>
                 </div>
-                
-                <Button 
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 mt-auto"
-                  variant="outline"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    window.location.href = service.link;
-                  }}
-                >
-                  <Icon name="ArrowRight" size={16} className="ml-2" />
-                  Подробнее
-                </Button>
               </CardContent>
             </Card>
           ))}
