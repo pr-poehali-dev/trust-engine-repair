@@ -41,9 +41,11 @@ export default function RestoreProcessSection() {
             {/* Step 1 */}
             <div className="flex flex-col lg:flex-row items-start gap-8">
               <div className="flex-shrink-0">
-                <Badge className="bg-gradient-to-r from-primary to-primary/80 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
-                  1 этап
-                </Badge>
+                <div className="px-6 py-2 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
+                  <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">
+                    1 этап
+                  </span>
+                </div>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -139,9 +141,11 @@ export default function RestoreProcessSection() {
             {/* Step 2 */}
             <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <Badge className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
-                  2 этап
-                </Badge>
+                <div className="px-6 py-2 bg-white rounded-full border border-orange-200 shadow-lg backdrop-blur-sm">
+                  <span className="text-sm font-bold text-orange-600 uppercase tracking-wide whitespace-nowrap">
+                    2 этап
+                  </span>
+                </div>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -231,9 +235,11 @@ export default function RestoreProcessSection() {
             {/* Step 3 */}
             <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <Badge className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
-                  3 этап
-                </Badge>
+                <div className="px-6 py-2 bg-white rounded-full border border-red-200 shadow-lg backdrop-blur-sm">
+                  <span className="text-sm font-bold text-red-600 uppercase tracking-wide whitespace-nowrap">
+                    3 этап
+                  </span>
+                </div>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -323,9 +329,11 @@ export default function RestoreProcessSection() {
             {/* Step 4 */}
             <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
-                  4 этап
-                </Badge>
+                <div className="px-6 py-2 bg-white rounded-full border border-blue-200 shadow-lg backdrop-blur-sm">
+                  <span className="text-sm font-bold text-blue-600 uppercase tracking-wide whitespace-nowrap">
+                    4 этап
+                  </span>
+                </div>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -415,9 +423,11 @@ export default function RestoreProcessSection() {
             {/* Step 5 */}
             <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <Badge className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
-                  5 этап
-                </Badge>
+                <div className="px-6 py-2 bg-white rounded-full border border-green-200 shadow-lg backdrop-blur-sm">
+                  <span className="text-sm font-bold text-green-600 uppercase tracking-wide whitespace-nowrap">
+                    5 этап
+                  </span>
+                </div>
               </div>
               <div className="flex-grow">
                 <Card className="bg-gradient-to-br from-green-50/50 to-white backdrop-blur-sm border border-green-200 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
