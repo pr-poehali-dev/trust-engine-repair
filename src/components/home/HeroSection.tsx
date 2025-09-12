@@ -14,7 +14,7 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden pt-8 lg:pt-12">
+    <section className="relative pt-8 lg:pt-12">
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-20 right-10 w-40 h-40 bg-primary/25 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-40 left-20 w-48 h-48 bg-[#039fcb0d] rounded-2xl blur-lg"></div>

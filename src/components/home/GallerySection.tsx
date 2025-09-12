@@ -76,7 +76,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="relative overflow-hidden py-20 lg:py-28">
+    <section id="gallery" className="relative py-20 lg:py-28">
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-8 left-10 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
       <div className="absolute z-0 bottom-12 right-12 w-46 h-46 bg-secondary/18 rounded-2xl blur-xl"></div>

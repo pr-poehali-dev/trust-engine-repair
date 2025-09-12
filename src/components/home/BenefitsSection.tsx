@@ -25,7 +25,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
+    <section className="relative py-20 lg:py-28">
       {/* 4. BenefitsSection - светло-серый волнообразный фон */}
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-12 right-8 w-44 h-44 bg-primary/18 rounded-3xl blur-xl"></div>
