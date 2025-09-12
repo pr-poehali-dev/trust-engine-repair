@@ -36,27 +36,27 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
   return (
     <section id={id || "guarantees"} className="relative overflow-hidden pt-20 lg:pt-28">
       {/* Декоративные геометрические элементы - задний фон */}
-      <div className="absolute z-1 top-8 right-12 w-52 h-52 bg-primary/30 rounded-3xl blur-md"></div>
-      <div className="absolute z-1 bottom-6 left-8 w-44 h-44 bg-blue-400/35 rounded-2xl blur-sm"></div>
-      <div className="absolute z-1 top-1/4 left-1/4 w-40 h-40 bg-primary/40 rounded-xl blur-sm"></div>
-      <div className="absolute z-1 bottom-1/4 right-1/4 w-36 h-36 bg-cyan-300/30 rounded-lg blur-sm"></div>
-      <div className="absolute z-1 top-2/3 right-8 w-44 h-44 bg-primary/25 rounded-3xl blur-md"></div>
-      <div className="absolute z-1 top-1/3 left-1/3 w-32 h-32 bg-teal-400/35 rounded-2xl blur-sm"></div>
-      <div className="absolute z-1 bottom-2/3 right-2/3 w-28 h-28 bg-primary/35 rounded-lg"></div>
-      <div className="absolute z-1 top-4 left-1/2 w-48 h-48 bg-blue-300/25 rounded-3xl blur-lg"></div>
-      <div className="absolute z-1 bottom-1/3 left-2/3 w-24 h-24 bg-primary/30 rounded-2xl blur-sm"></div>
-      <div className="absolute z-1 top-1/4 right-1/3 w-36 h-36 bg-indigo-400/30 rounded-xl blur-md"></div>
-      <div className="absolute z-1 bottom-1/3 left-1/4 w-28 h-28 bg-primary/30 rounded-lg blur-sm"></div>
-      <div className="absolute z-1 top-1/2 right-1/4 w-32 h-32 bg-sky-300/30 rounded-2xl blur-sm"></div>
-      <div className="absolute z-1 bottom-3/4 left-3/4 w-20 h-20 bg-primary/40 rounded-xl"></div>
+      <div className="absolute z-1 top-8 right-12 w-52 h-52 bg-primary/40 rounded-3xl blur-lg"></div>
+      <div className="absolute z-1 bottom-6 left-8 w-44 h-44 bg-blue-400/22 rounded-2xl blur-md"></div>
+      <div className="absolute z-1 top-1/5 left-1/6 w-38 h-38 bg-primary/25 rounded-xl blur-sm"></div>
+      <div className="absolute z-1 bottom-1/4 right-1/5 w-34 h-34 bg-cyan-300/20 rounded-lg blur-md"></div>
+      <div className="absolute z-1 top-2/3 right-8 w-42 h-42 bg-primary/16 rounded-3xl blur-lg"></div>
+      <div className="absolute z-1 top-1/3 left-1/3 w-30 h-30 bg-teal-400/18 rounded-2xl blur-md"></div>
+      <div className="absolute z-1 bottom-2/3 right-2/3 w-26 h-26 bg-primary/22 rounded-lg blur-sm"></div>
+      <div className="absolute z-1 top-4 left-1/2 w-48 h-48 bg-blue-300/15 rounded-3xl blur-xl"></div>
+      <div className="absolute z-1 bottom-1/6 left-2/3 w-22 h-22 bg-primary/20 rounded-2xl blur-md"></div>
+      <div className="absolute z-1 top-1/4 right-1/3 w-36 h-36 bg-indigo-400/16 rounded-xl blur-lg"></div>
+      <div className="absolute z-1 bottom-1/3 left-1/4 w-28 h-28 bg-primary/19 rounded-lg blur-md"></div>
+      <div className="absolute z-1 top-1/2 right-1/6 w-32 h-32 bg-sky-300/17 rounded-2xl blur-md"></div>
+      <div className="absolute z-1 bottom-3/4 left-3/4 w-18 h-18 bg-primary/24 rounded-xl blur-sm"></div>
       {/* Крупные элементы в области заголовка - увеличено */}
-      <div className="absolute z-1 top-0 left-20 w-32 h-32 bg-primary/25 rounded-3xl blur-lg"></div>
-      <div className="absolute z-1 top-4 right-28 w-28 h-28 bg-primary/20 rounded-2xl blur-md"></div>
-      <div className="absolute z-1 top-12 left-1/4 w-24 h-24 bg-primary/30 rounded-xl blur-sm"></div>
-      <div className="absolute z-1 top-6 right-2/5 w-20 h-20 bg-primary/25 rounded-lg blur-sm"></div>
-      <div className="absolute z-1 top-2 left-1/3 w-16 h-16 bg-primary/35 rounded-2xl blur-sm"></div>
-      <div className="absolute z-1 top-10 right-1/4 w-20 h-20 bg-primary/30 rounded-xl"></div>
-      <div className="absolute z-1 top-8 left-2/3 w-24 h-24 bg-primary/25 rounded-lg"></div>
+      <div className="absolute z-1 top-0 left-20 w-32 h-32 bg-primary/15 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-1 top-4 right-28 w-28 h-28 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
+      <div className="absolute z-1 top-12 left-1/5 w-24 h-24 bg-primary/18 rounded-xl blur-lg"></div>
+      <div className="absolute z-1 top-6 right-2/5 w-20 h-20 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      <div className="absolute z-1 top-2 left-1/3 w-16 h-16 bg-primary/20 rounded-2xl blur-lg"></div>
+      <div className="absolute z-1 top-10 right-1/4 w-18 h-18 bg-[#039fcb0d] rounded-xl blur-md"></div>
+      <div className="absolute z-1 top-8 left-2/3 w-22 h-22 bg-primary/16 rounded-lg blur-sm"></div>
       
       <div className="relative z-10 px-4">
 
@@ -168,8 +168,8 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
             </div>
             
             {/* Floating elements - в стиле баннера */}
-            <div className="absolute z-1 -top-6 -right-6 w-24 h-24 bg-primary/40 rounded-2xl blur-md"></div>
-            <div className="absolute z-1 -bottom-6 -left-6 w-32 h-32 bg-primary/40 rounded-2xl blur-md"></div>
+            <div className="absolute z-1 -top-6 -right-6 w-24 h-24 bg-primary/25 rounded-2xl blur-xl"></div>
+            <div className="absolute z-1 -bottom-6 -left-6 w-32 h-32 bg-primary/25 rounded-2xl blur-xl"></div>
             
 
           </div>
