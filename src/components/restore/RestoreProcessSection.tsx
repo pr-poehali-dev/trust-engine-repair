@@ -1,8 +1,37 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import PhotoGallery from '@/components/ui/photo-gallery';
 
 export default function RestoreProcessSection() {
+  const diagnosticPhotos = [
+    {
+      id: '1',
+      url: 'https://cdn.poehali.dev/files/e158c5ca-57b3-4d4a-b342-81d6b3f2a07d.JPG',
+      alt: 'Двигатель до диагностики - общий вид'
+    },
+    {
+      id: '2', 
+      url: 'https://cdn.poehali.dev/files/de797948-3172-4737-9e2c-615a718bf8ea.JPG',
+      alt: 'Повреждения коллектора - коррозия и износ'
+    },
+    {
+      id: '3',
+      url: 'https://cdn.poehali.dev/files/83a3baee-ed5b-426d-b0a6-08b9a63d5c6d.JPG', 
+      alt: 'Блок двигателя Mercury MerCruiser - детальный осмотр'
+    },
+    {
+      id: '4',
+      url: '/img/97c7e5fd-8a92-488d-901e-44606f13090c.jpg',
+      alt: 'Диагностика деталей двигателя - выявленные дефекты'
+    },
+    {
+      id: '5',
+      url: '/img/ffba6bb2-d434-4eb2-bddf-05026c92a280.jpg',
+      alt: 'Внутренние компоненты - состояние цилиндров'
+    }
+  ];
+
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
@@ -57,6 +86,8 @@ export default function RestoreProcessSection() {
                         </ul>
                       </div>
                     </div>
+                    <PhotoGallery photos={diagnosticPhotos} />
+                    
                     <div className="bg-primary/5 rounded-lg p-4">
                       <p className="text-sm text-gray-700">
                         <strong>Результат:</strong> Подробный отчет с фотографиями и рекомендациями по ремонту
