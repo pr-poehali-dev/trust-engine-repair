@@ -19,16 +19,6 @@ export default function RestoreProcessSection() {
       id: '3',
       url: 'https://cdn.poehali.dev/files/83a3baee-ed5b-426d-b0a6-08b9a63d5c6d.JPG', 
       alt: 'Блок двигателя Mercury MerCruiser - детальный осмотр'
-    },
-    {
-      id: '4',
-      url: '/img/97c7e5fd-8a92-488d-901e-44606f13090c.jpg',
-      alt: 'Диагностика деталей двигателя - выявленные дефекты'
-    },
-    {
-      id: '5',
-      url: '/img/ffba6bb2-d434-4eb2-bddf-05026c92a280.jpg',
-      alt: 'Внутренние компоненты - состояние цилиндров'
     }
   ];
 
