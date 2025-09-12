@@ -66,7 +66,8 @@ export default function HeroSection({
                   </span>
                 </p>
                 <p className="text-base lg:text-lg text-brand-gray-500 text-center lg:text-left">
-                  Более 12 лет опыта • Оригинальные запчасти
+                  Более 12 лет опыта • Оригинальные запчасти • Оригинальные
+                  запчасти
                 </p>
               </div>
 
