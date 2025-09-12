@@ -113,7 +113,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute top-6 right-6">
                     <div className="bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-lg">
