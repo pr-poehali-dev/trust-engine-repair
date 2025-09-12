@@ -60,7 +60,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
       <div className="space-y-3">
         <div className="flex items-center gap-2">
           <Icon name="Camera" size={16} className="text-primary" />
-          <span className="text-sm font-medium text-gray-700">Фотографии диагностики</span>
+          <span className="font-bold text-gray-900">Фотографии этапа</span>
         </div>
         
         <div className="space-y-2">
