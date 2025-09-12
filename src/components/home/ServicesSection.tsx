@@ -128,26 +128,36 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                 </div>
 
                 <CardHeader className="pb-3 pt-4">
-                  <CardTitle className="text-xl font-bold text-brand-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight">
-                    {service.title}
-                  </CardTitle>
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <CardTitle className="text-xl font-bold text-brand-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight flex-1">
+                      {service.title}
+                    </CardTitle>
+                    <div className="flex flex-col gap-1">
+                      <Badge variant="secondary" className="text-xs font-semibold bg-primary/10 text-primary border-0">
+                        {service.price}
+                      </Badge>
+                      <Badge variant="outline" className="text-xs text-gray-600 border-gray-200">
+                        {service.duration}
+                      </Badge>
+                    </div>
+                  </div>
                 </CardHeader>
 
                 <CardContent className="flex flex-col flex-grow space-y-4 px-4 pb-4">
-                  <p className="text-brand-gray-600 leading-relaxed">
+                  <p className="text-brand-gray-700 leading-relaxed font-medium">
                     {service.description}
                   </p>
 
-                  <div className="flex-grow">
+                  <div className="border-t border-gray-100 pt-4">
                     <div className="space-y-2">
                       {service.features.map((feature, i) => (
                         <div
                           key={i}
-                          className="flex items-center gap-2 text-base text-brand-gray-500"
+                          className="flex items-center gap-2 text-sm text-brand-gray-600"
                         >
                           <Icon
                             name="CheckCircle"
-                            size={16}
+                            size={14}
                             className="text-primary"
                           />
                           <span>{feature}</span>
@@ -156,36 +166,17 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                     </div>
                   </div>
 
-                  <div className="mt-auto space-y-3">
-                    <div className="flex flex-col gap-2 p-2.5 bg-gray-50 rounded-lg border">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
-                          Стоимость
-                        </span>
-                        <span className="text-lg font-bold text-primary">
-                          {service.price}
-                        </span>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
-                          Срок
-                        </span>
-                        <span className="text-sm font-semibold text-gray-700">
-                          {service.duration}
-                        </span>
-                      </div>
-                    </div>
-
+                  <div className="mt-auto pt-4 border-t border-gray-100">
                     <Button
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                      variant="outline"
+                      className="w-full text-brand-gray-600 hover:text-primary hover:bg-transparent transition-colors duration-300"
+                      variant="ghost"
                       onClick={(e) => {
                         e.stopPropagation();
                         window.location.href = service.link;
                       }}
                     >
-                      <Icon name="ArrowRight" size={16} className="ml-2" />
                       Подробнее
+                      <Icon name="ArrowRight" size={16} className="ml-2" />
                     </Button>
                   </div>
                 </CardContent>
