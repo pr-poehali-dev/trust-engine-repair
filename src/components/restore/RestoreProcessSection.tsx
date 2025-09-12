@@ -131,11 +131,6 @@ export default function RestoreProcessSection() {
     },
     {
       id: '4',
-      url: 'https://cdn.poehali.dev/files/98ed68fd-e87a-4af2-a8e8-d2f723b264c9.jpg', 
-      alt: 'Финальная сборка двигателя - установка последних компонентов'
-    },
-    {
-      id: '5',
       url: 'https://cdn.poehali.dev/files/834e9f46-756f-4138-9ace-c4673e616e38.jpg', 
       alt: 'Боковой вид восстановленного двигателя - готов к испытаниям'
     }
