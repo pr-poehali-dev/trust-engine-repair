@@ -76,7 +76,7 @@ export default function HeroSection({
                   onClick={onContactClick}
                 >
                   <Icon name="Wrench" size={20} className="mr-3" />
-                  Заказать диагностику
+                  Получить консультацию
                 </Button>
                 <Button
                   asChild
