@@ -52,6 +52,34 @@ export default function RestoreProcessSection() {
     }
   ];
 
+  const restorationPhotos = [
+    {
+      id: '1',
+      url: 'https://cdn.poehali.dev/files/00ee0ef7-df69-41a3-99de-1fe0ae027a08.jpg',
+      alt: 'Блок цилиндров V6 после полного восстановления - идеальное состояние поверхностей'
+    },
+    {
+      id: '2', 
+      url: 'https://cdn.poehali.dev/files/a7d6cd13-a2b1-4785-b4b3-faaad869c36f.jpg',
+      alt: 'Головки блока цилиндров после механической обработки - новые направляющие клапанов'
+    },
+    {
+      id: '3',
+      url: 'https://cdn.poehali.dev/files/37f4ad79-f944-41e1-843a-9e225e2b08d4.jpg', 
+      alt: 'Восстановленные поршни и новые кольца - готовы к установке'
+    },
+    {
+      id: '4',
+      url: 'https://cdn.poehali.dev/files/337f664a-bbce-4a95-8da1-74b35826f6f3.jpg', 
+      alt: 'Полный комплект восстановленных деталей двигателя'
+    },
+    {
+      id: '5',
+      url: 'https://cdn.poehali.dev/files/968d4c47-593b-48f2-8ee4-0ffe62100277.jpg', 
+      alt: 'Хонингованный цилиндр - идеальная поверхность для поршневых колец'
+    }
+  ];
+
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
@@ -65,7 +93,7 @@ export default function RestoreProcessSection() {
           <div className="space-y-16">
             <DiagnosticStep photos={processPhotos} />
             <DisassemblyStep photos={disassemblyPhotos} />
-            <RestorationStep photos={processPhotos} />
+            <RestorationStep photos={restorationPhotos} />
             <AssemblyStep photos={processPhotos} />
             <TestingStep photos={processPhotos} />
           </div>

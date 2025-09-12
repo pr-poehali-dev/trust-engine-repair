@@ -72,7 +72,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <img
               src={photos[mainPhoto].url}
               alt={photos[mainPhoto].alt}
-              className="w-full h-full object-cover object-center transition-transform group-hover:scale-105 filter brightness-110 contrast-105 saturate-105"
+              className="w-full h-full object-cover object-center transition-transform group-hover:scale-105 filter brightness-112 contrast-115 saturate-108 hue-rotate-2"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
               <Icon 
@@ -97,7 +97,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
                   <img
                     src={photo.thumbnail || photo.url}
                     alt={photo.alt}
-                    className="w-full h-full object-cover object-center transition-transform group-hover:scale-105 filter brightness-110 contrast-105 saturate-105"
+                    className="w-full h-full object-cover object-center transition-transform group-hover:scale-105 filter brightness-112 contrast-115 saturate-108 hue-rotate-2"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
                 </div>
@@ -144,7 +144,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           <img
             src={photos[selectedPhoto].url}
             alt={photos[selectedPhoto].alt}
-            className="max-w-[calc(100vw-5rem)] max-h-[calc(100vh-5rem)] object-contain rounded-lg shadow-2xl filter brightness-110 contrast-105 saturate-105"
+            className="max-w-[calc(100vw-5rem)] max-h-[calc(100vh-5rem)] object-contain rounded-lg shadow-2xl filter brightness-112 contrast-115 saturate-108 hue-rotate-2"
             onClick={(e) => e.stopPropagation()}
           />
           
