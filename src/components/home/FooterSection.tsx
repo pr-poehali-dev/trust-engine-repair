@@ -19,7 +19,7 @@ export default function FooterSection() {
       {/* Крупные элементы */}
       <div className="absolute z-0 top-2 left-24 w-32 h-32 bg-primary/16 rounded-3xl blur-2xl"></div>
       <div className="absolute z-0 top-0 right-32 w-28 h-28 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-10 left-1/4 w-24 h-24 bg-primary/20 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 top-10 left-1/4 w-24 h-24 rounded-xl blur-lg" style={{ backgroundColor: 'hsl(162.69deg 55.57% 55.69% / 17%)' }}></div>
       <div className="absolute z-0 top-6 right-1/3 w-20 h-20 bg-[#039fcb0d] rounded-lg blur-md"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto">
