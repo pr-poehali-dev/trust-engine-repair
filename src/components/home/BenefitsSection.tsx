@@ -73,40 +73,30 @@ export default function BenefitsSection() {
           </p>
         </div>
 
-        {/* Преимущества в 2 ряда */}
-        <div className="grid sm:grid-cols-2 gap-8">
+        {/* Преимущества компактно */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <div key={index} className="group border border-brand-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <div className="relative overflow-hidden">
-                <img 
-                  src={benefit.image} 
-                  alt={benefit.title}
-                  className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute top-6 right-6">
-                  <div className="bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-lg">
-                    <Icon name={benefit.icon} size={20} className="text-primary" />
-                  </div>
+            <div key={index} className="group border border-brand-gray-200 rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="bg-primary/10 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
+                  <Icon name={benefit.icon} size={18} className="text-primary" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-brand-gray-900 mb-3 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-lg font-bold text-brand-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight">
                   {benefit.title}
                 </h3>
-                <p className="text-brand-gray-600 leading-relaxed mb-4 text-sm">
-                  {benefit.description}
-                </p>
-                
-                <div className="space-y-2">
-                  {benefit.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-brand-gray-500">
-                      <Icon name="CheckCircle" size={14} className="text-primary flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
+              </div>
+              
+              <p className="text-brand-gray-600 text-sm mb-3 leading-relaxed">
+                {benefit.description}
+              </p>
+              
+              <div className="space-y-1">
+                {benefit.features.slice(0, 2).map((feature, i) => (
+                  <div key={i} className="flex items-center gap-2 text-xs text-brand-gray-500">
+                    <Icon name="CheckCircle" size={12} className="text-primary flex-shrink-0" />
+                    <span>{feature}</span>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
