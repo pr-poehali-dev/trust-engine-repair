@@ -36,18 +36,18 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
   return (
     <section id={id || "why-us"} className="relative overflow-hidden pt-20 lg:pt-28">
       {/* Декоративные геометрические элементы - задний фон */}
-      <div className="absolute z-0 top-12 left-12 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
+      <div className="absolute z-0 top-12 left-12 w-40 h-40 bg-primary/8 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-8 right-16 w-48 h-48 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
       <div className="absolute z-0 top-1/3 right-1/8 w-32 h-32 bg-primary/25 rounded-xl blur-md"></div>
       <div className="absolute z-0 bottom-1/4 left-1/5 w-36 h-36 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
-      <div className="absolute z-0 top-2/3 left-6 w-28 h-28 bg-primary/19 rounded-lg blur-sm"></div>
+      <div className="absolute z-0 top-2/3 left-6 w-28 h-28 bg-primary/8 rounded-lg blur-lg"></div>
       <div className="absolute z-0 top-1/4 right-1/3 w-24 h-24 bg-[#039fcb0d] rounded-xl blur-md"></div>
       <div className="absolute z-0 bottom-2/3 left-2/3 w-20 h-20 bg-primary/18 rounded-2xl blur-md"></div>
       <div className="absolute z-0 top-6 left-1/2 w-44 h-44 bg-[#039fcb0d] rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-1/6 right-2/3 w-16 h-16 bg-primary/26 rounded-lg blur-md"></div>
       {/* Дополнительные элементы (+30%) */}
       <div className="absolute z-0 top-1/8 left-5/6 w-26 h-26 bg-[#039fcb0d] rounded-xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/8 right-5/6 w-20 h-20 bg-primary/27 rounded-2xl blur-sm"></div>
+      <div className="absolute z-0 bottom-1/8 right-5/6 w-20 h-20 bg-primary/10 rounded-2xl blur-lg"></div>
       <div className="absolute z-0 top-7/8 left-1/8 w-30 h-30 bg-[#039fcb0d] rounded-lg blur-lg"></div>
       {/* Крупные элементы в области заголовка */}
       <div className="absolute z-0 top-6 left-16 w-36 h-36 bg-primary/12 rounded-3xl blur-2xl"></div>
