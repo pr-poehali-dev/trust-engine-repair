@@ -37,7 +37,7 @@ export default function HeroSection({
       <div className="relative z-10 px-4">
         <div className="max-w-7xl mx-auto pb-20">
           {/* Заголовок для мобильных устройств */}
-          <div className="lg:hidden space-y-6 mb-8 text-center">
+          <div className="lg:hidden mb-8 text-center">
             <h1 className="text-3xl sm:text-4xl font-semibold text-brand-gray-900 leading-[1.2] text-left my-0 py-0 px-2">
               Восстановленные{" "}
               <span className="text-primary font-bold block sm:inline">двигатели</span>{" "}
