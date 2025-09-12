@@ -38,7 +38,7 @@ export default function NavigationSection({
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Логотип с адаптивным слоганом - сдвинут правее, увеличен на 15% */}
-          <div className="flex items-center min-w-0 ml-3 sm:ml-4">
+          <div className="flex items-center min-w-0">
             {location.pathname === '/' ? (
               <div className="flex items-center gap-2 lg:gap-4">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
