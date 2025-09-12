@@ -14,19 +14,19 @@ interface TestingStepProps {
 
 export default function TestingStep({ photos }: TestingStepProps) {
   return (
-    <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
+    <div className="w-full max-w-full overflow-hidden flex flex-col lg:flex-row items-start gap-4 md:gap-8 mt-12">
       <ProcessStepBadge step={5} color="green" />
-      <div className="flex-grow">
-        <Card className="bg-gradient-to-br from-green-50/50 to-white backdrop-blur-sm border border-green-200 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+      <div className="flex-grow w-full max-w-full">
+        <Card className="w-full max-w-full bg-gradient-to-br from-green-50/50 to-white backdrop-blur-sm border border-green-200 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-3">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 min-w-0 flex-1">
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                   <Icon name="PlayCircle" size={24} className="text-green-600" />
                 </div>
-                <div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">Тестирование и настройка</CardTitle>
-                  <CardDescription className="text-gray-600 mt-1">
+                <div className="min-w-0 flex-1">
+                  <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 break-words">Тестирование и настройка</CardTitle>
+                  <CardDescription className="text-sm md:text-base text-gray-600 mt-1 break-words">
                     Финальное тестирование и настройка всех систем
                   </CardDescription>
                 </div>
@@ -37,7 +37,7 @@ export default function TestingStep({ photos }: TestingStepProps) {
             </div>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div className="space-y-6">
                 <div className="bg-gradient-to-br from-green-50/50 to-green-100/30 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-4">

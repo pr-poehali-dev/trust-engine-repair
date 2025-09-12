@@ -14,19 +14,19 @@ interface RestorationStepProps {
 
 export default function RestorationStep({ photos }: RestorationStepProps) {
   return (
-    <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
+    <div className="w-full max-w-full overflow-hidden flex flex-col lg:flex-row items-start gap-4 md:gap-8 mt-12">
       <ProcessStepBadge step={3} color="red" />
-      <div className="flex-grow">
-        <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+      <div className="flex-grow w-full max-w-full">
+        <Card className="w-full max-w-full bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
           <CardHeader className="pb-4">
             <div className="flex items-center justify-between flex-wrap gap-3">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 min-w-0 flex-1">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
                   <Icon name="Settings" size={24} className="text-primary" />
                 </div>
-                <div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">Восстановление деталей</CardTitle>
-                  <CardDescription className="text-gray-600 mt-1">
+                <div className="min-w-0 flex-1">
+                  <CardTitle className="text-xl md:text-2xl font-bold text-gray-900 break-words">Восстановление деталей</CardTitle>
+                  <CardDescription className="text-sm md:text-base text-gray-600 mt-1 break-words">
                     Профессиональное восстановление всех узлов и агрегатов
                   </CardDescription>
                 </div>
@@ -37,7 +37,7 @@ export default function RestorationStep({ photos }: RestorationStepProps) {
             </div>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div className="space-y-6">
                 <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-4">
