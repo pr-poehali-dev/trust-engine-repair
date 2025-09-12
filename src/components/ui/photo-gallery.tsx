@@ -111,24 +111,24 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
         >
           <button
             onClick={closeModal}
-            className="absolute top-6 right-6 z-50 w-12 h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
           >
-            <Icon name="X" size={24} />
+            <Icon name="X" size={20} className="sm:w-6 sm:h-6" />
           </button>
 
           {photos.length > 1 && (
             <>
               <button
                 onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
-                className="absolute left-6 top-1/2 -translate-y-1/2 z-50 w-14 h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+                className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
               >
-                <Icon name="ChevronLeft" size={24} />
+                <Icon name="ChevronLeft" size={20} className="sm:w-6 sm:h-6" />
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
-                className="absolute right-6 top-1/2 -translate-y-1/2 z-50 w-14 h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+                className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
               >
-                <Icon name="ChevronRight" size={24} />
+                <Icon name="ChevronRight" size={20} className="sm:w-6 sm:h-6" />
               </button>
             </>
           )}
@@ -140,10 +140,10 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <img
               src={photos[selectedPhoto].url}
               alt={photos[selectedPhoto].alt}
-              className="w-[calc(100vw-6rem)] h-[calc(100vh-6rem)] object-cover rounded-lg filter brightness-110 contrast-105 saturate-105"
+              className="w-[calc(100vw-2rem)] h-[calc(100vh-8rem)] sm:w-[calc(100vw-6rem)] sm:h-[calc(100vh-6rem)] object-contain sm:object-cover rounded-lg filter brightness-110 contrast-105 saturate-105"
             />
             
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm border border-white/20">
+            <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm border border-white/20">
               {selectedPhoto + 1} из {photos.length}
             </div>
           </div>
