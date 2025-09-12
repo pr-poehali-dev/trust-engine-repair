@@ -106,7 +106,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
       {/* Modal */}
       {selectedPhoto !== null && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 overflow-hidden"
           onClick={closeModal}
         >
           <button
@@ -134,13 +134,13 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           )}
 
           <div 
-            className="relative w-full h-full flex items-center justify-center"
+            className="relative flex items-center justify-center max-w-full max-h-full"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={photos[selectedPhoto].url}
               alt={photos[selectedPhoto].alt}
-              className="w-[calc(100vw-2rem)] h-[calc(100vh-8rem)] sm:w-[calc(100vw-6rem)] sm:h-[calc(100vh-6rem)] object-contain sm:object-cover rounded-lg filter brightness-110 contrast-105 saturate-105"
+              className="max-w-[calc(100vw-5rem)] max-h-[calc(100vh-5rem)] w-auto h-auto object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
             />
             
             <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm border border-white/20">
