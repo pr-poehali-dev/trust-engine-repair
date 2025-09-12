@@ -1,6 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import SectionTitle from '@/components/ui/SectionTitle';
 
@@ -9,113 +7,97 @@ export default function BenefitsSection() {
     {
       title: 'Экономия до 50%',
       description: 'От стоимости нового двигателя при сохранении всех характеристик.',
+      image: '/img/a3d90cac-8002-4f4c-a058-66c35f6064ba.jpg',
       icon: 'TrendingDown',
       color: 'green',
-      badge: 'до 50%',
-      features: [
-        'Оригинальные запчастей по цене аналогов',
-        'Современная диагностика без переплат',
-        'Точная калькуляция без скрытых доплат'
-      ],
-      result: {
-        title: 'Экономия гарантирована',
-        description: 'Восстановленный двигатель работает как новый при экономии до 300,000 рублей'
-      }
+      features: ['Оригинальные запчасти', 'Современная диагностика', 'Точная калькуляция стоимости']
     },
     {
       title: 'Повышение ликвидности',
       description: 'После установки нашего двигателя моторный отсек выглядит как новый, что значительно увеличивает рыночную стоимость катера.',
+      image: '/img/daf8631c-cc6d-4dfa-8caa-bc9f2907aa98.jpg',
       icon: 'TrendingUp',
       color: 'blue',
-      badge: '+30% к цене',
-      features: [
-        'Визуальное обновление моторного отсека',
-        'Полный пакет технической документации',
-        'Подтвержденная история обслуживания'
-      ],
-      result: {
-        title: 'Увеличение стоимости',
-        description: 'Катер с восстановленным двигателем продается на 30% дороже аналогов'
-      }
+      features: ['Визуальное обновление', 'Техническая документация', 'Увеличение стоимости на 30%']
     },
     {
       title: 'Долговечность и надежность',
       description: 'Использование современных материалов и компонентов гарантирует длительный срок службы.',
+      image: '/img/a3e4847e-9389-4b5e-a50d-71a32386ddea.jpg',
       icon: 'Shield',
       color: 'purple',
-      badge: '2 года гарантии',
-      features: [
-        'Качественные материалы превосходящие OEM',
-        'Расширенная гарантия на все узлы',
-        'Профессиональное тестирование на стенде'
-      ],
-      result: {
-        title: 'Надежность как у нового',
-        description: 'Восстановленный двигатель служит не менее 10 лет при правильной эксплуатации'
-      }
+      features: ['Качественные материалы', 'Расширенная гарантия', 'Профессиональное тестирование']
     },
     {
       title: 'Быстрые сроки',
       description: 'Восстановление двигателя занимает в 2-3 раза меньше времени, чем поиск и доставка нового.',
+      image: '/img/a3d90cac-8002-4f4c-a058-66c35f6064ba.jpg',
       icon: 'Clock',
       color: 'orange',
-      badge: '10-12 дней',
-      features: [
-        'Экспресс-диагностика за 1 день',
-        'Складские запчасти в наличии',
-        'Приоритетное обслуживание постоянных клиентов'
-      ],
-      result: {
-        title: 'Быстрый результат',
-        description: 'Готовый двигатель через 10-12 дней вместо месяцев ожидания нового'
-      }
+      features: ['Экспресс-диагностика', 'Складские запчасти', 'Приоритетное обслуживание']
     }
   ];
 
   const getColorClasses = (color: string) => {
     const colors = {
       green: {
-        badge: 'bg-green-100 text-green-800 border-green-200',
-        icon: 'bg-green-50 text-green-600',
-        gradient: 'from-green-50/50 to-green-100/30',
-        result: 'from-green-50 to-green-100/50 border-green-200 text-green-800',
-        resultIcon: 'bg-green-100 text-green-600',
-        dot: 'bg-green-500'
+        iconBg: 'bg-green-50 group-hover:bg-green-100',
+        iconColor: 'text-green-600',
+        titleHover: 'group-hover:text-green-600',
+        checkColor: 'text-green-600'
       },
       blue: {
-        badge: 'bg-blue-100 text-blue-800 border-blue-200',
-        icon: 'bg-blue-50 text-blue-600',
-        gradient: 'from-blue-50/50 to-blue-100/30',
-        result: 'from-blue-50 to-blue-100/50 border-blue-200 text-blue-800',
-        resultIcon: 'bg-blue-100 text-blue-600',
-        dot: 'bg-blue-500'
+        iconBg: 'bg-blue-50 group-hover:bg-blue-100',
+        iconColor: 'text-blue-600',
+        titleHover: 'group-hover:text-blue-600',
+        checkColor: 'text-blue-600'
       },
       purple: {
-        badge: 'bg-purple-100 text-purple-800 border-purple-200',
-        icon: 'bg-purple-50 text-purple-600',
-        gradient: 'from-purple-50/50 to-purple-100/30',
-        result: 'from-purple-50 to-purple-100/50 border-purple-200 text-purple-800',
-        resultIcon: 'bg-purple-100 text-purple-600',
-        dot: 'bg-purple-500'
+        iconBg: 'bg-purple-50 group-hover:bg-purple-100',
+        iconColor: 'text-purple-600',
+        titleHover: 'group-hover:text-purple-600',
+        checkColor: 'text-purple-600'
       },
       orange: {
-        badge: 'bg-orange-100 text-orange-800 border-orange-200',
-        icon: 'bg-orange-50 text-orange-600',
-        gradient: 'from-orange-50/50 to-orange-100/30',
-        result: 'from-orange-50 to-orange-100/50 border-orange-200 text-orange-800',
-        resultIcon: 'bg-orange-100 text-orange-600',
-        dot: 'bg-orange-500'
+        iconBg: 'bg-orange-50 group-hover:bg-orange-100',
+        iconColor: 'text-orange-600',
+        titleHover: 'group-hover:text-orange-600',
+        checkColor: 'text-orange-600'
       }
     };
     return colors[color as keyof typeof colors] || colors.green;
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
-      <div className="max-w-7xl mx-auto relative z-10">
+    <section className="relative py-20 lg:py-28">
+      {/* Декоративные геометрические элементы - задний фон */}
+      <div className="absolute z-0 top-12 left-8 w-44 h-44 bg-primary/18 rounded-3xl blur-xl"></div>
+      <div className="absolute z-0 bottom-8 left-12 w-36 h-36 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 top-1/4 left-1/5 w-32 h-32 bg-primary/22 rounded-xl blur-md"></div>
+      <div className="absolute z-0 bottom-1/3 left-1/4 w-28 h-28 bg-[#039fcb0d] rounded-lg blur-sm"></div>
+      <div className="absolute z-0 top-2/3 left-6 w-40 h-40 bg-primary/15 rounded-3xl blur-xl"></div>
+      <div className="absolute z-0 top-1/2 left-1/6 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 bottom-2/3 left-1/2 w-20 h-20 bg-primary/19 rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-5 left-2/3 w-48 h-48 bg-[#039fcb0d] rounded-3xl blur-xl"></div>
+      <div className="absolute z-0 bottom-1/4 left-2/3 w-16 h-16 bg-primary/26 rounded-xl blur-md"></div>
+      {/* Дополнительные элементы (+30%) */}
+      <div className="absolute z-0 top-1/6 left-2/5 w-26 h-26 bg-[#039fcb0d] rounded-2xl blur-md"></div>
+      <div className="absolute z-0 bottom-1/5 left-3/4 w-22 h-22 bg-primary/21 rounded-lg blur-sm"></div>
+      <div className="absolute z-0 top-3/4 left-1/8 w-30 h-30 bg-[#039fcb0d] rounded-xl blur-md"></div>
+      {/* Крупные элементы в области заголовка - увеличено */}
+      <div className="absolute z-0 top-4 left-16 w-36 h-36 bg-primary/12 rounded-3xl blur-2xl"></div>
+      <div className="absolute z-0 top-2 left-24 w-32 h-32 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
+      <div className="absolute z-0 top-14 left-1/5 w-28 h-28 bg-primary/15 rounded-xl blur-lg"></div>
+      <div className="absolute z-0 top-10 left-2/5 w-24 h-24 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      <div className="absolute z-0 top-6 left-1/3 w-20 h-20 bg-primary/18 rounded-2xl blur-lg"></div>
+      <div className="absolute z-0 top-12 left-1/4 w-18 h-18 bg-[#039fcb0d] rounded-xl blur-md"></div>
+      <div className="absolute z-0 top-2 left-2/3 w-26 h-26 bg-primary/14 rounded-lg blur-sm"></div>
+      
+      <div className="relative z-10 px-4">
+      <div className="max-w-7xl mx-auto">
+        <SectionTitle text="Выгодное предложение" />
+        {/* Заголовок */}
         <div className="text-center mb-16">
-          <SectionTitle text="Выгодное предложение" />
           <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
             Почему это{' '}
             <span className="text-primary font-bold">выгодно</span>
@@ -125,84 +107,32 @@ export default function BenefitsSection() {
           </p>
         </div>
 
-        <div className="space-y-12">
+        {/* Преимущества компактно */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => {
             const colors = getColorClasses(benefit.color);
             return (
-              <div key={index} className="flex flex-col lg:flex-row items-start gap-8">
-                <div className="flex-shrink-0">
-                  <div className={`px-6 py-2 bg-white rounded-full border ${colors.badge.includes('border') ? colors.badge.split('border-')[1] : 'border-primary/20'} shadow-lg backdrop-blur-sm`}>
-                    <span className={`text-sm font-bold uppercase tracking-wide whitespace-nowrap ${colors.badge.split(' ')[1]} ${colors.badge.split(' ')[2]}`}>
-                      {benefit.badge}
-                    </span>
+              <div key={index} className="group border border-brand-gray-200 rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`${colors.iconBg} w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-300`}>
+                    <Icon name={benefit.icon} size={18} className={colors.iconColor} />
                   </div>
+                  <h3 className={`text-lg font-bold text-brand-gray-900 ${colors.titleHover} transition-colors duration-300 leading-tight`}>
+                    {benefit.title}
+                  </h3>
                 </div>
                 
-                <div className="flex-grow">
-                  <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                    <CardHeader className="pb-4">
-                      <div className="flex items-center justify-between flex-wrap gap-3">
-                        <div className="flex items-center gap-3">
-                          <div className={`w-12 h-12 ${colors.icon} rounded-xl flex items-center justify-center`}>
-                            <Icon name={benefit.icon} size={24} />
-                          </div>
-                          <div>
-                            <CardTitle className="text-2xl font-bold text-gray-900">{benefit.title}</CardTitle>
-                            <CardDescription className="text-gray-600 mt-1">
-                              {benefit.description}
-                            </CardDescription>
-                          </div>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    
-                    <CardContent className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-8">
-                        <div className="space-y-6">
-                          {benefit.features.map((feature, i) => (
-                            <div key={i} className={`bg-gradient-to-br ${colors.gradient} rounded-2xl p-6`}>
-                              <div className="flex items-center gap-3 mb-4">
-                                <div className={`w-8 h-8 ${colors.icon} rounded-lg flex items-center justify-center`}>
-                                  <Icon name="CheckCircle" size={16} />
-                                </div>
-                                <h4 className="font-bold text-gray-900">Преимущество {i + 1}</h4>
-                              </div>
-                              <ul className="text-sm text-gray-700 space-y-2">
-                                <li className="flex items-start gap-2">
-                                  <div className={`w-1.5 h-1.5 ${colors.dot} rounded-full mt-2 flex-shrink-0`}></div>
-                                  {feature}
-                                </li>
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                        
-                        <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl p-6 flex items-center">
-                          <div className="text-center w-full">
-                            <div className={`w-16 h-16 ${colors.icon} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                              <Icon name={benefit.icon} size={32} />
-                            </div>
-                            <h4 className="text-lg font-bold text-gray-900 mb-2">{benefit.result.title}</h4>
-                            <p className="text-sm text-gray-600">{benefit.result.description}</p>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className={`bg-gradient-to-r ${colors.result} rounded-2xl p-6`}>
-                        <div className="flex items-start gap-3">
-                          <div className={`w-6 h-6 ${colors.resultIcon} rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                            <Icon name="Award" size={14} />
-                          </div>
-                          <div>
-                            <h5 className="font-bold mb-1">{benefit.result.title}</h5>
-                            <p className="text-sm">
-                              {benefit.result.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                <p className="text-brand-gray-600 text-sm mb-3 leading-relaxed">
+                  {benefit.description}
+                </p>
+                
+                <div className="space-y-1">
+                  {benefit.features.slice(0, 2).map((feature, i) => (
+                    <div key={i} className="flex items-center gap-2 text-xs text-brand-gray-500">
+                      <Icon name="CheckCircle" size={12} className={`${colors.checkColor} flex-shrink-0`} />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             );
@@ -223,6 +153,9 @@ export default function BenefitsSection() {
           </Button>
         </div>
       </div>
+      
+      </div>
     </section>
   );
+}
 }
