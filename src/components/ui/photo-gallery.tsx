@@ -118,7 +118,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
       {/* Modal */}
       {selectedPhoto !== null && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 overflow-hidden"
+          className="fixed top-0 left-0 w-full h-full z-50 bg-black/90 flex items-center justify-center"
           onClick={closeModal}
         >
           {/* Кнопка закрытия */}
@@ -147,18 +147,16 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             </>
           )}
 
-          {/* Центральная область для изображения */}
-          <div className="absolute left-16 right-16 top-16 bottom-16 flex items-center justify-center">
-            <div 
-              className="relative max-w-full max-h-full"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={photos[selectedPhoto].url}
-                alt={photos[selectedPhoto].alt}
-                className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
-              />
-            </div>
+          {/* Изображение с правильным центрированием */}
+          <div 
+            className="relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={photos[selectedPhoto].url}
+              alt={photos[selectedPhoto].alt}
+              className="max-w-[calc(100vw-8rem)] max-h-[calc(100vh-8rem)] object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
+            />
           </div>
           
           {/* Индикатор страниц */}
