@@ -38,7 +38,7 @@ export default function HeroSection({
         <div className="max-w-7xl mx-auto pb-20">
           {/* Заголовок для мобильных устройств */}
           <div className="lg:hidden space-y-6 mb-8 text-center">
-            <h1 className="text-3xl sm:text-4xl font-medium text-brand-gray-900 leading-tight px-2">
+            <h1 className="sm:text-4xl font-medium text-brand-gray-900 leading-tight text-left my-0 py-0 px-2 text-3xl">
               Восстановленые{" "}
               <span className="text-primary font-bold">двигатели</span> для
               катеров и яхт
@@ -60,10 +60,7 @@ export default function HeroSection({
                 <p className="text-lg lg:text-xl text-brand-gray-600 leading-relaxed font-medium text-center lg:text-left">
                   Специализируемся на ремонте и восстановлении стационарных
                   двигателей
-                  <span className="text-brand-gray-800 font-semibold">
-                    {" "}
-                    Volvo Penta, Mercruiser, Indmar, Yamaha
-                  </span>
+                  <span className="text-brand-gray-800 font-semibold">Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak</span>
                 </p>
                 <p className="text-base lg:text-lg text-brand-gray-500 text-center lg:text-left">
                   Более 12 лет опыта • Оригинальные запчасти • Оригинальные
