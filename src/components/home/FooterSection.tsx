@@ -2,7 +2,7 @@ export default function FooterSection() {
   return (
     <footer className="relative bg-white text-gray-900 py-12 px-4">
       {/* Декоративные геометрические элементы из GallerySection */}
-      <div className="absolute z-0 top-8 left-10 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
+
       <div className="absolute z-0 bottom-12 right-12 w-46 h-46 bg-secondary/18 rounded-2xl blur-xl"></div>
       <div className="absolute z-0 top-1/5 right-1/5 w-32 h-32 bg-primary/25 rounded-xl blur-md"></div>
       <div className="absolute z-0 bottom-1/4 left-1/4 w-36 h-36 bg-secondary/22 rounded-2xl blur-lg"></div>
