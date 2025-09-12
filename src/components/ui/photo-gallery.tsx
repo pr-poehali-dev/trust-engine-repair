@@ -68,7 +68,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <img
               src={photos[mainPhoto].url}
               alt={photos[mainPhoto].alt}
-              className="w-full h-full object-cover transition-transform group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform group-hover:scale-105 filter brightness-110 contrast-105 saturate-105"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
               <Icon 
@@ -93,7 +93,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
                   <img
                     src={photo.thumbnail || photo.url}
                     alt={photo.alt}
-                    className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform group-hover:scale-105 filter brightness-110 contrast-105 saturate-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
                 </div>
@@ -134,13 +134,13 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           )}
 
           <div 
-            className="relative max-w-6xl max-h-[90vh] flex items-center justify-center"
+            className="relative max-w-4xl max-h-[80vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={photos[selectedPhoto].url}
               alt={photos[selectedPhoto].alt}
-              className="max-w-full max-h-full object-contain rounded-lg"
+              className="max-w-full max-h-full object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
             />
             
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
