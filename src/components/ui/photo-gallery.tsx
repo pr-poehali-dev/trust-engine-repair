@@ -17,11 +17,15 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
   const openModal = (index: number) => {
     setSelectedPhoto(index);
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
   };
 
   const closeModal = () => {
     setSelectedPhoto(null);
     document.body.style.overflow = 'unset';
+    document.body.style.position = 'unset';
+    document.body.style.width = 'unset';
   };
 
   const nextPhoto = () => {
@@ -46,7 +50,15 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      // Cleanup на случай размонтирования компонента
+      if (selectedPhoto !== null) {
+        document.body.style.overflow = 'unset';
+        document.body.style.position = 'unset';
+        document.body.style.width = 'unset';
+      }
+    };
   }, [selectedPhoto]);
 
   if (photos.length === 0) return null;
@@ -106,7 +118,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
       {/* Modal */}
       {selectedPhoto !== null && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center overflow-hidden"
           onClick={closeModal}
         >
           {/* Кнопка закрытия */}
@@ -143,7 +155,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             <img
               src={photos[selectedPhoto].url}
               alt={photos[selectedPhoto].alt}
-              className="max-w-[calc(100vw-6rem)] max-h-[calc(100vh-10rem)] md:max-w-4xl md:max-h-[80vh] object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
+              className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
             />
             
             {/* Индикатор страниц */}
