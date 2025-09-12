@@ -134,7 +134,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
           )}
 
           <div 
-            className="relative max-w-4xl max-h-[80vh] flex items-center justify-center"
+            className="relative max-w-6xl max-h-[90vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             <img
