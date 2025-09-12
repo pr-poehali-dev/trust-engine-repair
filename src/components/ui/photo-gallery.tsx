@@ -106,7 +106,7 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
       {/* Modal */}
       {selectedPhoto !== null && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
           onClick={closeModal}
         >
           {/* Кнопка закрытия */}
@@ -135,22 +135,20 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
             </>
           )}
 
-          {/* Контейнер изображения */}
-          <div className="flex items-center justify-center h-full w-full p-4">
-            <div 
-              className="relative flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={photos[selectedPhoto].url}
-                alt={photos[selectedPhoto].alt}
-                className="max-w-[calc(100vw-6rem)] max-h-[calc(100vh-10rem)] md:max-w-4xl md:max-h-[80vh] object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
-              />
-              
-              {/* Индикатор страниц */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 translate-y-full bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20">
-                {selectedPhoto + 1} из {photos.length}
-              </div>
+          {/* Контейнер изображения - абсолютное центрирование */}
+          <div 
+            className="relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={photos[selectedPhoto].url}
+              alt={photos[selectedPhoto].alt}
+              className="max-w-[calc(100vw-6rem)] max-h-[calc(100vh-10rem)] md:max-w-4xl md:max-h-[80vh] object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
+            />
+            
+            {/* Индикатор страниц */}
+            <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20">
+              {selectedPhoto + 1} из {photos.length}
             </div>
           </div>
         </div>
