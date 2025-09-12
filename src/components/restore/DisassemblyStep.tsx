@@ -1,9 +1,18 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import PhotoGallery from '@/components/ui/photo-gallery';
 import ProcessStepBadge from './ProcessStepBadge';
 
-export default function DisassemblyStep() {
+interface DisassemblyStepProps {
+  photos: Array<{
+    id: string;
+    url: string;
+    alt: string;
+  }>;
+}
+
+export default function DisassemblyStep({ photos }: DisassemblyStepProps) {
   return (
     <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
       <ProcessStepBadge step={2} color="orange" />
@@ -28,52 +37,59 @@ export default function DisassemblyStep() {
             </div>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon name="Package" size={16} className="text-primary" />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="Package" size={16} className="text-primary" />
+                    </div>
+                    <h4 className="font-bold text-gray-900">Поэтапная разборка</h4>
                   </div>
-                  <h4 className="font-bold text-gray-900">Поэтапная разборка</h4>
+                  <ul className="text-sm text-gray-700 space-y-2">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Снятие навесного оборудования
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Разборка блока цилиндров
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Демонтаж ГРМ и коленвала
+                    </li>
+                  </ul>
                 </div>
-                <ul className="text-sm text-gray-700 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Снятие навесного оборудования
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Разборка блока цилиндров
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Демонтаж ГРМ и коленвала
-                  </li>
-                </ul>
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="Shield" size={16} className="text-primary" />
+                    </div>
+                    <h4 className="font-bold text-gray-900">Дефектовка деталей</h4>
+                  </div>
+                  <ul className="text-sm text-gray-700 space-y-2">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Измерение геометрии деталей
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Магнитная дефектоскопия
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Сортировка на восстановление/замену
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon name="Shield" size={16} className="text-primary" />
-                  </div>
-                  <h4 className="font-bold text-gray-900">Дефектовка деталей</h4>
-                </div>
-                <ul className="text-sm text-gray-700 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Измерение геометрии деталей
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Магнитная дефектоскопия
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Сортировка на восстановление/замену
-                  </li>
-                </ul>
+              <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl p-6">
+                <PhotoGallery photos={photos} />
               </div>
             </div>
+            
+            
             <div className="bg-gradient-to-r from-blue-50 to-blue-100/50 border border-blue-200 rounded-2xl p-6">
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">

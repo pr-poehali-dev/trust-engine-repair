@@ -1,9 +1,18 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import PhotoGallery from '@/components/ui/photo-gallery';
 import ProcessStepBadge from './ProcessStepBadge';
 
-export default function AssemblyStep() {
+interface AssemblyStepProps {
+  photos: Array<{
+    id: string;
+    url: string;
+    alt: string;
+  }>;
+}
+
+export default function AssemblyStep({ photos }: AssemblyStepProps) {
   return (
     <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
       <ProcessStepBadge step={4} color="blue" />
@@ -28,52 +37,59 @@ export default function AssemblyStep() {
             </div>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon name="Layers" size={16} className="text-primary" />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100/50 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="Layers" size={16} className="text-primary" />
+                    </div>
+                    <h4 className="font-bold text-gray-900">Поэтапная сборка</h4>
                   </div>
-                  <h4 className="font-bold text-gray-900">Поэтапная сборка</h4>
+                  <ul className="text-sm text-gray-700 space-y-2">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Сборка блока цилиндров
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Установка коленвала и ГРМ
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Монтаж навесного оборудования
+                    </li>
+                  </ul>
                 </div>
-                <ul className="text-sm text-gray-700 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Сборка блока цилиндров
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Установка коленвала и ГРМ
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Монтаж навесного оборудования
-                  </li>
-                </ul>
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
+                      <Icon name="CheckCircle" size={16} className="text-primary" />
+                    </div>
+                    <h4 className="font-bold text-gray-900">Контроль качества</h4>
+                  </div>
+                  <ul className="text-sm text-gray-700 space-y-2">
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Моментные характеристики
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Зазоры и регулировки
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                      Герметичность соединений
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Icon name="CheckCircle" size={16} className="text-primary" />
-                  </div>
-                  <h4 className="font-bold text-gray-900">Контроль качества</h4>
-                </div>
-                <ul className="text-sm text-gray-700 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Моментные характеристики
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Зазоры и регулировки
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    Герметичность соединений
-                  </li>
-                </ul>
+              <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl p-6">
+                <PhotoGallery photos={photos} />
               </div>
             </div>
+            
+            
             <div className="bg-gradient-to-r from-green-50 to-green-100/50 border border-green-200 rounded-2xl p-6">
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">

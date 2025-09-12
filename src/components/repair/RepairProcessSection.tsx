@@ -1,42 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
-
-// Заглушки изображений
-const processImages = [
-  { id: 1, src: '/api/placeholder/300/200', alt: 'Диагностика двигателя', caption: 'Компьютерная диагностика' },
-  { id: 2, src: '/api/placeholder/300/200', alt: 'Составление сметы', caption: 'Планирование работ' },
-  { id: 3, src: '/api/placeholder/300/200', alt: 'Процесс ремонта', caption: 'Выполнение ремонта' },
-  { id: 4, src: '/api/placeholder/300/200', alt: 'Контроль качества', caption: 'Проверка результатов' },
-  { id: 5, src: '/api/placeholder/300/200', alt: 'Готовый двигатель', caption: 'Завершенный ремонт' }
-];
-
-function PhotoGallery({ photos }: { photos: typeof processImages }) {
-  return (
-    <div className="space-y-4">
-      <h4 className="font-bold text-gray-900 flex items-center gap-2">
-        <Icon name="Camera" size={18} className="text-primary" />
-        Фотоотчет процесса
-      </h4>
-      <div className="grid grid-cols-2 gap-3">
-        {photos.map((photo) => (
-          <div key={photo.id} className="group relative overflow-hidden rounded-xl bg-gray-100 aspect-video">
-            <img
-              src={photo.src}
-              alt={photo.alt}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
-              <p className="text-white text-xs font-medium">{photo.caption}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
+import PhotoGallery from '@/components/ui/photo-gallery';
 
 export default function RepairProcessSection() {
+  const processPhotos = [
+    {
+      id: '1',
+      url: 'https://cdn.poehali.dev/files/e158c5ca-57b3-4d4a-b342-81d6b3f2a07d.JPG',
+      alt: 'Двигатель до диагностики - общий вид'
+    },
+    {
+      id: '2', 
+      url: 'https://cdn.poehali.dev/files/de797948-3172-4737-9e2c-615a718bf8ea.JPG',
+      alt: 'Повреждения коллектора - коррозия и износ'
+    },
+    {
+      id: '3',
+      url: 'https://cdn.poehali.dev/files/83a3baee-ed5b-426d-b0a6-08b9a63d5c6d.JPG', 
+      alt: 'Блок двигателя Mercury MerCruiser - детальный осмотр'
+    }
+  ];
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
@@ -130,7 +114,7 @@ export default function RepairProcessSection() {
                         </div>
                       </div>
                       <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl p-6">
-                        <PhotoGallery photos={processImages.slice(0, 4)} />
+                        <PhotoGallery photos={processPhotos} />
                       </div>
                     </div>
                     
@@ -230,7 +214,7 @@ export default function RepairProcessSection() {
                         </div>
                       </div>
                       <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl p-6">
-                        <PhotoGallery photos={processImages.slice(1, 3)} />
+                        <PhotoGallery photos={processPhotos} />
                       </div>
                     </div>
                     
@@ -330,7 +314,7 @@ export default function RepairProcessSection() {
                         </div>
                       </div>
                       <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl p-6">
-                        <PhotoGallery photos={processImages.slice(2, 5)} />
+                        <PhotoGallery photos={processPhotos} />
                       </div>
                     </div>
                     
@@ -430,7 +414,7 @@ export default function RepairProcessSection() {
                         </div>
                       </div>
                       <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-2xl p-6">
-                        <PhotoGallery photos={processImages.slice(3, 5)} />
+                        <PhotoGallery photos={processPhotos} />
                       </div>
                     </div>
                     

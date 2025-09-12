@@ -6,7 +6,7 @@ import AssemblyStep from './AssemblyStep';
 import TestingStep from './TestingStep';
 
 export default function RestoreProcessSection() {
-  const diagnosticPhotos = [
+  const processPhotos = [
     {
       id: '1',
       url: 'https://cdn.poehali.dev/files/e158c5ca-57b3-4d4a-b342-81d6b3f2a07d.JPG',
@@ -35,11 +35,11 @@ export default function RestoreProcessSection() {
 
         <div className="relative">
           <div className="space-y-16">
-            <DiagnosticStep photos={diagnosticPhotos} />
-            <DisassemblyStep />
-            <RestorationStep />
-            <AssemblyStep />
-            <TestingStep />
+            <DiagnosticStep photos={processPhotos} />
+            <DisassemblyStep photos={processPhotos} />
+            <RestorationStep photos={processPhotos} />
+            <AssemblyStep photos={processPhotos} />
+            <TestingStep photos={processPhotos} />
           </div>
         </div>
       </div>
