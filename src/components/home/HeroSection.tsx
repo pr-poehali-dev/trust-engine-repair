@@ -40,8 +40,8 @@ export default function HeroSection({
           <div className="lg:hidden space-y-6 mb-8 text-center">
             <h1 className="text-3xl sm:text-4xl font-medium text-brand-gray-900 leading-tight px-2">
               Восстановленые{" "}
-              <span className="text-primary font-bold">двигатели</span> для яхт
-              и катеров
+              <span className="text-primary font-bold">двигатели</span> для
+              катеров и яхт
             </h1>
           </div>
 
@@ -52,7 +52,7 @@ export default function HeroSection({
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight">
                   Восстановленые{" "}
                   <span className="text-primary font-bold">двигатели</span> для
-                  яхт и катеров
+                  катеров и яхт
                 </h1>
               </div>
 
