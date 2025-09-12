@@ -42,7 +42,7 @@ export default function NavigationSection({
             {location.pathname === '/' ? (
               <div className="flex items-center gap-2 lg:gap-4">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
-                <span className="hidden sm:block md:hidden xl:block text-brand-gray-600 font-medium text-xs">
+                <span className="block md:hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
               </div>
@@ -68,7 +68,7 @@ export default function NavigationSection({
                 Услуги
                 <Icon name="ChevronDown" size={14} className="transition-transform group-hover:rotate-180" />
               </Link>
-              <div className="absolute top-full left-0 mt-2 w-56 sm:w-64 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="p-2">
                   <Link 
                     to="/services/restore" 

@@ -67,7 +67,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
       
       {/* Menu panel */}
       <div 
-        className="fixed bg-white z-[99999] md:hidden shadow-xl animate-in slide-in-from-top-2 duration-300 overflow-x-hidden"
+        className="fixed bg-white z-[99999] md:hidden shadow-xl animate-in slide-in-from-top-2 duration-300"
         style={{ 
           top: `${headerHeight}px`, 
           left: 0, 
@@ -76,10 +76,10 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
         }}
       >
         {/* Navigation content */}
-        <div className="h-full overflow-y-auto overflow-x-hidden">
-          <nav className="px-4 py-6 max-w-full">
+        <div className="h-full overflow-y-auto">
+          <nav className="px-6 py-6">
             {/* Menu items */}
-            <div className="space-y-1 max-w-xs sm:max-w-sm mx-auto">
+            <div className="space-y-1 max-w-sm mx-auto">
               
               {/* Services with submenu */}
               <div className="space-y-1">
@@ -103,7 +103,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                     onClick={handleLinkClick}
                   >
                     <Icon name="RefreshCw" size={16} className="text-primary" />
-                    <span className="text-gray-600 break-words">Восстановление под ключ</span>
+                    <span className="text-gray-600">Восстановление под ключ</span>
                   </Link>
                   <Link 
                     to="/services/repair" 
@@ -111,7 +111,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
                     onClick={handleLinkClick}
                   >
                     <Icon name="Wrench" size={16} className="text-primary" />
-                    <span className="text-gray-600 break-words">Ремонт двигателей</span>
+                    <span className="text-gray-600">Ремонт двигателей</span>
                   </Link>
                   <Link 
                     to="/services/longblocks" 
@@ -166,7 +166,7 @@ export default function MobileMenu({ isOpen, onToggle, onContactClick }: MobileM
             </div>
             
             {/* CTA Section */}
-            <div className="mt-8 pt-6 border-t border-gray-200 max-w-xs sm:max-w-sm mx-auto">
+            <div className="mt-8 pt-6 border-t border-gray-200 max-w-sm mx-auto">
               <Button 
                 className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 text-base rounded-xl shadow-lg"
                 onClick={() => {
