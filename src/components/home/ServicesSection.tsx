@@ -100,7 +100,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -127,13 +127,13 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
                 </div>
 
-                <CardHeader className="pb-4">
+                <CardHeader className="pb-3 pt-4">
                   <CardTitle className="text-xl font-bold text-brand-gray-900 group-hover:text-primary transition-colors duration-300 leading-tight">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
 
-                <CardContent className="flex flex-col flex-grow space-y-6">
+                <CardContent className="flex flex-col flex-grow space-y-4 px-4 pb-4">
                   <p className="text-brand-gray-600 leading-relaxed">
                     {service.description}
                   </p>
@@ -156,8 +156,8 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                     </div>
                   </div>
 
-                  <div className="mt-auto space-y-4">
-                    <div className="flex flex-col gap-2 p-3 bg-gray-50 rounded-lg border">
+                  <div className="mt-auto space-y-3">
+                    <div className="flex flex-col gap-2 p-2.5 bg-gray-50 rounded-lg border">
                       <div className="flex items-center justify-between">
                         <span className="text-xs font-medium text-gray-500 uppercase tracking-wide">
                           Стоимость
