@@ -14,31 +14,31 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section className="relative pt-8 lg:pt-12">
-      {/* Декоративные геометрические элементы - задний фон */}
-      <div className="absolute z-0 top-20 right-10 w-40 h-40 bg-primary/25 rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 bottom-40 left-20 w-48 h-48 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
-      <div className="absolute z-0 top-1/4 left-1/3 w-32 h-32 bg-primary/20 rounded-xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/3 right-1/4 w-28 h-28 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
-      <div className="absolute z-0 top-1/2 left-16 w-36 h-36 bg-primary/15 rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 bottom-1/4 right-1/3 w-24 h-24 bg-[#039fcb0d] rounded-lg blur-sm"></div>
-      <div className="absolute z-0 top-3/4 left-1/6 w-20 h-20 bg-primary/18 rounded-xl blur-md"></div>
-      <div className="absolute z-0 top-10 left-2/3 w-44 h-44 bg-[#039fcb0d] rounded-3xl blur-lg"></div>
+    <section className="relative pt-8 lg:pt-12 overflow-hidden">
+      {/* Декоративные геометрические элементы - задний фон (скрыты на мобильных) */}
+      <div className="hidden md:block absolute z-0 top-20 right-10 w-40 h-40 bg-primary/25 rounded-3xl blur-xl"></div>
+      <div className="hidden md:block absolute z-0 bottom-40 left-20 w-48 h-48 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
+      <div className="hidden md:block absolute z-0 top-1/4 left-1/3 w-32 h-32 bg-primary/20 rounded-xl blur-md"></div>
+      <div className="hidden md:block absolute z-0 bottom-1/3 right-1/4 w-28 h-28 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
+      <div className="hidden md:block absolute z-0 top-1/2 left-16 w-36 h-36 bg-primary/15 rounded-3xl blur-xl"></div>
+      <div className="hidden md:block absolute z-0 bottom-1/4 right-1/3 w-24 h-24 bg-[#039fcb0d] rounded-lg blur-sm"></div>
+      <div className="hidden md:block absolute z-0 top-3/4 left-1/6 w-20 h-20 bg-primary/18 rounded-xl blur-md"></div>
+      <div className="hidden md:block absolute z-0 top-10 left-2/3 w-44 h-44 bg-[#039fcb0d] rounded-3xl blur-lg"></div>
       {/* Дополнительные элементы (+30%) */}
-      <div className="absolute z-0 top-1/8 right-3/4 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/8 left-3/4 w-18 h-18 bg-primary/28 rounded-lg blur-sm"></div>
-      <div className="absolute z-0 top-5/6 right-1/8 w-30 h-30 bg-[#039fcb0d] rounded-xl blur-md"></div>
+      <div className="hidden lg:block absolute z-0 top-1/8 right-3/4 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-md"></div>
+      <div className="hidden lg:block absolute z-0 bottom-1/8 left-3/4 w-18 h-18 bg-primary/28 rounded-lg blur-sm"></div>
+      <div className="hidden lg:block absolute z-0 top-5/6 right-1/8 w-30 h-30 bg-[#039fcb0d] rounded-xl blur-md"></div>
       {/* Крупные элементы в области заголовка - уменьшены до 50% */}
-      <div className="absolute z-0 top-14 left-12 w-20 h-20 bg-primary/12 rounded-3xl blur-2xl"></div>
-      <div className="absolute z-0 top-8 right-20 w-18 h-18 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-24 left-1/5 w-16 h-16 bg-primary/15 rounded-xl blur-lg"></div>
-      <div className="absolute z-0 top-18 right-2/5 w-14 h-14 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      <div className="hidden lg:block absolute z-0 top-14 left-12 w-20 h-20 bg-primary/12 rounded-3xl blur-2xl"></div>
+      <div className="hidden lg:block absolute z-0 top-8 right-20 w-18 h-18 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
+      <div className="hidden lg:block absolute z-0 top-24 left-1/5 w-16 h-16 bg-primary/15 rounded-xl blur-lg"></div>
+      <div className="hidden lg:block absolute z-0 top-18 right-2/5 w-14 h-14 bg-[#039fcb0d] rounded-lg blur-md"></div>
 
-      <div className="relative z-10 px-4">
+      <div className="relative z-10 px-4 overflow-x-hidden">
         <div className="max-w-7xl mx-auto">
           {/* Заголовок для мобильных устройств */}
           <div className="lg:hidden mb-8 text-center">
-            <h1 className="text-3xl sm:text-4xl font-semibold text-brand-gray-900 leading-[1.2] text-left my-0 py-0 px-2">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-brand-gray-900 leading-[1.2] text-left my-0 py-0 px-2 break-words">
               Восстановленные{" "}
               <span className="text-primary font-bold block sm:inline">двигатели</span>{" "}
               <span className="block sm:inline">для катеров и яхт</span>
@@ -49,7 +49,7 @@ export default function HeroSection({
             <div className="space-y-8 order-2 lg:order-1">
               {/* Заголовок для десктопа */}
               <div className="hidden lg:block space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight break-words">
                   Восстановленые{" "}
                   <span className="text-primary font-bold">двигатели</span> для
                   катеров и яхт
