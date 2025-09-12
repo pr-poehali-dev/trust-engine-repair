@@ -58,25 +58,29 @@ export default function RestoreProcessSection() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <h4 className="font-semibold text-gray-900">Внешний осмотр</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Проверка корпуса и креплений</li>
-                          <li>• Оценка коррозии и повреждений</li>
-                          <li>• Состояние электрических соединений</li>
-                        </ul>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-4">
+                        <div className="space-y-2">
+                          <h4 className="font-semibold text-gray-900">Внешний осмотр</h4>
+                          <ul className="text-sm text-gray-600 space-y-1">
+                            <li>• Проверка корпуса и креплений</li>
+                            <li>• Оценка коррозии и повреждений</li>
+                            <li>• Состояние электрических соединений</li>
+                          </ul>
+                        </div>
+                        <div className="space-y-2">
+                          <h4 className="font-semibold text-gray-900">Компьютерная диагностика</h4>
+                          <ul className="text-sm text-gray-600 space-y-1">
+                            <li>• Сканирование ошибок ECU</li>
+                            <li>• Проверка датчиков</li>
+                            <li>• Анализ рабочих параметров</li>
+                          </ul>
+                        </div>
                       </div>
-                      <div className="space-y-2">
-                        <h4 className="font-semibold text-gray-900">Компьютерная диагностика</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
-                          <li>• Сканирование ошибок ECU</li>
-                          <li>• Проверка датчиков</li>
-                          <li>• Анализ рабочих параметров</li>
-                        </ul>
+                      <div>
+                        <PhotoGallery photos={diagnosticPhotos} />
                       </div>
                     </div>
-                    <PhotoGallery photos={diagnosticPhotos} />
                     
                     <div className="bg-primary/5 rounded-lg p-4">
                       <p className="text-sm text-gray-700">
