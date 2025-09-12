@@ -41,9 +41,9 @@ export default function RestoreProcessSection() {
             {/* Step 1 */}
             <div className="flex flex-col lg:flex-row items-start gap-8">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                  01
-                </div>
+                <Badge className="bg-gradient-to-r from-primary to-primary/80 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
+                  1 этап
+                </Badge>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -136,17 +136,12 @@ export default function RestoreProcessSection() {
               </div>
             </div>
 
-            {/* Connecting Line */}
-            <div className="flex justify-center">
-              <div className="w-1 h-12 bg-gradient-to-b from-primary/50 to-primary/20 rounded-full"></div>
-            </div>
-
             {/* Step 2 */}
-            <div className="flex flex-col lg:flex-row items-start gap-8">
+            <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                  02
-                </div>
+                <Badge className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
+                  2 этап
+                </Badge>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -233,17 +228,12 @@ export default function RestoreProcessSection() {
               </div>
             </div>
 
-            {/* Connecting Line */}
-            <div className="flex justify-center">
-              <div className="w-1 h-12 bg-gradient-to-b from-primary/50 to-primary/20 rounded-full"></div>
-            </div>
-
             {/* Step 3 */}
-            <div className="flex flex-col lg:flex-row items-start gap-8">
+            <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                  03
-                </div>
+                <Badge className="bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
+                  3 этап
+                </Badge>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -330,17 +320,12 @@ export default function RestoreProcessSection() {
               </div>
             </div>
 
-            {/* Connecting Line */}
-            <div className="flex justify-center">
-              <div className="w-1 h-12 bg-gradient-to-b from-primary/50 to-primary/20 rounded-full"></div>
-            </div>
-
             {/* Step 4 */}
-            <div className="flex flex-col lg:flex-row items-start gap-8">
+            <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                  04
-                </div>
+                <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
+                  4 этап
+                </Badge>
               </div>
               <div className="flex-grow">
                 <Card className="bg-white/80 backdrop-blur-sm border-0 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
@@ -427,17 +412,12 @@ export default function RestoreProcessSection() {
               </div>
             </div>
 
-            {/* Connecting Line */}
-            <div className="flex justify-center">
-              <div className="w-1 h-12 bg-gradient-to-b from-primary/50 to-primary/20 rounded-full"></div>
-            </div>
-
             {/* Step 5 */}
-            <div className="flex flex-col lg:flex-row items-start gap-8">
+            <div className="flex flex-col lg:flex-row items-start gap-8 mt-12">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-lg">
-                  05
-                </div>
+                <Badge className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 text-lg font-bold rounded-full shadow-lg">
+                  5 этап
+                </Badge>
               </div>
               <div className="flex-grow">
                 <Card className="bg-gradient-to-br from-green-50/50 to-white backdrop-blur-sm border border-green-200 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
