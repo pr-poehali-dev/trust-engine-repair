@@ -67,24 +67,24 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
       id={id || "services"}
       className="relative pt-20 lg:pt-28"
     >
-      {/* Декоративные геометрические элементы - задний фон */}
-      <div className="absolute z-0 top-5 left-5 w-36 h-36 bg-primary/25 rounded-2xl blur-lg"></div>
-      <div className="absolute z-0 bottom-10 right-10 w-42 h-42 bg-[#039fcb0d] rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 top-1/3 right-1/5 w-28 h-28 bg-primary/18 rounded-xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/4 left-1/4 w-32 h-32 bg-[#039fcb0d] rounded-lg blur-sm"></div>
-      <div className="absolute z-0 top-2/3 left-8 w-40 h-40 bg-primary/15 rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 top-1/4 right-1/3 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
-      <div className="absolute z-0 bottom-2/3 left-2/3 w-20 h-20 bg-primary/20 rounded-lg blur-md"></div>
-      <div className="absolute z-0 top-10 left-1/2 w-48 h-48 bg-[#039fcb0d] rounded-3xl blur-xl"></div>
+      {/* Декоративные геометрические элементы - задний фон (скрыты на мобильных) */}
+      <div className="hidden md:block absolute z-0 top-5 left-5 w-36 h-36 bg-primary/25 rounded-2xl blur-lg"></div>
+      <div className="hidden md:block absolute z-0 bottom-10 right-10 w-42 h-42 bg-[#039fcb0d] rounded-3xl blur-xl"></div>
+      <div className="hidden md:block absolute z-0 top-1/3 right-1/5 w-28 h-28 bg-primary/18 rounded-xl blur-md"></div>
+      <div className="hidden md:block absolute z-0 bottom-1/4 left-1/4 w-32 h-32 bg-[#039fcb0d] rounded-lg blur-sm"></div>
+      <div className="hidden md:block absolute z-0 top-2/3 left-8 w-40 h-40 bg-primary/15 rounded-3xl blur-xl"></div>
+      <div className="hidden md:block absolute z-0 top-1/4 right-1/3 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
+      <div className="hidden md:block absolute z-0 bottom-2/3 left-2/3 w-20 h-20 bg-primary/20 rounded-lg blur-md"></div>
+      <div className="hidden md:block absolute z-0 top-10 left-1/2 w-48 h-48 bg-[#039fcb0d] rounded-3xl blur-xl"></div>
       {/* Дополнительные элементы (+30%) */}
-      <div className="absolute z-0 top-1/6 left-3/4 w-26 h-26 bg-[#039fcb0d] rounded-xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/5 right-2/5 w-22 h-22 bg-primary/23 rounded-2xl blur-sm"></div>
-      <div className="absolute z-0 top-4/5 left-1/8 w-30 h-30 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      <div className="hidden lg:block absolute z-0 top-1/6 left-3/4 w-26 h-26 bg-[#039fcb0d] rounded-xl blur-md"></div>
+      <div className="hidden lg:block absolute z-0 bottom-1/5 right-2/5 w-22 h-22 bg-primary/23 rounded-2xl blur-sm"></div>
+      <div className="hidden lg:block absolute z-0 top-4/5 left-1/8 w-30 h-30 bg-[#039fcb0d] rounded-lg blur-md"></div>
       {/* Крупные элементы в области заголовка */}
-      <div className="absolute z-0 top-8 left-12 w-38 h-38 bg-primary/10 rounded-3xl blur-2xl"></div>
-      <div className="absolute z-0 top-4 right-20 w-34 h-34 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-16 left-1/4 w-30 h-30 bg-primary/14 rounded-xl blur-lg"></div>
-      <div className="absolute z-0 top-12 right-1/3 w-26 h-26 bg-[#039fcb0d] rounded-lg blur-md"></div>
+      <div className="hidden lg:block absolute z-0 top-8 left-12 w-38 h-38 bg-primary/10 rounded-3xl blur-2xl"></div>
+      <div className="hidden lg:block absolute z-0 top-4 right-20 w-34 h-34 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
+      <div className="hidden lg:block absolute z-0 top-16 left-1/4 w-30 h-30 bg-primary/14 rounded-xl blur-lg"></div>
+      <div className="hidden lg:block absolute z-0 top-12 right-1/3 w-26 h-26 bg-[#039fcb0d] rounded-lg blur-md"></div>
 
       <div className="relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
