@@ -80,6 +80,34 @@ export default function RestoreProcessSection() {
     }
   ];
 
+  const assemblyPhotos = [
+    {
+      id: '1',
+      url: 'https://cdn.poehali.dev/files/3104f41a-781b-4525-9575-ff5000d3142b.jpg',
+      alt: 'Блок цилиндров V6 на стенде - готов к установке поршневой группы'
+    },
+    {
+      id: '2', 
+      url: 'https://cdn.poehali.dev/files/0ae3c28b-97a5-4202-9eca-b4f0cb1b50f8.jpg',
+      alt: 'Полностью собранный короткоблок V6 - установлены все основные компоненты'
+    },
+    {
+      id: '3',
+      url: 'https://cdn.poehali.dev/files/0d2e3c8d-6095-4b14-9d7c-53c60b7fa43d.jpg', 
+      alt: 'Двигатель с установленными головками блока цилиндров'
+    },
+    {
+      id: '4',
+      url: 'https://cdn.poehali.dev/files/1109662e-68ac-4a68-a969-67087521bc97.JPG', 
+      alt: 'Коленчатый вал с шатунами - прецизионная сборка'
+    },
+    {
+      id: '5',
+      url: 'https://cdn.poehali.dev/files/9a88e5b4-2319-49ca-b1e4-4bf29c74946e.jpg', 
+      alt: 'Готовый двигатель с навесным оборудованием и системой охлаждения'
+    }
+  ];
+
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
@@ -94,7 +122,7 @@ export default function RestoreProcessSection() {
             <DiagnosticStep photos={processPhotos} />
             <DisassemblyStep photos={disassemblyPhotos} />
             <RestorationStep photos={restorationPhotos} />
-            <AssemblyStep photos={processPhotos} />
+            <AssemblyStep photos={assemblyPhotos} />
             <TestingStep photos={processPhotos} />
           </div>
         </div>
