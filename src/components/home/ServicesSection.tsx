@@ -191,7 +191,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4 text-lg font-semibold"
+              className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4"
               onClick={() => {
                 window.location.href = "/services";
               }}

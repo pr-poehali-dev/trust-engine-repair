@@ -177,8 +177,9 @@ export default function ContactSection() {
                 className="border-2 focus:border-primary transition-colors duration-300 resize-none"
               />
               <Button 
+                size="lg"
                 variant="outline" 
-                className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 py-3 text-lg font-medium"
+                className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4"
                 onClick={() => {
                   alert('📧 Ваша заявка принята!\n\n📞 Мы свяжемся с вами в течение часа:\n+7 (999) 555-00-12\n\n📧 Или напишите прямо сейчас: info@marineservice.ru');
                 }}
