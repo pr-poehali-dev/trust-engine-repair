@@ -117,7 +117,7 @@ export default function GallerySection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.slice(0, 3).map((project, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30 bg-white/60 backdrop-blur-sm">
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img 
                   src={project.image} 

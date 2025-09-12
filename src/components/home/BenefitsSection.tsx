@@ -67,7 +67,7 @@ export default function BenefitsSection() {
         {/* Преимущества */}
         <div className="grid lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <div key={index} className="group bg-white border border-brand-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div key={index} className="group border border-brand-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="relative">
                 <img 
                   src={benefit.image} 

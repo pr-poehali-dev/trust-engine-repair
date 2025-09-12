@@ -107,7 +107,7 @@ export default function ContactSection() {
             {/* Упрощенное отображение контактов для мобильных */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {contacts.slice(0, 2).map((contact, index) => (
-                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border hover:border-primary/30 bg-white/90 backdrop-blur-sm h-full">
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border hover:border-primary/30 h-full">
                   <CardContent className="p-6">
                     <div className="text-center space-y-4 flex flex-col h-full">
                       <div className={`${contact.bgColor} w-16 h-16 rounded-xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
@@ -153,7 +153,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <Card className="shadow-2xl border-2 border-primary/20 bg-white/90 backdrop-blur-sm">
+          <Card className="shadow-2xl border-2 border-primary/20">
             <CardHeader className="bg-gradient-to-r from-primary/10 to-marine-blue/10 rounded-t-lg">
               <div className="flex items-center gap-3">
                 <div className="bg-primary/20 p-2 rounded-lg">

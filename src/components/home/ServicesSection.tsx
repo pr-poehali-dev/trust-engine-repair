@@ -104,7 +104,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 bg-white rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer"
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer"
                 onClick={() => {
                   window.location.href = service.link;
                 }}

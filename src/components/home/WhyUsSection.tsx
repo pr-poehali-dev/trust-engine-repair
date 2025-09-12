@@ -75,7 +75,7 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
         {/* Преимущества в 2 ряда */}
         <div className="grid sm:grid-cols-2 gap-6">
           {mainAdvantages.map((advantage, index) => (
-            <div key={index} className="group bg-white border border-brand-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div key={index} className="group border border-brand-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-start gap-4">
                 <div className="bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
                   <Icon name={advantage.icon} size={24} className="text-primary" />
