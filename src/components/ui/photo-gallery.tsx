@@ -106,45 +106,51 @@ export default function PhotoGallery({ photos }: PhotoGalleryProps) {
       {/* Modal */}
       {selectedPhoto !== null && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 overflow-hidden"
+          className="fixed inset-0 z-50 bg-black/90"
           onClick={closeModal}
         >
+          {/* Кнопка закрытия */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+            className="absolute top-4 right-4 z-[60] w-10 h-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
           >
-            <Icon name="X" size={20} className="sm:w-6 sm:h-6" />
+            <Icon name="X" size={20} />
           </button>
 
+          {/* Стрелки навигации */}
           {photos.length > 1 && (
             <>
               <button
                 onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
-                className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-[60] w-10 h-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
               >
-                <Icon name="ChevronLeft" size={20} className="sm:w-6 sm:h-6" />
+                <Icon name="ChevronLeft" size={20} />
               </button>
               <button
                 onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
-                className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-50 w-10 h-10 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-[60] w-10 h-10 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-full flex items-center justify-center transition-all duration-200 border border-white/20"
               >
-                <Icon name="ChevronRight" size={20} className="sm:w-6 sm:h-6" />
+                <Icon name="ChevronRight" size={20} />
               </button>
             </>
           )}
 
-          <div 
-            className="relative flex items-center justify-center max-w-full max-h-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={photos[selectedPhoto].url}
-              alt={photos[selectedPhoto].alt}
-              className="max-w-[calc(100vw-5rem)] max-h-[calc(100vh-5rem)] w-auto h-auto object-contain rounded-lg filter brightness-110 contrast-105 saturate-105"
-            />
-            
-            <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm border border-white/20">
-              {selectedPhoto + 1} из {photos.length}
+          {/* Контейнер изображения с правильным центрированием */}
+          <div className="absolute inset-4 flex items-center justify-center">
+            <div 
+              className="relative max-w-full max-h-full flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={photos[selectedPhoto].url}
+                alt={photos[selectedPhoto].alt}
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl filter brightness-110 contrast-105 saturate-105"
+              />
+              
+              {/* Индикатор страниц */}
+              <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm border border-white/20">
+                {selectedPhoto + 1} из {photos.length}
+              </div>
             </div>
           </div>
         </div>
