@@ -38,7 +38,7 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-12 left-12 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
       <div className="absolute z-0 bottom-8 right-16 w-48 h-48 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-1/3 right-1/8 w-32 h-32 bg-primary/25 rounded-xl blur-md"></div>
+      <div className="absolute z-0 top-1/3 right-1/8 w-32 h-32 bg-primary/8 rounded-xl blur-xl"></div>
       <div className="absolute z-0 bottom-1/4 left-1/5 w-36 h-36 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
       <div className="absolute z-0 top-2/3 left-6 w-28 h-28 bg-primary/19 rounded-lg blur-sm"></div>
       <div className="absolute z-0 top-1/4 right-1/3 w-24 h-24 bg-[#039fcb0d] rounded-xl blur-md"></div>
