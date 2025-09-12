@@ -14,7 +14,7 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden pt-8 pb-20 lg:pt-12 lg:pb-28">
+    <section className="relative overflow-hidden pt-8 lg:pt-12">
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-20 right-10 w-40 h-40 bg-primary/25 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-40 left-20 w-48 h-48 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
@@ -35,7 +35,7 @@ export default function HeroSection({
       <div className="absolute z-0 top-18 right-2/5 w-14 h-14 bg-[#039fcb0d] rounded-lg blur-md"></div>
 
       <div className="relative z-10 px-4">
-        <div className="max-w-7xl mx-auto pb-20">
+        <div className="max-w-7xl mx-auto">
           {/* Заголовок для мобильных устройств */}
           <div className="lg:hidden mb-8 text-center">
             <h1 className="text-3xl sm:text-4xl font-semibold text-brand-gray-900 leading-[1.2] text-left my-0 py-0 px-2">
