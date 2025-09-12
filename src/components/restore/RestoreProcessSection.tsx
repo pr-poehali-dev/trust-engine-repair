@@ -83,28 +83,33 @@ export default function RestoreProcessSection() {
   const assemblyPhotos = [
     {
       id: '1',
+      url: 'https://cdn.poehali.dev/files/4f84d197-6a5d-4434-b7e0-4abd1596c604.jpg',
+      alt: 'Полностью собранный двигатель V6 с навесным оборудованием - готов к испытаниям'
+    },
+    {
+      id: '2',
       url: 'https://cdn.poehali.dev/files/3104f41a-781b-4525-9575-ff5000d3142b.jpg',
       alt: 'Блок цилиндров V6 на стенде - готов к установке поршневой группы'
     },
     {
-      id: '2', 
+      id: '3', 
       url: 'https://cdn.poehali.dev/files/0ae3c28b-97a5-4202-9eca-b4f0cb1b50f8.jpg',
       alt: 'Полностью собранный короткоблок V6 - установлены все основные компоненты'
     },
     {
-      id: '3',
+      id: '4',
       url: 'https://cdn.poehali.dev/files/0d2e3c8d-6095-4b14-9d7c-53c60b7fa43d.jpg', 
       alt: 'Двигатель с установленными головками блока цилиндров'
     },
     {
-      id: '4',
+      id: '5',
       url: 'https://cdn.poehali.dev/files/1109662e-68ac-4a68-a969-67087521bc97.JPG', 
       alt: 'Коленчатый вал с шатунами - прецизионная сборка'
     },
     {
-      id: '5',
+      id: '6',
       url: 'https://cdn.poehali.dev/files/9a88e5b4-2319-49ca-b1e4-4bf29c74946e.jpg', 
-      alt: 'Готовый двигатель с навесным оборудованием и системой охлаждения'
+      alt: 'Готовый двигатель с системой охлаждения на тестовом стенде'
     }
   ];
 
