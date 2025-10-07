@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm';
 import RestoreHeroSection from '@/components/restore/RestoreHeroSection';
 import RestoreProcessSection from '@/components/restore/RestoreProcessSection';
 import RestoreBenefitsSection from '@/components/restore/RestoreBenefitsSection';
-import RestorePricingSection from '@/components/restore/RestorePricingSection';
+
 import RestoreCTASection from '@/components/restore/RestoreCTASection';
 
 export default function ServiceRestore() {
@@ -52,7 +52,6 @@ export default function ServiceRestore() {
       <RestoreHeroSection />
       <RestoreProcessSection />
       <RestoreBenefitsSection />
-      <RestorePricingSection />
       <RestoreCTASection onContactClick={() => setContactFormOpen(true)} />
 
       <FooterSection />

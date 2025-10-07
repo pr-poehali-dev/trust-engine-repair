@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm';
 import LongBlocksHeroSection from '@/components/longblocks/LongBlocksHeroSection';
 import LongBlocksProcessSection from '@/components/longblocks/LongBlocksProcessSection';
 import LongBlocksBenefitsSection from '@/components/longblocks/LongBlocksBenefitsSection';
-import LongBlocksPricingSection from '@/components/longblocks/LongBlocksPricingSection';
+
 import LongBlocksCTASection from '@/components/longblocks/LongBlocksCTASection';
 
 export default function LongBlocks() {
@@ -23,7 +23,6 @@ export default function LongBlocks() {
       <LongBlocksHeroSection />
       <LongBlocksProcessSection />
       <LongBlocksBenefitsSection />
-      <LongBlocksPricingSection />
       <LongBlocksCTASection onContactClick={() => setContactFormOpen(true)} />
 
       <FooterSection />

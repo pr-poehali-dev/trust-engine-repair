@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm';
 import RepairHeroSection from '@/components/repair/RepairHeroSection';
 import RepairProcessSection from '@/components/repair/RepairProcessSection';
 import RepairBenefitsSection from '@/components/repair/RepairBenefitsSection';
-import RepairPricingSection from '@/components/repair/RepairPricingSection';
+
 import RepairCTASection from '@/components/repair/RepairCTASection';
 
 export default function ServiceRepair() {
@@ -23,7 +23,6 @@ export default function ServiceRepair() {
       <RepairHeroSection />
       <RepairProcessSection />
       <RepairBenefitsSection />
-      <RepairPricingSection />
       <RepairCTASection onContactClick={() => setContactFormOpen(true)} />
 
       <FooterSection />
