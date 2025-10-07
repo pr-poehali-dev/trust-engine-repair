@@ -1,83 +1,62 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function GallerySection() {
-  const projects = [
-    { 
-      title: 'Volvo Penta D6-350', 
-      type: 'Капитальный ремонт', 
-      status: 'Завершено',
+  const portfolioItems = [
+    {
+      id: 1,
       image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
-      duration: '14 дней',
-      features: ['Новая поршневая', 'Обновленная электроника', 'Модернизация системы охлаждения'],
-      accent: 'text-marine-dark',
-      bgColor: 'bg-primary/10',
-      link: '/projects/volvo-d6-350'
+      title: 'Капитальный ремонт',
+      description: 'Volvo Penta D6-350'
     },
-    { 
-      title: 'Mercruiser 5.7L', 
-      type: 'Замена поршневой', 
-      status: 'Завершено',
-      image: '/img/7f7497d1-f1ad-4824-b35d-61928133340f.jpg',
-      duration: '10 дней',
-      features: ['Форсированные поршни', 'Балансировка коленвала', 'Новые форсунки'],
-      accent: 'text-marine-dark',
-      bgColor: 'bg-primary/10',
-      link: '/projects/mercruiser-5-7l'
+    {
+      id: 2,
+      image: '/img/296a2fc5-c78b-4f2f-a785-0cd8e650a619.jpg',
+      title: 'Замена лонг-блока',
+      description: 'Mercruiser 5.7L'
     },
-    { 
-      title: 'Yamaha 6.2L', 
-      type: 'Модернизация системы', 
-      status: 'Завершено',
-      image: '/img/7362f21a-774e-4981-abe9-d46ef65ceb65.jpg',
-      duration: '18 дней',
-      features: ['Турбонаддув', 'Интеркулер', 'Программная настройка'],
-      accent: 'text-marine-dark',
-      bgColor: 'bg-primary/10',
-      link: '#'
+    {
+      id: 3,
+      image: '/img/c79d6585-a600-4aea-9d31-53374ad1cad5.jpg',
+      title: 'Ремонт системы питания',
+      description: 'Yamaha F150'
     },
-    { 
-      title: 'Indmar Raptor 6.0L', 
-      type: 'Восстановление блока', 
-      status: 'Завершено',
-      image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
-      duration: '21 день',
-      features: ['Расточка блока', 'Новая ГБЦ', 'Система впрыска'],
-      accent: 'text-marine-dark',
-      bgColor: 'bg-primary/10',
-      link: '/projects/volvo-d6-350'
+    {
+      id: 4,
+      image: '/img/c5cc0155-a2cd-402d-8127-cdf0d98da013.jpg',
+      title: 'Профилактика',
+      description: 'Indmar Monsoon 6.2L'
     },
-    { 
-      title: 'Volvo Penta D4-180', 
-      type: 'Ремонт турбины', 
-      status: 'Завершено',
-      image: '/img/7f7497d1-f1ad-4824-b35d-61928133340f.jpg',
-      duration: '7 дней',
-      features: ['Новый картридж', 'Обновленные магистрали', 'Калибровка системы'],
-      accent: 'text-marine-dark',
-      bgColor: 'bg-primary/10',
-      link: '/portfolio'
+    {
+      id: 5,
+      image: '/img/265424a9-abd7-4a7c-a05b-5707bb54352d.jpg',
+      title: 'Ремонт турбины',
+      description: 'Volvo Penta D4-225'
     },
-    { 
-      title: 'Mercruiser 6.2L', 
-      type: 'Полное восстановление', 
-      status: 'Завершено',
-      image: '/img/7362f21a-774e-4981-abe9-d46ef65ceb65.jpg',
-      duration: '25 дней',
-      features: ['Капремонт блока', 'Новая трансмиссия', 'Полная электроника'],
-      accent: 'text-marine-dark',
-      bgColor: 'bg-primary/10',
-      link: '/projects/mercruiser-5-7l'
+    {
+      id: 6,
+      image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
+      title: 'Восстановление под ключ',
+      description: 'Mercury Verado 300'
+    },
+    {
+      id: 7,
+      image: 'https://cdn.poehali.dev/files/e158c5ca-57b3-4d4a-b342-81d6b3f2a07d.JPG',
+      title: 'Диагностика двигателя',
+      description: 'Mercury MerCruiser'
+    },
+    {
+      id: 8,
+      image: 'https://cdn.poehali.dev/files/de797948-3172-4737-9e2c-615a718bf8ea.JPG',
+      title: 'Ремонт коллектора',
+      description: 'Volvo Penta'
     }
   ];
 
   return (
     <section id="gallery" className="relative py-20 lg:py-28">
-      {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-8 left-10 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
       <div className="absolute z-0 bottom-12 right-12 w-46 h-46 bg-secondary/18 rounded-2xl blur-xl"></div>
       <div className="absolute z-0 top-1/5 right-1/5 w-32 h-32 bg-primary/25 rounded-xl blur-md"></div>
@@ -88,114 +67,62 @@ export default function GallerySection() {
       <div className="absolute z-0 top-10 right-1/3 w-44 h-44 bg-secondary/15 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-1/6 left-1/2 w-16 h-16 bg-primary/26 rounded-lg blur-md"></div>
       <div className="absolute z-0 top-1/3 right-6 w-38 h-38 bg-secondary/19 rounded-2xl blur-lg"></div>
-      {/* Дополнительные элементы (+30%) */}
       <div className="absolute z-0 top-1/8 left-5/6 w-22 h-22 bg-[#039fcb0d] rounded-xl blur-md"></div>
       <div className="absolute z-0 bottom-1/8 right-5/6 w-26 h-26 bg-primary/27 rounded-2xl blur-sm"></div>
       <div className="absolute z-0 top-7/8 left-1/8 w-34 h-34 bg-[#039fcb0d] rounded-lg blur-lg"></div>
-      {/* Крупные элементы в области заголовка */}
       <div className="absolute z-0 top-2 left-24 w-32 h-32 bg-primary/16 rounded-3xl blur-2xl"></div>
       <div className="absolute z-0 top-0 right-32 w-28 h-28 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
       <div className="absolute z-0 top-10 left-1/4 w-24 h-24 bg-primary/20 rounded-xl blur-lg"></div>
       <div className="absolute z-0 top-6 right-1/3 w-20 h-20 bg-[#039fcb0d] rounded-lg blur-md"></div>
       
       <div className="relative z-10 px-4">
+        <div className="max-w-7xl mx-auto">
+          <SectionTitle text="Наши работы" />
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
+              Примеры <span className="text-primary font-bold">выполненных проектов</span>
+            </h2>
+            <p className="text-xl text-marine-steel max-w-3xl mx-auto">
+              Профессиональное восстановление стационарных двигателей с гарантией качества
+            </p>
+          </div>
 
-      
-      {/* Декоративные элементы */}
-
-      
-      <div className="max-w-7xl mx-auto">
-        <SectionTitle text="Наши работы" />
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
-            Примеры <span className="text-primary font-bold">выполненных проектов</span>
-          </h2>
-          <p className="text-xl text-marine-steel max-w-3xl mx-auto">
-            Профессиональное восстановление стационарных двигателей с гарантией качества
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.slice(0, 3).map((project, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-primary/30">
-              <div className="relative overflow-hidden rounded-t-lg">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {portfolioItems.map((item) => (
+              <div 
+                key={item.id}
+                className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
                 <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-primary/10 text-marine-dark border-primary/20 shadow-lg">
-                    {project.status}
-                  </Badge>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h3 className="font-bold text-base mb-1 line-clamp-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-200 line-clamp-1">
+                    {item.description}
+                  </p>
                 </div>
-                <div className="absolute top-4 right-4">
-                  <div className={`${project.bgColor} px-3 py-1 rounded-full shadow-lg`}>
-                    <span className={`text-sm font-medium ${project.accent}`}>{project.duration}</span>
-                  </div>
+                <div className="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Icon name="ZoomIn" size={16} className="text-white" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              
-              <CardHeader className="pb-3">
-                <div className="flex justify-between items-start mb-2">
-                  <CardTitle className={`text-xl font-bold ${project.accent} group-hover:text-primary transition-colors duration-300`}>
-                    {project.title}
-                  </CardTitle>
-                </div>
-                <CardDescription className="text-marine-steel font-medium">
-                  {project.type}
-                </CardDescription>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                <div className="space-y-2">
-                  {project.features.map((feature, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-marine-steel">
-                      <Icon name="CheckCircle" size={14} className="text-primary flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                {project.link && project.link !== '#' ? (
-                  <Button 
-                    asChild 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
-                  >
-                    <Link to={project.link}>
-                      <Icon name="Eye" size={16} className="mr-2" />
-                      Посмотреть детали
-                    </Link>
-                  </Button>
-                ) : (
-                  <Button 
-                    variant="outline" 
-                    className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105"
-                    onClick={() => {
-                      alert(`📋 Проект "${project.title}" - ${project.type}\n\n⏱ Срок выполнения: ${project.duration}\n\n📞 Подробности по телефону: +7 (999) 555-00-12`);
-                    }}
-                  >
-                    <Icon name="Eye" size={16} className="mr-2" />
-                    Посмотреть детали
-                  </Button>
-                )}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+            ))}
+          </div>
         
-        <div className="text-center mt-12">
-          <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
-            <Link to="/projects">
-              <Icon name="Grid3X3" size={20} className="mr-2" />
-              Посмотреть все проекты
-            </Link>
-          </Button>
+          <div className="text-center">
+            <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
+              <Link to="/projects">
+                <Icon name="Grid3X3" size={20} className="mr-2" />
+                Посмотреть все проекты
+              </Link>
+            </Button>
+          </div>
         </div>
-      </div>
-      
       </div>
     </section>
   );
