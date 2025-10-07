@@ -1,111 +1,89 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import NavigationSection from '@/components/home/NavigationSection';
 import FooterSection from '@/components/home/FooterSection';
 import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 
-const projects = [
+const portfolioItems = [
   {
-    id: 'volvo-d6-350',
-    title: 'Volvo Penta D6-350',
-    subtitle: 'Капитальный ремонт',
-    description: 'Полное восстановление стационарного двигателя с заменой всех изношенных компонентов и модернизацией системы охлаждения',
+    id: 1,
     image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
-    duration: '14 дней',
-    budget: '₽ 485 000',
-    type: 'Капитальный',
-    status: 'Завершен',
-    category: 'Volvo Penta',
-    features: ['Замена поршневой группы', 'Модернизация охлаждения', 'Компьютерная диагностика'],
-    link: '/projects/volvo-d6-350'
+    title: 'Капитальный ремонт',
+    description: 'Volvo Penta D6-350'
   },
   {
-    id: 'mercruiser-5-7l',
-    title: 'Mercruiser 5.7L',
-    subtitle: 'Восстановление под ключ',
-    description: 'Комплексное восстановление двигателя с заменой коленвала, поршней и полной переборкой головки блока цилиндров',
+    id: 2,
     image: '/img/296a2fc5-c78b-4f2f-a785-0cd8e650a619.jpg',
-    duration: '18 дней',
-    budget: '₽ 420 000',
-    type: 'Полное восстановление',
-    status: 'Завершен',
-    category: 'Mercruiser',
-    features: ['Замена коленвала', 'Переборка ГБЦ', 'Стендовые испытания'],
-    link: '/projects/mercruiser-5-7l'
+    title: 'Замена лонг-блока',
+    description: 'Mercruiser 5.7L'
   },
   {
-    id: 'yamaha-f150',
-    title: 'Yamaha F150',
-    subtitle: 'Ремонт системы питания',
-    description: 'Восстановление системы впрыска топлива с заменой форсунок и модернизацией топливного насоса высокого давления',
+    id: 3,
     image: '/img/c79d6585-a600-4aea-9d31-53374ad1cad5.jpg',
-    duration: '10 дней',
-    budget: '₽ 280 000',
-    type: 'Система питания',
-    status: 'В процессе',
-    category: 'Yamaha',
-    features: ['Замена форсунок', 'Ремонт ТНВД', 'Калибровка системы'],
-    link: '#'
+    title: 'Ремонт системы питания',
+    description: 'Yamaha F150'
   },
   {
-    id: 'indmar-monsoon',
-    title: 'Indmar Monsoon 6.2L',
-    subtitle: 'Профилактический ремонт',
-    description: 'Профилактическое обслуживание с заменой расходных материалов и диагностикой всех систем двигателя',
+    id: 4,
     image: '/img/c5cc0155-a2cd-402d-8127-cdf0d98da013.jpg',
-    duration: '7 дней',
-    budget: '₽ 150 000',
-    type: 'Профилактика',
-    status: 'Завершен',
-    category: 'Indmar',
-    features: ['Замена фильтров', 'Диагностика систем', 'Профилактика'],
-    link: '#'
+    title: 'Профилактика',
+    description: 'Indmar Monsoon 6.2L'
   },
   {
-    id: 'volvo-d4-225',
-    title: 'Volvo Penta D4-225',
-    subtitle: 'Ремонт турбины',
-    description: 'Восстановление турбокомпрессора с балансировкой ротора и заменой уплотнительных элементов',
+    id: 5,
     image: '/img/265424a9-abd7-4a7c-a05b-5707bb54352d.jpg',
-    duration: '12 дней',
-    budget: '₽ 320 000',
-    type: 'Турбокомпрессор',
-    status: 'Планируется',
-    category: 'Volvo Penta',
-    features: ['Балансировка ротора', 'Замена уплотнений', 'Стендовые испытания'],
-    link: '#'
+    title: 'Ремонт турбины',
+    description: 'Volvo Penta D4-225'
   },
   {
-    id: 'mercury-verado',
-    title: 'Mercury Verado 300',
-    subtitle: 'Капитальный ремонт',
-    description: 'Полная переборка двигателя с заменой блока цилиндров и модернизацией системы управления',
+    id: 6,
     image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
-    duration: '21 день',
-    budget: '₽ 650 000',
-    type: 'Капитальный',
-    status: 'В процессе',
-    category: 'Mercury',
-    features: ['Замена блока', 'Модернизация ECU', 'Полные испытания'],
-    link: '#'
+    title: 'Восстановление под ключ',
+    description: 'Mercury Verado 300'
+  },
+  {
+    id: 7,
+    image: 'https://cdn.poehali.dev/files/e158c5ca-57b3-4d4a-b342-81d6b3f2a07d.JPG',
+    title: 'Диагностика двигателя',
+    description: 'Mercury MerCruiser'
+  },
+  {
+    id: 8,
+    image: 'https://cdn.poehali.dev/files/de797948-3172-4737-9e2c-615a718bf8ea.JPG',
+    title: 'Ремонт коллектора',
+    description: 'Volvo Penta'
+  },
+  {
+    id: 9,
+    image: 'https://cdn.poehali.dev/files/83a3baee-ed5b-426d-b0a6-08b9a63d5c6d.JPG',
+    title: 'Разборка блока',
+    description: 'MerCruiser 5.7L'
+  },
+  {
+    id: 10,
+    image: 'https://cdn.poehali.dev/files/e02cbe74-095b-4485-9ee8-94dbd7c242b3.jpg',
+    title: 'Замена поршневой группы',
+    description: 'Indmar'
+  },
+  {
+    id: 11,
+    image: 'https://cdn.poehali.dev/files/71b32441-5803-447b-b8c6-33091e7661a3.jpg',
+    title: 'Восстановление коленвала',
+    description: 'Yamaha'
+  },
+  {
+    id: 12,
+    image: 'https://cdn.poehali.dev/files/4799a2a8-4b79-456f-a2de-eb3ef233bb85.jpg',
+    title: 'Сборка двигателя',
+    description: 'Kodiak Marine'
   }
 ];
-
-const statusColors = {
-  'Завершен': 'bg-green-100 text-green-800 border-green-200',
-  'В процессе': 'bg-blue-100 text-blue-800 border-blue-200',
-  'Планируется': 'bg-yellow-100 text-yellow-800 border-yellow-200'
-};
 
 export default function Projects() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [contactFormOpen, setContactFormOpen] = useState(false);
 
-  // Обработка якорных ссылок
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '');
@@ -142,17 +120,14 @@ export default function Projects() {
         onContactClick={() => setContactFormOpen(true)}
       />
 
-      {/* Header */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-50/80 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
         
-        {/* Декоративные элементы */}
         <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl opacity-60"></div>
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl opacity-40"></div>
         <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary/5 rounded-full blur-2xl"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          {/* Разделитель */}
           <div className="flex items-center justify-center py-8">
             <div className="flex items-center w-full max-w-4xl">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
@@ -170,11 +145,10 @@ export default function Projects() {
             Каждый проект — это история возвращения мощности и надежности.
           </p>
 
-          {/* Статистика */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/50">
-              <div className="text-3xl font-bold text-primary mb-2">45+</div>
-              <div className="text-gray-600 font-medium">Проектов выполнено</div>
+              <div className="text-3xl font-bold text-primary mb-2">500+</div>
+              <div className="text-gray-600 font-medium">Двигателей отремонтировано</div>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-white/50">
               <div className="text-3xl font-bold text-primary mb-2">12</div>
@@ -192,103 +166,37 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={project.id} className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute top-6 right-6">
-                    <Badge className={`${statusColors[project.status]} font-medium px-3 py-1`}>
-                      {project.status}
-                    </Badge>
-                  </div>
-                  <div className="absolute top-6 left-6">
-                    <Badge variant="secondary" className="bg-black/50 text-white border-none backdrop-blur-sm">
-                      {project.category}
-                    </Badge>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                </div>
-                
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between mb-2">
-                    <div>
-                      <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-primary font-medium mt-1">
-                        {project.subtitle}
-                      </CardDescription>
-                    </div>
-                  </div>
-                </CardHeader>
-                
-                <CardContent className="space-y-6">
-                  <p className="text-gray-600 leading-relaxed text-sm">
-                    {project.description}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {portfolioItems.map((item) => (
+              <div 
+                key={item.id}
+                className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer hover:shadow-xl transition-all duration-300"
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                  <h3 className="font-bold text-base mb-1 line-clamp-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-200 line-clamp-1">
+                    {item.description}
                   </p>
-                  
-                  {/* Project Stats */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-gray-50 rounded-xl p-3">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Icon name="Clock" size={14} className="text-primary" />
-                        <span className="text-xs font-medium text-gray-500">Срок</span>
-                      </div>
-                      <div className="font-semibold text-gray-900 text-sm">{project.duration}</div>
-                    </div>
-                    <div className="bg-gray-50 rounded-xl p-3">
-                      <div className="flex items-center gap-2 mb-1">
-                        <Icon name="DollarSign" size={14} className="text-primary" />
-                        <span className="text-xs font-medium text-gray-500">Бюджет</span>
-                      </div>
-                      <div className="font-semibold text-gray-900 text-sm">{project.budget}</div>
-                    </div>
-                  </div>
-                  
-                  {/* Features */}
-                  <div className="space-y-2">
-                    {project.features.slice(0, 2).map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                        <Icon name="CheckCircle" size={14} className="text-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {project.link !== '#' ? (
-                    <Link to={project.link}>
-                      <Button className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
-                        <Icon name="ArrowRight" size={16} className="ml-2" />
-                        Подробнее о проекте
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button 
-                      disabled 
-                      variant="outline" 
-                      className="w-full cursor-not-allowed opacity-50"
-                    >
-                      <Icon name="Clock" size={16} className="mr-2" />
-                      Скоро будет доступно
-                    </Button>
-                  )}
-                </CardContent>
-              </Card>
+                </div>
+                <div className="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Icon name="ZoomIn" size={16} className="text-white" />
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
@@ -313,7 +221,6 @@ export default function Projects() {
 
       <FooterSection />
 
-      {/* Contact Form Modal */}
       <ContactForm 
         isOpen={contactFormOpen}
         onClose={() => setContactFormOpen(false)}
