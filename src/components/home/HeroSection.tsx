@@ -39,7 +39,7 @@ export default function HeroSection({
           {/* Заголовок для мобильных устройств */}
           <div className="lg:hidden mb-8 text-center">
             <h1 className="text-3xl sm:text-4xl font-semibold text-brand-gray-900 leading-[1.2] text-left my-0 py-0 px-2">
-              Восстановленные{" "}
+              Стационарные{" "}
               <span className="text-primary font-bold block sm:inline">двигатели</span>{" "}
               <span className="block sm:inline">для катеров и яхт</span>
             </h1>
@@ -50,7 +50,7 @@ export default function HeroSection({
               {/* Заголовок для десктопа */}
               <div className="hidden lg:block space-y-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight">
-                  Восстановленые{" "}
+                  Стационарные{" "}
                   <span className="text-primary font-bold">двигатели</span> для
                   катеров и яхт
                 </h1>
