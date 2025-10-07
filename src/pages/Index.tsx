@@ -100,9 +100,9 @@ export default function Index() {
         
         <ServicesSection id="services" />
         
-        <WhyUsSection id="why-us" />
-        
         <BenefitsSection />
+        
+        <WhyUsSection id="why-us" />
         
         <GallerySection />
         
