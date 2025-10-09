@@ -68,7 +68,7 @@ export default function BenefitsSection() {
   };
 
   return (
-    <section className="relative py-20 lg:py-28">
+    <section className="relative py-16 lg:py-20">
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-12 left-8 w-44 h-44 bg-primary/18 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-8 left-12 w-36 h-36 bg-[#039fcb0d] rounded-2xl blur-lg"></div>
@@ -107,7 +107,7 @@ export default function BenefitsSection() {
         </div>
 
         {/* Преимущества компактно */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6">
           {benefits.map((benefit, index) => {
             const colors = getColorClasses(benefit.color);
             return (
