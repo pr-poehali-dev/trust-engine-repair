@@ -7,6 +7,7 @@ import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const portfolioItems = [
     {
@@ -76,10 +77,13 @@ export default function GallerySection() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {portfolioItems.map((item) => (
+            {portfolioItems.map((item, index) => (
               <div 
                 key={item.id}
-                onClick={() => setSelectedImage(item.image)}
+                onClick={() => {
+                  setSelectedImage(item.image);
+                  setCurrentIndex(index);
+                }}
                 className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer hover:shadow-xl transition-all duration-300"
               >
                 <img 
@@ -98,11 +102,39 @@ export default function GallerySection() {
           <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
             <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-transparent">
               <div className="relative w-full h-full flex items-center justify-center">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const newIndex = currentIndex === 0 ? portfolioItems.length - 1 : currentIndex - 1;
+                    setCurrentIndex(newIndex);
+                    setSelectedImage(portfolioItems[newIndex].image);
+                  }}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-50 w-12 h-12 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-200"
+                >
+                  <Icon name="ChevronLeft" size={24} className="text-white" />
+                </button>
+                
                 <img 
                   src={selectedImage || ''} 
                   alt="Увеличенное изображение"
                   className="max-w-full max-h-[95vh] object-contain rounded-lg"
                 />
+                
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    const newIndex = currentIndex === portfolioItems.length - 1 ? 0 : currentIndex + 1;
+                    setCurrentIndex(newIndex);
+                    setSelectedImage(portfolioItems[newIndex].image);
+                  }}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-50 w-12 h-12 bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-200"
+                >
+                  <Icon name="ChevronRight" size={24} className="text-white" />
+                </button>
+                
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm">
+                  {currentIndex + 1} / {portfolioItems.length}
+                </div>
               </div>
             </DialogContent>
           </Dialog>
