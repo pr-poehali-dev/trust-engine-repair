@@ -56,7 +56,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="relative py-20 lg:py-28">
+    <section id="gallery" className="relative py-16 lg:py-20">
       <div className="absolute z-0 top-8 left-10 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
       <div className="absolute z-0 bottom-12 right-12 w-46 h-46 bg-secondary/18 rounded-2xl blur-xl"></div>
       <div className="absolute z-0 top-1/5 right-1/5 w-32 h-32 bg-primary/25 rounded-xl blur-md"></div>
@@ -78,7 +78,7 @@ export default function GallerySection() {
       <div className="relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
           <SectionTitle text="Наши работы" />
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
               Примеры <span className="text-primary font-bold">выполненных проектов</span>
             </h2>
@@ -87,7 +87,7 @@ export default function GallerySection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {portfolioItems.map((item) => (
               <div 
                 key={item.id}
