@@ -137,9 +137,7 @@ export default function BenefitsSection() {
             );
           })}
         </div>
-
       </div>
-      
       </div>
     </section>
   );
