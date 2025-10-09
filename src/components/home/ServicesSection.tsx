@@ -110,7 +110,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                 }}
               >
                 <div className="relative overflow-hidden">
-                  <div className="h-48 overflow-hidden">
+                  <div className="h-96 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
