@@ -60,9 +60,7 @@ export default function HeroSection({
                 <p className="text-lg lg:text-xl text-brand-gray-600 leading-relaxed font-medium text-center lg:text-left">
                   Специализируемся на ремонте и восстановлении стационарных
                   двигателей
-                  <span className="text-brand-gray-800 font-semibold">
-                    Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
-                  </span>
+                  <span className="text-brand-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak</span>
                 </p>
                 <p className="text-base lg:text-lg text-brand-gray-500 text-center lg:text-left">
                   Более 12 лет опыта • Оригинальные запчасти • Экспертный подход
