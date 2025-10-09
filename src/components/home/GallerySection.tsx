@@ -1,57 +1,45 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import SectionTitle from '@/components/ui/SectionTitle';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 export default function GallerySection() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const portfolioItems = [
     {
       id: 1,
-      image: '/img/b05150a3-d117-43c9-aa59-ec3a63c68f5d.jpg',
-      title: 'Капитальный ремонт',
-      description: 'Volvo Penta D6-350'
+      image: 'https://cdn.poehali.dev/files/476dfd07-6064-45c8-9a7e-c7654798d00d.JPG'
     },
     {
       id: 2,
-      image: '/img/296a2fc5-c78b-4f2f-a785-0cd8e650a619.jpg',
-      title: 'Замена лонг-блока',
-      description: 'Mercruiser 5.7L'
+      image: 'https://cdn.poehali.dev/files/4e76a87a-2dd8-4ec3-aabb-c72d04b22f52.JPG'
     },
     {
       id: 3,
-      image: '/img/c79d6585-a600-4aea-9d31-53374ad1cad5.jpg',
-      title: 'Ремонт системы питания',
-      description: 'Yamaha F150'
+      image: 'https://cdn.poehali.dev/files/1e4a4aab-3184-4cb1-96ab-04bb7f8a4dfc.JPG'
     },
     {
       id: 4,
-      image: '/img/c5cc0155-a2cd-402d-8127-cdf0d98da013.jpg',
-      title: 'Профилактика',
-      description: 'Indmar Monsoon 6.2L'
+      image: 'https://cdn.poehali.dev/files/2b04c66a-4d12-4f06-a278-509da7e0bf85.JPG'
     },
     {
       id: 5,
-      image: '/img/265424a9-abd7-4a7c-a05b-5707bb54352d.jpg',
-      title: 'Ремонт турбины',
-      description: 'Volvo Penta D4-225'
+      image: 'https://cdn.poehali.dev/files/e49dc95e-a349-4997-b476-e28bd437430d.JPG'
     },
     {
       id: 6,
-      image: '/img/43a72e8a-017f-4e19-b4a0-fb8377eb2457.jpg',
-      title: 'Восстановление под ключ',
-      description: 'Mercury Verado 300'
+      image: 'https://cdn.poehali.dev/files/7b1930e7-6ded-4915-a1e7-c685b527e523.JPG'
     },
     {
       id: 7,
-      image: 'https://cdn.poehali.dev/files/e158c5ca-57b3-4d4a-b342-81d6b3f2a07d.JPG',
-      title: 'Диагностика двигателя',
-      description: 'Mercury MerCruiser'
+      image: 'https://cdn.poehali.dev/files/36d10ba2-4a2b-4a4d-a616-1bcf4b2111c8.JPG'
     },
     {
       id: 8,
-      image: 'https://cdn.poehali.dev/files/de797948-3172-4737-9e2c-615a718bf8ea.JPG',
-      title: 'Ремонт коллектора',
-      description: 'Volvo Penta'
+      image: 'https://cdn.poehali.dev/files/f4d657ea-f00d-4c7d-bf67-879782befe16.JPG'
     }
   ];
 
@@ -91,28 +79,33 @@ export default function GallerySection() {
             {portfolioItems.map((item) => (
               <div 
                 key={item.id}
+                onClick={() => setSelectedImage(item.image)}
                 className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer hover:shadow-xl transition-all duration-300"
               >
                 <img 
                   src={item.image} 
-                  alt={item.title}
+                  alt={`Проект ${item.id}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-bold text-base mb-1 line-clamp-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-gray-200 line-clamp-1">
-                    {item.description}
-                  </p>
-                </div>
-                <div className="absolute top-3 right-3 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Icon name="ZoomIn" size={16} className="text-white" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-3 right-3 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Icon name="ZoomIn" size={20} className="text-white" />
                 </div>
               </div>
             ))}
           </div>
+
+          <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+            <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-transparent">
+              <div className="relative w-full h-full flex items-center justify-center">
+                <img 
+                  src={selectedImage || ''} 
+                  alt="Увеличенное изображение"
+                  className="max-w-full max-h-[95vh] object-contain rounded-lg"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
         
           <div className="text-center">
             <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4">
