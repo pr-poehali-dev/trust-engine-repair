@@ -104,7 +104,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-0 rounded-2xl overflow-hidden h-full flex flex-col cursor-pointer"
+                className="group shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-0 rounded-2xl overflow-hidden flex flex-col cursor-pointer"
                 onClick={() => {
                   window.location.href = service.link;
                 }}
@@ -145,12 +145,12 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                   </div>
                 </CardHeader>
 
-                <CardContent className="flex flex-col h-full px-4 pb-4">
+                <CardContent className="flex flex-col px-4 pb-4">
                   <p className="text-brand-gray-700 leading-relaxed font-medium">
                     {service.description}
                   </p>
 
-                  <div className="border-t border-gray-100 pt-4 flex-1">
+                  <div className="border-t border-gray-100 pt-4">
                     <div className="space-y-2">
                       {service.features.map((feature, i) => (
                         <div
@@ -168,7 +168,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
                     </div>
                   </div>
 
-                  <div className="mt-auto pt-4 border-t border-gray-100">
+                  <div className="pt-4 border-t border-gray-100">
                     <Button
                       className="w-full text-brand-gray-600 hover:text-primary hover:bg-transparent transition-colors duration-300"
                       variant="ghost"
