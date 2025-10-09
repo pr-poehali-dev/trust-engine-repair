@@ -66,7 +66,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contacts" className="relative py-20 lg:py-28">
+    <section id="contacts" className="relative py-16 lg:py-20">
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-5 right-10 w-50 h-50 bg-primary/12 rounded-3xl blur-xl"></div>
       <div className="absolute z-0 bottom-8 left-8 w-42 h-42 bg-secondary/20 rounded-2xl blur-lg"></div>

@@ -34,7 +34,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
   ];
 
   return (
-    <section id={id || "guarantees"} className="relative pt-20 lg:pt-28">
+    <section id={id || "guarantees"} className="relative py-16 lg:py-20">
       {/* Декоративные элементы */}
       <div className="absolute top-10 right-16 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-16 w-48 h-48 bg-blue-400/30 rounded-full blur-2xl"></div>

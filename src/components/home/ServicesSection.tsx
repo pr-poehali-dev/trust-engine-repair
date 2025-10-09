@@ -65,7 +65,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
   return (
     <section
       id={id || "services"}
-      className="relative pt-20 lg:pt-28"
+      className="relative py-16 lg:py-20"
     >
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-5 left-5 w-36 h-36 bg-primary/25 rounded-2xl blur-lg"></div>
