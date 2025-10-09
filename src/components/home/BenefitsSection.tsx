@@ -96,7 +96,7 @@ export default function BenefitsSection() {
       <div className="max-w-7xl mx-auto">
         <SectionTitle text="Выгодное предложение" />
         {/* Заголовок */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
             Почему это{' '}
             <span className="text-primary font-bold">выгодно</span>
@@ -107,7 +107,7 @@ export default function BenefitsSection() {
         </div>
 
         {/* Преимущества компактно */}
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-6 mb-0">
           {benefits.map((benefit, index) => {
             const colors = getColorClasses(benefit.color);
             return (
