@@ -100,8 +100,8 @@ export default function GallerySection() {
           </div>
 
           <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-            <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-transparent">
-              <div className="relative w-full h-full flex items-center justify-center">
+            <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 border-0 bg-transparent" onClick={() => setSelectedImage(null)}>
+              <div className="relative w-full h-full flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
@@ -117,7 +117,8 @@ export default function GallerySection() {
                 <img 
                   src={selectedImage || ''} 
                   alt="Увеличенное изображение"
-                  className="max-w-full max-h-[95vh] object-contain rounded-lg"
+                  className="max-w-full max-h-[95vh] object-contain rounded-lg cursor-default"
+                  onClick={(e) => e.stopPropagation()}
                 />
                 
                 <button
