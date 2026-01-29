@@ -21,34 +21,39 @@ export default function LongBlocksHeroSection() {
       {/* Header */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
-        <div className="max-w-7xl mx-auto relative z-10 text-center">
-          {/* Разделитель */}
-          <div className="flex items-center justify-center py-8">
-            <div className="flex items-center w-full max-w-4xl">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
-              <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
-                <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Продажа лонг-блоков</span>
-              </div>
-              <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Левая часть - иконка */}
+            <div className="flex-shrink-0">
+              <img 
+                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/0ccd2fa3-13d2-4d07-af3a-0c1f7f1a4681.png" 
+                alt="Лонг-блоки" 
+                style={{ width: '15rem', imageRendering: 'crisp-edges' }}
+                className="h-auto object-contain drop-shadow-2xl"
+              />
             </div>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Лонг-блоки для стационарных двигателей{' '}
-            <span className="text-primary">Mercruiser \ Volvo Penta \ Indmar</span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Готовые к установке лонг-блоки стационарных двигателей. 
-            Полностью восстановленные с гарантией качества и долговечности работы.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-semibold">
-              <Icon name="Phone" size={20} className="mr-2" />
-              Получить консультацию
-            </Button>
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg font-semibold">
-              <Icon name="ShoppingCart" size={20} className="mr-2" />
-              Посмотреть каталог
-            </Button>
+
+            {/* Правая часть - текст */}
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                Лонг-блоки для стационарных двигателей<br />
+                <span className="text-primary">Mercruiser \ Volvo Penta \ Indmar</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                Готовые к установке лонг-блоки стационарных двигателей. 
+                Полностью восстановленные с гарантией качества и долговечности работы.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-4 text-lg font-semibold"
+                >
+                  <Icon name="Phone" size={20} className="mr-2" />
+                  Получить консультацию
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
