@@ -26,10 +26,12 @@ export default function RestoreHeroSection() {
           <div className="flex items-center justify-center py-8">
             <div className="flex items-center w-full max-w-4xl">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
-              <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
-                <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">
-                  Двигателя под ключ
-                </span>
+              <div className="mx-8">
+                <img 
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/83ac042c-fbe8-43da-b989-7411020df1fd.png" 
+                  alt="Двигатели под ключ" 
+                  className="h-16 w-auto object-contain"
+                />
               </div>
               <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
             </div>
