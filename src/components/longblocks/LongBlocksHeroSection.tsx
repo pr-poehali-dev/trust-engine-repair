@@ -27,17 +27,17 @@ export default function LongBlocksHeroSection() {
             <div className="flex items-center w-full max-w-4xl">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
               <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
-                <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Продажа лонг-блоков</span>
+                <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">⚙️ Продажа лонг-блоков ⚙️</span>
               </div>
               <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-            Лонг-блоки для стационарных двигателей{' '}
+            🚤 Лонг-блоки для стационарных двигателей{' '}
             <span className="text-primary">Mercruiser \ Volvo Penta \ Indmar</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Готовые к установке лонг-блоки стационарных двигателей. 
+            ✅ Готовые к установке лонг-блоки стационарных двигателей. 
             Полностью восстановленные с гарантией качества и долговечности работы.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

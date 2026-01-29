@@ -145,17 +145,17 @@ export default function LongBlocksInventorySection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-              Лонг-блоки в наличии
+              ⚙️ Лонг-блоки в наличии
             </h2>
             <p className="text-lg text-gray-600">
-              Готовые восстановленные двигатели с гарантией качества сборки
+              ✅ Готовые восстановленные двигатели с гарантией качества сборки
             </p>
           </div>
 
           {/* Группа 4.3 л */}
           <div className="mb-10">
             <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-              <Icon name="Engine" size={24} className="text-primary" fallback="Cog" />
+              <span className="text-3xl">🏎️</span>
               Двигатели 4.3 л
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -234,7 +234,7 @@ export default function LongBlocksInventorySection() {
           {/* Группа 5.7 л */}
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-              <Icon name="Engine" size={24} className="text-primary" fallback="Cog" />
+              <span className="text-3xl">🚀</span>
               Двигатели 5.7 л
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -312,7 +312,7 @@ export default function LongBlocksInventorySection() {
 
           <div className="mt-10 text-center bg-blue-50 border border-blue-200 rounded-2xl p-6">
             <div className="flex items-start gap-3 justify-center">
-              <Icon name="Info" size={20} className="text-blue-600 flex-shrink-0 mt-0.5" />
+              <span className="text-2xl flex-shrink-0">💡</span>
               <div className="text-left">
                 <p className="text-blue-800 font-semibold mb-1">
                   Не нашли нужную модель?
