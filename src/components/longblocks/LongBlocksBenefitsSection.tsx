@@ -7,8 +7,9 @@ export default function LongBlocksBenefitsSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            💪 Преимущества лонг-блоков
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-3">
+            <Icon name="Award" size={36} className="text-primary" />
+            Преимущества лонг-блоков
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Готовое решение для быстрого восстановления мощности двигателя
@@ -19,7 +20,7 @@ export default function LongBlocksBenefitsSection() {
           <Card className="text-center hover:shadow-lg transition-all duration-300">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">⏱️</span>
+                <Icon name="Clock" size={32} className="text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Экономия времени</h3>
               <p className="text-gray-600">
@@ -31,7 +32,7 @@ export default function LongBlocksBenefitsSection() {
           <Card className="text-center hover:shadow-lg transition-all duration-300">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">🛡️</span>
+                <Icon name="Shield" size={32} className="text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Гарантия качества</h3>
               <p className="text-gray-600">
@@ -43,7 +44,7 @@ export default function LongBlocksBenefitsSection() {
           <Card className="text-center hover:shadow-lg transition-all duration-300">
             <CardContent className="p-8">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-4xl">🔧</span>
+                <Icon name="Wrench" size={32} className="text-primary" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Заводские параметры</h3>
               <p className="text-gray-600">
@@ -56,8 +57,9 @@ export default function LongBlocksBenefitsSection() {
         <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                📦 Что входит в лонг-блок?
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <Icon name="Package" size={28} className="text-primary" />
+                Что входит в лонг-блок?
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
@@ -88,7 +90,7 @@ export default function LongBlocksBenefitsSection() {
             </div>
             <div className="text-center">
               <div className="bg-primary/5 rounded-xl p-6">
-                <div className="text-6xl mb-4">🚀</div>
+                <Icon name="Rocket" size={64} className="text-primary mx-auto mb-4" />
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Готов к установке
                 </h4>
