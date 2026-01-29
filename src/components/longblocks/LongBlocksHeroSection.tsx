@@ -26,7 +26,7 @@ export default function LongBlocksHeroSection() {
             {/* Левая часть - иконка */}
             <div className="flex-shrink-0">
               <img 
-                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/0ccd2fa3-13d2-4d07-af3a-0c1f7f1a4681.png" 
+                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/058fc0f0-2966-43ec-9b9d-cb4151656ed7.png" 
                 alt="Лонг-блоки" 
                 style={{ width: '20rem', imageRendering: 'crisp-edges' }}
                 className="h-auto object-contain drop-shadow-2xl"
