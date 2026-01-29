@@ -21,32 +21,39 @@ export default function RestoreHeroSection() {
       {/* Header */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
-        <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <div className="flex items-center justify-center gap-8 mb-6 mt-8">
-            <img 
-              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/83ac042c-fbe8-43da-b989-7411020df1fd.png" 
-              alt="Двигатели под ключ" 
-              className="w-56 h-auto object-contain"
-            />
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Восстановление двигателя{" "}
-              <span className="text-primary">под ключ</span>
-            </h1>
-          </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Полное восстановление стационарного двигателя с гарантией качества.
-            От диагностики до финального тестирования — весь процесс под
-            контролем профессионалов.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              variant="outline"
-              size="lg"
-              className="px-8 py-4 text-lg font-semibold"
-            >
-              <Icon name="Phone" size={20} className="mr-2" />
-              Получить консультацию
-            </Button>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+            {/* Левая часть - иконка */}
+            <div className="flex-shrink-0">
+              <img 
+                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/83ac042c-fbe8-43da-b989-7411020df1fd.png" 
+                alt="Двигатели под ключ" 
+                className="w-64 lg:w-80 h-auto object-contain drop-shadow-2xl"
+              />
+            </div>
+
+            {/* Правая часть - текст */}
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                Восстановление двигателя{" "}
+                <span className="text-primary">под ключ</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                Полное восстановление стационарного двигателя с гарантией качества.
+                От диагностики до финального тестирования — весь процесс под
+                контролем профессионалов.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-4 text-lg font-semibold"
+                >
+                  <Icon name="Phone" size={20} className="mr-2" />
+                  Получить консультацию
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
