@@ -36,7 +36,7 @@ export default function RestoreHeroSection() {
             {/* Правая часть - текст */}
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Восстановление двигателя{" "}
+                Восстановление двигателя<br />
                 <span className="text-primary">под ключ</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
