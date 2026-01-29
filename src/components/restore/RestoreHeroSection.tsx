@@ -28,7 +28,7 @@ export default function RestoreHeroSection() {
               <img 
                 src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/83ac042c-fbe8-43da-b989-7411020df1fd.png" 
                 alt="Двигатели под ключ" 
-                style={{ width: '15rem' }}
+                style={{ width: '15rem', imageRendering: 'crisp-edges' }}
                 className="h-auto object-contain drop-shadow-2xl"
               />
             </div>
