@@ -102,10 +102,6 @@
     @apply bg-background text-foreground;
     font-family:
       "Inter",
-      "Apple Color Emoji",
-      "Segoe UI Emoji",
-      "Segoe UI Symbol",
-      "Noto Color Emoji",
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
@@ -113,14 +109,6 @@
     font-feature-settings:
       "cv08" 1,
       "cv11" 1;
-  }
-
-  /* Гарантируем отображение эмодзи */
-  .emoji {
-    font-family:
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-      "Noto Color Emoji";
-    font-style: normal;
   }
 
   /* Предотвращение смещения контента при блокировке скролла */

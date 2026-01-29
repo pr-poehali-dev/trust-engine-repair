@@ -144,12 +144,10 @@ export default function LongBlocksInventorySection() {
       <section className="py-16 px-4 bg-gradient-to-br from-white via-primary/5 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-              <Icon name="Cog" size={36} className="text-primary" />
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
               Лонг-блоки в наличии
             </h2>
-            <p className="text-lg text-gray-600 flex items-center justify-center gap-2">
-              <Icon name="CheckCircle" size={20} className="text-green-500" />
+            <p className="text-lg text-gray-600">
               Готовые восстановленные двигатели с гарантией качества сборки
             </p>
           </div>
@@ -157,7 +155,7 @@ export default function LongBlocksInventorySection() {
           {/* Группа 4.3 л */}
           <div className="mb-10">
             <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-              <Icon name="Gauge" size={28} className="text-primary" />
+              <Icon name="Engine" size={24} className="text-primary" fallback="Cog" />
               Двигатели 4.3 л
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -236,7 +234,7 @@ export default function LongBlocksInventorySection() {
           {/* Группа 5.7 л */}
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-              <Icon name="Zap" size={28} className="text-primary" />
+              <Icon name="Engine" size={24} className="text-primary" fallback="Cog" />
               Двигатели 5.7 л
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

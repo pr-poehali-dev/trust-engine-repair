@@ -67,8 +67,7 @@ export default function LongBlocksProcessSection() {
     <section className="py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-            <Icon name="Wrench" size={36} className="text-primary" />
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
             Процесс изготовления лонг-блока
           </h2>
           <p className="text-lg text-gray-600">
