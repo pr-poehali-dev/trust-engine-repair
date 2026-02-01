@@ -14,7 +14,6 @@ import FloatingActionButton from '@/components/FloatingActionButton';
 import PullToRefresh from '@/components/PullToRefresh';
 import OfflineBanner from '@/components/OfflineBanner';
 import SectionTitle from '@/components/ui/SectionTitle';
-import { UIKitShowcase } from '@/components/ui/ui-kit';
 import { useAnalytics } from '@/utils/analytics';
 
 export default function Index() {
@@ -102,8 +101,6 @@ export default function Index() {
         <ServicesSection id="services" />
         
         <BenefitsSection />
-        
-        <UIKitShowcase />
         
         <WhyUsSection id="why-us" />
         
