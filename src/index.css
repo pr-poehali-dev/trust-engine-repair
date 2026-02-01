@@ -106,23 +106,16 @@
       BlinkMacSystemFont,
       sans-serif;
     letter-spacing: 0.01em;
-    background-color: hsla(0, 0%, 100%, 1);
-    background-image:
-      radial-gradient(
-        at 10% 55%,
-        hsla(200, 37%, 85%, 0.3) 0px,
-        transparent 55%
-      ),
-      radial-gradient(
-        at 15% 10%,
-        hsla(219, 100%, 85%, 0.25) 0px,
-        transparent 55%
-      ),
-      radial-gradient(
-        at 45% 80%,
-        hsla(242, 37%, 85%, 0.25) 0px,
-        transparent 55%
-      );
+    background: linear-gradient(
+      180deg,
+      hsl(250, 45%, 92%) 0%,
+      hsl(240, 50%, 94%) 20%,
+      hsl(0, 0%, 98%) 40%,
+      hsl(0, 0%, 98%) 60%,
+      hsl(220, 40%, 94%) 80%,
+      hsl(245, 45%, 93%) 100%
+    );
+    min-height: 100vh;
   }
 
   h1,
