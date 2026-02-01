@@ -34,7 +34,7 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
   ];
 
   return (
-    <section id={id || "why-us"} className="relative py-16 lg:py-20">
+    <section id={id || "why-us"} className="relative py-20 lg:py-28">
       {/* Декоративные геометрические элементы - задний фон */}
       <div className="absolute z-0 top-12 left-12 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
       <div className="absolute z-0 bottom-8 left-16 w-48 h-48 bg-[#039fcb0d] rounded-2xl blur-xl"></div>

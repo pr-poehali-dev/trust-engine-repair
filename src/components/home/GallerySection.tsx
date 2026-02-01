@@ -45,7 +45,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="gallery" className="relative py-16 lg:py-20">
+    <section id="gallery" className="relative py-20 lg:py-28">
       <div className="absolute z-0 top-8 left-10 w-40 h-40 bg-primary/20 rounded-3xl blur-lg"></div>
       <div className="absolute z-0 bottom-12 right-12 w-46 h-46 bg-secondary/18 rounded-2xl blur-xl"></div>
       <div className="absolute z-0 top-1/5 right-1/5 w-32 h-32 bg-primary/25 rounded-xl blur-md"></div>
