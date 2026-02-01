@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Commissioner', 'system-ui', '-apple-system', 'sans-serif'],
-				commissioner: ['Commissioner', 'sans-serif'],
+				sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+				manrope: ['Manrope', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
