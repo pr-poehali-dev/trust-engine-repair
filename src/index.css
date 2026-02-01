@@ -106,6 +106,20 @@
       BlinkMacSystemFont,
       sans-serif;
     letter-spacing: 0.01em;
+    background: hsl(0, 0%, 98%);
+    min-height: 100vh;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1536px;
+    height: 100vh;
     background: linear-gradient(
       180deg,
       hsl(250, 45%, 92%) 0%,
@@ -116,7 +130,8 @@
       hsl(240, 40%, 94%) 90%,
       hsl(245, 45%, 93%) 100%
     );
-    min-height: 100vh;
+    z-index: -1;
+    pointer-events: none;
   }
 
   h1,
