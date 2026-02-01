@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
-				montserrat: ['Montserrat', 'sans-serif'],
+				sans: ['Commissioner', 'system-ui', '-apple-system', 'sans-serif'],
+				commissioner: ['Commissioner', 'sans-serif'],
 			},
 			fontSize: {
 				'xs': ['0.6rem', { lineHeight: '0.8rem' }],
