@@ -26,7 +26,7 @@ export default function RestoreHeroSection() {
             {/* Левая часть - иконка */}
             <div className="flex-shrink-0">
               <img 
-                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/8cf8e64d-c50b-4a58-8e65-0e41218e906a.png" 
+                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/83ac042c-fbe8-43da-b989-7411020df1fd.png" 
                 alt="Двигатели под ключ" 
                 style={{ width: '15rem', imageRendering: 'crisp-edges' }}
                 className="h-auto object-contain drop-shadow-2xl"
@@ -36,7 +36,7 @@ export default function RestoreHeroSection() {
             {/* Правая часть - текст */}
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Восстановление двигателя<br />
+                Восстановление двигателя{" "}
                 <span className="text-primary">под ключ</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">

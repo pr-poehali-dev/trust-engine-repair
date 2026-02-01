@@ -38,9 +38,9 @@ export default function HeroSection({
         <div className="max-w-7xl mx-auto">
           {/* Заголовок для мобильных устройств */}
           <div className="lg:hidden mb-8 text-center">
-            <h1 className="text-3xl sm:text-4xl font-bold text-brand-gray-900 leading-[1.15] text-left my-0 py-0 px-2 tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-semibold text-brand-gray-900 leading-[1.2] text-left my-0 py-0 px-2">
               Стационарные{" "}
-              <span className="text-primary font-extrabold block sm:inline">двигатели</span>{" "}
+              <span className="text-primary font-bold block sm:inline">двигатели</span>{" "}
               <span className="block sm:inline">для катеров и яхт</span>
             </h1>
           </div>
@@ -49,20 +49,20 @@ export default function HeroSection({
             <div className="space-y-8 order-2 lg:order-1">
               {/* Заголовок для десктопа */}
               <div className="hidden lg:block space-y-6">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-gray-900 leading-[1.15] tracking-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-brand-gray-900 leading-tight">
                   Стационарные{" "}
-                  <span className="text-primary font-extrabold">двигатели</span> для
+                  <span className="text-primary font-bold">двигатели</span> для
                   катеров и яхт
                 </h1>
               </div>
 
               <div className="space-y-4">
-                <p className="text-lg lg:text-xl text-brand-gray-600 leading-relaxed font-normal text-center lg:text-left">
+                <p className="text-lg lg:text-xl text-brand-gray-600 leading-relaxed font-medium text-center lg:text-left">
                   Специализируемся на ремонте и восстановлении стационарных
                   двигателей
                   <span className="text-brand-gray-800 font-semibold"> Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak</span>
                 </p>
-                <p className="text-base lg:text-lg text-brand-gray-500 text-center lg:text-left font-normal">
+                <p className="text-base lg:text-lg text-brand-gray-500 text-center lg:text-left">
                   Более 12 лет опыта • Оригинальные запчасти • Экспертный подход
                 </p>
               </div>
@@ -70,7 +70,7 @@ export default function HeroSection({
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-brand-blue-dark text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30 tracking-normal"
+                  className="bg-primary hover:bg-brand-blue-dark text-white font-semibold px-8 py-4 rounded-xl text-base shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/30"
                   onClick={onContactClick}
                 >
                   <Icon name="Wrench" size={20} className="mr-3" />
@@ -80,7 +80,7 @@ export default function HeroSection({
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-8 py-4 rounded-xl text-base tracking-normal"
+                  className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-8 py-4 rounded-xl text-base"
                 >
                   <Link to="/projects">
                     <Icon name="Play" size={20} className="mr-3" />

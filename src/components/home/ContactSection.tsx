@@ -153,7 +153,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <Card className="shadow-lg border border-primary/20">
+          <Card className="shadow-2xl border-2 border-primary/20">
             <CardHeader className="bg-gradient-to-r from-primary/10 to-marine-blue/10 rounded-t-lg">
               <div className="flex items-center gap-3">
                 <div className="bg-primary/20 p-2 rounded-lg">
@@ -168,18 +168,18 @@ export default function ContactSection() {
               </div>
             </CardHeader>
             <CardContent className="space-y-4 p-6">
-              <Input placeholder="Ваше имя" className="border focus:border-primary transition-colors duration-300 shadow-sm" />
-              <Input placeholder="Телефон" type="tel" className="border focus:border-primary transition-colors duration-300 shadow-sm" />
-              <Input placeholder="Email" type="email" className="border focus:border-primary transition-colors duration-300 shadow-sm" />
+              <Input placeholder="Ваше имя" className="border-2 focus:border-primary transition-colors duration-300" />
+              <Input placeholder="Телефон" type="tel" className="border-2 focus:border-primary transition-colors duration-300" />
+              <Input placeholder="Email" type="email" className="border-2 focus:border-primary transition-colors duration-300" />
               <Textarea 
                 placeholder="Опишите проблему с двигателем..." 
                 rows={4} 
-                className="border focus:border-primary transition-colors duration-300 resize-none shadow-sm"
+                className="border-2 focus:border-primary transition-colors duration-300 resize-none"
               />
               <Button 
                 size="lg"
                 variant="outline" 
-                className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-sm hover:shadow-md transition-all duration-300 px-8 py-4"
+                className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4"
                 onClick={() => {
                   alert('📧 Ваша заявка принята!\n\n📞 Мы свяжемся с вами в течение часа:\n+7 (999) 555-00-12\n\n📧 Или напишите прямо сейчас: info@marineservice.ru');
                 }}
