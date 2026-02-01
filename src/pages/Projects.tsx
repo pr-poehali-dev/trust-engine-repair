@@ -122,11 +122,6 @@ export default function Projects() {
 
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-blue-50/80 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/5 to-primary/10"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
-        
-        <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl opacity-60"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl opacity-40"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary/5 rounded-full blur-2xl"></div>
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <div className="flex items-center justify-center py-8">
             <div className="flex items-center w-full max-w-4xl">

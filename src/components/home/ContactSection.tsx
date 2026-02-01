@@ -67,27 +67,6 @@ export default function ContactSection() {
 
   return (
     <section id="contacts" className="relative py-16 lg:py-20">
-      {/* Декоративные геометрические элементы - задний фон */}
-      <div className="absolute z-0 top-5 right-10 w-50 h-50 bg-primary/12 rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 bottom-8 left-8 w-42 h-42 bg-secondary/20 rounded-2xl blur-lg"></div>
-      <div className="absolute z-0 top-1/4 left-1/5 w-36 h-36 bg-primary/18 rounded-xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/3 right-1/4 w-32 h-32 bg-secondary/25 rounded-lg blur-sm"></div>
-      <div className="absolute z-0 top-3/5 right-6 w-38 h-38 bg-primary/22 rounded-2xl blur-lg"></div>
-      <div className="absolute z-0 top-1/2 left-1/6 w-28 h-28 bg-secondary/19 rounded-xl blur-md"></div>
-      <div className="absolute z-0 bottom-2/3 right-2/3 w-24 h-24 bg-primary/24 rounded-lg blur-md"></div>
-      <div className="absolute z-0 top-8 left-1/2 w-46 h-46 bg-secondary/15 rounded-3xl blur-xl"></div>
-      <div className="absolute z-0 bottom-1/5 left-2/3 w-20 h-20 bg-primary/21 rounded-2xl blur-md"></div>
-      <div className="absolute z-0 top-1/3 left-4 w-44 h-44 bg-secondary/18 rounded-3xl blur-xl"></div>
-      {/* Дополнительные элементы (+30%) */}
-      <div className="absolute z-0 top-1/8 right-3/4 w-28 h-28 bg-[#039fcb0d] rounded-2xl blur-md"></div>
-      <div className="absolute z-0 bottom-1/8 left-5/6 w-24 h-24 bg-primary/29 rounded-xl blur-sm"></div>
-      <div className="absolute z-0 top-6/7 right-1/8 w-32 h-32 bg-[#039fcb0d] rounded-lg blur-lg"></div>
-      {/* Крупные элементы в области заголовка */}
-      <div className="absolute z-0 top-0 left-32 w-28 h-28 bg-primary/20 rounded-3xl blur-2xl"></div>
-      <div className="absolute z-0 top-2 right-40 w-24 h-24 bg-[#039fcb0d] rounded-2xl blur-xl"></div>
-      <div className="absolute z-0 top-6 left-1/4 w-20 h-20 bg-primary/24 rounded-xl blur-lg"></div>
-      <div className="absolute z-0 top-4 right-1/3 w-16 h-16 bg-[#039fcb0d] rounded-lg blur-md"></div>
-      
       <div className="relative z-10 px-4">
 
       
