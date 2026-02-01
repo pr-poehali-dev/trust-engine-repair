@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+				sans: ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
 				manrope: ['Manrope', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

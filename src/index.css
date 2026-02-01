@@ -100,12 +100,12 @@
   body {
     @apply bg-background text-foreground;
     font-family:
-      "Manrope",
+      "Montserrat",
       system-ui,
       -apple-system,
       BlinkMacSystemFont,
       sans-serif;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
   }
 
   h1,
@@ -115,7 +115,26 @@
   h5,
   h6 {
     font-family: "Manrope", sans-serif;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-size: 0.9em;
+  }
+  h2 {
+    font-size: 0.9em;
+  }
+  h3 {
+    font-size: 0.9em;
+  }
+  h4 {
+    font-size: 0.9em;
+  }
+  h5 {
+    font-size: 0.9em;
+  }
+  h6 {
+    font-size: 0.9em;
   }
 
   /* Предотвращение смещения контента при блокировке скролла */
