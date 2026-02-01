@@ -122,6 +122,13 @@
     height: 100vh;
     background:
       linear-gradient(
+        180deg,
+        hsl(0, 0%, 98%) 0%,
+        transparent 10%,
+        transparent 90%,
+        hsl(0, 0%, 98%) 100%
+      ),
+      linear-gradient(
         90deg,
         hsl(0, 0%, 98%) 0%,
         transparent 15%,
