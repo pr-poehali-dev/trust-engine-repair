@@ -98,22 +98,16 @@ export default function Index() {
           sliderImages={sliderImages}
         />
         
-        <div className="border-t border-gray-200/50" />
         <ServicesSection id="services" />
         
-        <div className="border-t border-gray-200/50" />
         <BenefitsSection />
         
-        <div className="border-t border-gray-200/50" />
         <WhyUsSection id="why-us" />
         
-        <div className="border-t border-gray-200/50" />
         <GallerySection />
         
-        <div className="border-t border-gray-200/50" />
         <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
         
-        <div className="border-t border-gray-200/50" />
         <ContactSection />
         
         <FooterSection />
