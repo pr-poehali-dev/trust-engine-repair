@@ -155,7 +155,7 @@ export default function NavigationSection({
               onClick={onMobileMenuToggle}
               aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
             >
-              <Icon name={mobileMenuOpen ? "X" : "Menu"} className="text-jivo-gray-700 !w-12 !h-12" strokeWidth={2} />
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} className="text-jivo-gray-700 !w-8 !h-8" strokeWidth={2} />
             </Button>
           </div>
         </div>
