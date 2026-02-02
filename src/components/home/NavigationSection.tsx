@@ -42,14 +42,14 @@ export default function NavigationSection({
             {location.pathname === '/' ? (
               <div className="flex items-center gap-2 lg:gap-4">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" style={{ filter: 'none' }} />
-                <span className="block md:hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
+                <span className="hidden text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
               </div>
             ) : (
               <Link to="/" className="flex items-center gap-2 lg:gap-4 hover:opacity-80 transition-opacity">
                 <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
-                <span className="block md:hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
+                <span className="hidden text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
               </Link>
@@ -152,11 +152,11 @@ export default function NavigationSection({
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden hover:bg-jivo-gray-100 flex-shrink-0 w-[76px] h-[76px] flex items-center justify-center"
+              className="md:hidden hover:bg-jivo-gray-100 flex-shrink-0 w-12 h-12 p-2 flex items-center justify-center"
               onClick={onMobileMenuToggle}
               aria-label={mobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
             >
-              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={46} className="text-jivo-gray-700" />
+              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={32} className="text-jivo-gray-700" />
             </Button>
           </div>
         </div>
