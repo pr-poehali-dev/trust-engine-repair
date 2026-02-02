@@ -33,15 +33,7 @@ export default function HeroSection({
               </p>
             </div>
 
-            <div className="flex items-center gap-2 text-sm lg:text-base text-brand-gray-600">
-              <span>Более 14 лет опыта</span>
-              <span>•</span>
-              <span>Более 500 выполненных проектов</span>
-              <span>•</span>
-              <span>Контроль качества</span>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-6 rounded-lg text-base shadow-md"
@@ -60,15 +52,23 @@ export default function HeroSection({
                 </Link>
               </Button>
             </div>
+
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-brand-gray-700 pt-2">
+              <span>Более 14 лет опыта</span>
+              <span className="text-brand-gray-400">•</span>
+              <span>Более 500 выполненных проектов</span>
+              <span className="text-brand-gray-400">•</span>
+              <span>Контроль качества</span>
+            </div>
           </div>
 
           {/* Правая колонка с изображением */}
-          <div className="relative">
-            <div className="relative w-full h-[400px] lg:h-[500px]">
+          <div className="relative -mr-4 lg:-mr-12">
+            <div className="relative w-full h-[450px] lg:h-[600px]">
               <img 
                 src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
                 alt="Стационарный двигатель Mercury для яхт и катеров"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
