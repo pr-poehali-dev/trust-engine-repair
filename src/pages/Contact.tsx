@@ -51,9 +51,9 @@ export default function Contact() {
     {
       icon: 'Mail',
       title: 'Email',
-      content: 'info@trust-engine.ru',
+      content: 'info@red-mar.ru',
       description: 'Ответим в течение 24 часов',
-      action: 'mailto:info@trust-engine.ru'
+      action: 'mailto:info@red-mar.ru'
     },
     {
       icon: 'MapPin',
