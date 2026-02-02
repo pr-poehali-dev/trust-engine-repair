@@ -11,7 +11,9 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] to-[#F8F9FF] pb-0">
+    <section className="relative overflow-hidden pb-0" style={{ 
+      background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
+    }}>
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-8 lg:py-16">
         {/* Десктоп: текст слева, изображение справа наложением */}
         <div className="hidden lg:block relative min-h-[550px]">
