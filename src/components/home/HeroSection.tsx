@@ -14,7 +14,7 @@ export default function HeroSection({
     <section className="relative overflow-hidden pb-0" style={{ 
       background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
     }}>
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-8 lg:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         {/* Десктоп: текст слева, изображение справа наложением */}
         <div className="hidden lg:block relative min-h-[550px]">
           {/* Текстовый контент */}
@@ -22,7 +22,7 @@ export default function HeroSection({
             <h1 className="text-[52px] leading-[1.2] max-w-[800px]">
               <span className="text-[#1a1a1a] font-normal">Стационарные </span>
               <span className="text-primary font-medium" style={{ 
-                textShadow: '-2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, -3px 0 0 #fff, 3px 0 0 #fff, 0 -3px 0 #fff, 0 3px 0 #fff'
+                textShadow: '-2.5px -2.5px 0 #fff, 2.5px -2.5px 0 #fff, -2.5px 2.5px 0 #fff, 2.5px 2.5px 0 #fff, -3.5px 0 0 #fff, 3.5px 0 0 #fff, 0 -3.5px 0 #fff, 0 3.5px 0 #fff'
               }}>двигатели</span>
               <br />
               <span className="text-[#1a1a1a] text-[48px] font-light">для яхт и катеров</span>
@@ -68,7 +68,7 @@ export default function HeroSection({
           </div>
 
           {/* Изображение справа */}
-          <div className="absolute top-0 right-0 w-[60%] h-full pointer-events-none">
+          <div className="absolute top-0 right-0 w-[65%] h-[90%] pointer-events-none">
             <img 
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
               alt="Стационарный двигатель Mercury для яхт и катеров"
