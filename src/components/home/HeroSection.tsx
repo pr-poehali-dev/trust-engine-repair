@@ -11,15 +11,17 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] via-[#F5F7FF] to-white pb-0">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] to-[#F8F9FF] pb-0">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-8 lg:py-16">
         {/* Десктоп: текст слева, изображение справа наложением */}
         <div className="hidden lg:block relative min-h-[550px]">
           {/* Текстовый контент */}
-          <div className="relative z-10 max-w-[600px] space-y-6 pt-8">
-            <h1 className="text-[52px] leading-[1.2]">
+          <div className="relative z-10 max-w-none space-y-6 pt-8">
+            <h1 className="text-[52px] leading-[1.2] max-w-[800px]">
               <span className="text-[#1a1a1a] font-normal">Стационарные </span>
-              <span className="text-primary font-medium">двигатели</span>
+              <span className="text-primary font-medium" style={{ 
+                textShadow: '-2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff, -3px 0 0 #fff, 3px 0 0 #fff, 0 -3px 0 #fff, 0 3px 0 #fff'
+              }}>двигатели</span>
               <br />
               <span className="text-[#1a1a1a] text-[48px] font-light">для яхт и катеров</span>
             </h1>
