@@ -64,13 +64,12 @@ export default function HeroSection({
 
           {/* Правая колонка с изображением */}
           <div className="relative">
-            {/* Placeholder для изображения */}
             <div className="relative w-full h-[400px] lg:h-[500px]">
-              <div className="absolute inset-0 bg-brand-gray-100 rounded-2xl flex items-center justify-center">
-                <p className="text-brand-gray-400 text-center px-4">
-                  Здесь будет изображение двигателя и лодки
-                </p>
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
+                alt="Стационарный двигатель Mercury для яхт и катеров"
+                className="w-full h-full object-contain"
+              />
             </div>
           </div>
         </div>
