@@ -11,24 +11,25 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] via-[#F5F7FF] to-white min-h-[500px] lg:min-h-[600px]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#EEF2FF] via-[#F5F7FF] to-white">
       <div className="max-w-[1400px] mx-auto px-4 lg:px-8 py-8 lg:py-12">
-        <div className="relative">
+        {/* Десктоп: текст слева, изображение справа наложением */}
+        <div className="hidden lg:block relative min-h-[600px]">
           {/* Текстовый контент */}
-          <div className="relative z-10 max-w-[600px] space-y-5 lg:space-y-7">
-            <h1 className="text-4xl sm:text-5xl lg:text-[52px] leading-[1.15]">
+          <div className="relative z-10 max-w-[600px] space-y-7 pt-8">
+            <h1 className="text-[52px] leading-[1.15]">
               <span className="text-[#1a1a1a] font-normal">Стационарные </span>
               <span className="text-primary font-medium">двигатели</span>
               <br />
-              <span className="text-[#1a1a1a] text-[32px] sm:text-[40px] lg:text-[48px] font-light">для яхт и катеров</span>
+              <span className="text-[#1a1a1a] text-[48px] font-light">для яхт и катеров</span>
             </h1>
 
             <div className="space-y-2">
-              <p className="text-[15px] lg:text-[16px] text-[#4a4a4a] leading-relaxed">
+              <p className="text-[16px] text-[#4a4a4a] leading-relaxed">
                 Специализируемся на ремонте и восстановлении<br />
                 стационарных двигателей таких марок
               </p>
-              <p className="text-[15px] lg:text-[16px] text-[#1a1a1a] font-semibold">
+              <p className="text-[16px] text-[#1a1a1a] font-semibold">
                 Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
               </p>
             </div>
@@ -41,7 +42,7 @@ export default function HeroSection({
               <span>Контроль качества</span>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-3">
+            <div className="flex gap-3 pt-3">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-5 rounded-lg text-[15px] shadow-md"
@@ -63,21 +64,70 @@ export default function HeroSection({
           </div>
 
           {/* Изображение справа */}
-          <div className="absolute top-0 right-0 w-[65%] h-full hidden lg:block pointer-events-none">
+          <div className="absolute top-0 right-0 w-[65%] h-full pointer-events-none">
             <img 
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
               alt="Стационарный двигатель Mercury для яхт и катеров"
               className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-auto max-w-none"
             />
           </div>
+        </div>
 
-          {/* Изображение для мобилки */}
-          <div className="lg:hidden mt-8">
+        {/* Мобилка: grid с изображением сверху */}
+        <div className="lg:hidden grid gap-8">
+          <div className="relative w-full">
             <img 
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
               alt="Стационарный двигатель Mercury для яхт и катеров"
               className="w-full h-auto"
             />
+          </div>
+
+          <div className="space-y-5">
+            <h1 className="text-4xl sm:text-5xl leading-[1.2]">
+              <span className="text-[#1a1a1a] font-normal">Стационарные </span>
+              <span className="text-primary font-medium">двигатели</span>
+              <br />
+              <span className="text-[#1a1a1a] text-3xl sm:text-4xl font-light">для яхт и катеров</span>
+            </h1>
+
+            <div className="space-y-2">
+              <p className="text-[15px] text-[#4a4a4a] leading-relaxed">
+                Специализируемся на ремонте и восстановлении<br />
+                стационарных двигателей таких марок
+              </p>
+              <p className="text-[15px] text-[#1a1a1a] font-semibold">
+                Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 pt-2">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-5 rounded-lg text-[15px] shadow-md"
+                onClick={onContactClick}
+              >
+                Получить консультацию
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-2 border-primary text-primary hover:bg-primary/5 font-medium px-8 py-5 rounded-lg text-[15px] uppercase tracking-wide"
+              >
+                <Link to="/projects">
+                  Смотреть работы
+                </Link>
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-[#666] pt-1">
+              <span>Более 14 лет опыта</span>
+              <span className="text-[#ccc]">·</span>
+              <span>Более 500 выполненных проектов</span>
+              <span className="text-[#ccc]">·</span>
+              <span>Контроль качества</span>
+            </div>
           </div>
         </div>
       </div>
