@@ -21,7 +21,7 @@ export default function HeroSection({
           <div className="relative z-10 max-w-none space-y-6 pt-8">
             <h1 className="text-[52px] leading-[1.2] max-w-[800px]">
               <span className="text-[#1a1a1a] font-normal">Стационарные </span>
-              <span className="text-primary font-medium" style={{ 
+              <span className="text-primary font-bold" style={{ 
                 textShadow: '-2.5px -2.5px 0 #fff, 2.5px -2.5px 0 #fff, -2.5px 2.5px 0 #fff, 2.5px 2.5px 0 #fff, -3.5px 0 0 #fff, 3.5px 0 0 #fff, 0 -3.5px 0 #fff, 0 3.5px 0 #fff'
               }}>двигатели</span>
               <br />
@@ -87,12 +87,12 @@ export default function HeroSection({
             />
           </div>
 
-          <div className="space-y-5">
-            <h1 className="text-4xl sm:text-5xl leading-[1.2]">
+          <div className="space-y-5 text-center">
+            <h1 className="text-[32px] leading-[1.25]">
               <span className="text-[#1a1a1a] font-normal">Стационарные </span>
-              <span className="text-primary font-medium">двигатели</span>
+              <span className="text-primary font-bold">двигатели</span>
               <br />
-              <span className="text-[#1a1a1a] text-3xl sm:text-4xl font-light">для яхт и катеров</span>
+              <span className="text-[#1a1a1a] text-[28px] font-light">для яхт и катеров</span>
             </h1>
 
             <div className="space-y-2">
@@ -105,10 +105,10 @@ export default function HeroSection({
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 pt-2">
+            <div className="flex flex-col gap-3 pt-2 max-w-xs mx-auto">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-5 rounded-lg text-[15px] shadow-md"
+                className="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-5 rounded-lg text-[14px] shadow-md w-full"
                 onClick={onContactClick}
               >
                 Получить консультацию
@@ -117,7 +117,7 @@ export default function HeroSection({
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-2 border-primary text-primary hover:bg-primary/5 font-medium px-8 py-5 rounded-lg text-[15px] uppercase tracking-wide"
+                className="border-2 border-primary text-primary hover:bg-primary/5 font-medium px-6 py-5 rounded-lg text-[14px] uppercase tracking-wide w-full"
               >
                 <Link to="/projects">
                   Смотреть работы
