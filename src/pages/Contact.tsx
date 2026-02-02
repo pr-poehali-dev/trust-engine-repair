@@ -58,15 +58,15 @@ export default function Contact() {
     {
       icon: 'MapPin',
       title: 'Адрес',
-      content: 'г. Москва, ул. Морская, д. 15',
+      content: 'г. Домодедово, Объездное шоссе владение 1 строение 6',
       description: 'Работаем по предварительной записи',
       action: null
     },
     {
       icon: 'Clock',
       title: 'Режим работы',
-      content: 'Пн-Сб: 9:00 - 18:00',
-      description: 'Вс: по договоренности',
+      content: 'Ежедневно с 9:00 до 19:00',
+      description: '',
       action: null
     }
   ];
@@ -156,7 +156,7 @@ export default function Contact() {
             <div className="text-center text-gray-600">
               <Icon name="MapPin" size={48} className="mx-auto mb-4 text-gray-400" />
               <h3 className="text-lg font-semibold mb-2">Интерактивная карта</h3>
-              <p>г. Москва, ул. Морская, д. 15</p>
+              <p>г. Домодедово, Объездное шоссе владение 1 строение 6</p>
               <p className="text-sm mt-2">Здесь будет встроена карта с локацией</p>
             </div>
           </div>
