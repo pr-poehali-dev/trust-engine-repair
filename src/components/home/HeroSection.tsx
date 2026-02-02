@@ -11,11 +11,11 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section className="relative bg-gradient-to-br from-[#f5f7ff] to-white overflow-hidden min-h-[600px] lg:min-h-[700px]">
+    <section className="relative bg-gradient-to-br from-[#f5f7ff] to-white overflow-visible min-h-[600px] lg:min-h-[700px]">
       <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Левая колонка с текстом */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-brand-gray-900 leading-tight">
               Стационарные{" "}
               <span className="text-primary font-medium">двигатели</span>
@@ -63,12 +63,12 @@ export default function HeroSection({
           </div>
 
           {/* Правая колонка с изображением */}
-          <div className="relative -mr-4 lg:-mr-12">
-            <div className="relative w-full h-[450px] lg:h-[600px]">
+          <div className="relative order-1 lg:order-2 -mx-4 sm:mx-0 lg:-mr-12 lg:ml-0">
+            <div className="relative w-full h-[350px] sm:h-[450px] lg:h-[600px] overflow-visible">
               <img 
                 src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
                 alt="Стационарный двигатель Mercury для яхт и катеров"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-contain object-center lg:object-cover"
               />
             </div>
           </div>
