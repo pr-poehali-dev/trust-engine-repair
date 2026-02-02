@@ -39,7 +39,7 @@ export default function ContactSection() {
     {
       icon: 'Mail',
       title: 'Email',
-      value: 'info@marineservice.ru',
+      value: 'info@red-mar.ru',
       description: 'Отвечаем в течение часа',
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
@@ -48,7 +48,7 @@ export default function ContactSection() {
     {
       icon: 'MapPin',
       title: 'Адрес мастерской',
-      value: 'г. Москва, ул. Морская, д. 15',
+      value: 'г. Домодедово, Объездное шоссе владение 1 строение 6',
       description: 'Приезжайте на экскурсию',
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
@@ -57,8 +57,8 @@ export default function ContactSection() {
     {
       icon: 'Clock',
       title: 'Режим работы',
-      value: 'Пн-Пт: 9:00-18:00, Сб: 10:00-16:00',
-      description: 'Воскресенье - выходной',
+      value: 'Ежедневно с 9:00 до 19:00',
+      description: '',
       accent: 'text-marine-dark',
       bgColor: 'bg-primary/10',
       action: 'Записаться на визит'
@@ -160,7 +160,7 @@ export default function ContactSection() {
                 variant="outline" 
                 className="w-full border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4"
                 onClick={() => {
-                  alert('📧 Ваша заявка принята!\n\n📞 Мы свяжемся с вами в течение часа:\n+7 (999) 555-00-12\n\n📧 Или напишите прямо сейчас: info@marineservice.ru');
+                  alert('📧 Ваша заявка принята!\n\n📞 Мы свяжемся с вами в течение часа:\n+7 (999) 555-00-12\n\n📧 Или напишите прямо сейчас: info@red-mar.ru');
                 }}
               >
                 <Icon name="Send" size={18} className="mr-2" />

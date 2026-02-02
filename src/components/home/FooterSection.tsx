@@ -45,8 +45,8 @@ export default function FooterSection() {
               </p>
               <p className="flex items-center gap-2">
                 <Icon name="AtSign" size={20} className="text-primary" />
-                <a href="mailto:info@redmar.pro" className="hover:text-gray-900 transition-colors">
-                  info@redmar.pro
+                <a href="mailto:info@red-mar.ru" className="hover:text-gray-900 transition-colors">
+                  info@red-mar.ru
                 </a>
               </p>
               <p className="flex items-center gap-2">

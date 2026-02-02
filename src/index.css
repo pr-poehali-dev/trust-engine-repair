@@ -109,6 +109,7 @@
     background: hsl(0, 0%, 98%);
     min-height: 100vh;
     position: relative;
+    font-size: 90%;
   }
 
   body::before {
