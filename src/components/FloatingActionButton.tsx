@@ -37,7 +37,7 @@ export default function FloatingActionButton() {
         </a>
         
         <a
-          href="mailto:info@trust-engine.ru"
+          href="mailto:info@red-mar.ru"
           className="w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         >
           <Icon name="Mail" size={20} />

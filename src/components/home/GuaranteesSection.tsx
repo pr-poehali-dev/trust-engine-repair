@@ -84,7 +84,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
                 size="lg"
                 className="border-2 border-brand-gray-300 text-brand-gray-700 hover:bg-brand-gray-50 font-semibold px-8 py-4 rounded-xl text-base transition-all"
                 onClick={() => {
-                  alert('📄 Договор гарантии предоставляется при заключении сделки.\n\n📞 Для получения образца договора:\n+7 (999) 555-00-12\n\n📧 info@marineservice.ru');
+                  alert('📄 Договор гарантии предоставляется при заключении сделки.\n\n📞 Для получения образца договора:\n+7 (999) 555-00-12\n\n📧 info@red-mar.ru');
                 }}
               >
                 <Icon name="FileText" size={20} className="mr-3" />
