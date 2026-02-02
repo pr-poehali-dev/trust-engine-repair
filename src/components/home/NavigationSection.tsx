@@ -37,11 +37,11 @@ export default function NavigationSection({
     <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-[99998]">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
-          {/* Логотип с адаптивным слоганом - сдвинут правее, увеличен на 15% */}
+          {/* Логотип с адаптивным слоганом */}
           <div className="flex items-center min-w-0">
             {location.pathname === '/' ? (
               <div className="flex items-center gap-2 lg:gap-4">
-                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" />
+                <img src="/logo.svg" alt="RED MAR" className="h-7 w-auto sm:h-8 lg:h-9 flex-shrink-0" style={{ filter: 'none' }} />
                 <span className="block md:hidden xl:block text-brand-gray-600 font-medium text-xs whitespace-nowrap">
                   Новая жизнь вашего двигателя
                 </span>
