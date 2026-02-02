@@ -185,7 +185,7 @@ export default function Services() {
                       {service.category}
                     </Badge>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
                 
                 <CardHeader className="pb-4">

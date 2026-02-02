@@ -55,7 +55,9 @@ export default function ProjectMercruiser57() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-marine-light/5 to-primary/5">
+    <div className="min-h-screen" style={{ 
+      background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
+    }}>
       <NavigationSection
         mobileMenuOpen={mobileMenuOpen}
         onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}

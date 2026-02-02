@@ -19,8 +19,7 @@ export default function RestoreHeroSection() {
       </div>
 
       {/* Header */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+      <section className="py-20 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
             {/* Левая часть - иконка */}

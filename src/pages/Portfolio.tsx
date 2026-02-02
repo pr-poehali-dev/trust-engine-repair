@@ -112,7 +112,9 @@ export default function Portfolio() {
   const [contactFormOpen, setContactFormOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-primary/5 to-primary/10">
+    <div className="min-h-screen" style={{ 
+      background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
+    }}>
       <NavigationSection
         mobileMenuOpen={mobileMenuOpen}
         onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -120,8 +122,7 @@ export default function Portfolio() {
       />
 
       {/* Header */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+      <section className="py-20 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <Badge className="bg-primary/10 text-primary border-primary/20 text-sm font-semibold px-4 py-2 rounded-full mb-6">
             🏆 Портфолио работ

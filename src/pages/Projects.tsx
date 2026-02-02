@@ -166,7 +166,7 @@ export default function Projects() {
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black/40 opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
                   <h3 className="font-bold text-base mb-1 line-clamp-1">
                     {item.title}
@@ -184,8 +184,7 @@ export default function Projects() {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+      <section className="py-20 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
             Хотите стать следующим успешным проектом?

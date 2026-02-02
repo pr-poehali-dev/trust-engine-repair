@@ -19,19 +19,8 @@ export default function RepairHeroSection() {
       </div>
 
       {/* Header */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-marine-light/20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-marine-blue/3 opacity-60"></div>
+      <section className="py-20 px-4 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10 text-center">
-          {/* Разделитель */}
-          <div className="flex items-center justify-center py-8">
-            <div className="flex items-center w-full max-w-4xl">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
-              <div className="mx-8 px-8 py-3 bg-white rounded-full border border-primary/20 shadow-lg backdrop-blur-sm">
-                <span className="text-sm font-bold text-primary uppercase tracking-wide whitespace-nowrap">Качественный ремонт стационарных двигателей</span>
-              </div>
-              <div className="flex-1 h-px bg-gradient-to-r from-primary via-primary/40 via-primary/20 to-transparent"></div>
-            </div>
-          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
             Качественный ремонт{' '}
             <span className="text-primary">стационарных двигателей</span>
