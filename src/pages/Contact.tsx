@@ -72,7 +72,7 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f2f6fa]">
+    <div className="min-h-screen bg-white">
       <NavigationSection
         mobileMenuOpen={mobileMenuOpen}
         onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}

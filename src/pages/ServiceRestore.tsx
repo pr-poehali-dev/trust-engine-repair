@@ -42,7 +42,7 @@ export default function ServiceRestore() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-primary/5 to-primary/10">
+    <div className="min-h-screen bg-white">
       <NavigationSection
         mobileMenuOpen={mobileMenuOpen}
         onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
