@@ -69,7 +69,10 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
     >
       <div className="relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
-          <SectionTitle text="Наши услуги" />
+          <SectionTitle 
+            text="Наши услуги" 
+            iconUrl="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4100cfa5-103f-4800-9095-a6a83cd6c61b.png"
+          />
 
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6 leading-tight">
