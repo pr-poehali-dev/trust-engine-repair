@@ -13,11 +13,11 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden pb-12 lg:pb-0">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-4">
         {/* Десктоп: текст слева, изображение справа наложением */}
         <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-start">
           {/* Текстовый контент */}
-          <div className="relative z-10 space-y-6 pt-8">
+          <div className="relative z-10 space-y-6 pt-2">
             <h1 className="text-[56px] leading-[1.15] font-montserrat">
               <span className="text-[#0f1419] font-normal">Новый рассвет</span>
               <br />
