@@ -59,13 +59,12 @@ export default function ComparisonSlider({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full overflow-hidden rounded-xl select-none ${className}`}
-      style={{ aspectRatio: '16/9' }}
+      className={`relative w-full select-none ${className}`}
     >
       <img
         src={afterImage}
         alt={afterLabel}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="w-full h-auto"
         draggable={false}
       />
 
@@ -104,14 +103,6 @@ export default function ComparisonSlider({
             <line x1="2" y1="12" x2="22" y2="12" />
           </svg>
         </div>
-      </div>
-
-      <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1.5 rounded-lg text-sm font-medium backdrop-blur-sm">
-        {beforeLabel}
-      </div>
-
-      <div className="absolute top-4 right-4 bg-black/60 text-white px-3 py-1.5 rounded-lg text-sm font-medium backdrop-blur-sm">
-        {afterLabel}
       </div>
     </div>
   );
