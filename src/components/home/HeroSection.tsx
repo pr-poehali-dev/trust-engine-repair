@@ -67,13 +67,11 @@ export default function HeroSection({
           </div>
 
           {/* Comparison slider справа */}
-          <div className="absolute top-0 right-0 w-[55%] h-full flex items-center">
-            <div className="w-full">
-              <ComparisonSlider
-                beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
-                afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
-              />
-            </div>
+          <div className="absolute top-0 right-0 w-[55%] h-full">
+            <ComparisonSlider
+              beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
+              afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
+            />
           </div>
         </div>
 

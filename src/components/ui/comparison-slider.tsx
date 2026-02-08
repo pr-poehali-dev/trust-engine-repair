@@ -24,7 +24,7 @@ export default function ComparisonSlider({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full ${className}`}
+      className={`relative w-full h-full ${className}`}
       onMouseDown={(e) => {
         updatePosition(e.clientX);
         const handleMove = (me: MouseEvent) => updatePosition(me.clientX);
@@ -70,34 +70,30 @@ export default function ComparisonSlider({
         />
       </div>
 
-      <div
-        className="absolute bg-white"
+      <div 
+        className="absolute w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md"
         style={{
           left: `${position}%`,
+          top: 'calc(50% - 20px)',
           transform: 'translateX(-50%)',
-          top: '12%',
-          bottom: '8%',
-          width: '2px',
-          pointerEvents: 'none'
+          pointerEvents: 'none',
+          minTop: 'calc(12% - 20px)',
+          maxTop: 'calc(88% - 20px)'
         }}
       >
-        <div 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md"
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          className="text-primary"
         >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-primary"
-          >
-            <path d="M18 8L22 12L18 16" />
-            <path d="M6 8L2 12L6 16" />
-            <line x1="2" y1="12" x2="22" y2="12" />
-          </svg>
-        </div>
+          <path d="M18 8L22 12L18 16" />
+          <path d="M6 8L2 12L6 16" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+        </svg>
       </div>
     </div>
   );
