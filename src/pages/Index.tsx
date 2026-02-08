@@ -13,7 +13,7 @@ import MultiStepForm from '@/components/MultiStepForm';
 import FloatingActionButton from '@/components/FloatingActionButton';
 import PullToRefresh from '@/components/PullToRefresh';
 import OfflineBanner from '@/components/OfflineBanner';
-import SectionTitle from '@/components/ui/SectionTitle';
+
 import { useAnalytics } from '@/utils/analytics';
 
 export default function Index() {
@@ -86,9 +86,7 @@ export default function Index() {
 
   return (
     <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
-      <div className="min-h-screen relative overflow-x-hidden" style={{ 
-        background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
-      }}>
+      <div className="min-h-screen relative overflow-x-hidden bg-[#FAFAFA]">
         <NavigationSection
           mobileMenuOpen={mobileMenuOpen}
           onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
