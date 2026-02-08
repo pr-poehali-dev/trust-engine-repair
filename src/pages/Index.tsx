@@ -94,6 +94,16 @@ export default function Index() {
           sliderImages={sliderImages}
         />
         
+        {/* Изображение под hero секцией */}
+        <div className="w-full flex justify-center -mt-8">
+          <img 
+            src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/9703ae55-e0f1-41e9-b06c-91ae3fa856c9.png"
+            alt="Декоративное изображение"
+            className="w-full object-contain"
+            style={{ maxWidth: '1600px', minWidth: '1000px' }}
+          />
+        </div>
+        
         <ServicesSection id="services" />
         
         <BenefitsSection />
