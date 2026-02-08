@@ -43,11 +43,15 @@ export default function HeroSection({
 
             {/* Логотип MER */}
             <div className="pt-2 pb-4">
-              <img 
-                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/f4d2158a-b881-49ad-a8f8-ae1db91a2689.png" 
-                alt="MER - Marine Engine Renew"
-                className="h-[52px] w-auto"
-              />
+              <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-200/50 shadow-sm">
+                <div className="bg-[#1a1a1a] px-3 py-1.5 rounded">
+                  <span className="text-white font-bold text-[14px] tracking-wide font-montserrat">MER</span>
+                </div>
+                <div className="text-[12px] text-[#475569] leading-tight">
+                  <div className="font-medium">работаем по методологии</div>
+                  <div className="text-[#94a3b8]">marine engine renew</div>
+                </div>
+              </div>
             </div>
 
             <div className="flex gap-3 pt-2">
@@ -78,7 +82,7 @@ export default function HeroSection({
               <div 
                 className="absolute inset-0 z-0"
                 style={{
-                  backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
+                  backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/d79d713c-fe95-4e94-8e0f-3f7a72309325.png)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 60%, transparent 100%)',
@@ -127,11 +131,15 @@ export default function HeroSection({
 
             {/* Логотип MER мобильная версия */}
             <div className="flex justify-center pt-2 pb-2">
-              <img 
-                src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/f4d2158a-b881-49ad-a8f8-ae1db91a2689.png" 
-                alt="MER - Marine Engine Renew"
-                className="h-[48px] w-auto"
-              />
+              <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-200/50 shadow-sm">
+                <div className="bg-[#1a1a1a] px-3 py-1.5 rounded">
+                  <span className="text-white font-bold text-[13px] tracking-wide font-montserrat">MER</span>
+                </div>
+                <div className="text-[11px] text-[#475569] leading-tight text-left">
+                  <div className="font-medium">работаем по методологии</div>
+                  <div className="text-[#94a3b8]">marine engine renew</div>
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-col gap-3 pt-2 max-w-xs mx-auto">
