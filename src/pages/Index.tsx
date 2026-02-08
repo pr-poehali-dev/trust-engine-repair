@@ -86,55 +86,19 @@ export default function Index() {
 
   return (
     <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
-      <div className="min-h-screen relative overflow-x-hidden bg-white">
-        {/* Фон с водой - первый слой, ограничен 1600px */}
-        <div 
-          className="absolute top-0 left-1/2 -translate-x-1/2 z-0"
-          style={{
-            width: '100%',
-            maxWidth: '1600px',
-            height: '800px',
-            backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: 'center bottom',
-            backgroundRepeat: 'no-repeat'
-          }}
+      <div className="min-h-screen relative overflow-x-hidden" style={{ 
+        background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
+      }}>
+        <NavigationSection
+          mobileMenuOpen={mobileMenuOpen}
+          onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onContactClick={() => setContactFormOpen(true)}
         />
         
-        {/* Плавный переход к белому - второй слой */}
-        <div 
-          className="absolute top-0 left-0 w-full z-[1]"
-          style={{
-            height: '800px',
-            background: 'linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.9) 90%, #ffffff 100%)'
-          }}
+        <HeroSection
+          onContactClick={() => setContactFormOpen(true)}
+          sliderImages={sliderImages}
         />
-        
-        {/* Цветные градиентные пятна - третий слой, поверх всего */}
-        <div 
-          className="absolute top-0 left-0 w-full z-[2] pointer-events-none"
-          style={{
-            height: '800px',
-            background: `
-              radial-gradient(ellipse 800px 600px at 20% 30%, rgba(238, 242, 255, 0.7) 0%, rgba(245, 247, 255, 0.4) 40%, transparent 70%),
-              radial-gradient(ellipse 600px 500px at 80% 20%, rgba(219, 234, 254, 0.5) 0%, transparent 60%),
-              radial-gradient(ellipse 500px 400px at 50% 60%, rgba(253, 242, 248, 0.4) 0%, transparent 50%)
-            `
-          }}
-        />
-        
-        <div className="relative z-10">
-          <NavigationSection
-            mobileMenuOpen={mobileMenuOpen}
-            onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
-            onContactClick={() => setContactFormOpen(true)}
-          />
-          
-          <HeroSection
-            onContactClick={() => setContactFormOpen(true)}
-            sliderImages={sliderImages}
-          />
-        </div>
         
         <ServicesSection id="services" />
         
