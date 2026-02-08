@@ -48,7 +48,7 @@ export default function GallerySection() {
     <section id="gallery" className="relative py-16 lg:py-20">
       <div className="relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
-          <SectionTitle text="Наши работы" />
+          <SectionTitle text="Наши работы" iconUrl="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3ec57edd-ee83-4982-ac10-ae2d478ffd81.png" />
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
               Примеры <span className="text-primary font-bold">выполненных проектов</span>
