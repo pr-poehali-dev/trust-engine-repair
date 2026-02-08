@@ -24,7 +24,7 @@ export default function ComparisonSlider({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full h-full ${className}`}
+      className={`relative ${className}`}
       onMouseDown={(e) => {
         updatePosition(e.clientX);
         const handleMove = (me: MouseEvent) => updatePosition(me.clientX);
@@ -70,15 +70,28 @@ export default function ComparisonSlider({
         />
       </div>
 
+      {/* Линия с эффектом затухания */}
+      <div
+        className="absolute"
+        style={{
+          left: `${position}%`,
+          transform: 'translateX(-50%)',
+          top: '12%',
+          bottom: '8%',
+          width: '2px',
+          pointerEvents: 'none',
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%)'
+        }}
+      />
+
+      {/* Иконка ползунка */}
       <div 
         className="absolute w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md"
         style={{
           left: `${position}%`,
-          top: 'calc(50% - 20px)',
-          transform: 'translateX(-50%)',
-          pointerEvents: 'none',
-          minTop: 'calc(12% - 20px)',
-          maxTop: 'calc(88% - 20px)'
+          top: '50%',
+          transform: 'translate(-50%, -50%)',
+          pointerEvents: 'none'
         }}
       >
         <svg
