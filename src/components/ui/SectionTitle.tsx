@@ -8,7 +8,7 @@ export default function SectionTitle({ text, className = "", iconUrl }: SectionT
   return (
     <div className={`flex items-center justify-center py-8 ${className}`}>
       {iconUrl ? (
-        <img src={iconUrl} alt={text} className="w-[150px] h-auto" />
+        <img src={iconUrl} alt={text} className="w-[180px] h-auto" />
       ) : (
         <div className="flex items-center w-full max-w-4xl">
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-primary/20 via-primary/40 to-primary"></div>
