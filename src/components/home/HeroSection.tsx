@@ -12,13 +12,25 @@ export default function HeroSection({
   sliderImages,
 }: HeroSectionProps) {
   return (
-    <section 
-      className="relative overflow-hidden pb-12 lg:pb-0"
-      style={{
-        background: 'radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(220, 235, 255, 0.4) 0%, rgba(240, 248, 255, 0.2) 50%, transparent 80%)'
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+    <section className="relative overflow-hidden pb-12 lg:pb-0">
+      {/* Фон с водой */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center bottom'
+        }}
+      />
+      
+      {/* Градиенты поверх фона */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.85) 100%), radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(220, 235, 255, 0.4) 0%, rgba(240, 248, 255, 0.2) 50%, transparent 80%)'
+        }}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         {/* Десктоп: текст слева, изображение справа наложением */}
         <div className="hidden lg:block relative min-h-[600px]">
           {/* Текстовый контент */}
@@ -44,9 +56,11 @@ export default function HeroSection({
             {/* Логотип MER */}
             <div className="pt-2 pb-4">
               <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-200/50 shadow-sm">
-                <div className="bg-[#1a1a1a] px-3 py-1.5 rounded">
-                  <span className="text-white font-bold text-[14px] tracking-wide font-montserrat">MER</span>
-                </div>
+                <img 
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/f4d2158a-b881-49ad-a8f8-ae1db91a2689.png"
+                  alt="MER"
+                  className="h-[32px] w-auto"
+                />
                 <div className="text-[12px] text-[#475569] leading-tight">
                   <div className="font-medium">работаем по методологии</div>
                   <div className="text-[#94a3b8]">marine engine renew</div>
@@ -75,28 +89,13 @@ export default function HeroSection({
             </div>
           </div>
 
-          {/* Comparison slider справа с фоном воды */}
+          {/* Comparison slider справа */}
           <div className="absolute top-0 right-[-50px] w-[58%] h-full">
-            <div className="relative w-full h-full">
-              {/* Фон с водой */}
-              <div 
-                className="absolute inset-0 z-0"
-                style={{
-                  backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/d79d713c-fe95-4e94-8e0f-3f7a72309325.png)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  maskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 60%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.8) 60%, transparent 100%)'
-                }}
+            <div className="relative w-full h-full pt-8">
+              <ComparisonSlider
+                beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
+                afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
               />
-              
-              {/* Comparison slider поверх фона */}
-              <div className="relative z-10 pt-8">
-                <ComparisonSlider
-                  beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
-                  afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -132,9 +131,11 @@ export default function HeroSection({
             {/* Логотип MER мобильная версия */}
             <div className="flex justify-center pt-2 pb-2">
               <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-200/50 shadow-sm">
-                <div className="bg-[#1a1a1a] px-3 py-1.5 rounded">
-                  <span className="text-white font-bold text-[13px] tracking-wide font-montserrat">MER</span>
-                </div>
+                <img 
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/f4d2158a-b881-49ad-a8f8-ae1db91a2689.png"
+                  alt="MER"
+                  className="h-[28px] w-auto"
+                />
                 <div className="text-[11px] text-[#475569] leading-tight text-left">
                   <div className="font-medium">работаем по методологии</div>
                   <div className="text-[#94a3b8]">marine engine renew</div>
