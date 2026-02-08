@@ -76,12 +76,8 @@ export default function Index() {
   };
   
   const sliderImages = [
-    'https://cdn.poehali.dev/files/e09db305-2603-4837-80e4-8ec8d050de04.jpg',
-    'https://cdn.poehali.dev/files/e02cbe74-095b-4485-9ee8-94dbd7c242b3.jpg',
-    'https://cdn.poehali.dev/files/71b32441-5803-447b-b8c6-33091e7661a3.jpg',
-    'https://cdn.poehali.dev/files/4799a2a8-4b79-456f-a2de-eb3ef233bb85.jpg',
-    'https://cdn.poehali.dev/files/e9f180f3-2bee-40cc-81bd-6e5c3e1fc5fe.jpg',
-    'https://cdn.poehali.dev/files/6c3e20ca-54d7-4993-b37d-4f2bcf09645d.jpg'
+    'https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3a80a092-b801-4783-beaa-cda72bd137cb.png',
+    'https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3e0d87d7-c86b-4eaa-937c-57339fe93cbc.png'
   ];
 
   return (
