@@ -39,7 +39,7 @@ export default function WhyUsSection({ id }: WhyUsSectionProps = {}) {
 
       
       <div className="max-w-7xl mx-auto">
-        <SectionTitle text="Наши преимущества" />
+        <SectionTitle text="Наши преимущества" iconUrl="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/550ddff6-5bd4-4175-a6df-cbe439586fa1.png" />
         {/* Заголовок */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
