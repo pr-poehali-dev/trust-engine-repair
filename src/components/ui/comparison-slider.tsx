@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 interface ComparisonSliderProps {
   beforeImage: string;
@@ -19,52 +19,43 @@ export default function ComparisonSlider({
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const updatePosition = (clientX: number) => {
+  const updatePosition = useCallback((clientX: number) => {
     if (!containerRef.current) return;
     
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     const percentage = (x / rect.width) * 100;
     setSliderPosition(Math.max(0, Math.min(100, percentage)));
-  };
+  }, []);
 
   const handleMouseDown = () => setIsDragging(true);
-  const handleMouseUp = () => setIsDragging(false);
-
-  const handleMouseMove = (e: MouseEvent) => {
-    if (!isDragging) return;
-    updatePosition(e.clientX);
-  };
-
-  const handleTouchMove = (e: TouchEvent) => {
-    if (!isDragging) return;
-    updatePosition(e.touches[0].clientX);
-  };
 
   useEffect(() => {
-    const handleMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging) return;
       updatePosition(e.clientX);
     };
 
-    const handleTouchMoveWrapper = (e: TouchEvent) => {
+    const handleTouchMove = (e: TouchEvent) => {
       if (!isDragging) return;
       updatePosition(e.touches[0].clientX);
     };
 
+    const handleMouseUp = () => setIsDragging(false);
+
     if (isDragging) {
-      document.addEventListener('mousemove', handleMove);
+      document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMoveWrapper);
+      document.addEventListener('touchmove', handleTouchMove);
       document.addEventListener('touchend', handleMouseUp);
     }
     return () => {
-      document.removeEventListener('mousemove', handleMove);
+      document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchmove', handleTouchMoveWrapper);
+      document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleMouseUp);
     };
-  }, [isDragging, sliderPosition]);
+  }, [isDragging, updatePosition]);
 
   return (
     <div
