@@ -86,19 +86,44 @@ export default function Index() {
 
   return (
     <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
-      <div className="min-h-screen relative overflow-x-hidden" style={{ 
-        background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
-      }}>
-        <NavigationSection
-          mobileMenuOpen={mobileMenuOpen}
-          onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
-          onContactClick={() => setContactFormOpen(true)}
+      <div className="min-h-screen relative overflow-x-hidden">
+        {/* Фон с водой под градиентами - первый слой */}
+        <div 
+          className="absolute top-0 left-0 w-full z-0"
+          style={{
+            height: '800px',
+            maxWidth: '1600px',
+            margin: '0 auto',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center bottom',
+            backgroundRepeat: 'no-repeat'
+          }}
         />
         
-        <HeroSection
-          onContactClick={() => setContactFormOpen(true)}
-          sliderImages={sliderImages}
+        {/* Градиенты над фоном - второй слой */}
+        <div 
+          className="absolute top-0 left-0 w-full z-[1]"
+          style={{
+            height: '800px',
+            background: 'radial-gradient(ellipse 800px 600px at 20% 30%, #EEF2FF 0%, #F5F7FF 40%, transparent 70%)'
+          }}
         />
+        
+        <div className="relative z-10">
+          <NavigationSection
+            mobileMenuOpen={mobileMenuOpen}
+            onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onContactClick={() => setContactFormOpen(true)}
+          />
+          
+          <HeroSection
+            onContactClick={() => setContactFormOpen(true)}
+            sliderImages={sliderImages}
+          />
+        </div>
         
         <ServicesSection id="services" />
         
