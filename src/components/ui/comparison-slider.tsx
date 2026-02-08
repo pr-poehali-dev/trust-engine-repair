@@ -28,16 +28,25 @@ export default function ComparisonSlider({
     setSliderPosition(Math.max(0, Math.min(100, percentage)));
   }, []);
 
-  const handleMouseDown = () => setIsDragging(true);
+  const handleMouseDown = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const handleClick = (e: React.MouseEvent) => {
+    updatePosition(e.clientX);
+  };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDragging) return;
+      e.preventDefault();
       updatePosition(e.clientX);
     };
 
     const handleTouchMove = (e: TouchEvent) => {
       if (!isDragging) return;
+      e.preventDefault();
       updatePosition(e.touches[0].clientX);
     };
 
@@ -46,7 +55,7 @@ export default function ComparisonSlider({
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMove);
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
       document.addEventListener('touchend', handleMouseUp);
     }
     return () => {
@@ -61,6 +70,7 @@ export default function ComparisonSlider({
     <div
       ref={containerRef}
       className={`relative w-full select-none ${className}`}
+      onClick={handleClick}
     >
       <img
         src={afterImage}
@@ -70,7 +80,7 @@ export default function ComparisonSlider({
       />
 
       <div
-        className="absolute inset-0 w-full h-full overflow-hidden"
+        className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         <img
@@ -82,8 +92,13 @@ export default function ComparisonSlider({
       </div>
 
       <div
-        className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"
-        style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
+        className="absolute w-1 bg-white cursor-ew-resize"
+        style={{ 
+          left: `${sliderPosition}%`, 
+          transform: 'translateX(-50%)',
+          top: '10%',
+          bottom: '10%'
+        }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleMouseDown}
       >
