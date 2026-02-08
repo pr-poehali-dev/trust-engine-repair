@@ -87,6 +87,24 @@ export default function Index() {
   return (
     <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
       <div className="min-h-screen relative overflow-x-hidden">
+        {/* Фон с водой на всю страницу */}
+        <div 
+          className="fixed inset-0 z-[-2] w-full h-screen"
+          style={{
+            backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center bottom',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        
+        {/* Градиентный фон поверх воды */}
+        <div 
+          className="fixed inset-0 z-[-1] w-full h-screen"
+          style={{
+            background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(220, 235, 255, 0.6) 0%, rgba(240, 248, 255, 0.3) 50%, transparent 80%)'
+          }}
+        />
         <NavigationSection
           mobileMenuOpen={mobileMenuOpen}
           onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
