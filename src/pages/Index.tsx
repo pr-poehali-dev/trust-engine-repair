@@ -101,16 +101,24 @@ export default function Index() {
           }}
         />
         
-        {/* Градиенты над фоном - второй слой */}
+        {/* Плавный переход к белому - второй слой */}
         <div 
           className="absolute top-0 left-0 w-full z-[1]"
           style={{
             height: '800px',
+            background: 'linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.9) 90%, #ffffff 100%)'
+          }}
+        />
+        
+        {/* Цветные градиентные пятна - третий слой, поверх всего */}
+        <div 
+          className="absolute top-0 left-0 w-full z-[2] pointer-events-none"
+          style={{
+            height: '800px',
             background: `
-              radial-gradient(ellipse 800px 600px at 20% 30%, rgba(238, 242, 255, 0.85) 0%, rgba(245, 247, 255, 0.7) 40%, transparent 70%),
-              radial-gradient(ellipse 600px 500px at 80% 20%, rgba(219, 234, 254, 0.6) 0%, transparent 60%),
-              radial-gradient(ellipse 500px 400px at 50% 60%, rgba(253, 242, 248, 0.5) 0%, transparent 50%),
-              linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(255, 255, 255, 0.8) 85%, #ffffff 100%)
+              radial-gradient(ellipse 800px 600px at 20% 30%, rgba(238, 242, 255, 0.7) 0%, rgba(245, 247, 255, 0.4) 40%, transparent 70%),
+              radial-gradient(ellipse 600px 500px at 80% 20%, rgba(219, 234, 254, 0.5) 0%, transparent 60%),
+              radial-gradient(ellipse 500px 400px at 50% 60%, rgba(253, 242, 248, 0.4) 0%, transparent 50%)
             `
           }}
         />
