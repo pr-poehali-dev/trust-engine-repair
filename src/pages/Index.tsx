@@ -83,32 +83,16 @@ export default function Index() {
   return (
     <PullToRefresh onRefresh={handleRefresh} enabled={!mobileMenuOpen}>
       <div className="min-h-screen relative overflow-x-hidden">
-        {/* Фоновое изображение под hero */}
-        <div 
-          className="absolute top-0 left-1/2 -translate-x-1/2 z-0 w-full"
-          style={{
-            maxWidth: '1600px',
-            minWidth: '1000px',
-            height: '100vh',
-            backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/9703ae55-e0f1-41e9-b06c-91ae3fa856c9.png)',
-            backgroundSize: 'contain',
-            backgroundPosition: 'top center',
-            backgroundRepeat: 'no-repeat'
-          }}
+        <NavigationSection
+          mobileMenuOpen={mobileMenuOpen}
+          onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onContactClick={() => setContactFormOpen(true)}
         />
         
-        <div className="relative z-10">
-          <NavigationSection
-            mobileMenuOpen={mobileMenuOpen}
-            onMobileMenuToggle={() => setMobileMenuOpen(!mobileMenuOpen)}
-            onContactClick={() => setContactFormOpen(true)}
-          />
-          
-          <HeroSection
-            onContactClick={() => setContactFormOpen(true)}
-            sliderImages={sliderImages}
-          />
-        </div>
+        <HeroSection
+          onContactClick={() => setContactFormOpen(true)}
+          sliderImages={sliderImages}
+        />
         
         <ServicesSection id="services" />
         
