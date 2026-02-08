@@ -75,12 +75,12 @@ export default function ComparisonSlider({
       <img
         src={afterImage}
         alt="После"
-        className="w-full h-auto block"
+        className="w-full h-auto block pointer-events-none"
         draggable={false}
       />
 
       <div
-        className="absolute top-0 left-0 w-full h-full overflow-hidden"
+        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
       >
         <img
@@ -92,12 +92,13 @@ export default function ComparisonSlider({
       </div>
 
       <div
-        className="absolute w-1 bg-white"
+        className="absolute bg-white pointer-events-none"
         style={{
           left: `${sliderPosition}%`,
           transform: 'translateX(-50%)',
           top: '12%',
           bottom: '8%',
+          width: '2px',
         }}
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-ew-resize">
