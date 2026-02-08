@@ -92,12 +92,8 @@ export default function Index() {
           className="absolute top-0 left-0 w-full z-0"
           style={{
             height: '800px',
-            maxWidth: '1600px',
-            margin: '0 auto',
-            left: '50%',
-            transform: 'translateX(-50%)',
             backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
-            backgroundSize: 'contain',
+            backgroundSize: 'cover',
             backgroundPosition: 'center bottom',
             backgroundRepeat: 'no-repeat'
           }}
