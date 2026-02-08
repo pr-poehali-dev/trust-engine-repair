@@ -71,7 +71,7 @@ export default function BenefitsSection() {
     <section className="relative py-16 lg:py-20">
       <div className="relative z-10 px-4">
       <div className="max-w-7xl mx-auto">
-        <SectionTitle text="Выгодное предложение" />
+        <SectionTitle text="Выгодное предложение" iconUrl="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e3fbd5ce-6e46-47bc-b714-cf1531743345.png" />
         {/* Заголовок */}
         <div className="text-center mb-12">
           <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
