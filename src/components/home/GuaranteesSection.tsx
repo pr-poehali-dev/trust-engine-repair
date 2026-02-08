@@ -39,7 +39,7 @@ export default function GuaranteesSection({ onContactClick, id }: GuaranteesSect
 
       
       <div className="max-w-7xl mx-auto">
-        <SectionTitle text="Наши гарантии" />
+        <SectionTitle text="Наши гарантии" iconUrl="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/abcb4ae9-b4db-4ed8-8c99-a36ed1f14cdb.png" />
         {/* Заголовок для мобильных */}
         <div className="lg:hidden space-y-6 mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-medium text-brand-gray-900 leading-tight px-2">
