@@ -13,29 +13,34 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden pb-12 lg:pb-0">
-      {/* Фон с водой */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center bottom'
-        }}
-      />
-      
-      {/* Градиенты поверх фона */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          background: 'radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(220, 235, 255, 0.6) 0%, rgba(240, 248, 255, 0.3) 50%, transparent 80%)'
-        }}
-      />
+      {/* Контейнер для фона с ограничением ширины */}
+      <div className="absolute inset-0 z-0 flex justify-center">
+        <div className="w-full max-w-7xl relative h-full">
+          {/* Фон с водой */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'url(https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/a35bc3e4-95d1-40d0-b3fa-fde12ffbf204.png)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center bottom'
+            }}
+          />
+          
+          {/* Градиенты поверх фона */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(220, 235, 255, 0.6) 0%, rgba(240, 248, 255, 0.3) 50%, transparent 80%)'
+            }}
+          />
+        </div>
+      </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         {/* Десктоп: текст слева, изображение справа наложением */}
-        <div className="hidden lg:block relative min-h-[550px]">
+        <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-start">
           {/* Текстовый контент */}
-          <div className="relative z-10 max-w-none space-y-6 pt-8">
-            <h1 className="text-[56px] leading-[1.15] font-montserrat max-w-[700px]">
+          <div className="relative z-10 space-y-6 pt-8">
+            <h1 className="text-[56px] leading-[1.15] font-montserrat">
               <span className="text-[#0f1419] font-normal">Новый рассвет</span>
               <br />
               <span className="text-[#0f1419] font-normal">вашего </span>
@@ -43,7 +48,7 @@ export default function HeroSection({
             </h1>
 
             <div className="space-y-3">
-              <p className="text-[17px] text-[#475569] leading-relaxed font-normal max-w-[640px]">
+              <p className="text-[17px] text-[#475569] leading-relaxed font-normal">
                 Специализируемся на ремонте<br />
                 и восстановлении стационарных двигателей<br />
                 таких марок
@@ -90,7 +95,7 @@ export default function HeroSection({
           </div>
 
           {/* Comparison slider справа */}
-          <div className="absolute top-0 right-[-50px] w-[58%]">
+          <div className="relative z-10">
             <ComparisonSlider
               beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3a80a092-b801-4783-beaa-cda72bd137cb.png"
               afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3e0d87d7-c86b-4eaa-937c-57339fe93cbc.png"
