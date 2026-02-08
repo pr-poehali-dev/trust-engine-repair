@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ComparisonSlider from "@/components/ui/comparison-slider";
 
 interface HeroSectionProps {
   onContactClick: () => void;
@@ -65,25 +66,27 @@ export default function HeroSection({
             </div>
           </div>
 
-          {/* Изображение справа */}
-          <div className="absolute top-0 right-0 w-[65%] h-[90%] pointer-events-none">
-            <img 
-              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
-              alt="Стационарный двигатель Mercury для яхт и катеров"
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-auto max-w-none"
+          {/* Comparison slider справа */}
+          <div className="absolute top-0 right-0 w-[55%] h-full flex items-center pointer-events-auto">
+            <ComparisonSlider
+              beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
+              afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
+              beforeLabel="Было"
+              afterLabel="Стало"
+              className="shadow-2xl"
             />
           </div>
         </div>
 
-        {/* Мобилка: grid с изображением сверху */}
+        {/* Мобилка: grid с comparison slider сверху */}
         <div className="lg:hidden grid gap-8">
-          <div className="relative w-full">
-            <img 
-              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/e14469ab-4343-4a02-b9bb-198d20c52893.png"
-              alt="Стационарный двигатель Mercury для яхт и катеров"
-              className="w-full h-auto"
-            />
-          </div>
+          <ComparisonSlider
+            beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
+            afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
+            beforeLabel="Было"
+            afterLabel="Стало"
+            className="shadow-lg"
+          />
 
           <div className="space-y-5 text-center">
             <h1 className="text-[32px] leading-[1.25]">
