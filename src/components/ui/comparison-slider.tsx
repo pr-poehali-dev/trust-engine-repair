@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 interface ComparisonSliderProps {
   beforeImage: string;
@@ -14,8 +14,8 @@ export default function ComparisonSlider({
   className = '',
 }: ComparisonSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
-  const [isSliding, setIsSliding] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isSlidingRef = useRef(false);
 
   const updateSliderPosition = (clientX: number) => {
     if (!containerRef.current) return;
@@ -25,31 +25,52 @@ export default function ComparisonSlider({
     setSliderPosition(percent);
   };
 
-  const handleStart = (clientX: number) => {
-    setIsSliding(true);
-    updateSliderPosition(clientX);
+  const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    isSlidingRef.current = true;
+    updateSliderPosition(e.clientX);
   };
 
-  const handleMove = (clientX: number) => {
-    if (!isSliding) return;
-    updateSliderPosition(clientX);
+  const handleTouchStart = (e: React.TouchEvent) => {
+    e.preventDefault();
+    isSlidingRef.current = true;
+    updateSliderPosition(e.touches[0].clientX);
   };
 
-  const handleEnd = () => {
-    setIsSliding(false);
-  };
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isSlidingRef.current) return;
+      updateSliderPosition(e.clientX);
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isSlidingRef.current) return;
+      updateSliderPosition(e.touches[0].clientX);
+    };
+
+    const handleEnd = () => {
+      isSlidingRef.current = false;
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleEnd);
+    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleEnd);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleEnd);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleEnd);
+    };
+  }, []);
 
   return (
     <div
       ref={containerRef}
-      className={`relative w-full select-none ${className}`}
-      onMouseDown={(e) => handleStart(e.clientX)}
-      onMouseMove={(e) => handleMove(e.clientX)}
-      onMouseUp={handleEnd}
-      onMouseLeave={handleEnd}
-      onTouchStart={(e) => handleStart(e.touches[0].clientX)}
-      onTouchMove={(e) => handleMove(e.touches[0].clientX)}
-      onTouchEnd={handleEnd}
+      className={`relative w-full select-none cursor-ew-resize ${className}`}
+      onMouseDown={handleMouseDown}
+      onTouchStart={handleTouchStart}
     >
       <img
         src={afterImage}
