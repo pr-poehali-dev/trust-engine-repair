@@ -26,8 +26,21 @@ export default function ComparisonSlider({
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    console.log('Mouse down at', e.clientX);
     isSlidingRef.current = true;
     updateSliderPosition(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (e.buttons !== 1) return;
+    console.log('Mouse move at', e.clientX);
+    updateSliderPosition(e.clientX);
+  };
+
+  const handleMouseUp = () => {
+    console.log('Mouse up');
+    isSlidingRef.current = false;
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -36,40 +49,26 @@ export default function ComparisonSlider({
     updateSliderPosition(e.touches[0].clientX);
   };
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isSlidingRef.current) return;
-      updateSliderPosition(e.clientX);
-    };
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isSlidingRef.current) return;
+    updateSliderPosition(e.touches[0].clientX);
+  };
 
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!isSlidingRef.current) return;
-      updateSliderPosition(e.touches[0].clientX);
-    };
-
-    const handleEnd = () => {
-      isSlidingRef.current = false;
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleEnd);
-    document.addEventListener('touchmove', handleTouchMove);
-    document.addEventListener('touchend', handleEnd);
-
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleEnd);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleEnd);
-    };
-  }, []);
+  const handleTouchEnd = () => {
+    isSlidingRef.current = false;
+  };
 
   return (
     <div
       ref={containerRef}
       className={`relative w-full select-none cursor-ew-resize ${className}`}
       onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
       onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
     >
       <img
