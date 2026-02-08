@@ -106,7 +106,7 @@ export default function Index() {
           className="absolute top-0 left-0 w-full z-[1]"
           style={{
             height: '800px',
-            background: 'radial-gradient(ellipse 800px 600px at 20% 30%, rgba(238, 242, 255, 0.7) 0%, rgba(245, 247, 255, 0.5) 40%, transparent 70%)'
+            background: 'radial-gradient(ellipse 800px 600px at 20% 30%, rgba(238, 242, 255, 0.85) 0%, rgba(245, 247, 255, 0.7) 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 85%, #ffffff 100%)'
           }}
         />
         
