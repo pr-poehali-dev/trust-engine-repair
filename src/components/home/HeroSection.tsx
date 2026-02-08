@@ -73,7 +73,6 @@ export default function HeroSection({
               afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
               beforeLabel="Было"
               afterLabel="Стало"
-              className="shadow-2xl"
             />
           </div>
         </div>
@@ -85,7 +84,6 @@ export default function HeroSection({
             afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
             beforeLabel="Было"
             afterLabel="Стало"
-            className="shadow-lg"
           />
 
           <div className="space-y-5 text-center">

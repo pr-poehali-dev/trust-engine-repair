@@ -42,19 +42,29 @@ export default function ComparisonSlider({
   };
 
   useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      updatePosition(e.clientX);
+    };
+
+    const handleTouchMoveWrapper = (e: TouchEvent) => {
+      if (!isDragging) return;
+      updatePosition(e.touches[0].clientX);
+    };
+
     if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mousemove', handleMove);
       document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMove);
+      document.addEventListener('touchmove', handleTouchMoveWrapper);
       document.addEventListener('touchend', handleMouseUp);
     }
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mousemove', handleMove);
       document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchmove', handleTouchMoveWrapper);
       document.removeEventListener('touchend', handleMouseUp);
     };
-  }, [isDragging]);
+  }, [isDragging, sliderPosition]);
 
   return (
     <div
@@ -81,12 +91,12 @@ export default function ComparisonSlider({
       </div>
 
       <div
-        className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-lg"
+        className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"
         style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
         onMouseDown={handleMouseDown}
         onTouchStart={handleMouseDown}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center">
           <svg
             width="24"
             height="24"
