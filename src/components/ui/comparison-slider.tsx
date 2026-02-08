@@ -16,66 +16,42 @@ export default function ComparisonSlider({
   className = '',
 }: ComparisonSliderProps) {
   const [sliderPosition, setSliderPosition] = useState(50);
-  const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const updatePosition = useCallback((clientX: number) => {
+  const handleMove = (clientX: number) => {
     if (!containerRef.current) return;
-    
     const rect = containerRef.current.getBoundingClientRect();
-    const x = clientX - rect.left;
+    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
     const percentage = (x / rect.width) * 100;
-    setSliderPosition(Math.max(0, Math.min(100, percentage)));
-  }, []);
-
-  const handleMouseDown = (e: React.MouseEvent | React.TouchEvent) => {
-    e.preventDefault();
-    setIsDragging(true);
+    setSliderPosition(percentage);
   };
 
-  const handleClick = (e: React.MouseEvent) => {
-    updatePosition(e.clientX);
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (e.buttons !== 1) return;
+    handleMove(e.clientX);
   };
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      updatePosition(e.clientX);
-    };
+  const handleMouseDown = (e: React.MouseEvent) => {
+    handleMove(e.clientX);
+  };
 
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!isDragging) return;
-      e.preventDefault();
-      updatePosition(e.touches[0].clientX);
-    };
-
-    const handleMouseUp = () => setIsDragging(false);
-
-    if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMove, { passive: false });
-      document.addEventListener('touchend', handleMouseUp);
-    }
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleMouseUp);
-    };
-  }, [isDragging, updatePosition]);
+  const handleTouchMove = (e: React.TouchEvent) => {
+    handleMove(e.touches[0].clientX);
+  };
 
   return (
     <div
       ref={containerRef}
-      className={`relative w-full select-none ${className}`}
-      onClick={handleClick}
+      className={`relative w-full select-none cursor-ew-resize ${className}`}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
+      onTouchStart={(e) => handleMove(e.touches[0].clientX)}
     >
       <img
         src={afterImage}
         alt={afterLabel}
-        className="w-full h-auto"
+        className="w-full h-auto pointer-events-none"
         draggable={false}
       />
 
@@ -92,15 +68,13 @@ export default function ComparisonSlider({
       </div>
 
       <div
-        className="absolute w-1 bg-white cursor-ew-resize"
+        className="absolute w-1 bg-white pointer-events-none"
         style={{ 
           left: `${sliderPosition}%`, 
           transform: 'translateX(-50%)',
-          top: '10%',
-          bottom: '10%'
+          top: '15%',
+          bottom: '15%'
         }}
-        onMouseDown={handleMouseDown}
-        onTouchStart={handleMouseDown}
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center">
           <svg
