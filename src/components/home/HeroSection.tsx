@@ -13,11 +13,11 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden pb-12 lg:pb-0">
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-4">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
         {/* Десктоп: текст слева, изображение справа наложением */}
         <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-start">
           {/* Текстовый контент */}
-          <div className="relative z-10 space-y-6 pt-2">
+          <div className="relative z-10 space-y-6 pt-8">
             <h1 className="text-[56px] leading-[1.15] font-montserrat">
               <span className="text-[#0f1419] font-normal">Новый рассвет</span>
               <br />
@@ -73,7 +73,7 @@ export default function HeroSection({
           </div>
 
           {/* Comparison slider справа */}
-          <div className="relative z-10">
+          <div className="relative z-10 -mt-8">
             <ComparisonSlider
               beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3a80a092-b801-4783-beaa-cda72bd137cb.png"
               afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3e0d87d7-c86b-4eaa-937c-57339fe93cbc.png"
