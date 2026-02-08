@@ -27,7 +27,14 @@ export default function ComparisonSlider({
 
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     isSlidingRef.current = true;
+    updateSliderPosition(e.clientX);
+  };
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     updateSliderPosition(e.clientX);
   };
 
@@ -70,6 +77,7 @@ export default function ComparisonSlider({
       ref={containerRef}
       className={`relative w-full select-none cursor-ew-resize ${className}`}
       onMouseDown={handleMouseDown}
+      onClick={handleClick}
       onTouchStart={handleTouchStart}
     >
       <img
@@ -97,7 +105,7 @@ export default function ComparisonSlider({
           left: `${sliderPosition}%`,
           transform: 'translateX(-50%)',
           top: '12%',
-          bottom: '12%',
+          bottom: '8%',
         }}
       >
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-ew-resize">
