@@ -27,7 +27,7 @@ export default function HeroSection({
       <div 
         className="absolute inset-0 z-0"
         style={{
-          background: 'linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 30%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.85) 100%), radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(220, 235, 255, 0.4) 0%, rgba(240, 248, 255, 0.2) 50%, transparent 80%)'
+          background: 'radial-gradient(ellipse 1200px 600px at 50% 0%, rgba(220, 235, 255, 0.6) 0%, rgba(240, 248, 255, 0.3) 50%, transparent 80%)'
         }}
       />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
@@ -90,13 +90,11 @@ export default function HeroSection({
           </div>
 
           {/* Comparison slider справа */}
-          <div className="absolute top-0 right-[-50px] w-[58%] h-full">
-            <div className="relative w-full h-full pt-8">
-              <ComparisonSlider
-                beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
-                afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
-              />
-            </div>
+          <div className="absolute top-0 right-[-50px] w-[58%] h-full flex items-start pt-8">
+            <ComparisonSlider
+              beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c928ad66-a8b3-4b57-bbc8-9892186941bd.png"
+              afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4396e610-144e-491c-bd59-9d55245d68da.png"
+            />
           </div>
         </div>
 
