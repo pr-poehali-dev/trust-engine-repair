@@ -170,31 +170,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             ))}
           </div>
 
-          {/* Быстрая связь */}
-          <div className="mt-12 text-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
-            <p className="text-lg text-brand-gray-700 mb-4">
-              Не можете определиться? <span className="font-semibold text-brand-gray-900">Поможем выбрать оптимальное решение</span>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white shadow-lg"
-                onClick={() => window.location.href = '/contact'}
-              >
-                <Icon name="MessageSquare" size={18} className="mr-2" />
-                Получить консультацию
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-white"
-                onClick={() => window.location.href = '/services'}
-              >
-                <Icon name="Grid3X3" size={18} className="mr-2" />
-                Все услуги
-              </Button>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>

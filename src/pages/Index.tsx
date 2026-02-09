@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react';
 import NavigationSection from '@/components/home/NavigationSection';
 import HeroSection from '@/components/home/HeroSection';
-import TrustSection from '@/components/home/TrustSection';
 import ServicesSection from '@/components/home/ServicesSection';
-import ProcessSection from '@/components/home/ProcessSection';
 import WhyUsSection from '@/components/home/WhyUsSection';
-import BenefitsSection from '@/components/home/BenefitsSection';
 import GallerySection from '@/components/home/GallerySection';
 import GuaranteesSection from '@/components/home/GuaranteesSection';
-import CTASection from '@/components/home/CTASection';
 import ContactSection from '@/components/home/ContactSection';
 import FooterSection from '@/components/home/FooterSection';
 import ContactForm from '@/components/ContactForm';
@@ -96,21 +92,13 @@ export default function Index() {
           sliderImages={sliderImages}
         />
         
-        <TrustSection />
-        
         <ServicesSection id="services" />
-        
-        <ProcessSection />
-        
-        <BenefitsSection />
         
         <WhyUsSection id="why-us" />
         
         <GallerySection />
         
         <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
-        
-        <CTASection onContactClick={() => setContactFormOpen(true)} />
         
         <ContactSection />
         

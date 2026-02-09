@@ -54,13 +54,10 @@ export default function HeroSection({
             <div className="flex gap-3 pt-2">
               <Button
                 size="lg"
-                className="bg-[#1d4cd7] hover:bg-[#1540bd] text-white font-semibold px-8 py-6 rounded-xl text-[15px] shadow-lg shadow-blue-500/20 transition-all hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105"
+                className="bg-[#1d4cd7] hover:bg-[#1540bd] text-white font-semibold px-8 py-6 rounded-xl text-[15px] shadow-lg shadow-blue-500/20 transition-all hover:shadow-xl hover:shadow-blue-500/30"
                 onClick={onContactClick}
               >
-                <span className="flex items-center gap-2">
-                  Бесплатная консультация
-                  <span className="text-xs bg-white/20 px-2 py-0.5 rounded">30 мин</span>
-                </span>
+                Получить консультацию
               </Button>
               <Button
                 asChild
@@ -72,21 +69,6 @@ export default function HeroSection({
                   Смотреть работы
                 </Link>
               </Button>
-            </div>
-
-            {/* Социальное доказательство */}
-            <div className="pt-6 flex items-center gap-6">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white" />
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white" />
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white" />
-                </div>
-                <div className="text-sm">
-                  <div className="font-semibold text-[#0f1419]">150+ довольных клиентов</div>
-                  <div className="text-[#475569] text-xs">за последние 3 года</div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -148,10 +130,7 @@ export default function HeroSection({
                 className="bg-[#1d4cd7] hover:bg-[#1540bd] text-white font-semibold px-6 py-5 rounded-xl text-[14px] shadow-lg shadow-blue-500/20 w-full"
                 onClick={onContactClick}
               >
-                <span className="flex items-center justify-center gap-2">
-                  Бесплатная консультация
-                  <span className="text-xs bg-white/20 px-2 py-0.5 rounded">30 мин</span>
-                </span>
+                Получить консультацию
               </Button>
               <Button
                 asChild
@@ -163,21 +142,6 @@ export default function HeroSection({
                   Смотреть работы
                 </Link>
               </Button>
-            </div>
-
-            {/* Социальное доказательство - мобильная версия */}
-            <div className="pt-4 flex justify-center">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white" />
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white" />
-                  <div className="w-7 h-7 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white" />
-                </div>
-                <div className="text-xs text-center">
-                  <div className="font-semibold text-[#0f1419]">150+ клиентов</div>
-                  <div className="text-[#475569]">за 3 года</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
