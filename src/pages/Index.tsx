@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import NavigationSection from '@/components/home/NavigationSection';
 import HeroSection from '@/components/home/HeroSection';
+import TrustSection from '@/components/home/TrustSection';
 import ServicesSection from '@/components/home/ServicesSection';
+import ProcessSection from '@/components/home/ProcessSection';
 import WhyUsSection from '@/components/home/WhyUsSection';
 import BenefitsSection from '@/components/home/BenefitsSection';
 import GallerySection from '@/components/home/GallerySection';
 import GuaranteesSection from '@/components/home/GuaranteesSection';
+import CTASection from '@/components/home/CTASection';
 import ContactSection from '@/components/home/ContactSection';
 import FooterSection from '@/components/home/FooterSection';
 import ContactForm from '@/components/ContactForm';
@@ -13,7 +16,6 @@ import MultiStepForm from '@/components/MultiStepForm';
 import FloatingActionButton from '@/components/FloatingActionButton';
 import PullToRefresh from '@/components/PullToRefresh';
 import OfflineBanner from '@/components/OfflineBanner';
-import SectionTitle from '@/components/ui/SectionTitle';
 import { useAnalytics } from '@/utils/analytics';
 
 export default function Index() {
@@ -94,7 +96,11 @@ export default function Index() {
           sliderImages={sliderImages}
         />
         
+        <TrustSection />
+        
         <ServicesSection id="services" />
+        
+        <ProcessSection />
         
         <BenefitsSection />
         
@@ -103,6 +109,8 @@ export default function Index() {
         <GallerySection />
         
         <GuaranteesSection id="guarantees" onContactClick={() => setContactFormOpen(true)} />
+        
+        <CTASection onContactClick={() => setContactFormOpen(true)} />
         
         <ContactSection />
         

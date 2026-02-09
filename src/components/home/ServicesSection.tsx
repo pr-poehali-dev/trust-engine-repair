@@ -74,7 +74,7 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             iconUrl="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/4100cfa5-103f-4800-9095-a6a83cd6c61b.png"
           />
 
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6 leading-tight">
               Что мы <span className="text-primary font-bold">предлагаем</span>
             </h2>
@@ -170,19 +170,30 @@ export default function ServicesSection({ id }: ServicesSectionProps = {}) {
             ))}
           </div>
 
-          {/* View All Services Button */}
-          <div className="text-center">
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-4"
-              onClick={() => {
-                window.location.href = "/services";
-              }}
-            >
-              <Icon name="Grid3X3" size={20} className="mr-2" />
-              Посмотреть все услуги
-            </Button>
+          {/* Быстрая связь */}
+          <div className="mt-12 text-center bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <p className="text-lg text-brand-gray-700 mb-4">
+              Не можете определиться? <span className="font-semibold text-brand-gray-900">Поможем выбрать оптимальное решение</span>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white shadow-lg"
+                onClick={() => window.location.href = '/contact'}
+              >
+                <Icon name="MessageSquare" size={18} className="mr-2" />
+                Получить консультацию
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary hover:text-white"
+                onClick={() => window.location.href = '/services'}
+              >
+                <Icon name="Grid3X3" size={18} className="mr-2" />
+                Все услуги
+              </Button>
+            </div>
           </div>
         </div>
       </div>
