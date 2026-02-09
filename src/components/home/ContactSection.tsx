@@ -7,7 +7,7 @@ import Icon from '@/components/ui/icon';
 import SectionTitle from '@/components/ui/SectionTitle';
 
 export default function ContactSection() {
-  const handleContactClick = (contact: any) => {
+  const handleContactClick = (contact: typeof contacts[0]) => {
     switch (contact.icon) {
       case 'Phone':
         window.open(`tel:${contact.value}`, '_self');
@@ -71,7 +71,7 @@ export default function ContactSection() {
 
       
       <div className="max-w-7xl mx-auto">
-        <SectionTitle text="Связаться с нами" />
+        <SectionTitle text="Связаться с нами" iconUrl="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/c620c973-ef31-4762-9599-56acb19d1da4.png" />
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-medium text-brand-gray-900 mb-6">
             Готовы начать <span className="text-primary font-bold">восстановление</span>?
