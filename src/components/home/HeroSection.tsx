@@ -66,7 +66,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative min-h-[700px]">
+      <div className="hidden lg:block relative min-h-[700px] bg-gradient-to-b from-blue-50/20 via-white to-white">
         {/* Background Slider - Full Section */}
         <div 
           className="absolute inset-0 select-none"
@@ -77,6 +77,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
         >
           {/* Before Image */}
           <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white"></div>
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
               alt="До ремонта"
@@ -92,6 +94,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
               clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
             }}
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white"></div>
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/970de46a-7665-4831-b8f7-ffecc04d67de.png"
               alt="После ремонта"
@@ -116,9 +120,9 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           </div>
         </div>
 
-        {/* Content Overlay - Centered Vertically */}
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-[700px] px-8 py-16">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+        {/* Content Overlay - Positioned Higher */}
+        <div className="relative z-10 flex flex-col items-center justify-start min-h-[700px] px-8 pt-12 pb-16">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* MER Badge */}
             <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-300 shadow-sm">
               <div className="bg-gray-800 text-white text-[12px] font-bold px-3 py-1.5 rounded tracking-wide">
@@ -136,11 +140,11 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
 
             {/* Subheading */}
             <div className="space-y-2">
-              <p className="text-[23px] leading-relaxed">
+              <p className="text-[20px] leading-[1.2]">
                 <span className="text-[#0033CC] font-semibold">Re:New Engine.</span>
                 <span className="text-[#000000]"> Инженерное восстановление стационарных двигателей</span>
               </p>
-              <p className="text-[23px] text-[#000000] leading-relaxed">
+              <p className="text-[20px] text-[#000000] font-semibold leading-[1.2]">
                 Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
               </p>
             </div>
