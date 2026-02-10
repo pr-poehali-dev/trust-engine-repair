@@ -80,7 +80,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
               alt="До ремонта"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               draggable="false"
             />
           </div>
@@ -95,7 +95,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/970de46a-7665-4831-b8f7-ffecc04d67de.png"
               alt="После ремонта"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
               draggable="false"
             />
           </div>
@@ -136,11 +136,11 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
 
             {/* Subheading */}
             <div className="space-y-2">
-              <p className="text-[33px] leading-relaxed">
+              <p className="text-[23px] leading-relaxed">
                 <span className="text-[#0033CC] font-semibold">Re:New Engine.</span>
                 <span className="text-[#000000]"> Инженерное восстановление стационарных двигателей</span>
               </p>
-              <p className="text-[33px] text-[#000000] leading-relaxed">
+              <p className="text-[23px] text-[#000000] leading-relaxed">
                 Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
               </p>
             </div>
@@ -149,15 +149,15 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <div className="flex gap-4 justify-center pt-4">
               <Button
                 onClick={onContactClick}
-                className="bg-[#0033CC] hover:bg-[#0029a3] text-white text-[23px] font-medium px-8 h-[52px] rounded-[10px] shadow-lg transition-all"
+                className="bg-[#0033CC] hover:bg-[#0029a3] text-white text-[13px] font-medium px-8 h-[52px] rounded-[10px] shadow-lg transition-all"
               >
                 Получить консультацию
               </Button>
               <Button
                 variant="outline"
-                className="bg-white hover:bg-gray-50 border-2 border-[#0033CC] text-[#0033CC] hover:text-[#0029a3] text-[23px] font-medium px-8 h-[52px] rounded-[10px] uppercase tracking-wide transition-all"
+                className="bg-white hover:bg-gray-50 border-2 border-[#0033CC] text-[#0033CC] hover:text-[#0029a3] text-[13px] font-medium px-8 h-[52px] rounded-[10px] uppercase tracking-wide transition-all"
               >
-                <Icon name="Play" size={18} className="mr-2" />
+                <Icon name="Play" size={16} className="mr-2" />
                 СМОТРЕТЬ РАБОТЫ
               </Button>
             </div>
