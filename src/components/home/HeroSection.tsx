@@ -63,61 +63,12 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   }, [isDragging]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-white">
+    <section className="relative w-full overflow-hidden bg-gradient-to-b from-blue-50/30 via-white to-white">
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        {/* Background Images with Slider */}
-        <div 
-          className="absolute inset-0 select-none min-h-[700px]"
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {/* Before Image (Left side) */}
-          <div className="absolute inset-0">
-            <img
-              src="https://placehold.co/1920x1080/e0f2fe/1e40af?text=Hero+Before+Desktop"
-              alt="До ремонта"
-              className="w-full h-full object-cover"
-              draggable="false"
-            />
-          </div>
-
-          {/* After Image (Right side) with clip-path */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
-            }}
-          >
-            <img
-              src="https://placehold.co/1920x1080/dbeafe/2563eb?text=Hero+After+Desktop"
-              alt="После ремонта"
-              className="w-full h-full object-cover"
-              draggable="false"
-            />
-          </div>
-
-          {/* Slider Handle */}
-          <div 
-            className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-2xl"
-            style={{ left: `${sliderPosition}%` }}
-            onMouseDown={handleMouseDown}
-            onTouchStart={handleTouchStart}
-          >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-2xl flex items-center justify-center pointer-events-none">
-              <div className="flex gap-0.5">
-                <Icon name="ChevronLeft" size={18} className="text-gray-600" />
-                <Icon name="ChevronRight" size={18} className="text-gray-600" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Content Overlay */}
-        <div className="relative z-10 max-w-7xl mx-auto px-8 min-h-[700px] flex items-center">
-          <div className="w-full max-w-xl pt-12 pb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 pt-16 pb-12">
+          {/* Content Centered */}
+          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             {/* MER Badge */}
             <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-sm px-3.5 py-2 rounded-md border border-gray-300 shadow-sm mb-6">
               <div className="flex items-center justify-center bg-gray-800 text-white text-xs font-bold rounded px-2.5 py-1 tracking-wider">
@@ -143,7 +94,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex gap-3">
+            <div className="flex gap-3 mb-12">
               <Button
                 onClick={onContactClick}
                 className="bg-blue-600 hover:bg-blue-700 text-white text-[15px] font-medium px-7 py-5 h-auto rounded-lg shadow-md hover:shadow-lg transition-all"
@@ -157,6 +108,55 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                 <Icon name="Play" size={16} className="mr-2" />
                 СМОТРЕТЬ РАБОТЫ
               </Button>
+            </div>
+
+            {/* Slider Section Below */}
+            <div 
+              className="relative w-full max-w-5xl aspect-[16/9] select-none rounded-xl overflow-hidden shadow-2xl"
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              {/* Before Image (Left side) */}
+              <div className="absolute inset-0">
+                <img
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/files/82c94b36-a8d3-4dcf-a91f-6774f423e2be.jpg"
+                  alt="До ремонта"
+                  className="w-full h-full object-cover"
+                  draggable="false"
+                />
+              </div>
+
+              {/* After Image (Right side) with clip-path */}
+              <div 
+                className="absolute inset-0"
+                style={{
+                  clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
+                }}
+              >
+                <img
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/files/b3fd6e20-2363-48b5-aa66-97a9b3840258.jpg"
+                  alt="После ремонта"
+                  className="w-full h-full object-cover"
+                  draggable="false"
+                />
+              </div>
+
+              {/* Slider Handle */}
+              <div 
+                className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-2xl"
+                style={{ left: `${sliderPosition}%` }}
+                onMouseDown={handleMouseDown}
+                onTouchStart={handleTouchStart}
+              >
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-2xl flex items-center justify-center pointer-events-none">
+                  <div className="flex gap-0.5">
+                    <Icon name="ChevronLeft" size={18} className="text-gray-600" />
+                    <Icon name="ChevronRight" size={18} className="text-gray-600" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -192,7 +192,9 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             {/* Heading */}
             <h1 className="text-[36px] leading-[1.15] font-normal text-center mb-6">
               <span className="text-gray-900">Новый рассвет </span>
-              <span className="text-blue-600 font-bold">вашего двигателя</span>
+              <span className="text-blue-600 font-bold">вашего</span>
+              <span className="text-gray-900"> </span>
+              <span className="text-gray-900 font-bold">двигателя</span>
             </h1>
 
             {/* Subheading */}
