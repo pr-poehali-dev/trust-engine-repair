@@ -218,7 +218,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
               {/* Before Image */}
               <div className="absolute inset-0">
                 <img
-                  src="https://placehold.co/800x600/e0f2fe/1e40af?text=Before"
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
                   alt="До ремонта"
                   className="w-full h-full object-cover"
                   draggable="false"
@@ -233,7 +233,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                 }}
               >
                 <img
-                  src="https://placehold.co/800x600/dbeafe/2563eb?text=After"
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/970de46a-7665-4831-b8f7-ffecc04d67de.png"
                   alt="После ремонта"
                   className="w-full h-full object-cover"
                   draggable="false"
