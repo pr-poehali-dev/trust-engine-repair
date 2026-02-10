@@ -63,113 +63,213 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   }, [isDragging]);
 
   return (
-    <section className="relative w-full min-h-[600px] lg:min-h-[700px] overflow-hidden">
-      {/* Background Images with Slider - Desktop */}
-      <div 
-        className="hidden lg:block absolute inset-0 select-none"
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        {/* Before Image (Left side) */}
-        <div className="absolute inset-0">
-          <img
-            src="/hero-before-desktop.jpg"
-            alt="До ремонта"
-            className="w-full h-full object-cover"
-            draggable="false"
-          />
+    <section className="relative w-full overflow-hidden bg-white">
+      {/* Desktop Layout */}
+      <div className="hidden lg:block">
+        {/* Background Images with Slider */}
+        <div 
+          className="absolute inset-0 select-none min-h-[700px]"
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Before Image (Left side) */}
+          <div className="absolute inset-0">
+            <img
+              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/files/82c94b36-a8d3-4dcf-a91f-6774f423e2be.jpg"
+              alt="До ремонта"
+              className="w-full h-full object-cover"
+              draggable="false"
+            />
+          </div>
+
+          {/* After Image (Right side) with clip-path */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
+            }}
+          >
+            <img
+              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/files/b3fd6e20-2363-48b5-aa66-97a9b3840258.jpg"
+              alt="После ремонта"
+              className="w-full h-full object-cover"
+              draggable="false"
+            />
+          </div>
+
+          {/* Slider Handle */}
+          <div 
+            className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-2xl"
+            style={{ left: `${sliderPosition}%` }}
+            onMouseDown={handleMouseDown}
+            onTouchStart={handleTouchStart}
+          >
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-2xl flex items-center justify-center pointer-events-none">
+              <div className="flex gap-0.5">
+                <Icon name="ChevronLeft" size={18} className="text-gray-600" />
+                <Icon name="ChevronRight" size={18} className="text-gray-600" />
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* After Image (Right side) with clip-path */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
-          }}
-        >
-          <img
-            src="/hero-after-desktop.jpg"
-            alt="После ремонта"
-            className="w-full h-full object-cover"
-            draggable="false"
-          />
-        </div>
+        {/* Content Overlay */}
+        <div className="relative z-10 max-w-7xl mx-auto px-8 min-h-[700px] flex items-center">
+          <div className="w-full max-w-xl pt-12 pb-16">
+            {/* MER Badge */}
+            <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-sm px-3.5 py-2 rounded-md border border-gray-300 shadow-sm mb-6">
+              <div className="flex items-center justify-center bg-gray-800 text-white text-xs font-bold rounded px-2.5 py-1 tracking-wider">
+                MER
+              </div>
+              <span className="text-xs text-gray-600 font-normal">Работаем по протоколу</span>
+            </div>
 
-        {/* Slider Handle */}
-        <div 
-          className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"
-          style={{ left: `${sliderPosition}%` }}
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleTouchStart}
-        >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
-            <div className="flex gap-1">
-              <Icon name="ChevronLeft" size={16} className="text-gray-700" />
-              <Icon name="ChevronRight" size={16} className="text-gray-700" />
+            {/* Heading */}
+            <h1 className="text-[56px] leading-[1.1] font-normal mb-6">
+              <span className="text-gray-900">Новый рассвет </span>
+              <span className="text-blue-600 font-bold">вашего двигателя</span>
+            </h1>
+
+            {/* Subheading */}
+            <div className="space-y-2 mb-8">
+              <p className="text-[17px] text-gray-900 leading-relaxed">
+                <span className="text-blue-600 font-semibold">Re:New Engine.</span> Инженерное восстановление стационарных двигателей
+              </p>
+              <p className="text-[17px] text-gray-700 font-normal">
+                Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex gap-3">
+              <Button
+                onClick={onContactClick}
+                className="bg-blue-600 hover:bg-blue-700 text-white text-[15px] font-medium px-7 py-5 h-auto rounded-lg shadow-md hover:shadow-lg transition-all"
+              >
+                Получить консультацию
+              </Button>
+              <Button
+                variant="outline"
+                className="bg-white hover:bg-gray-50 border-2 border-blue-600 text-blue-600 hover:text-blue-700 text-[14px] font-medium px-6 py-5 h-auto rounded-lg uppercase tracking-wide transition-all"
+              >
+                <Icon name="Play" size={16} className="mr-2" />
+                СМОТРЕТЬ РАБОТЫ
+              </Button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Background Image - Mobile */}
-      <div className="lg:hidden absolute inset-0">
-        <img
-          src="/hero-mobile.jpg"
-          alt="Ремонт двигателей"
-          className="w-full h-full object-cover"
-        />
-      </div>
+      {/* Mobile Layout */}
+      <div className="lg:hidden">
+        <div className="relative min-h-[600px]">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img
+              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/files/94206d50-dd3e-46df-a035-a8a5e1e4486a.jpg"
+              alt="Ремонт двигателей"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40 lg:bg-gradient-to-r lg:from-black/50 lg:via-black/30 lg:to-transparent"></div>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/80"></div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[600px] lg:min-h-[700px] flex items-center">
-        <div className="w-full lg:w-1/2 text-center lg:text-left py-12">
-          {/* MER Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full mb-6 shadow-lg">
-            <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-              <span className="text-white text-xs font-bold">MER</span>
+          {/* Content */}
+          <div className="relative z-10 px-4 py-12 min-h-[600px] flex flex-col">
+            {/* MER Badge */}
+            <div className="flex justify-center mb-6">
+              <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-sm px-3.5 py-2 rounded-md border border-gray-300 shadow-sm">
+                <div className="flex items-center justify-center bg-gray-800 text-white text-xs font-bold rounded px-2.5 py-1 tracking-wider">
+                  MER
+                </div>
+                <span className="text-xs text-gray-600 font-normal">Работаем по протоколу</span>
+              </div>
             </div>
-            <span className="text-sm text-gray-700">Работаем по протоколу</span>
-          </div>
 
-          {/* Heading */}
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
-            <span className="font-normal">Новый рассвет </span>
-            <span className="text-blue-400">вашего</span>
-            <span className="text-blue-400"> двигателя</span>
-          </h1>
+            {/* Heading */}
+            <h1 className="text-[36px] leading-[1.15] font-normal text-center mb-6">
+              <span className="text-gray-900">Новый рассвет </span>
+              <span className="text-blue-600 font-bold">вашего двигателя</span>
+            </h1>
 
-          {/* Subheading */}
-          <div className="mb-4">
-            <p className="text-lg lg:text-xl text-white/90 mb-2">
-              <span className="text-blue-300 font-semibold">Re:New Engine.</span> Инженерное восстановление стационарных двигателей
-            </p>
-            <p className="text-base lg:text-lg text-white/80">
-              Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
-            </p>
-          </div>
+            {/* Subheading */}
+            <div className="space-y-2 mb-8 text-center">
+              <p className="text-[15px] text-gray-900 leading-relaxed">
+                <span className="text-blue-600 font-semibold">Re:New Engine.</span> Инженерное восстановление стационарных двигателей
+              </p>
+              <p className="text-[15px] text-gray-700 font-normal">
+                Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
+              </p>
+            </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
-            <Button
-              size="lg"
-              onClick={onContactClick}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-base font-semibold shadow-xl"
+            {/* Slider Section */}
+            <div 
+              className="relative w-full aspect-[4/3] mb-8 select-none rounded-lg overflow-hidden shadow-xl"
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
             >
-              Получить консультацию
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/90 backdrop-blur-sm hover:bg-white border-2 border-white text-blue-600 px-8 py-6 text-base font-semibold shadow-xl"
-            >
-              <Icon name="Play" size={18} className="mr-2" />
-              СМОТРЕТЬ РАБОТЫ
-            </Button>
+              {/* Before Image */}
+              <div className="absolute inset-0">
+                <img
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/files/82c94b36-a8d3-4dcf-a91f-6774f423e2be.jpg"
+                  alt="До ремонта"
+                  className="w-full h-full object-cover"
+                  draggable="false"
+                />
+              </div>
+
+              {/* After Image with clip-path */}
+              <div 
+                className="absolute inset-0"
+                style={{
+                  clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
+                }}
+              >
+                <img
+                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/files/b3fd6e20-2363-48b5-aa66-97a9b3840258.jpg"
+                  alt="После ремонта"
+                  className="w-full h-full object-cover"
+                  draggable="false"
+                />
+              </div>
+
+              {/* Slider Handle */}
+              <div 
+                className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize shadow-2xl"
+                style={{ left: `${sliderPosition}%` }}
+                onMouseDown={handleMouseDown}
+                onTouchStart={handleTouchStart}
+              >
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-2xl flex items-center justify-center">
+                  <div className="flex gap-0.5">
+                    <Icon name="ChevronLeft" size={16} className="text-gray-600" />
+                    <Icon name="ChevronRight" size={16} className="text-gray-600" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col gap-3">
+              <Button
+                onClick={onContactClick}
+                className="bg-blue-600 hover:bg-blue-700 text-white text-[14px] font-medium px-6 py-5 h-auto rounded-lg shadow-md w-full"
+              >
+                Получить консультацию
+              </Button>
+              <Button
+                variant="outline"
+                className="bg-white hover:bg-gray-50 border-2 border-blue-600 text-blue-600 hover:text-blue-700 text-[13px] font-medium px-5 py-5 h-auto rounded-lg uppercase tracking-wide w-full"
+              >
+                <Icon name="Play" size={14} className="mr-2" />
+                СМОТРЕТЬ РАБОТЫ
+              </Button>
+            </div>
           </div>
         </div>
       </div>
