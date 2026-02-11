@@ -76,7 +76,13 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           onTouchEnd={handleTouchEnd}
         >
           {/* Before Image */}
-          <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0"
+            style={{
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)'
+            }}
+          >
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
               alt="До ремонта"
@@ -89,7 +95,9 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           <div 
             className="absolute inset-0"
             style={{
-              clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
+              clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`,
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)'
             }}
           >
             <img
