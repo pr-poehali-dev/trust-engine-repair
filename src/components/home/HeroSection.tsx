@@ -95,8 +95,10 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           <div 
             className="absolute inset-0 flex items-center justify-center"
             style={{
-              maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+              maskComposite: 'intersect',
+              WebkitMaskComposite: 'source-in'
             }}
           >
             <img
@@ -113,8 +115,10 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute inset-0 flex items-center justify-center"
             style={{
               clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`,
-              maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%), linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+              maskComposite: 'intersect',
+              WebkitMaskComposite: 'source-in'
             }}
           >
             <img
