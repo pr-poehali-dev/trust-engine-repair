@@ -29,6 +29,16 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
     setSliderPosition(percent);
   };
 
+  const handleGlobalMouseMove = (e: MouseEvent, containerRef: HTMLDivElement) => {
+    if (!isDragging) return;
+    
+    const rect = containerRef.getBoundingClientRect();
+    const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+    const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
+    
+    setSliderPosition(percent);
+  };
+
   const handleTouchStart = () => {
     setIsDragging(true);
   };
@@ -49,15 +59,21 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   };
 
   useEffect(() => {
+    const container = document.querySelector('.slider-container') as HTMLDivElement;
+    if (!container) return;
+
     const handleGlobalMouseUp = () => setIsDragging(false);
     const handleGlobalTouchEnd = () => setIsDragging(false);
+    const handleMouseMoveGlobal = (e: MouseEvent) => handleGlobalMouseMove(e, container);
 
     if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMoveGlobal);
       document.addEventListener('mouseup', handleGlobalMouseUp);
       document.addEventListener('touchend', handleGlobalTouchEnd);
     }
 
     return () => {
+      document.removeEventListener('mousemove', handleMouseMoveGlobal);
       document.removeEventListener('mouseup', handleGlobalMouseUp);
       document.removeEventListener('touchend', handleGlobalTouchEnd);
     };
@@ -69,7 +85,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
       <div className="hidden lg:block relative min-h-[800px] bg-gradient-to-b from-blue-50/20 via-white to-white">
         {/* Background Slider - Full Section */}
         <div 
-          className="absolute inset-0 select-none"
+          className="absolute inset-0 select-none slider-container"
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onTouchMove={handleTouchMove}
