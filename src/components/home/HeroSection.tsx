@@ -85,7 +85,10 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
       <div className="hidden lg:block relative min-h-[900px] bg-gradient-to-b from-blue-50/20 via-white to-white">
         {/* Background Slider - Full Section */}
         <div 
-          className="absolute inset-0 select-none slider-container"
+          className="absolute inset-0 select-none slider-container after:content-[''] after:absolute after:inset-0 after:pointer-events-none after:z-[15] after:bg-gradient-to-b after:from-white after:via-transparent after:to-white"
+          style={{
+            '--tw-gradient-stops': 'white 0%, transparent 15%, transparent 85%, white 100%'
+          } as React.CSSProperties}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onTouchMove={handleTouchMove}
@@ -131,8 +134,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute cursor-ew-resize z-20"
             style={{ 
               left: `${sliderPosition}%`,
-              top: '35%',
-              bottom: '20%'
+              top: '40%',
+              bottom: '15%'
             }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
