@@ -82,7 +82,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative min-h-[900px] bg-gradient-to-b from-blue-50/20 via-white to-white">
+      <div className="hidden lg:block relative min-h-[1000px] bg-gradient-to-b from-blue-50/20 via-white to-white">
         {/* Background Slider - Full Section */}
         <div 
           className="absolute inset-0 select-none slider-container"
@@ -161,7 +161,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
         </div>
 
         {/* Content Overlay - Centered and positioned higher */}
-        <div className="relative z-10 flex flex-col items-center justify-start min-h-[900px] px-8 pt-16">
+        <div className="relative z-10 flex flex-col items-center justify-start min-h-[1000px] px-8 pt-16">
           <div className="max-w-4xl mx-auto text-center space-y-4">
             {/* MER Badge - Compact design */}
             <div className="inline-flex items-center gap-3">
