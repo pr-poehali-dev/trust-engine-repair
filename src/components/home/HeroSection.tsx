@@ -95,7 +95,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           <div 
             className="absolute inset-0 pointer-events-none z-[15]"
             style={{
-              background: 'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 88%, rgba(255,255,255,1) 100%)'
+              background: 'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%)'
             }}
           />
           {/* Before Image */}
@@ -138,8 +138,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute cursor-ew-resize z-20"
             style={{ 
               left: `${sliderPosition}%`,
-              top: '40%',
-              bottom: '15%'
+              top: '34%',
+              bottom: '0%'
             }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
