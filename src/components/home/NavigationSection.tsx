@@ -34,7 +34,14 @@ export default function NavigationSection({
   };
 
   return (
-    <nav className="bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-[99998]">
+    <nav className="relative bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-[99998]">
+      {/* Gradient overlay for smooth fade into hero section */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none z-[-1]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)'
+        }}
+      />
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">
         <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Логотип с адаптивным слоганом */}

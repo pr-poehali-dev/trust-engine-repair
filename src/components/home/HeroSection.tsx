@@ -91,19 +91,12 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Gradient overlay for smooth fade */}
-          <div 
-            className="absolute inset-0 pointer-events-none z-[15]"
-            style={{
-              background: 'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%)'
-            }}
-          />
           {/* Before Image */}
           <div 
             className="absolute inset-0 flex items-center justify-center"
             style={{
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)'
+              maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
             }}
           >
             <img
@@ -120,8 +113,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute inset-0 flex items-center justify-center"
             style={{
               clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`,
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)'
+              maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
             }}
           >
             <img
@@ -230,6 +223,14 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
               <span className="text-[#000000] font-bold"> двигателя</span>
             </h1>
 
+            {/* Comparison Slider */}
+            <div className="mt-6">
+              <ComparisonSlider
+                beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3a80a092-b801-4783-beaa-cda72bd137cb.png"
+                afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3e0d87d7-c86b-4eaa-937c-57339fe93cbc.png"
+              />
+            </div>
+
             {/* Subheading */}
             <div className="space-y-2 text-center">
               <p className="text-[18px] leading-[1.2]">
@@ -256,14 +257,6 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
                 <Icon name="Play" size={16} className="mr-2" />
                 СМОТРЕТЬ РАБОТЫ
               </Button>
-            </div>
-
-            {/* Comparison Slider */}
-            <div className="mt-8">
-              <ComparisonSlider
-                beforeImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3a80a092-b801-4783-beaa-cda72bd137cb.png"
-                afterImage="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/3e0d87d7-c86b-4eaa-937c-57339fe93cbc.png"
-              />
             </div>
           </div>
         </div>
