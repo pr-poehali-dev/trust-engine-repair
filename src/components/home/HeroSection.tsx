@@ -66,7 +66,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative min-h-[700px] bg-gradient-to-b from-blue-50/20 via-white to-white">
+      <div className="hidden lg:block relative min-h-[800px] bg-gradient-to-b from-blue-50/20 via-white to-white">
         {/* Background Slider - Full Section */}
         <div 
           className="absolute inset-0 select-none"
@@ -100,9 +100,9 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             />
           </div>
 
-          {/* Gradient Overlays - After images for proper layering */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-transparent to-white/80 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/90 pointer-events-none"></div>
+          {/* Gradient Overlays - More pronounced blur effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white pointer-events-none"></div>
 
           {/* Slider Handle */}
           <div 
@@ -120,9 +120,9 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           </div>
         </div>
 
-        {/* Content Overlay - Positioned Higher */}
-        <div className="relative z-10 flex flex-col items-center justify-start min-h-[700px] px-8 pt-6 pb-16">
-          <div className="max-w-4xl mx-auto text-center space-y-4">
+        {/* Content Overlay - Positioned left-center */}
+        <div className="relative z-10 flex flex-col items-start justify-center min-h-[800px] px-16 pl-24">
+          <div className="max-w-4xl text-left space-y-4">
             {/* MER Badge */}
             <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-300 shadow-sm">
               <div className="bg-gray-800 text-white text-[12px] font-bold px-3 py-1.5 rounded tracking-wide">
@@ -150,7 +150,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex gap-4 justify-center pt-4">
+            <div className="flex gap-4 justify-start pt-4">
               <Button
                 onClick={onContactClick}
                 className="bg-[#0033CC] hover:bg-[#0029a3] text-white text-[13px] font-medium px-8 h-[52px] rounded-[10px] shadow-lg transition-all"
