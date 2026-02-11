@@ -126,11 +126,22 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
 
           {/* Slider Handle */}
           <div 
-            className="absolute top-0 bottom-0 w-[2px] bg-white cursor-ew-resize shadow-2xl z-20"
-            style={{ left: `${sliderPosition}%` }}
+            className="absolute cursor-ew-resize z-20"
+            style={{ 
+              left: `${sliderPosition}%`,
+              top: '12%',
+              bottom: '12%'
+            }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
           >
+            {/* Vertical line with fade effect */}
+            <div 
+              className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] shadow-2xl"
+              style={{
+                background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,1) 92%, rgba(255,255,255,0) 100%)'
+              }}
+            />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-white rounded-full shadow-2xl flex items-center justify-center cursor-ew-resize">
               <div className="flex gap-1">
                 <Icon name="ChevronLeft" size={20} className="text-gray-700" />
