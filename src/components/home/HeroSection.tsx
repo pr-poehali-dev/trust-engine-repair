@@ -93,7 +93,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
         >
           {/* Before Image */}
           <div 
-            className="absolute inset-0"
+            className="absolute inset-0 flex items-center justify-center"
             style={{
               maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)',
               WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)'
@@ -102,14 +102,15 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
               alt="До ремонта"
-              className="w-full h-full object-contain"
+              className="object-contain"
+              style={{ width: '120%', height: '120%' }}
               draggable="false"
             />
           </div>
 
           {/* After Image with clip-path */}
           <div 
-            className="absolute inset-0"
+            className="absolute inset-0 flex items-center justify-center"
             style={{
               clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`,
               maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)',
@@ -119,7 +120,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/970de46a-7665-4831-b8f7-ffecc04d67de.png"
               alt="После ремонта"
-              className="w-full h-full object-contain"
+              className="object-contain"
+              style={{ width: '120%', height: '120%' }}
               draggable="false"
             />
           </div>
