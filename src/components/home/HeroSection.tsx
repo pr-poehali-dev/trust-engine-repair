@@ -82,7 +82,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative min-h-[1000px] bg-gradient-to-b from-blue-50/20 via-white to-white">
+      <div className="hidden lg:block relative min-h-[1000px] bg-white">
         {/* Background Slider - Full Section */}
         <div 
           className="absolute inset-0 select-none slider-container"
@@ -118,45 +118,13 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             />
           </div>
 
-          {/* Decorative gradient spots */}
-          <div className="absolute inset-0 pointer-events-none z-[5]">
-            {/* Top left blue spot */}
-            <div 
-              className="absolute w-[600px] h-[600px]"
-              style={{
-                top: '-15%',
-                left: '-10%',
-                background: 'radial-gradient(circle, rgba(0,51,204,0.12) 0%, transparent 70%)'
-              }}
-            />
-            {/* Top right gray spot */}
-            <div 
-              className="absolute w-[500px] h-[500px]"
-              style={{
-                top: '0%',
-                right: '-5%',
-                background: 'radial-gradient(circle, rgba(175,175,175,0.08) 0%, transparent 65%)'
-              }}
-            />
-            {/* Bottom left gray spot */}
-            <div 
-              className="absolute w-[550px] h-[550px]"
-              style={{
-                bottom: '-10%',
-                left: '5%',
-                background: 'radial-gradient(circle, rgba(175,175,175,0.1) 0%, transparent 68%)'
-              }}
-            />
-            {/* Bottom right blue spot */}
-            <div 
-              className="absolute w-[650px] h-[650px]"
-              style={{
-                bottom: '-15%',
-                right: '-8%',
-                background: 'radial-gradient(circle, rgba(0,51,204,0.1) 0%, transparent 72%)'
-              }}
-            />
-          </div>
+          {/* Gradient overlay from original bg */}
+          <div 
+            className="absolute inset-0 pointer-events-none z-[5]"
+            style={{
+              background: 'linear-gradient(to bottom, rgba(239,246,255,0.2) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%)'
+            }}
+          />
 
           {/* Slider Handle */}
           <div 
