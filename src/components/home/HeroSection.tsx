@@ -82,7 +82,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Desktop Layout */}
-      <div className="hidden lg:block relative min-h-[800px] bg-gradient-to-b from-blue-50/20 via-white to-white">
+      <div className="hidden lg:block relative min-h-[900px] bg-gradient-to-b from-blue-50/20 via-white to-white">
         {/* Background Slider - Full Section */}
         <div 
           className="absolute inset-0 select-none slider-container"
@@ -131,8 +131,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute cursor-ew-resize z-20"
             style={{ 
               left: `${sliderPosition}%`,
-              top: '12%',
-              bottom: '12%'
+              top: '18%',
+              bottom: '20%'
             }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
@@ -154,11 +154,11 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
         </div>
 
         {/* Content Overlay - Centered and positioned higher */}
-        <div className="relative z-10 flex flex-col items-center justify-start min-h-[800px] px-8 pt-16">
+        <div className="relative z-10 flex flex-col items-center justify-start min-h-[900px] px-8 pt-16">
           <div className="max-w-4xl mx-auto text-center space-y-4">
             {/* MER Badge - Compact design */}
             <div className="inline-flex items-center gap-3">
-              <div className="bg-gradient-to-b from-gray-200 to-gray-300 text-black text-[16px] font-black px-6 py-2 rounded-full border-2 border-gray-400 shadow-md">
+              <div className="bg-gradient-to-b from-gray-200 to-[#afafafb0] text-black text-[15px] font-black px-2 py-0.5 rounded border border-gray-400 shadow-md">
                 MER
               </div>
               <span className="text-[14px] text-[#000000] font-normal">Работаем по протоколу</span>
