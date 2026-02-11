@@ -215,11 +215,11 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           <div className="space-y-8">
             {/* MER Badge */}
             <div className="flex justify-center">
-              <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-300 shadow-sm">
-                <div className="bg-gray-800 text-white text-[11px] font-bold px-2.5 py-1.5 rounded tracking-wide">
+              <div className="inline-flex items-center gap-3">
+                <div className="bg-gradient-to-b from-gray-200 to-[#afafafb0] text-black text-[15px] font-black px-2 py-0.5 rounded border border-gray-400 shadow-md">
                   MER
                 </div>
-                <span className="text-[11px] text-[#000000]">Работаем по протоколу</span>
+                <span className="text-[14px] text-[#000000] font-normal">Работаем по протоколу</span>
               </div>
             </div>
 
@@ -232,11 +232,11 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
 
             {/* Subheading */}
             <div className="space-y-2 text-center">
-              <p className="text-[18px] leading-relaxed">
+              <p className="text-[18px] leading-[1.2]">
                 <span className="text-[#0033CC] font-semibold">Re:New Engine.</span>
                 <span className="text-[#000000]"> Инженерное восстановление стационарных двигателей</span>
               </p>
-              <p className="text-[18px] text-[#000000] leading-relaxed">
+              <p className="text-[18px] text-[#000000] font-semibold leading-[1.2]">
                 Volvo Penta, Mercruiser, Indmar, Yamaha, Kodiak
               </p>
             </div>
@@ -245,13 +245,13 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <div className="flex flex-col gap-3 max-w-sm mx-auto">
               <Button
                 onClick={onContactClick}
-                className="bg-[#0033CC] hover:bg-[#0029a3] text-white text-[16px] font-medium h-[48px] rounded-[10px] shadow-lg w-full"
+                className="bg-[#0033CC] hover:bg-[#0029a3] text-white text-[13px] font-medium px-8 h-[52px] rounded-[10px] shadow-lg w-full"
               >
                 Получить консультацию
               </Button>
               <Button
                 variant="outline"
-                className="bg-white hover:bg-gray-50 border-2 border-[#0033CC] text-[#0033CC] text-[16px] font-medium h-[48px] rounded-[10px] uppercase tracking-wide w-full"
+                className="bg-white hover:bg-gray-50 border-2 border-[#0033CC] text-[#0033CC] hover:text-[#0029a3] text-[13px] font-medium px-8 h-[52px] rounded-[10px] uppercase tracking-wide w-full"
               >
                 <Icon name="Play" size={16} className="mr-2" />
                 СМОТРЕТЬ РАБОТЫ
