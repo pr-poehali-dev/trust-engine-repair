@@ -131,8 +131,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute cursor-ew-resize z-20"
             style={{ 
               left: `${sliderPosition}%`,
-              top: '30%',
-              bottom: '25%'
+              top: '35%',
+              bottom: '20%'
             }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
