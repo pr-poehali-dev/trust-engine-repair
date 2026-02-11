@@ -37,9 +37,9 @@ export default function NavigationSection({
     <nav className="relative bg-white shadow-sm border-b border-jivo-gray-200 sticky top-0 z-[99998]">
       {/* Gradient overlay for smooth fade into hero section */}
       <div 
-        className="absolute bottom-0 left-0 right-0 h-20 pointer-events-none z-[-1]"
+        className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none translate-y-full"
         style={{
-          background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)'
+          background: 'linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)'
         }}
       />
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 xl:px-8">

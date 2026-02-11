@@ -122,7 +122,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           <div 
             className="absolute inset-0 pointer-events-none z-[5]"
             style={{
-              background: 'linear-gradient(to bottom, rgba(239,246,255,0.2) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%)'
+              background: 'linear-gradient(to bottom, rgba(239,246,255,0.15) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 100%)'
             }}
           />
 
