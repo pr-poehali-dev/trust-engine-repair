@@ -100,35 +100,35 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             />
           </div>
 
-          {/* Gradient Overlays - Soft blur effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-transparent to-white/70 pointer-events-none"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/80 pointer-events-none"></div>
-
-          {/* Slider Handle */}
+          {/* Slider Handle - Moved before gradients for proper z-index */}
           <div 
-            className="absolute top-0 bottom-0 w-[2px] bg-white cursor-ew-resize shadow-2xl"
+            className="absolute top-0 bottom-0 w-[2px] bg-white cursor-ew-resize shadow-2xl z-20"
             style={{ left: `${sliderPosition}%` }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
           >
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-white rounded-full shadow-2xl flex items-center justify-center pointer-events-none">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-white rounded-full shadow-2xl flex items-center justify-center cursor-ew-resize">
               <div className="flex gap-1">
                 <Icon name="ChevronLeft" size={20} className="text-gray-700" />
                 <Icon name="ChevronRight" size={20} className="text-gray-700" />
               </div>
             </div>
           </div>
+
+          {/* Gradient Overlays - After slider handle */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-transparent to-white/70 pointer-events-none z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/80 pointer-events-none z-10"></div>
         </div>
 
         {/* Content Overlay - Centered and positioned higher */}
         <div className="relative z-10 flex flex-col items-center justify-start min-h-[800px] px-8 pt-16">
           <div className="max-w-4xl mx-auto text-center space-y-4">
-            {/* MER Badge */}
-            <div className="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-sm px-4 py-2.5 rounded-lg border border-gray-300 shadow-sm">
-              <div className="bg-gray-800 text-white text-[12px] font-bold px-3 py-1.5 rounded tracking-wide">
+            {/* MER Badge - Compact design */}
+            <div className="inline-flex items-center gap-3">
+              <div className="bg-gradient-to-b from-gray-200 to-gray-300 text-black text-[16px] font-black px-6 py-2 rounded-full border-2 border-gray-400 shadow-md">
                 MER
               </div>
-              <span className="text-[12px] text-[#000000]">Работаем по протоколу</span>
+              <span className="text-[14px] text-[#000000] font-normal">Работаем по протоколу</span>
             </div>
 
             {/* Main Heading */}
