@@ -95,8 +95,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           <div 
             className="absolute inset-0 flex items-center justify-center"
             style={{
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)'
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)'
             }}
           >
             <img
@@ -113,8 +113,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute inset-0 flex items-center justify-center"
             style={{
               clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`,
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%)'
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 100%, black 100%)'
             }}
           >
             <img
@@ -131,8 +131,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute cursor-ew-resize z-20"
             style={{ 
               left: `${sliderPosition}%`,
-              top: '26%',
-              bottom: '26%'
+              top: '30%',
+              bottom: '25%'
             }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
@@ -141,7 +141,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <div 
               className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] shadow-2xl"
               style={{
-                background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 85%, rgba(255,255,255,0) 100%)'
+                background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%)'
               }}
             />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-white rounded-full shadow-2xl flex items-center justify-center cursor-ew-resize">
