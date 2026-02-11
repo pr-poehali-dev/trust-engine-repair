@@ -93,35 +93,41 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
         >
           {/* Before Image */}
           <div 
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute flex items-center justify-center"
             style={{
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)'
+              top: '10%',
+              bottom: '10%',
+              left: 0,
+              right: 0,
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)'
             }}
           >
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
               alt="До ремонта"
-              className="object-contain"
-              style={{ width: '120%', height: '120%' }}
+              className="object-contain w-full h-full"
               draggable="false"
             />
           </div>
 
           {/* After Image with clip-path */}
           <div 
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute flex items-center justify-center"
             style={{
+              top: '10%',
+              bottom: '10%',
+              left: 0,
+              right: 0,
               clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`,
-              maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 88%, transparent 100%)'
+              maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)'
             }}
           >
             <img
               src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/970de46a-7665-4831-b8f7-ffecc04d67de.png"
               alt="После ремонта"
-              className="object-contain"
-              style={{ width: '120%', height: '120%' }}
+              className="object-contain w-full h-full"
               draggable="false"
             />
           </div>
@@ -131,8 +137,8 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             className="absolute cursor-ew-resize z-20"
             style={{ 
               left: `${sliderPosition}%`,
-              top: '18%',
-              bottom: '20%'
+              top: '22%',
+              bottom: '22%'
             }}
             onMouseDown={handleMouseDown}
             onTouchStart={handleTouchStart}
@@ -141,7 +147,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             <div 
               className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] shadow-2xl"
               style={{
-                background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 8%, rgba(255,255,255,1) 92%, rgba(255,255,255,0) 100%)'
+                background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 88%, rgba(255,255,255,0) 100%)'
               }}
             />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-white rounded-full shadow-2xl flex items-center justify-center cursor-ew-resize">
