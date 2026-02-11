@@ -93,29 +93,13 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
         >
           {/* Before Image */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div 
-              className="absolute inset-0"
-              style={{
-                maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)'
-              }}
-            >
-              <div 
-                className="absolute inset-0 flex items-center justify-center"
-                style={{
-                  maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
-                }}
-              >
-                <img
-                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
-                  alt="До ремонта"
-                  className="object-contain"
-                  style={{ width: '120%', height: '120%' }}
-                  draggable="false"
-                />
-              </div>
-            </div>
+            <img
+              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/b3441192-3577-427c-be48-68969c71a8ff.png"
+              alt="До ремонта"
+              className="object-contain"
+              style={{ width: '120%', height: '120%' }}
+              draggable="false"
+            />
           </div>
 
           {/* After Image with clip-path */}
@@ -125,29 +109,53 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
               clipPath: `polygon(${sliderPosition}% 0, 100% 0, 100% 100%, ${sliderPosition}% 100%)`
             }}
           >
+            <img
+              src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/970de46a-7665-4831-b8f7-ffecc04d67de.png"
+              alt="После ремонта"
+              className="object-contain"
+              style={{ width: '120%', height: '120%' }}
+              draggable="false"
+            />
+          </div>
+
+          {/* Decorative gradient spots */}
+          <div className="absolute inset-0 pointer-events-none z-[5]">
+            {/* Top left blue spot */}
             <div 
-              className="absolute inset-0"
+              className="absolute w-[600px] h-[600px]"
               style={{
-                maskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%)'
+                top: '-15%',
+                left: '-10%',
+                background: 'radial-gradient(circle, rgba(0,51,204,0.12) 0%, transparent 70%)'
               }}
-            >
-              <div 
-                className="absolute inset-0 flex items-center justify-center"
-                style={{
-                  maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-                  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
-                }}
-              >
-                <img
-                  src="https://cdn.poehali.dev/projects/7df45e6f-2c3a-4cc9-ad5c-89b6175d83ff/bucket/970de46a-7665-4831-b8f7-ffecc04d67de.png"
-                  alt="После ремонта"
-                  className="object-contain"
-                  style={{ width: '120%', height: '120%' }}
-                  draggable="false"
-                />
-              </div>
-            </div>
+            />
+            {/* Top right gray spot */}
+            <div 
+              className="absolute w-[500px] h-[500px]"
+              style={{
+                top: '0%',
+                right: '-5%',
+                background: 'radial-gradient(circle, rgba(175,175,175,0.08) 0%, transparent 65%)'
+              }}
+            />
+            {/* Bottom left gray spot */}
+            <div 
+              className="absolute w-[550px] h-[550px]"
+              style={{
+                bottom: '-10%',
+                left: '5%',
+                background: 'radial-gradient(circle, rgba(175,175,175,0.1) 0%, transparent 68%)'
+              }}
+            />
+            {/* Bottom right blue spot */}
+            <div 
+              className="absolute w-[650px] h-[650px]"
+              style={{
+                bottom: '-15%',
+                right: '-8%',
+                background: 'radial-gradient(circle, rgba(0,51,204,0.1) 0%, transparent 72%)'
+              }}
+            />
           </div>
 
           {/* Slider Handle */}
