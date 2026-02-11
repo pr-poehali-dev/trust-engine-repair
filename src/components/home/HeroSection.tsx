@@ -100,7 +100,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
             />
           </div>
 
-          {/* Slider Handle - Moved before gradients for proper z-index */}
+          {/* Slider Handle */}
           <div 
             className="absolute top-0 bottom-0 w-[2px] bg-white cursor-ew-resize shadow-2xl z-20"
             style={{ left: `${sliderPosition}%` }}
@@ -114,10 +114,6 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
               </div>
             </div>
           </div>
-
-          {/* Gradient Overlays - After slider handle */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-transparent to-white/70 pointer-events-none z-10"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/80 pointer-events-none z-10"></div>
         </div>
 
         {/* Content Overlay - Centered and positioned higher */}
